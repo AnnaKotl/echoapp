@@ -2,7 +2,3 @@
   base = "echoapp"
   command = "npm run build"
   publish = "echoapp/dist"
-
-
-[build.environment]
-  NODE_VERSION = "18"
