@@ -342,7 +342,7 @@
   cursor: pointer;
 
   max-width: 150px;
-  height: 190px;
+  height: 200px;
   width: calc((100% - 10px) / 4);
 }
 
