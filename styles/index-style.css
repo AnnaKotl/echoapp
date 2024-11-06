@@ -136,22 +136,6 @@ color: var(--white);
   -webkit-text-fill-color: transparent; */
 }
 
-.hero-text-1 {
-font-style: italic;
-color: var(--pink);
-font-size: 60px;
-}
-.hero-text-2 {
-  font-style: italic;
-  color: var(--blue);
-  font-size: 60px;
-}
-.hero-text-3 {
-  font-style: italic;
-  color: var(--danger);
-  font-size: 60px;
-}
-
 .hero-btn {
   font-size: 46px;
   color: var(--accnet-color);
