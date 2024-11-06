@@ -183,42 +183,41 @@
 }
 
 .hero-scroll-link {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1px;
-    color: var(--accnet-color);
-    position: relative;
-    text-decoration: none;
-  }
-  
-  .hero-scroll-icon-top {
-    fill: currentColor;
-    width: 100px;
-    height: 100px;
-    opacity: 0.1;
-    margin-bottom: -75px;
-    transition: opacity 0.3s ease, transform 0.3s ease;
-  }
-  
-  .hero-scroll-icon-bottom {
-    fill: currentColor;
-    width: 100px;
-    height: 100px;
-    opacity: 0.6;
-    transition: opacity 0.3s ease, transform 0.3s ease;
-  }
-  
-  .hero-scroll-link:hover .hero-scroll-icon-top,
-  .hero-scroll-link:focus .hero-scroll-icon-top {
-    opacity: 0.4;
-    transform: scale(1.2);
-  }
-  
-  .hero-scroll-link:hover .hero-scroll-icon-bottom,
-  .hero-scroll-link:focus .hero-scroll-icon-bottom {
-    opacity: 1;
-    transform: scale(1.3);
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1px;
+  color: var(--accnet-color);
+  position: relative;
+  text-decoration: none;
+}
+
+.hero-scroll-icon-top {
+  fill: currentColor;
+  width: 100px;
+  height: 100px;
+  opacity: 0.1;
+  margin-bottom: -75px;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.hero-scroll-icon-bottom {
+  fill: currentColor;
+  width: 100px;
+  height: 100px;
+  opacity: 0.6;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.hero-scroll-link:hover .hero-scroll-icon-top,
+.hero-scroll-link:focus .hero-scroll-icon-top {
+  opacity: 0.4;
+  transform: scale(1.2);
+}
+
+.hero-scroll-link:hover .hero-scroll-icon-bottom,
+.hero-scroll-link:focus .hero-scroll-icon-bottom {
+  opacity: 1;
+  transform: scale(1.3);
+}
