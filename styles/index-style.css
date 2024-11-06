@@ -122,9 +122,9 @@
   font-weight: var(--text-standart-font-weight);
   line-height: var(--text-standart-line-height);
 
-color: var(--white);
+  /* color: var(--white); */
 
-  /* background: linear-gradient(
+  background: linear-gradient(
     330deg,
     #f8f9fa 0%,
     #ffc107 25%,
@@ -133,7 +133,7 @@ color: var(--white);
     #007bff 100%
   );
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; */
+  -webkit-text-fill-color: transparent;
 }
 
 .hero-btn {
@@ -180,15 +180,15 @@ color: var(--white);
   width: 50%;
   height: 200%;
   /* -------якісніше зображення !!! transparent png / webp------ */
-  background-image: url("/images/ios-new-web.webp");
-  
+  /* background-image: url("/images/ios-banner.webp"); */
+  background-image: url(/images/ios-new-web.webp);
   background-position: bottom right;
   background-size: 75% auto;
   background-repeat: no-repeat;
 
   pointer-events: none;
   z-index: 2;
-  opacity: var(--opacity-standart);
+  opacity: 0.8;
 }
 
 .hero-btn-container {
@@ -341,7 +341,7 @@ color: var(--white);
 }
 
 .hw-castom-bgc {
-  background: linear-gradient(90deg, #A066FF 29%, #E3D2FF 100%);
+  background: linear-gradient(180deg, #A066FF 29%, #E3D2FF 100%);
   border-radius: 24px;
 }
 
