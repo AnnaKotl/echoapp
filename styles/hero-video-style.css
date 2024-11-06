@@ -1,4 +1,12 @@
 /* HERO SECTION */
+/* 
+Video
+        <div class="hero-video-container">
+          <video autoplay loop muted id="hero-video">
+            <source src="video/hero.mp4" type="video/mp4" />
+          </video>
+          <div class="video-shadow"></div>
+        </div> */
 
 /* .hero-section {
     position: relative;
