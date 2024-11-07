@@ -24,13 +24,13 @@
   --light: #f8f9fa;
   --dark: #343a40;
 
---text-standart-font-size: 20px;
---text-standart-font-weight: 500;
---text-standart-line-height: 1;
---title-standart-font-weight: 700;
+  --text-standart-font-size: 20px;
+  --text-standart-font-weight: 500;
+  --text-standart-line-height: 1;
+  --title-standart-font-weight: 700;
 
---margin-bottom: 30px;
---opacity-standart: 0.6;
+  --margin-bottom: 30px;
+  --opacity-standart: 0.6;
 
   --transition-bg: background 300ms cubic-bezier(0.4, 0, 0.2, 1);
   --transition-tr: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -168,12 +168,12 @@
   /* height: 100vh; */
   overflow: hidden;
   z-index: 3;
-  padding-bottom: 270px;
+  padding-bottom: 350px;
 }
 
 .hero-bg-images {
   position: absolute;
-  bottom: -5%;
+  bottom: 0;
   right: 0;
   width: 50%;
   height: 200%;
@@ -237,46 +237,85 @@
 /* PRODUCTS */
 
 .products-section {
-  overflow: hidden;
-  z-index: 1;
   padding-bottom: 100px;
 }
 
 .products-container {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.hw-castom-bgc {
+  background: linear-gradient(180deg, #a066ff 29%, #e3d2ff 100%);
+  border-radius: 50px;
+}
+
+.products-title-container {
+  display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: right;
 }
 
 .products-title {
-  font-weight: var(--title-standart-font-weight);
+  /* font-weight: var(--title-standart-font-weight);
   font-size: 60px;
   text-transform: uppercase;
-  color: var(--white);
+  color: var(--white); */
+
+  font-size: 72px;
+  text-transform: uppercase;
+  font-weight: var(--title-standart-font-weight);
+  background: linear-gradient(
+    330deg,
+    #007bff 0%,
+    #6f42c1 25%,
+    #dc3545 50%,
+    #fd7e14 75%,
+    #ffc107 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .products-subtitle {
   font-weight: var(--text-standart-font-weight);
   font-size: 30px;
-  max-width: 800px;
   margin-bottom: var(--margin-bottom);
   line-height: var(--text-standart-line-height);
   text-align: center;
+  max-width: 500px;
 }
 
-.products-title-container {
-  margin-bottom: var(--margin-bottom);
+/* SWIPER HERO */
+
+.swiper {
+  width: 310px;
+  height: 310px;
 }
 
-.products-title-link {
+.swiper-wrapper {
+  display: flex;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: auto;
+}
+
+/* more products */
+/* .products-title-link {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1px;
   color: var(--accnet-color);
 }
-
 .products-title-icon {
   fill: currentColor;
   width: 70px;
@@ -286,99 +325,11 @@
   transition: opacity 0.3s ease, transform 0.3s ease;
   opacity: var(--opacity-standart);
 }
-
 .products-title-link:hover .products-title-icon,
 .products-title-link:focus .products-title-icon {
   opacity: 0.9;
   transform: rotate(270deg) scale(1.1);
-}
-
-.products-list-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.products-list {
-  /* display: flex;
-  flex-wrap: wrap;
-  gap: 5px;
-  max-width: 800px; */
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  width: 70%;
-  column-gap: 6px;
-  row-gap: 10px;
-}
-
-.products-item {
-  /* display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  flex: 1 1 22%; 
-  min-width: 150px;
-  max-width: 200px;
-  height: 200px;
-  padding: 10px;
-  border-radius: 30px;
-  transition: transform 0.3s ease;
-  cursor: pointer; */
-
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 10px;
-  border-radius: 30px;
-  transition: transform 0.3s ease;
-  cursor: pointer;
-
-  max-width: 150px;
-  height: 200px;
-  width: calc((100% - 10px) / 4);
-}
-
-.products-item:hover {
-  transform: scale(1.1);
-}
-
-.products-item-wrap {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 6px;
-  max-width: 160px;
-  font-weight: var(--text-standart-font-weight);
-  font-size: 15px;
-}
-
-.hw-castom-bgc {
-  background: linear-gradient(180deg, #A066FF 29%, #E3D2FF 100%);
-  border-radius: 24px;
-}
-
-.products-list-container {
-  display: flex;
-  justify-content: center;
-  margin: 0 auto;
-}
-
-.products-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  padding: 0;
-  list-style: none;
-  justify-content: center;
-}
-
-
-
-
-
+} */
 
 /* FOOTER */
 
