@@ -122,9 +122,7 @@
   font-weight: var(--text-standart-font-weight);
   line-height: var(--text-standart-line-height);
 
-  color: var(--white);
-
-  /* background: linear-gradient(
+  background: linear-gradient(
     330deg,
     #f8f9fa 0%,
     #ffc107 25%,
@@ -133,7 +131,7 @@
     #007bff 100%
   );
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; */
+  -webkit-text-fill-color: transparent;
 }
 
 .hero-btn {
@@ -175,13 +173,11 @@
 
 .hero-bg-images {
   position: absolute;
-  bottom: -4%;
+  bottom: -5%;
   right: 0;
   width: 50%;
   height: 200%;
-  /* -------якісніше зображення !!! transparent png / webp------ */
-  /* background-image: url("/images/ios-banner.webp"); */
-  background-image: url(/images/ios-new-web.webp);
+  background-image: url("/images/ios-banner.webp");
   background-position: bottom right;
   background-size: 75% auto;
   background-repeat: no-repeat;
@@ -302,7 +298,6 @@
   justify-content: center;
   align-items: center;
 }
-
 
 .products-list {
   /* display: flex;
