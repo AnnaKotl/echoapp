@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     grabCursor: true,
     loop: true,
     autoplay: {
-      delay: 1000,
+      delay: 800,
       disableOnInteraction: false,
     },
   });
