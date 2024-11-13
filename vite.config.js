@@ -5,12 +5,12 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: './index.html',
-        career: './src/pages/career.html',
-        contact: './src/pages/contact.html',
-        partnership: './src/pages/partnership.html',
-        prices: './src/pages/prices.html',
-        products: './src/pages/products.html',
-        team: './src/pages/team.html',
+        career: './public/pages/career.html',
+        contact: './public/pages/contact.html',
+        partnership: './public/pages/partnership.html',
+        prices: './public/pages/prices.html',
+        products: './public/pages/products.html',
+        team: './public/pages/team.html',
       },
     },
   },
