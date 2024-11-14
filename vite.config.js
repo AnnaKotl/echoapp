@@ -8,8 +8,7 @@ export default defineConfig({
   root: 'src',
   build: {
     rollupOptions: {
-      input: glob.sync('./src/*.html'),
-      // input: glob.sync('./src/index.html'),
+      input: glob.sync('./src/index.html'),
     },
     outDir: '../dist',
     emptyOutDir: true,
