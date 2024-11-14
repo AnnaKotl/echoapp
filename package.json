@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/echoapp-front/",
+    "build": "vite build --base=/echoapp-front/ --emptyOutDir",
     "preview": "vite preview"
   },
   "devDependencies": {
