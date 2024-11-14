@@ -1,0 +1,154 @@
+@import "normalize.css";
+
+@import url('./index-style.css');
+
+:root {
+  --bgc: #0d192f;
+  --accnet-color: #20f3dd;
+  --white: #fff;
+}
+
+:root {
+    --bgc: #0d192f;
+    --accnet-color: #20f3dd;
+  
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #007bff;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
+  
+    --text-standart-font-size: 20px;
+    --text-standart-font-weight: 500;
+    --text-standart-line-height: 1;
+    --title-standart-font-weight: 700;
+  
+    --margin-bottom: 30px;
+    --opacity-standart: 0.6;
+  
+    --transition-bg: background 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-tr: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-cl: color 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  font-family: "Karla", serif;
+  font-style: normal;
+
+  font-weight: 500; 
+  font-size: 18px;
+
+  color: var(--white);
+  background-color: #050b17;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.2;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  line-height: 1.2;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  display: block;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  line-height: 1.2;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  overflow: hidden;
+}
+
+@media (max-width: 767px) {
+  .container {
+      padding: 0 10px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .container {
+      max-width: 750px;
+      padding: 0 20px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .container {
+      max-width: 1200px;
+      padding: 0 30px;
+  }
+}

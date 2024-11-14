@@ -5,14 +5,17 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build --base=/echoapp-front/",
     "preview": "vite preview"
   },
   "devDependencies": {
-    "vite": "^5.4.10"
+    "vite": "^5.4.10",
+    "glob": "^8.1.0"
   },
   "dependencies": {
     "normalize.css": "^8.0.1",
-    "swiper": "^11.1.14"
+    "swiper": "^11.1.14",
+    "vite-plugin-full-reload": "^1.0.5",
+    "vite-plugin-html-inject": "^1.0.1"
   }
 }
