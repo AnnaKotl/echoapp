@@ -152,3 +152,9 @@ button {
       padding: 0 30px;
   }
 }
+
+@media (max-width: 767px) {
+  .prices-list {
+    grid-template-columns: 1fr;
+  }
+}
