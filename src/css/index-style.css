@@ -1,67 +1,67 @@
 @keyframes gradientFlow {
   0% {
     border-image-source: linear-gradient(
-      90deg, 
-      var(--pink), 
-      var(--danger), 
-      var(--red), 
-      var(--orange), 
-      var(--yellow), 
+      90deg,
+      var(--pink),
+      var(--danger),
+      var(--red),
+      var(--orange),
+      var(--yellow),
       var(--light)
     );
   }
   20% {
     border-image-source: linear-gradient(
-      90deg, 
-      var(--danger), 
-      var(--red), 
-      var(--orange), 
-      var(--yellow), 
-      var(--light), 
+      90deg,
+      var(--danger),
+      var(--red),
+      var(--orange),
+      var(--yellow),
+      var(--light),
       var(--pink)
     );
   }
   40% {
     border-image-source: linear-gradient(
-      90deg, 
-      var(--red), 
-      var(--orange), 
-      var(--yellow), 
-      var(--light), 
-      var(--pink), 
+      90deg,
+      var(--red),
+      var(--orange),
+      var(--yellow),
+      var(--light),
+      var(--pink),
       var(--danger)
     );
   }
   60% {
     border-image-source: linear-gradient(
-      90deg, 
-      var(--orange), 
-      var(--yellow), 
-      var(--light), 
-      var(--pink), 
-      var(--danger), 
+      90deg,
+      var(--orange),
+      var(--yellow),
+      var(--light),
+      var(--pink),
+      var(--danger),
       var(--red)
     );
   }
   80% {
     border-image-source: linear-gradient(
-      90deg, 
-      var(--yellow), 
-      var(--light), 
-      var(--pink), 
-      var(--danger), 
-      var(--red), 
+      90deg,
+      var(--yellow),
+      var(--light),
+      var(--pink),
+      var(--danger),
+      var(--red),
       var(--orange)
     );
   }
   100% {
     border-image-source: linear-gradient(
-      90deg, 
-      var(--pink), 
-      var(--danger), 
-      var(--red), 
-      var(--orange), 
-      var(--yellow), 
+      90deg,
+      var(--pink),
+      var(--danger),
+      var(--red),
+      var(--orange),
+      var(--yellow),
       var(--light)
     );
   }
@@ -368,7 +368,6 @@
     transform: rotate(270deg) scale(1.1);
 } */
 
-
 /* PRICES */
 
 .prices-section {
@@ -396,7 +395,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 16px;
-  padding: 0;
+  padding: 0 0 20px 0;
   margin: 0;
 }
 
@@ -406,30 +405,40 @@
   flex-direction: column;
   justify-content: space-between;
   text-align: center;
-  border: 3px solid;
-  border-image-slice: 1;
-  border-image-source: linear-gradient(
-    90deg, 
-    var(--pink), 
-    var(--danger), 
-    var(--red), 
-    var(--orange), 
-    var(--yellow), 
-    var(--light)
-  );
-  box-shadow: 
-    0 4px 6px rgba(0, 0, 0, 0.1), 
+  border-radius: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1),
     inset 0 1px 3px rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
-  animation: gradientFlow 2s infinite linear;
   height: 300px;
-  transition: box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease, border-radius 0.3s ease;
+  position: relative;
+  animation: gradientFlow 3s infinite linear;
+}
+
+@keyframes gradientFlow {
+  0% {
+    box-shadow: 0 0 0 3px rgba(232, 62, 140, 0.8), 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  20% {
+    box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.8), 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  40% {
+    box-shadow: 0 0 0 3px rgba(253, 126, 20, 0.8), 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  60% {
+    box-shadow: 0 0 0 3px rgba(255, 193, 7, 0.8), 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  80% {
+    box-shadow: 0 0 0 3px rgba(248, 249, 250, 0.8), 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  100% {
+    box-shadow: 0 0 0 3px rgba(232, 62, 140, 0.8), 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
 }
 
 .prices-item:hover {
-  box-shadow: 
-    2px 4px 8px rgba(255, 193, 7, 0.3);
+  box-shadow: 2px 4px 8px rgba(255, 193, 7, 0.3);
 }
 
 .prices-item-container {
@@ -449,7 +458,7 @@
   margin-bottom: 10px;
   flex-grow: 1;
   overflow-y: auto;
-  
+
   font-size: 18px;
   font-weight: 200;
 }
@@ -490,13 +499,6 @@
   background: rgba(255, 255, 255, 0.15);
   color: var(--red);
 }
-
-
-
-
-
-
-
 
 /* FOOTER */
 
