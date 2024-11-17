@@ -200,6 +200,8 @@
 }
 
 .hero-btn {
+  cursor: not-allowed;
+
   font-size: 46px;
   color: var(--accnet-color);
   background: rgba(255, 255, 255, 0.05);
@@ -399,19 +401,18 @@
 
 .prices-bg-images {
   position: absolute;
-  left: 0;
+  left: -10%;
   bottom: 0;
   width: 100%;
   height: 100%;
-  background-image: url('/images/bg-img-3.png');
-  background-position: center;
-  background-size: 100% auto;
+  background-image: url('/images/bg-img-21.png');
+  background-position: bottom left;
+  background-size: 50% auto;
   background-repeat: no-repeat;
   pointer-events: none;
-  opacity: 0.2;
+  opacity: 0.4;
   z-index: -1;
 }
-
 
 .prices-container > h3 {
   font-size: 72px;
@@ -494,6 +495,8 @@
 }
 
 .order-btn {
+  cursor: not-allowed;
+  
   font-size: var(--text-standart-font-size);
   color: var(--yellow);
   background: rgba(255, 255, 255, 0.05);
