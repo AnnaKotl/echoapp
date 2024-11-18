@@ -5,7 +5,7 @@ import FullReload from 'vite-plugin-full-reload';
 
 export default defineConfig({
   // base: '/',
-  base: '/echoapp-front/',
+  base: '/',
   root: 'src',
   build: {
     rollupOptions: {
