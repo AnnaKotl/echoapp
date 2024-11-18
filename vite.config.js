@@ -5,8 +5,7 @@ import FullReload from 'vite-plugin-full-reload';
 
 export default defineConfig({
   // base: '/',
-  // base: '/echoapp-front/',
-  base: '/',
+  base: '/echoapp-front/',
   root: 'src',
   build: {
     rollupOptions: {
@@ -20,11 +19,10 @@ export default defineConfig({
         team: './src/pages/team.html',
       },
     },
-    outDir: 'dist',
+    outDir: '../dist',
     emptyOutDir: true,
   },
   plugins: [
     injectHTML(),
-    FullReload(['src/**/*.html']),
   ],
 });
