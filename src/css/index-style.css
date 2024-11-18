@@ -247,8 +247,6 @@
 }
 
 .hero-scroll-link {
-  cursor: not-allowed;
-
   display: flex;
   flex-direction: column;
   align-items: center;
