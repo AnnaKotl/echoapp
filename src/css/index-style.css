@@ -230,7 +230,7 @@
   position: relative;
   overflow: hidden;
   z-index: 3;
-  padding-bottom: 350px;
+  padding-bottom: 200px;
 }
 
 .hero-bg-images {
@@ -241,12 +241,12 @@
   height: 200%;
   background-image: url('/images/ios-banner.webp');
   background-position: bottom right;
-  background-size: 70% auto;
+  background-size: 80% auto;
   background-repeat: no-repeat;
 
   pointer-events: none;
-  z-index: 2;
-  opacity: 0.6;
+  z-index: -1;
+  opacity: 0.4;
 }
 
 .hero-btn-container {
@@ -302,7 +302,7 @@
 
 /* PRODUCTS */
 .products-section {
-  padding-bottom: 120px;
+  padding-bottom: 200px;
 }
 
 .hw-castom-bgc {
@@ -324,7 +324,7 @@
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin-bottom: 24px;
+  margin-bottom: 30px;
 }
 
 /* \ */
@@ -341,7 +341,7 @@
   justify-content: start;
   width: max-content;
 
-  animation: scrollFirst 100s linear infinite;
+  animation: scrollFirst 50s linear infinite;
 }
 
 @keyframes scrollFirst {
@@ -371,7 +371,7 @@
   justify-content: start;
   width: max-content;
 
-  animation: scrollSecond 100s linear infinite;
+  animation: scrollSecond 50s linear infinite;
 }
 
 @keyframes scrollSecond {
@@ -397,7 +397,7 @@
   height: 150px;
   width: 150px;
   object-fit: contain;
-  opacity: 0.8;
+  opacity: 0.7;
 }
 
 /* .products-subtitle {
@@ -501,7 +501,7 @@
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin-bottom: 24px;
+  margin-bottom: 30px;
 }
 
 .prices-list {
