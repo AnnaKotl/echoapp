@@ -300,6 +300,35 @@
 
 /* ======================================================= */
 
+/* BASED ON */
+
+.based-on-container > h3 {
+  text-align: center;
+  font-size: 72px;
+  text-transform: uppercase;
+  font-weight: bold;
+  background: linear-gradient(
+    330deg,
+    #007bff 0%,
+    #6610f2 25%,
+    #6f42c1 50%,
+    #dc3545 75%,
+    #ffc107 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 30px;
+}
+
+.based-on-section {
+  padding-bottom: 580px;
+  /* norm - 120px */
+}
+
+/* / */
+
+/* ======================================================= */
+
 /* PRODUCTS */
 .products-section {
   padding-bottom: 200px;
@@ -313,14 +342,14 @@
 .products-title {
   font-size: 72px;
   text-transform: uppercase;
-  font-weight: bold;
+  font-weight: var(--title-standart-font-weight);
   background: linear-gradient(
     330deg,
-    #007bff 0%,
-    #6f42c1 25%,
-    #dc3545 50%,
-    #fd7e14 75%,
-    #ffc107 100%
+    #f8f9fa 0%,
+    #20c997 25%,
+    #17a2b8 50%,
+    #007bff 75%,
+    #6f42c1 100%
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -394,8 +423,8 @@
 
 .first-products-item img,
 .second-products-item img {
-  height: 150px;
-  width: 150px;
+  height: 110px;
+  width: 110px;
   object-fit: contain;
   opacity: 0.7;
 }
