@@ -246,7 +246,7 @@ button {
     /* grid-template-columns: 1fr; */
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
     max-width: 300px;
     margin: 0 auto;
   }
@@ -256,7 +256,12 @@ button {
     max-height: 360px;
   }
   .service-name {
-    font-size: 18px;
+    font-size: 26px;
+  }
+  .order-container {
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
   }
   .price {
     font-size: 26px;
