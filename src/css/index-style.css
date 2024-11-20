@@ -346,7 +346,7 @@
 .first-products-list,
 .second-products-list {
   display: flex;
-  gap: 10px;
+  gap: 15px;
   align-items: center;
   justify-content: start;
   width: max-content;
@@ -370,7 +370,7 @@
 
 /* \\ */
 .second-products-list-container {
-  margin-top: 10px;
+  margin-top: 15px;
 }
 .second-products-list {
   animation: scrollSecond 50s linear infinite;
