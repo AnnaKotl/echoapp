@@ -168,6 +168,8 @@
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+
+  color: var(--light);
 }
 
 .hero-text {
