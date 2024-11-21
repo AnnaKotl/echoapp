@@ -151,27 +151,6 @@ button {
 
 /* TITLE */
 
-@keyframes gradientFlow {
-  0% {
-    box-shadow: 0 0 0 3px rgba(232, 62, 140, 0.8), 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  20% {
-    box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.8), 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  40% {
-    box-shadow: 0 0 0 3px rgba(253, 126, 20, 0.8), 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  60% {
-    box-shadow: 0 0 0 3px rgba(255, 193, 7, 0.8), 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  80% {
-    box-shadow: 0 0 0 3px rgba(248, 249, 250, 0.8), 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  100% {
-    box-shadow: 0 0 0 3px rgba(232, 62, 140, 0.8), 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-}
-
 .title {
   font-size: 72px;
   text-transform: uppercase;
