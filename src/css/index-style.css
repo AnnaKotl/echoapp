@@ -783,7 +783,7 @@
 
 /* TEAM */
 
-.team-container > h6 {
+.team-container > h5 {
   text-align: right;
   background: linear-gradient(
     330deg,
@@ -807,7 +807,7 @@
 
 /* CAREER */
 
-.career-container > h6 {
+.career-container > h5 {
   text-align: center;
   background: linear-gradient(
     330deg,
