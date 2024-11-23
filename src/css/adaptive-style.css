@@ -26,6 +26,7 @@
     font-size: 46px;
   }
   .hero-text {
+    text-align: left;
     font-size: 32px;
     margin: 50px auto;
   }
@@ -67,6 +68,9 @@
   .based-on-item:nth-child(5) {
     width: 340px;
     margin: 0 auto;
+  }
+  #video-based {
+    display: none;
   }
 
   /* PRODUCTS */
@@ -147,6 +151,21 @@
 /* TABLET STYLE for element on HOME page */
 
 @media (min-width: 768px) and (max-width: 1024px) {
+  /* HERO */
+  .hero-bg-images,
+  .hero-scroll-link,
+  .hero-scroll-icon-top,
+  .hero-scroll-icon-bottom,
+  .prices-bg-images {
+    display: block;
+  }
+  .hero-btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    max-width: none;
+    gap: 30px;
+  }
   /* BASED ON */
   .based-on-list-container {
     flex-direction: column;

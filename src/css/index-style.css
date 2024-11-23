@@ -235,7 +235,7 @@
   position: relative;
   overflow: hidden;
   z-index: 1;
-  padding-bottom: 120px;
+  padding-bottom: 90px;
 }
 
 .hero-bg-images {
@@ -324,7 +324,7 @@
 }
 
 .based-on-section {
-  padding-bottom: var(--padding-section);
+  padding: 70px 0 var(--padding-section);
   background-color: #010205;
 }
 
@@ -388,6 +388,7 @@
   flex-direction: column;
   margin: 0 auto;
   overflow-y: auto;
+  border-radius: 30px;
 }
 
 .based-on-title {
@@ -633,6 +634,7 @@
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  padding-top: 70px;
 }
 
 .prices-list {
