@@ -573,7 +573,7 @@
   font-size: 36px;
   line-height: var(--text-standart-line-height);
   font-weight: var(--text-standart-font-weight);
-  color: var(--white);
+  color: var(--light);
   transition: var(--transition-tr), var(--transition-op), var(--transition-cl);
 }
 
@@ -586,16 +586,19 @@
   transition: var(--transition-tr), var(--transition-op), var(--transition-cl);
 }
 
-.more-products-container:is(:hover, :focus) .more-products-link {
-  color: var(--accnet-color);
+.more-products-container:hover .more-products-link,
+.more-products-container:focus .more-products-link {
+  color: var(--white);
   opacity: 1;
 }
 
-.more-products-container:is(:hover, :focus) .more-products-icon {
-  color: var(--accnet-color);
-  opacity: 0.9;
-  transform: rotate(270deg) scale(1.3);
+.more-products-container:hover .more-products-icon,
+.more-products-container:focus .more-products-icon {
+  fill: var(--accnet-color);
+  opacity: 1;
+  transform: rotate(270deg) scale(1.2);
 } */
+
 
 /* ======================================================= */
 
