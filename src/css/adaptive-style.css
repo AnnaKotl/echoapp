@@ -142,6 +142,17 @@
     font-size: var(--mob-title-font-size);
     margin-bottom: var(--mob-margin-title);
   }
+
+  /* CONTACTS */
+  .contacts-container > h5 {
+    text-align: center;
+    font-size: var(--mob-title-font-size);
+    margin-bottom: var(--mob-margin-title);
+  }
+  .contacts-section {
+    font-size: var(--mob-title-font-size);
+    margin-bottom: var(--mob-margin-title);
+  }
 }
 
 /* / */

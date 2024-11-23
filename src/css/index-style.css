@@ -805,6 +805,68 @@
 
 /* ======================================================= */
 
+/* CONTACTS */
+
+.contacts-container > h5 {
+  text-align: left;
+  background: linear-gradient(
+    330deg,
+    #fd7e14 0%,
+    #ffc107 30%,
+    #28a745 50%,
+    #20c997 70%,
+    #17a2b8 90%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.contacts-section {
+  padding-bottom: var(--padding-section);
+}
+
+.contacts-social-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 90px;
+}
+
+.social-list {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.social-link {
+  color: var(--light);
+}
+
+.social-link-icon {
+  fill: currentColor;
+  fill: var(--light);
+  color: var(--light);
+  width: 60px;
+  height: 60px;
+}
+
+.contacts-content {
+  margin-left: auto;
+}
+
+.contacts-text {
+  max-width: 500px;
+  font-weight: var(--text-standart-font-weight);
+  font-size: 30px;
+  text-align: right;
+}
+
+/* / */
+
+/* ======================================================= */
+
 /* FOOTER */
 
 .footer-text {
