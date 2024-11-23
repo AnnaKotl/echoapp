@@ -47,7 +47,7 @@
   }
 
   /* BASED ON */
-  .based-on-container > h3 {
+  .based-on-container > h2 {
     font-size: 40px;
     margin-bottom: var(--mob-margin-title);
   }
