@@ -215,11 +215,11 @@ button {
 }
 
 #scroll-button.visible:hover .scroll-icon {
-  opacity: 0.8;
+  opacity: 1;
   transform: scale(1.2);
 
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 #scroll-button.visible:hover {
