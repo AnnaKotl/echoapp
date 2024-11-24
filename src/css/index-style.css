@@ -598,7 +598,6 @@
   transform: rotate(270deg) scale(1.2);
 } */
 
-
 /* ======================================================= */
 
 /* PRICES */
@@ -826,33 +825,57 @@
 
 .contacts-social-container {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
   gap: 90px;
 }
 
 .social-list {
   display: flex;
-  align-items: center;
   justify-content: left;
   flex-direction: column;
-  gap: 10px;
+  gap: 36px;
+}
+
+.social-items {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .social-link {
-  color: var(--light);
+  color: var(--accnet-color);
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 30px;
+  font-size: 30px;
+  text-align: left;
+  justify-content: flex-start;
+  margin-left: 0;
+  transition: var(--transition-cl);
 }
 
 .social-link-icon {
-  fill: currentColor;
   fill: var(--light);
-  color: var(--light);
   width: 60px;
   height: 60px;
+  margin: 0;
+  display: block;
+  transition: fill 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-link:hover {
+  color: var(--blue);
+}
+
+.social-link:hover .social-link-icon {
+  fill: var(--blue);
 }
 
 .contacts-content {
   margin-left: auto;
+  text-align: right;
 }
 
 .contacts-text {
@@ -862,6 +885,18 @@
   text-align: right;
 }
 
+.address-list {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 30px;
+  gap: 30px;
+}
+
+.address-flex-container {
+  display: flex;
+  flex-direction: column-reverse;
+}
 /* / */
 
 /* ======================================================= */
