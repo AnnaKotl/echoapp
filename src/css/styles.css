@@ -99,7 +99,8 @@ body {
   font-size: 18px;
 
   color: var(--white);
-  background-color: #050b17;
+  /* background-color: #050b17; */
+  background-color: #010205;
 }
 
 h1,
