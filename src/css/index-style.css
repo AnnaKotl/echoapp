@@ -711,6 +711,7 @@
 
   font-size: 18px;
   font-weight: 200;
+  line-height: var(--text-standart-line-height);
 }
 
 .order-container {
@@ -790,6 +791,16 @@
 
 .team-section {
   padding-bottom: var(--padding-section);
+}
+
+
+.team-text {
+font-size: var(--text-standart-font-size);
+font-weight: var(--text-standart-font-weight);
+line-height: var(--text-standart-line-height);
+text-align: right;
+max-width: 700px;
+margin-left: auto;
 }
 
 /* / */
@@ -923,6 +934,8 @@
 .contacts-text {
   max-width: 500px;
   font-weight: var(--text-standart-font-weight);
+  font-weight: var(--text-standart-font-weight);
+  line-height: var(--text-standart-line-height);
   font-size: 30px;
   text-align: right;
   margin-left: auto;
@@ -931,7 +944,7 @@
 .contact-btn {
   max-width: 300px;
   margin-left: auto;
-  margin-top: 30px;
+  margin-top: 60px;
   font-size: 30px;
 }
 
