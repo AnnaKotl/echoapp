@@ -1,0 +1,26 @@
+.team-container > h5 {
+  text-align: right;
+  background: linear-gradient(
+    330deg,
+    #6c757d 0%,
+    #ffc107 20%,
+    #20c997 40%,
+    #17a2b8 70%,
+    #6f42c1 90%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.team-section {
+  padding-bottom: var(--padding-section);
+}
+
+.team-text {
+  font-size: var(--text-standart-font-size);
+  font-weight: var(--text-standart-font-weight);
+  line-height: var(--text-standart-line-height);
+  text-align: right;
+  max-width: 700px;
+  margin-left: auto;
+}

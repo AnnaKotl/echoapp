@@ -1,0 +1,124 @@
+.prices-section {
+  padding-bottom: var(--padding-section);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.prices-bg-images {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 70%;
+  height: 70%;
+  background-image: url('/images/bg-img-21.png');
+  background-position: bottom left;
+  background-size: contain;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  opacity: 0.4;
+  z-index: -1;
+}
+
+.prices-container > h4 {
+  background: linear-gradient(
+    330deg,
+    #007bff 0%,
+    #6610f2 25%,
+    #6f42c1 50%,
+    #dc3545 75%,
+    #ffc107 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding-top: 70px;
+}
+
+.prices-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
+  padding: 0 0 20px 0;
+  margin: 0;
+}
+
+.prices-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  border-radius: 30px;
+  padding: 20px;
+  height: 300px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1),
+    inset 0 1px 3px rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  transition: var(--transition-tr),
+    box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-radius 300ms cubic-bezier(0.4, 0, 0.2, 1), var(--transition-cl);
+  animation: gradientFlow 3s infinite linear;
+}
+
+.prices-item:hover .price {
+  color: var(--red);
+}
+
+.prices-item:is(:hover, :focus) {
+  transform: scale(1.01);
+}
+
+.prices-item-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.service-name {
+  font-weight: var(--title-standart-font-weight);
+  font-size: 32px;
+  color: var(--red);
+  margin: 0 auto 10px;
+}
+
+.about-service {
+  margin-bottom: 10px;
+  flex-grow: 1;
+
+  font-size: 18px;
+  font-weight: 200;
+  line-height: var(--text-standart-line-height);
+}
+
+.order-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.price {
+  font-size: 32px;
+  font-weight: bold;
+  color: var(--yellow);
+}
+
+.order-btn {
+  font-size: var(--text-standart-font-size);
+  color: var(--yellow);
+  background: transparent;
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 30px;
+  padding: 12px 24px;
+  width: 110px;
+  max-height: 100%;
+  animation: subtlePulse 2s infinite, subtleTextPulse 1.5s ease-in-out infinite;
+  transition: var(--transition-bg), var(--transition-cl);
+}
+
+.order-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: var(--red);
+}

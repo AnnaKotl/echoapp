@@ -1,0 +1,17 @@
+.career-container > h5 {
+  text-align: center;
+  background: linear-gradient(
+    330deg,
+    #007bff 0%,
+    #17a2b8 20%,
+    #20c997 40%,
+    #ffc107 70%,
+    #fd7e14 90%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.career-section {
+  padding-bottom: var(--padding-section);
+}

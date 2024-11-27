@@ -1,0 +1,30 @@
+.home-nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+  }
+  
+  .nav-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .nav-link {
+    color: var(--white);
+    font-size: var(--text-standart-font-size);
+    padding: 20px;
+    position: relative;
+    border-radius: 30px;
+    transition: var(--transition-cl);
+  }
+  
+  .nav-link.active {
+    color: var(--accnet-color);
+  }
+  
+  .nav-link:not(.active):is(:hover, :focus) {
+    color: var(--blue);
+  }
