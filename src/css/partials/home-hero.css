@@ -12,10 +12,10 @@
     background: linear-gradient(
       330deg,
       #f8f9fa 0%,
-      #ffc107 25%,
+      #ffc107 30%,
       #e83e8c 50%,
-      #007bff 75%,
-      #20f3dd 100%
+      #007bff 70%,
+      #20f3dd 90%
     );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -33,10 +33,10 @@
     background: linear-gradient(
       330deg,
       #f8f9fa 0%,
-      #ffc107 10%,
-      #fd7e14 20%,
-      #e83e8c 60%,
-      #007bff 85%
+      #ffc107 20%,
+      #fd7e14 40%,
+      #e83e8c 70%,
+      #007bff 90%
     );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

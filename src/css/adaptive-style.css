@@ -250,7 +250,8 @@
   }
   .contact-btn {
     margin: 60px 0;
-    max-width: 220px;
+    max-width: 300px;
+    font-size: 30px;
   }
   .adress-container {
     margin: 0;
