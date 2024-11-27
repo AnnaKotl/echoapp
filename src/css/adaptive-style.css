@@ -153,14 +153,16 @@
   }
   .contacts-bg-img {
     left: 0;
-    bottom: 0;
+    bottom: 10%;
   }
   .contacts-social-container {
     flex-direction: column;
-    gap: 30px;
+    gap: 60px;
   }
   .social-list {
     gap: 20px;
+  }
+  .social-link {
     font-size: 26px;
   }
   .contacts-content {
@@ -173,8 +175,9 @@
     font-size: 26px;
   }
   .contact-btn {
-    margin: 30px 0;
+    margin: 50px 0 30px;
     max-width: 220px;
+    font-size: 30px;
   }
   .adress-container {
     margin: 0;
@@ -187,6 +190,7 @@
   }
   .address-flex-container {
     align-items: center;
+    font-size: 26px;
   }
   /* / */
 }
@@ -245,7 +249,7 @@
     text-align: left;
   }
   .contact-btn {
-    margin: 30px 0;
+    margin: 60px 0;
     max-width: 220px;
   }
   .adress-container {
