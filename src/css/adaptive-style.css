@@ -31,9 +31,9 @@
     margin: 50px auto;
   }
   .hero-btn {
-    font-size: 36px;
     margin: 0 auto;
-    padding: 10px 18px;
+    max-width: 220px;
+    font-size: 30px;
   }
   .hero-btn-container {
     width: 300px;
@@ -176,7 +176,7 @@
   }
   .contact-btn {
     margin: 50px 0 30px;
-    max-width: 220px;
+    max-width: 200px;
     font-size: 30px;
   }
   .adress-container {
