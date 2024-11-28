@@ -14,11 +14,9 @@
     text-align: right;
     background: linear-gradient(
       330deg,
-      #fd7e14 0%,
-      #ffc107 20%,
-      #007bff 40%,
-      #6f42c1 60%,
-      #6610f2 80%
+      #fd7e14 8%,
+      #ffc107 15%,
+      #007bff 55%
     );
   }
   

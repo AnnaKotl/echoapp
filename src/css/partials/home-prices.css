@@ -23,11 +23,9 @@
 .prices-container > h4 {
   background: linear-gradient(
     330deg,
-    #007bff 0%,
-    #6610f2 25%,
-    #6f42c1 50%,
-    #dc3545 75%,
-    #ffc107 100%
+    #dc3545 40%,
+    #ffc107 60%,
+    #fd7e14 80%
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

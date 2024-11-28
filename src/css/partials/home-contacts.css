@@ -2,11 +2,10 @@
   text-align: left;
   background: linear-gradient(
     330deg,
-    #fd7e14 0%,
-    #ffc107 30%,
-    #28a745 50%,
-    #20c997 70%,
-    #17a2b8 90%
+    #17a2b8 30%,
+    #20f3dd 50%,
+    #20c997 90%,
+    #28a745 99%
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
