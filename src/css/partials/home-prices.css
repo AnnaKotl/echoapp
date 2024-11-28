@@ -8,9 +8,9 @@
 .prices-bg-images {
   position: absolute;
   left: 0;
-  bottom: 0;
-  width: 70%;
-  height: 70%;
+  bottom: 5%;
+  width: 80%;
+  height: 80%;
   background-image: url('/images/bg-img-21.png');
   background-position: bottom left;
   background-size: contain;
@@ -29,7 +29,6 @@
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  padding-top: 70px;
 }
 
 .prices-list {

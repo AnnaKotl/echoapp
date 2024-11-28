@@ -84,7 +84,7 @@
   font-size: 36px;
   font-weight: var(--text-standart-font-weight);
   opacity: 1;
-  transition: all 100ms ease;
+  transition: all 300ms ease;
 }
 
 .based-on-info {
@@ -96,7 +96,7 @@
 }
 
 .based-on-item:nth-child(1):hover {
-  border-color: var(--accnet-color);
+  border-color: var(--accent-color);
   background-color: rgba(32, 243, 221, 0.7);
 }
 

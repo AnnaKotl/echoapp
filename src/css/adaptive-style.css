@@ -121,7 +121,7 @@
   }
 
   /* PARTNERSHIP */
-  .partner-container > h5 {
+  .partner-title {
     text-align: center;
     font-size: var(--mob-title-font-size);
     margin-bottom: var(--mob-margin-title);

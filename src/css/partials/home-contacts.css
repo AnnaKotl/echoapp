@@ -51,7 +51,7 @@
 }
 
 .social-link {
-  color: var(--accnet-color);
+  color: var(--accent-color);
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
@@ -84,7 +84,7 @@
 }
 
 .social-link:hover .social-link-icon {
-  fill: var(--accnet-color);
+  fill: var(--accent-color);
   opacity: 1;
   transform: scale(1.1);
 }
@@ -97,11 +97,10 @@
 }
 
 .contacts-text {
-  max-width: 500px;
-  font-weight: var(--text-standart-font-weight);
-  font-weight: var(--text-standart-font-weight);
-  line-height: var(--text-standart-line-height);
-  font-size: 30px;
+  max-width: 600px;
+  font-weight: 200;
+  line-height: 1;
+  font-size: 40px;
   text-align: right;
   margin-left: auto;
 }
@@ -109,7 +108,7 @@
 .contact-btn {
   max-width: 300px;
   margin-left: auto;
-  margin-top: 60px;
+  margin-top: 30px;
   font-size: 30px;
 }
 

@@ -22,7 +22,7 @@
   }
   
   .nav-link.active {
-    color: var(--accnet-color);
+    color: var(--accent-color);
   }
   
   .nav-link:not(.active):is(:hover, :focus) {
