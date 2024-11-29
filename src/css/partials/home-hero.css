@@ -25,7 +25,7 @@
   
   .hero-text {
     font-size: 50px;
-    max-width: 820px;
+    max-width: 870px;
     margin-bottom: var(--margin-bottom);
     font-weight: var(--text-standart-font-weight);
     line-height: var(--text-standart-line-height);
@@ -33,9 +33,9 @@
     background: linear-gradient(
       330deg,
       #f8f9fa 0%,
-      #ffc107 20%,
-      #fd7e14 40%,
-      #e83e8c 70%,
+      #ffc107 10%,
+      #fd7e14 30%,
+      #e83e8c 60%,
       #007bff 90%
     );
     -webkit-background-clip: text;
@@ -45,7 +45,6 @@
   .hero-btn {
     font-size: 50px;
     color: var(--accent-color);
-    /* background: rgba(255, 255, 255, 0.05); */
     background: transparent;
     backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.3);

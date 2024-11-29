@@ -1,7 +1,6 @@
 .products-section {
     padding-bottom: var(--padding-section);
-  
-    background-color: #010205;
+    background-color: var(--bgc);
   }
   
   .hw-castom-bgc {

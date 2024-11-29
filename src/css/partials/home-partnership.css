@@ -57,7 +57,7 @@
   margin: 10px 0 0 auto;
   z-index: 2;
 
-  color: var(--light);
+  color: rgba(248, 249, 250, 0.9);
   backdrop-filter: blur(3px);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1),
     inset 0 1px 3px rgba(255, 255, 255, 0.2);
@@ -87,7 +87,13 @@
   max-width: 1200px;
 
   /* color: var(--red); */
-  background: linear-gradient(330deg, #e83e8c 10%, #dc3545 30%, #fd7e14 80%, #ffc107 90%);
+  background: linear-gradient(
+    330deg,
+    #e83e8c 10%,
+    #dc3545 30%,
+    #fd7e14 80%,
+    #ffc107 90%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -114,9 +120,6 @@
 
   transition: var(--transition-bg);
   animation: gradientFlow 3s infinite linear;
-}
-
-.partner-item:hover {
 }
 
 .partner-item:nth-child(5),
