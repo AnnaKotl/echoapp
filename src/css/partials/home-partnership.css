@@ -58,7 +58,7 @@
 }
 
 .partner-link:is(:hover, :focus) {
-  background-color: rgba(232, 62, 140, 0.7);
+  background-color: rgba(232, 62, 140, 0.8);
   color: var(--white);
   transform: scale(1.03);
 }
@@ -82,7 +82,7 @@
 .partner-list-wrap {
   display: flex;
   justify-content: center;
-  margin-top: 60px;
+  margin-top: 30px;
 }
 
 .partner-item {

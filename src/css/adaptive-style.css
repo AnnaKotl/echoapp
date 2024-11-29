@@ -13,7 +13,8 @@
   .hero-section,
   .based-on-section,
   .products-section,
-  .prices-section {
+  .prices-section,
+  .partner-section {
     padding-bottom: var(--mob-padding-section);
   }
   .hero-content {
@@ -124,7 +125,39 @@
   .partner-title {
     text-align: center;
     font-size: var(--mob-title-font-size);
-    margin-bottom: var(--mob-margin-title);
+    margin-bottom: 10px;
+  }
+  .partner-title-wrap {
+    flex-direction: column;
+  }
+  .partner-text {
+    font-size: var(--text-standart-font-size);
+    max-width: none;
+    text-align: center;
+  }
+  .partner-link {
+    font-size: var(--text-standart-font-size);
+    border-radius: 30px;
+    width: 300px;
+    height: 60px;
+    margin: 20px auto 0;
+  }
+  .partner-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 300px;
+    margin: 0 auto;
+  }
+  /* .tablet-partner-link {
+    display: none;
+  }
+  .mob-partner-link {
+    display: block;
+  } */
+  .partner-item {
+    font-size: var(--text-standart-font-size);
+    height: 100px;
   }
 
   /* TEAM */
@@ -263,6 +296,14 @@
     margin-top: 0;
   }
 }
+
+  /* PARTNERSHIP */
+/* .tablet-partner-link {
+  display: block;
+}
+.mob-partner-link {
+  display: none;
+} */
 
 /* / */
 
