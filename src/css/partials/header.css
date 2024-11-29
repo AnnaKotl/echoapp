@@ -13,18 +13,21 @@
   }
   
   .nav-link {
-    color: var(--white);
+    color: var(--light);
     font-size: var(--text-standart-font-size);
     padding: 20px;
     position: relative;
     border-radius: 30px;
-    transition: var(--transition-cl);
+    transition: var(--transition-cl), var(--transition-op);
+    opacity: 0.8;
   }
   
   .nav-link.active {
     color: var(--accent-color);
+    opacity: 1;
   }
   
   .nav-link:not(.active):is(:hover, :focus) {
     color: var(--blue);
+    opacity: 1;
   }

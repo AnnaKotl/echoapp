@@ -110,7 +110,6 @@
   padding: 12px 24px;
   width: 110px;
   max-height: 100%;
-  animation: subtlePulse 2s infinite, subtleTextPulse 1.5s ease-in-out infinite;
   transition: var(--transition-bg), var(--transition-cl);
 }
 
