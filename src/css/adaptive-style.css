@@ -205,15 +205,11 @@
     align-items: center;
     font-size: 26px;
   }
-  /* / */
 }
-
 /* / */
-
-/* ======================================================= */
+/* _________________ */
 
 /* MOB + TABLET */
-
 @media (max-width: 1024px) {
   /* PARTNERSHIP */
   .partner-title {
@@ -242,13 +238,11 @@
     height: 100px;
   }
 }
-
 /* / */
 
-/* ======================================================= */
+/* _________________ */
 
 /* TABLET STYLE for element on HOME page */
-
 @media (min-width: 768px) and (max-width: 1024px) {
   /* HERO */
   .hero-bg-images,
@@ -317,15 +311,6 @@
     margin-top: 0;
   }
 }
-
-/* PARTNERSHIP */
-/* .tablet-partner-link {
-  display: block;
-}
-.mob-partner-link {
-  display: none;
-} */
-
 /* / */
 
-/* ======================================================= */
+/* _________________ */

@@ -59,21 +59,17 @@
 
   color: rgba(248, 249, 250, 0.9);
   backdrop-filter: blur(3px);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1),
-    inset 0 1px 3px rgba(255, 255, 255, 0.2);
-
   font-size: 30px;
   line-height: var(--text-standart-line-height);
   font-weight: var(--text-standart-font-weight);
   padding: 30px;
 
-  transition: var(--transition-bg), var(--transition-cl), var(--transition-tr);
-  animation: gradientFlow 3s infinite linear;
+  transition: var(--transition-cl);
+  animation: combinedEffect 3s infinite ease-in-out;
 }
 
 .partner-link:is(:hover, :focus) {
   color: rgba(232, 62, 140, 0.9);
-  transform: scale(1.05);
 }
 
 /* LIST */

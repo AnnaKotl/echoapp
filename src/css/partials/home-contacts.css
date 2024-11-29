@@ -119,7 +119,7 @@
   padding: 12px 24px;
   align-items: center;
   justify-content: center;
-  animation: subtlePulse 2s infinite, subtleTextPulse 1.5s ease-in-out infinite;
+  animation: subtlePulse 3s infinite;
   transition: var(--transition-bg), var(--transition-cl);
 }
 .contact-btn:hover {
