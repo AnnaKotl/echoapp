@@ -13,8 +13,7 @@
   .hero-section,
   .based-on-section,
   .products-section,
-  .prices-section,
-  .partner-section {
+  .prices-section {
     padding-bottom: var(--mob-padding-section);
   }
   .hero-content {
