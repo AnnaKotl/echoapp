@@ -106,7 +106,6 @@
 }
 
 .contact-btn {
-  /* max-width: 300px; */
   margin-left: auto;
   margin-top: 60px;
 
@@ -122,6 +121,7 @@
   animation: subtlePulse 3s infinite;
   transition: var(--transition-bg), var(--transition-cl);
 }
+
 .contact-btn:hover {
   background: rgba(255, 255, 255, 0.15);
   color: var(--blue);

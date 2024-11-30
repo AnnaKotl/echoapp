@@ -17,4 +17,3 @@ document.addEventListener('DOMContentLoaded', function () {
   cloneListItems('second-products-list', '.second-products-item', 10);
   cloneListItems('running-list', '.running-item', 10);
 });
-

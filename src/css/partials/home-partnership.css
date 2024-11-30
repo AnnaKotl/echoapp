@@ -46,7 +46,16 @@
   z-index: 2;
 }
 
-.partner-link {
+.partner-link-pc {
+  display: block;
+}
+
+.partner-link-address.partner-link-mob {
+  display: none;
+}
+
+.partner-link-address {
+  font-style: normal;
   border-radius: 180px;
   width: 200px;
   height: 200px;
@@ -56,8 +65,8 @@
   text-align: center;
   margin: 10px 0 0 auto;
   z-index: 2;
+  cursor: pointer;
 
-  color: rgba(248, 249, 250, 0.9);
   backdrop-filter: blur(3px);
   font-size: 30px;
   line-height: var(--text-standart-line-height);
@@ -68,7 +77,11 @@
   animation: combinedEffect 3s infinite ease-in-out;
 }
 
-.partner-link:is(:hover, :focus) {
+.partner-link {
+  color: rgba(248, 249, 250, 0.9);
+}
+
+.partner-link-address:is(:hover, :focus) .partner-link {
   color: rgba(232, 62, 140, 0.9);
 }
 
