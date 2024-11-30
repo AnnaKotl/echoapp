@@ -1,10 +1,8 @@
-footer {
-  padding: 0 0 30px;
-}
-
 .footer-container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding: 0 0 10px;
 }
 
 .footer-text {
@@ -14,8 +12,22 @@ footer {
   color: var(--light);
 }
 
+.github-link {
+  color: var(--light);
+  padding: 10px;
+  transition: var(--transition-cl), var(--transition-op);
+}
+
 .github-icon {
   width: 30px;
   height: 30px;
   color: var(--light);
+  fill: currentColor;
+  opacity: 0.8;
+  transition: var(--transition-cl), var(--transition-op);
+}
+
+.github-link:is(:hover, :focus) .github-icon {
+  opacity: 1;
+  color: var(--accent-color);
 }

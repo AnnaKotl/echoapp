@@ -261,6 +261,14 @@
     font-size: var(--text-standart-font-size);
     height: 100px;
   }
+
+  /* FOOTER */
+  .footer-container {
+    flex-direction: column-reverse;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+  }
 }
 /* / */
 
