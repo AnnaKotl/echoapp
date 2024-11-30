@@ -1,0 +1,54 @@
+.running-line-section {
+  position: relative;
+  padding-bottom: 60px;
+  overflow: hidden;
+}
+
+.running-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 1) 12.5%,
+    rgba(0, 0, 0, 1) 87.5%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+.running-list {
+  display: flex;
+  gap: 60px;
+  justify-content: flex-start;
+  align-items: center;
+  animation: scrollLine 180s linear infinite;
+  will-change: transform;
+  flex-shrink: 0;
+}
+
+@keyframes scrollLine {
+  0% {
+    transform: translateX(0);
+  }
+  99.99% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.running-item {
+  flex-shrink: 0;
+  overflow: hidden;
+  padding: 0;
+}
+
+.running-img {
+  object-fit: contain;
+  width: 150px;
+  opacity: var(--opacity-standart);
+}

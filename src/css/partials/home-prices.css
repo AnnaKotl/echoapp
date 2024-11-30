@@ -44,19 +44,15 @@
   height: 300px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1),
     inset 0 1px 3px rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(3px);
-  -webkit-backdrop-filter: blur(3px);
-  transition: var(--transition-tr), box-shadow var(--standart-tr-cubic),
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  transition: box-shadow var(--standart-tr-cubic),
     border-radius var(--standart-tr-cubic), var(--transition-cl);
   animation: gradientFlow 3s infinite linear;
 }
 
 .prices-item:hover .price {
   color: var(--red);
-}
-
-.prices-item:is(:hover, :focus) {
-  transform: scale(1.01);
 }
 
 .prices-item-container {

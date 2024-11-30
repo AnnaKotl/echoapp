@@ -7,6 +7,7 @@
 @import url('./partials/home-contacts.css');
 @import url('./partials/home-hero.css');
 @import url('./partials/home-partnership.css');
+@import url('./partials/running-line.css');
 @import url('./partials/home-prices.css');
 @import url('./partials/home-products.css');
 @import url('./partials/home-team.css');
@@ -65,43 +66,40 @@
 /* PRICES & PARTNERSHIP gradient border */
 @keyframes gradientFlow {
   0% {
-    box-shadow: 0 0 0 2px rgba(232, 62, 140, 0.8), 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 0 2px rgba(232, 62, 140, 0.6), 0 4px 6px rgba(0, 0, 0, 0.1);
   }
-  20% {
-    box-shadow: 0 0 0 2px rgba(220, 53, 69, 0.8), 0 4px 6px rgba(0, 0, 0, 0.1);
+  30% {
+    box-shadow: 0 0 0 2px rgba(220, 53, 69, 0.6), 0 4px 6px rgba(0, 0, 0, 0.1);
   }
-  40% {
-    box-shadow: 0 0 0 2px rgba(253, 126, 20, 0.8), 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  60% {
-    box-shadow: 0 0 0 2px rgba(255, 193, 7, 0.8), 0 4px 6px rgba(0, 0, 0, 0.1);
+  50% {
+    box-shadow: 0 0 0 2px rgba(253, 126, 20, 0.6), 0 4px 6px rgba(0, 0, 0, 0.1);
   }
   80% {
-    box-shadow: 0 0 0 2px rgba(248, 249, 250, 0.8), 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 0 2px rgba(255, 193, 7, 0.6), 0 4px 6px rgba(0, 0, 0, 0.1);
   }
   100% {
-    box-shadow: 0 0 0 2px rgba(232, 62, 140, 0.8), 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 0 2px rgba(232, 62, 140, 0.6), 0 4px 6px rgba(0, 0, 0, 0.1);
   }
 }
 /* BASED ON gradient border */
 @keyframes gradientFlowBased {
   0% {
-    box-shadow: 0 0 0 2px rgba(32, 243, 221, 0.8), 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 0 2px rgba(32, 243, 221, 0.6), 0 4px 6px rgba(0, 0, 0, 0.1);
   }
   20% {
-    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.8), 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.6), 0 4px 6px rgba(0, 0, 0, 0.1);
   }
   40% {
-    box-shadow: 0 0 0 2px rgba(111, 66, 193, 0.8), 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 0 2px rgba(111, 66, 193, 0.6), 0 4px 6px rgba(0, 0, 0, 0.1);
   }
   60% {
-    box-shadow: 0 0 0 2px rgba(232, 62, 140, 0.8), 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 0 2px rgba(232, 62, 140, 0.6), 0 4px 6px rgba(0, 0, 0, 0.1);
   }
   80% {
-    box-shadow: 0 0 0 2px rgba(220, 53, 69, 0.8), 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 0 2px rgba(220, 53, 69, 0.6), 0 4px 6px rgba(0, 0, 0, 0.1);
   }
   100% {
-    box-shadow: 0 0 0 2px rgba(32, 243, 221, 0.8), 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 0 2px rgba(32, 243, 221, 0.6), 0 4px 6px rgba(0, 0, 0, 0.1);
   }
 }
 /* BUTTON scale */
@@ -119,25 +117,24 @@
 /* PARTNERSHIP link (border gradient + scale) */
 @keyframes combinedEffect {
   0% {
+    box-shadow: 0 0 0 2px rgba(232, 62, 140, 0.6), 0 4px 6px rgba(0, 0, 0, 0.1);
     transform: scale(1);
-    box-shadow: 0 0 0 2px rgba(232, 62, 140, 0.8), 0 4px 6px rgba(0, 0, 0, 0.1);
   }
-  20% {
-    box-shadow: 0 0 0 2px rgba(220, 53, 69, 0.8), 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  40% {
+  30% {
+    box-shadow: 0 0 0 2px rgba(220, 53, 69, 0.6), 0 4px 6px rgba(0, 0, 0, 0.1);
     transform: scale(1.02);
-    box-shadow: 0 0 0 2px rgba(253, 126, 20, 0.8), 0 6px 8px rgba(0, 0, 0, 0.2);
   }
-  60% {
-    box-shadow: 0 0 0 2px rgba(255, 193, 7, 0.8), 0 6px 8px rgba(0, 0, 0, 0.2);
+  50% {
+    box-shadow: 0 0 0 2px rgba(253, 126, 20, 0.6), 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform: scale(1);
   }
   80% {
-    transform: scale(1);
-    box-shadow: 0 0 0 2px rgba(248, 249, 250, 0.8), 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 0 2px rgba(255, 193, 7, 0.6), 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform: scale(1.02);
   }
   100% {
-    box-shadow: 0 0 0 2px rgba(232, 62, 140, 0.8), 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 0 2px rgba(232, 62, 140, 0.6), 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform: scale(1);
   }
 }
 /* / */
