@@ -1,10 +1,21 @@
+footer {
+  padding: 0 0 30px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+}
+
 .footer-text {
-    font-size: 12px;
-    font-weight: 200;
-    text-align: center;
-    padding-top: 200px;
-  }
-  
-  footer {
-    padding-bottom: 50px;
-  }
+  font-size: 12px;
+  font-weight: 200;
+  opacity: 0.8;
+  color: var(--light);
+}
+
+.github-icon {
+  width: 30px;
+  height: 30px;
+  color: var(--light);
+}

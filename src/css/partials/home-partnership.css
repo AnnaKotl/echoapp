@@ -78,6 +78,7 @@
 }
 
 .partner-link {
+  transition: var(--transition-cl);
   color: rgba(248, 249, 250, 0.9);
 }
 
