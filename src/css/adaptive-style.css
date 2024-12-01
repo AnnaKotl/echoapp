@@ -166,10 +166,43 @@
   }
 
   /* TEAM */
-  .team-container > h5 {
+  .team-section {
+    padding-bottom: 270px;
+  }
+  .team-title {
     text-align: center;
     font-size: var(--mob-title-font-size);
-    margin-bottom: var(--mob-margin-title);
+    margin-bottom: 30px;
+  }
+  .team-content {
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+  }
+  .team-description {
+    margin-left: 0;
+  }
+  .team-text {
+    font-size: var(--text-standart-font-size);
+    text-align: center;
+    max-width: none;
+    margin-left: 0;
+  }
+  .team-content {
+    align-items: center;
+    gap: 30px;
+  }
+  .team-bg-img {
+    transform: translate(-50%, 0%);
+    width: 70%;
+    height: 70%;
+    opacity: 0.7;
+  }
+  .team-list {
+    gap: 10px;
+  }
+  .advantage {
+    font-size: 36px;
   }
 
   /* CAREER */
@@ -177,6 +210,9 @@
     text-align: center;
     font-size: var(--mob-title-font-size);
     margin-bottom: var(--mob-margin-title);
+  }
+  .career-section {
+    margin-top: 60px;
   }
 
   /* CONTACTS */

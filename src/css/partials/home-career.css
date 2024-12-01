@@ -12,4 +12,5 @@
 
 .career-section {
   padding-bottom: var(--padding-section);
+  z-index: 1;
 }
