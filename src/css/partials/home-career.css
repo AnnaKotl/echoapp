@@ -17,10 +17,10 @@
 .career-bg-img {
   position: absolute;
   right: 0;
-  bottom: 15%;
+  bottom: 20%;
   /* transform: translate(-50%, -40%); */
-  width: 70%;
-  height: 70%;
+  width: 60%;
+  height: 60%;
   background-image: url('/images/logo/icononly-transp.png');
   background-position: bottom right;
   background-size: contain;
@@ -32,7 +32,7 @@
 
 .career-wrap {
   text-align: left;
-  max-width: 800px;
+  max-width: 750px;
   font-weight: 200;
   color: var(--light);
 }
@@ -54,6 +54,16 @@
   font-weight: var(--text-standart-font-weight);
   margin-top: 30px;
   max-width: 350px;
+
+  border-radius: 30px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1),
+    inset 0 1px 3px rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  transition: box-shadow var(--standart-tr-cubic),
+    border-radius var(--standart-tr-cubic), var(--transition-cl);
+  animation: gradientFlowBased 3s infinite linear;
 }
 
 .career-scroll-wrap {
@@ -62,6 +72,7 @@
   align-items: center;
   justify-content: center;
   gap: 1px;
+  height: 260px;
 }
 
 .career-scroll-link {
@@ -72,7 +83,8 @@
   align-items: center;
   justify-content: center;
   gap: 1px;
-  margin-top: -10px;
+  margin-top: auto;
+  animation: subtlePulseIcon 3s infinite;
 }
 
 .career-scroll-icon {
