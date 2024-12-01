@@ -1,24 +1,91 @@
-.team-container > h5 {
+.team-title {
   text-align: right;
-  background: linear-gradient(
-    330deg,
-    #ffc107 30%,
-    #fd7e14 60%,
-    #e83e8c 80%
-  );
+  font-size: 72px;
+  font-weight: var(--title-standart-font-weight);
+  line-height: var(--text-standart-line-height);
+  margin-bottom: var(--margin-bottom);
+  color: var(--light);
+}
+
+.team-title-accent {
+  background: linear-gradient(330deg, #ffc107 40%, #fd7e14 60%, #dc3545 90%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
 }
 
 .team-section {
   padding-bottom: var(--padding-section);
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.team-description {
+  margin-left: auto;
 }
 
 .team-text {
-  font-size: var(--text-standart-font-size);
-  font-weight: var(--text-standart-font-weight);
+  font-size: 30px;
+  font-weight: 200;
   line-height: var(--text-standart-line-height);
   text-align: right;
-  max-width: 700px;
+  max-width: 450px;
   margin-left: auto;
+  margin-top: 60px;
+}
+
+.team-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 60px;
+}
+
+.team-bg-img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 50%;
+  background-image: url('/images/logo/icononly-transp.png');
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  opacity: 0.6;
+  z-index: -1;
+}
+
+/*  TEAM list 👩🏻‍💻👨🏼‍💻  */
+.team-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding: 10px;
+}
+
+.advantage {
+  font-size: 50px;
+  font-weight: var(--title-standart-font-weight);
+  line-height: var(--text-standart-line-height);
+  color: var(--light);
+  opacity: 0.8;
+  transition: all var(--standart-tr-cubic);
+  padding: 6px;
+}
+
+.advantage.active {
+  opacity: 1;
+  transform: scale(1.1);
+  background: linear-gradient(
+    330deg,
+    #dc3545 10%,
+    #fd7e14 50%,
+    #ffc107 80%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
