@@ -1,5 +1,5 @@
 .partner-section {
-  padding-bottom: 30px;
+  padding-bottom: 60px;
   z-index: 1;
 }
 
@@ -41,7 +41,7 @@
   font-size: 30px;
   line-height: var(--text-standart-line-height);
   font-weight: 200;
-  max-width: 600px;
+  max-width: 620px;
   margin: 0;
   z-index: 2;
 }
@@ -111,7 +111,7 @@
 .partner-list-wrap {
   display: flex;
   justify-content: center;
-  margin-top: 30px;
+  margin-top: 60px;
 }
 
 .partner-item {
