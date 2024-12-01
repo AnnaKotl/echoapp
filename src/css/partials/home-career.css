@@ -1,18 +1,33 @@
 .career-container > h5 {
   text-align: center;
-  background: linear-gradient(
-    330deg,
-    #20f3dd 20%,
-    #20c997 30%,
-    #ffc107 50%
-  );
+  background: linear-gradient(330deg, #20f3dd 20%, #ffc107 60%, #f8f9fa 90%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .career-section {
   padding-bottom: var(--padding-section);
+}
+
+.career-container {
   z-index: 1;
+  position: relative;
+}
+
+.career-bg-img {
+  position: absolute;
+  right: 0;
+  bottom: 15%;
+  /* transform: translate(-50%, -40%); */
+  width: 70%;
+  height: 70%;
+  background-image: url('/images/logo/icononly-transp.png');
+  background-position: bottom right;
+  background-size: contain;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  opacity: 0.7;
+  z-index: -1;
 }
 
 .career-wrap {
@@ -29,8 +44,7 @@
 
 .career-contacts-wrap {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: start;
   gap: 30px;
 }
 
@@ -38,5 +52,52 @@
   line-height: var(--text-standart-line-height);
   font-size: 20px;
   font-weight: var(--text-standart-font-weight);
-  padding: 30px 0;
+  margin-top: 30px;
+  max-width: 350px;
+}
+
+.career-scroll-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1px;
+}
+
+.career-scroll-link {
+  color: var(--accent-color);
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1px;
+  margin-top: -10px;
+}
+
+.career-scroll-icon {
+  opacity: 0.8;
+  margin-top: -82px;
+}
+
+.career-scroll-icon,
+.career-scroll-icon-top {
+  fill: currentColor;
+  transition: var(--transition-tr), var(--transition-op);
+}
+
+.career-scroll-icon-top {
+  opacity: 0.2;
+}
+
+.career-scroll-link:hover .career-scroll-icon,
+.career-scroll-link:focus .career-scroll-icon {
+  opacity: 1;
+  transform: scale(1.3);
+}
+
+.career-scroll-link:hover .career-scroll-icon-top,
+.career-scroll-link:focus .career-scroll-icon-top {
+  opacity: var(--opacity-standart);
+  transform: scale(1.1);
 }

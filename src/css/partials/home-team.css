@@ -15,7 +15,7 @@
 }
 
 .team-section {
-  padding-bottom: 60px;
+  padding-bottom: var(--padding-section);
   position: relative;
   z-index: 1;
 }
@@ -29,7 +29,7 @@
   font-weight: 200;
   line-height: var(--text-standart-line-height);
   text-align: right;
-  max-width: 450px;
+  max-width: 400px;
   margin-left: auto;
 }
 
@@ -43,10 +43,11 @@
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -40%);
-  width: 50%;
-  height: 50%;
-  background-image: url('/images/logo/icononly-transp.png');
+  transform: translate(-50%, -60%);
+  width: 70%;
+  height: 70%;
+  background-image: url('/images/background/bg-3.png');
+  /* background-image: url('/images/bg-img-11.png'); */
   background-position: center center;
   background-size: contain;
   background-repeat: no-repeat;
