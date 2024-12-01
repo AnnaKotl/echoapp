@@ -15,7 +15,7 @@
 }
 
 .team-section {
-  padding-bottom: var(--padding-section);
+  padding-bottom: 60px;
   position: relative;
   z-index: 1;
 }
@@ -43,7 +43,7 @@
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -40%);
   width: 50%;
   height: 50%;
   background-image: url('/images/logo/icononly-transp.png');

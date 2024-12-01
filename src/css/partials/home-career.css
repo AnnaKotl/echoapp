@@ -2,9 +2,9 @@
   text-align: center;
   background: linear-gradient(
     330deg,
+    #20f3dd 20%,
     #20c997 30%,
-    #28a745 50%,
-    #ffc107 70%
+    #ffc107 50%
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -13,4 +13,30 @@
 .career-section {
   padding-bottom: var(--padding-section);
   z-index: 1;
+}
+
+.career-wrap {
+  text-align: left;
+  max-width: 800px;
+  font-weight: 200;
+  color: var(--light);
+}
+
+.career-text {
+  line-height: var(--text-standart-line-height);
+  font-size: 30px;
+}
+
+.career-contacts-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.text-career {
+  line-height: var(--text-standart-line-height);
+  font-size: 20px;
+  font-weight: var(--text-standart-font-weight);
+  padding: 30px 0;
 }
