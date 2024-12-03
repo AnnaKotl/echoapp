@@ -20,7 +20,7 @@
 }
 
 .prices-container > h4 {
-  background: linear-gradient(330deg, #dc3545 40%, #ffc107 60%, #fd7e14 80%);
+  background: linear-gradient(330deg, #dc3545 75%, #ffc107 95%, #fd7e14 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
