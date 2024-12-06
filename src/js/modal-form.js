@@ -3,7 +3,7 @@ import { sendRequest } from '/js/api/api';
 import showToast from '/js/toastify';
 
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('DOM fully loaded');
+    console.log('DOM fully loaded');  // LOG ----------------------------- > DELETE after DEV
 
     const modalForm = document.getElementById('modalForm');
     const openModalBtns = document.querySelectorAll('#openModal');
@@ -59,11 +59,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const form = document.getElementById('requestForm');
         if (form) {
             form.addEventListener('submit', async (e) => {
-                console.log('Submit event triggered');
+                console.log('Submit event triggered');  // LOG ----------------------------- > DELETE after DEV
                 e.preventDefault();
                 const formData = new FormData(form);
                 const formObj = Object.fromEntries(formData);
-                console.log('Form data:', formObj);
+                console.log('Form data:', formObj);  // LOG ----------------------------- > DELETE after DEV
 
                 try {
                     await validationSchema.validate(formObj, { abortEarly: false });

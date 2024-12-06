@@ -19,7 +19,7 @@ export async function fetchIcons() {
 // 🖼️ Modal request to backend
 export const sendRequest = async (data) => {
   try {
-    console.log('Sending data:', data);
+    console.log('Sending data:', data);  // LOG ----------------------------- > DELETE after DEV
     const response = await fetch(`${API_URL}/submit-request`, {
       method: 'POST',
       headers: {

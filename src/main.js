@@ -11,12 +11,12 @@ import showToast from './js/toastify';
 import './js/modal-form';
 
 document.addEventListener('DOMContentLoaded', () => {
-  console.log('DOM fully loaded');
+  console.log('DOM fully loaded');  // LOG ----------------------------- > DELETE after DEV
   const form = document.getElementById('requestForm');
 
   if (form) {
     form.addEventListener('submit', async (e) => {
-      console.log('Submit event triggered');
+      console.log('Submit event triggered');  // LOG ----------------------------- > DELETE after DEV
       e.preventDefault();
       const formData = new FormData(form);
       const formObj = Object.fromEntries(formData);
@@ -34,9 +34,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 // 🖼️ /
-
-
-
 
 // TEST 1
 // import { fetchIcons, uploadImage } from '/js/api/api';
