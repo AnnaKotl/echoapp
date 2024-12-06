@@ -1,5 +1,6 @@
 import API_URL from '/js/config';
 
+// 💎 Get Icons from backend
 export async function fetchIcons() {
   try {
     const response = await fetch(`${API_URL}/icons`);
@@ -13,7 +14,32 @@ export async function fetchIcons() {
     return [];
   }
 }
+// 💎 /
 
+// 🖼️ Modal request to backend
+export const sendRequest = async (data) => {
+  try {
+    console.log('Sending data:', data);
+    const response = await fetch(`${API_URL}/submit-request`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    });
+
+    if (!response.ok) {
+      throw new Error('Failed to submit the form');
+    }
+
+    return await response.json();
+  } catch (error) {
+    throw new Error(error.message);
+  }
+};
+// 🖼️ /
+
+// 🩻 Import IMG from backend
 // export async function uploadImage(imageFile) {
 //   const formData = new FormData();
 //   formData.append('image', imageFile);
@@ -32,3 +58,4 @@ export async function fetchIcons() {
 //     return null;
 //   }
 // }
+// 🩻 /

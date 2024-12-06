@@ -2,6 +2,41 @@ import '/js/home-page';
 import '/js/config';
 import '/js/api/api';
 import './js/scroll-to-top';
+import './js/modal-form';
+
+// 🖼️ Modal open
+import validationSchema from './js/validate-form';
+import { sendRequest } from './js/api/api';
+import showToast from './js/toastify';
+import './js/modal-form';
+
+document.addEventListener('DOMContentLoaded', () => {
+  console.log('DOM fully loaded');
+  const form = document.getElementById('requestForm');
+
+  if (form) {
+    form.addEventListener('submit', async (e) => {
+      console.log('Submit event triggered');
+      e.preventDefault();
+      const formData = new FormData(form);
+      const formObj = Object.fromEntries(formData);
+
+      try {
+        await validationSchema.validate(formObj, { abortEarly: false });
+        const response = await sendRequest(formObj);
+        console.log('Form submitted successfully:', response);
+        showToast('Form submitted successfully!', true);
+      } catch (error) {
+        console.error('Error submitting form:', error);
+        showToast(error.message, false);
+      }
+    });
+  }
+});
+// 🖼️ /
+
+
+
 
 // TEST 1
 // import { fetchIcons, uploadImage } from '/js/api/api';
