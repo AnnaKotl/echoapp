@@ -2,7 +2,6 @@ const corsOptions = {
   origin: (origin, callback) => {
     const allowedOrigins = [
       'http://localhost:5173', // Local frontend
-      'https://echoapp-front.onrender.com', // Deployed frontend on Render
       'https://www.echocode.app', // Production domain
       'https://annakotl.github.io', // GitHub
     ];
@@ -19,8 +18,6 @@ const corsOptions = {
 };
 
 module.exports = corsOptions;
-
-
 
 // origin -> 'https://www.echocode.app'
 // local -> 'http://localhost:5173'
