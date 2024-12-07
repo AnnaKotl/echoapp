@@ -4,6 +4,7 @@ const corsOptions = {
       'http://localhost:5173', // Local frontend
       'https://echoapp-front.onrender.com', // Deployed frontend on Render
       'https://www.echocode.app', // Production domain
+      'https://annakotl.github.io', // GitHub
     ];
 
     if (!origin || allowedOrigins.includes(origin)) {

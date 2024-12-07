@@ -29,6 +29,12 @@ export default defineConfig({
 // /Users/annakotlyar/Desktop/projects/echoapp-front
 // npm run start
 // Ctrl + Shift + R / (Command + Shift + R) - hard reset page
+// git status
+// git add .
+// git commit -m " "
+// git push origin main
+
+
 
 
 
