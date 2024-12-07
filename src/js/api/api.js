@@ -1,4 +1,5 @@
 import API_URL from '/js/config';
+import { renderServices } from '/js/prices';
 
 // 💎 Get Icons from backend
 export async function fetchIcons() {
@@ -39,23 +40,36 @@ export const sendRequest = async (data) => {
 };
 // 🖼️ /
 
+// 💸 GET prices
+export async function fetchServices() {
+  try {
+    const response = await fetch(`${API_URL}/services`);
+    const services = await response.json();
+    renderServices(services);
+  } catch (error) {
+    console.error("Failed to fetch services:", error);
+  }
+}
+// 💸 /
+
+
 // 🩻 Import IMG from backend
-// export async function uploadImage(imageFile) {
-//   const formData = new FormData();
-//   formData.append('image', imageFile);
+export async function uploadImage(imageFile) {
+  const formData = new FormData();
+  formData.append('image', imageFile);
 
-//   const response = await fetch(`${API_URL}/upload`, {
-//     method: 'POST',
-//     body: formData,
-//   });
+  const response = await fetch(`${API_URL}/upload`, {
+    method: 'POST',
+    body: formData,
+  });
 
-//   if (response.ok) {
-//     const data = await response.json();
-//     console.log('Image uploaded successfully:', data.imageUrl);
-//     return data.imageUrl;
-//   } else {
-//     console.error('Image upload failed');
-//     return null;
-//   }
-// }
+  if (response.ok) {
+    const data = await response.json();
+    console.log('Image uploaded successfully:', data.imageUrl);
+    return data.imageUrl;
+  } else {
+    console.error('Image upload failed');
+    return null;
+  }
+}
 // 🩻 /

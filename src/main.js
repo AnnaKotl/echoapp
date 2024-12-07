@@ -1,19 +1,22 @@
 import '/js/home-page';
 import '/js/config';
-import '/js/api/api';
 import './js/scroll-to-top';
-import './js/modal-form';
 
-// 🖼️ Modal open
-import validationSchema from './js/validate-form';
-import { sendRequest } from './js/api/api';
 import showToast from './js/toastify';
+import { sendRequest, fetchServices } from './js/api/api';
+
+// 🖼️ Modal imports
+import validationSchema from './js/validate-form';
 import './js/modal-form';
 
+// 💸 PRICES impors
+import './js/prices';
+
+// init DOM
 document.addEventListener('DOMContentLoaded', () => {
-  console.log('DOM fully loaded');  // LOG ----------------------------- > DELETE after DEV
   const form = document.getElementById('requestForm');
 
+  // 🖼️ Modal open
   if (form) {
     form.addEventListener('submit', async (e) => {
       console.log('Submit event triggered');  // LOG ----------------------------- > DELETE after DEV
@@ -32,8 +35,13 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+  // 🖼️ /
+
+  // 💸 PRICES
+  fetchServices();
+  // 💸 /
 });
-// 🖼️ /
+
 
 // TEST 1
 // import { fetchIcons, uploadImage } from '/js/api/api';
@@ -44,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // init();
 
 // TEST 2
-{/* <div id="icons-container"></div> */}
+{/* <div id="icons-container"></div> */ }
 // import { fetchIcons } from '/js/api/api';
 // async function init() {
 //   const icons = await fetchIcons();
