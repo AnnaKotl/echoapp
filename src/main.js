@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // async function init() {
 //   // GET icons
 //   const icons = await fetchIcons();
-//   console.log('Fetched icons:', icons);
+//   console.log('Fetched icons:', icons);  // LOG ----------------------------- > DELETE after DEV
 // init();
 
 // TEST 2
@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // import { fetchIcons } from '/js/api/api';
 // async function init() {
 //   const icons = await fetchIcons();
-//   console.log('Fetched icons:', icons);
+//   console.log('Fetched icons:', icons);  // LOG ----------------------------- > DELETE after DEV
 //   const iconsContainer = document.getElementById('icons-container');
 //   icons.forEach(icon => {
 //     const imgElement = document.createElement('img');
