@@ -6,10 +6,10 @@
 
 .prices-bg-images {
   position: absolute;
-  right: -10%;
+  right: 0;
   bottom: 0;
-  width: 90%;
-  height: 90%;
+  width: 100%;
+  height: 100%;
   background-image: url('/images/bg-img-21-reverse.png');
   background-position: bottom right;
   background-size: contain;
@@ -28,9 +28,9 @@
 .prices-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 10px;
   padding: 0;
-  margin: 10px 0;
+  margin: 10px auto;
 }
 
 .prices-item {
@@ -40,16 +40,18 @@
   justify-content: space-between;
   text-align: start;
 
-  width: calc(50% - 20px);
-  height: 380px;
-  margin: 0;
+  min-width: 210px;
+  max-width: calc(20% - 10px);
+  height: 560px;
+  margin: 0 auto;
 
+  color: rgba(248, 249, 250, 0.8);
   border-radius: 30px;
-  padding: 30px;
+  padding: 20px 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1),
     inset 0 1px 3px rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
 
   transition: box-shadow var(--standart-tr-cubic),
     border-radius var(--standart-tr-cubic), var(--transition-cl);
@@ -65,9 +67,12 @@
 
 .service-name {
   font-weight: var(--title-standart-font-weight);
-  font-size: 50px;
-  color: var(--red);
+  font-size: 34px;
   text-align: start;
+
+  background: linear-gradient(330deg,#ffc107 30%,  #fd7e14 50%, #dc3545 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .service-description {
@@ -75,7 +80,7 @@
   font-size: 20px;
   font-weight: 500;
   line-height: var(--text-standart-line-height);
-  max-width: 320px;
+  color: rgba(255, 193, 7, 0.8);
 }
 
 .about-service{
@@ -85,29 +90,27 @@
   font-weight: 500;
 }
 
-.about-service span {
-  font-weight: 200;
-}
-
 .order-container {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
   margin: auto 0 0;
+  gap: 10px;
 }
 
 .price {
-  font-size: 30px;
+  font-size: 20px;
   font-weight: 500;
-  color: var(--yellow);
+  color: rgba(255, 193, 7, 0.8);
 }
 
 .order-btn {
   align-items: center;
   text-align: center;
-  font-size: 30px;
+  font-size: 26px;
   font-weight: 500;
-  color: var(--yellow);
+  color: var(--red);
   background: transparent;
   backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -119,5 +122,5 @@
 
 .order-btn:hover {
   background: rgba(255, 255, 255, 0.15);
-  color: var(--red);
+  color: var(--yellow);
 }
