@@ -6,12 +6,12 @@
 
 .prices-bg-images {
   position: absolute;
-  left: -10%;
-  bottom: -5%;
-  width: 80%;
-  height: 80%;
-  background-image: url('/images/bg-img-21.png');
-  background-position: bottom left;
+  right: -10%;
+  bottom: 0;
+  width: 90%;
+  height: 90%;
+  background-image: url('/images/bg-img-21-reverse.png');
+  background-position: bottom right;
   background-size: contain;
   background-repeat: no-repeat;
   pointer-events: none;
