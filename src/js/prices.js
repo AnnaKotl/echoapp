@@ -4,12 +4,19 @@ export function renderServices(services) {
   const container = document.querySelector('.prices-list');
 
   if (!container) return;
+
   const baseFeatures = ['UI/UX Design', 'Develop', 'QA', 'Source code', 'Custom Project Management'];
+
+  let accumulatedFeatures = [...baseFeatures];
+
   const servicesHTML = services.map(service => {
     const featuresHTML = service.features.map(feature => {
-      const isNotBaseFeature = !baseFeatures.some(base => base.trim() === feature.trim());
-      return `<p class="about-features" style="color: ${isNotBaseFeature ? 'var(--red)' : 'inherit'};">${feature}</p>`;
+      const isNewFeature = !accumulatedFeatures.some(f => f.trim() === feature.trim());
+
+      return `<p class="about-features" style="color: ${isNewFeature ? 'var(--red)' : 'inherit'};">${feature}</p>`;
     }).join('');
+
+    accumulatedFeatures = [...new Set([...accumulatedFeatures, ...service.features.map(f => f.trim())])];
 
     const descriptionHTML = service.description && service.description.length > 0
       ? service.description.map(desc => `<p>${desc}</p>`).join('')
