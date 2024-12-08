@@ -42,6 +42,11 @@ export default defineConfig({
 // cd frontend
 // npm run build
 
+// or this build
+// cd frontend
+// npm install
+// npm run build
+
 
 
 
