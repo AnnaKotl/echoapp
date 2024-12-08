@@ -24,9 +24,9 @@ export default defineConfig({
   ],
 });
 
-// cd /Users/annakotlyar/Desktop/projects/echoapp-front
+// cd /Users/annakotlyar/Desktop/projects/echoapp
 // cd
-// /Users/annakotlyar/Desktop/projects/echoapp-front
+// /Users/annakotlyar/Desktop/projects/echoapp
 // npm run start
 
 // hard reset
