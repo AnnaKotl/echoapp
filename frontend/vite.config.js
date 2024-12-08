@@ -28,11 +28,20 @@ export default defineConfig({
 // cd
 // /Users/annakotlyar/Desktop/projects/echoapp-front
 // npm run start
+
+// hard reset
 // Ctrl + Shift + R / (Command + Shift + R) - hard reset page
+
+// push
 // git status
 // git add .
 // git commit -m " "
 // git push origin main
+
+// build
+// cd frontend
+// npm run build
+
 
 
 

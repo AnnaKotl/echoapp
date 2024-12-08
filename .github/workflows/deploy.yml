@@ -19,6 +19,7 @@ jobs:
 
       - name: Install dependencies and build 🔧
         run: |
+          cd frontend
           npm install
           npm run build
 
@@ -26,5 +27,5 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@4.1.0
         with:
           branch: gh-pages
-          folder: dist
+          folder: frontend/dist
           token: ${{ secrets.GITHUB_TOKEN }}
