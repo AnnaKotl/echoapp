@@ -22,6 +22,9 @@ export default defineConfig({
   plugins: [
     injectHTML(),
   ],
+  define: {
+    'process.env': process.env
+  },
 });
 
 // cd /Users/annakotlyar/Desktop/projects/echoapp

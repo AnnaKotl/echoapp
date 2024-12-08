@@ -44,6 +44,14 @@ export const sendRequest = async (data) => {
 export async function fetchServices() {
   try {
     const response = await fetch(`${API_URL}/services`);
+    console.log(`${API_URL}/services`);
+    console.log('Response Status:', response.status);
+    console.log('Response Headers:', response.headers.get('Content-Type'));
+    
+    if (!response.ok) {
+      throw new Error('Failed to fetch services');
+    }
+
     const services = await response.json();
     renderServices(services);
   } catch (error) {
@@ -51,7 +59,6 @@ export async function fetchServices() {
   }
 }
 // 💸 /
-
 
 // 🩻 Import IMG from backend
 export async function uploadImage(imageFile) {

@@ -3,7 +3,10 @@
 export function renderServices(services) {
   const container = document.querySelector('.prices-list');
 
-  if (!container) return;
+  if (!container || !services || services.length === 0) {
+    console.error('No services available');
+    return;
+  }
 
   const baseFeatures = ['UI/UX Design', 'Develop', 'QA', 'Source code', 'Custom Project Management'];
 

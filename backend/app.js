@@ -11,7 +11,7 @@ const setupSwagger = require('./config/swagger');
 const cors = require('cors');
 const corsOptions = require('./config/cors');
 const logger = require('morgan');
-
+ 
 dotenv.config();
 
 const app = express();
@@ -35,6 +35,7 @@ app.use((_, res) => {
 
 app.use((err, req, res, next) => {
   const { status = 500, message = 'Server error' } = err;
+  console.error('Server error:', message);
   res.status(status).json({ message });
 });
 

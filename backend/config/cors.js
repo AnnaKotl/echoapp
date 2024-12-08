@@ -2,8 +2,8 @@ const corsOptions = {
   origin: (origin, callback) => {
     const allowedOrigins = [
       'http://localhost:5173', // Local frontend
-      'https://www.echocode.app', // Production domain
       'https://annakotl.github.io', // GitHub
+      'https://echocode.netlify.app', // netlify
     ];
 
     if (!origin || allowedOrigins.includes(origin)) {
@@ -13,12 +13,11 @@ const corsOptions = {
     }
   },
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-  credentials: true,
   optionsSuccessStatus: 200,
 };
 
 module.exports = corsOptions;
 
-// origin -> 'https://www.echocode.app'
+// origin -> 'https://www.echocode.app' - in future
 // local -> 'http://localhost:5173'
-// Render -> 'https://echoapp-backend.onrender.com'
+// netlify -> 'https://echocode.netlify.app/'
