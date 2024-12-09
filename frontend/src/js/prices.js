@@ -3,6 +3,11 @@
 export function renderServices(services) {
   const container = document.querySelector('.prices-list');
 
+  if (!container) {
+    console.error('Container .prices-list not found');
+    return;
+  }
+
   if (!container || !services || services.length === 0) {
     console.error('No services available');
     return;
@@ -11,6 +16,8 @@ export function renderServices(services) {
   const baseFeatures = ['UI/UX Design', 'Develop', 'QA', 'Source code', 'Custom Project Management'];
 
   let accumulatedFeatures = [...baseFeatures];
+
+  console.log('Rendering services:', services);
 
   const servicesHTML = services.map(service => {
     const featuresHTML = service.features.map(feature => {
