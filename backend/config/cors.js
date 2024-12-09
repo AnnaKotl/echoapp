@@ -1,5 +1,6 @@
 const corsOptions = {
   origin: (origin, callback) => {
+    console.log("CORS origin:", origin); 
     const allowedOrigins = [
       'https://echocode.netlify.app',
       'http://localhost:5173',
