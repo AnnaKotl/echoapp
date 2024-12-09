@@ -1,10 +1,10 @@
 const corsOptions = {
   origin: (origin, callback) => {
     const allowedOrigins = [
-      'http://localhost:5173', // Local frontend
-      'https://annakotl.github.io', // GitHub Pages
-      'https://echocode.netlify.app', // Netlify
-      'https://www.echocode.app', // Future production domain
+      'http://localhost:5173',
+      'https://annakotl.github.io',
+      'https://echocode.netlify.app',
+      'https://www.echocode.app',
     ];
 
     if (!origin || allowedOrigins.includes(origin)) {

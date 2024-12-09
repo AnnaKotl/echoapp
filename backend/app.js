@@ -40,10 +40,15 @@ app.use((_, res) => {
 });
 
 app.use((err, req, res, next) => {
+  console.error('Server error:', {
+    message: err.message,
+    stack: err.stack,
+    status: err.status,
+  });
   const { status = 500, message = 'Server error' } = err;
-  console.error('Server error:', message);
   res.status(status).json({ message });
 });
+
 
 const PORT = process.env.PORT || 5001;
 app.listen(PORT, () => {

@@ -1,20 +1,23 @@
 {
   "name": "echoapp",
   "version": "1.0.0",
+  "description": "A multi-page landing website with backend and admin panel for EchoCode.",
   "main": "index.js",
   "scripts": {
     "install:frontend": "cd frontend && npm install",
     "install:backend": "cd backend && npm install",
-    "start:frontend": "cd frontend && npm run dev",
-    "start:backend": "cd backend && npm start",
+    "install:all": "npm run install:frontend && npm run install:backend",
+    "start:frontend": "cd ./frontend && npm run dev",
+    "start:backend": "cd ./backend && npm start",
     "start": "concurrently \"npm run start:backend\" \"npm run start:frontend\"",
-    "build:frontend": "cd frontend && npm run build"
+    "build:frontend": "cd frontend && npm run build",
+    "build:all": "npm run build:frontend"
   },
-  "author": "",
-  "license": "ISC",
-  "description": "",
   "devDependencies": {
     "concurrently": "^9.1.0",
     "vite-plugin-static-copy": "^2.2.0"
-  }
+  },
+  "dependencies": {},
+  "author": "",
+  "license": "ISC"
 }

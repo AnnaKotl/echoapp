@@ -9,7 +9,8 @@ const getAllServices = async (req, res, next) => {
     res.json(services);
   } catch (error) {
     console.error('Error fetching services from DB:', error.message);
-    next(HttpError(500, 'Unable to fetch services'));
+    // next(HttpError(500, 'Unable to fetch services'));
+    next(error); 
   }
 };
 
