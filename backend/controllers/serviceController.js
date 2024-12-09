@@ -5,7 +5,7 @@ const HttpError = require('../helpers/HttpError');
 const getAllServices = async (req, res, next) => {
   try {
     const services = await Service.find();
-    console.log('Services fetched from DB:', services); 
+    // console.log('Services fetched from DB:', services); 
     res.json(services);
   } catch (error) {
     console.error('Error fetching services from DB:', error.message);

@@ -22,7 +22,8 @@ const formatsLogger = app.get('env') === 'development' ? 'dev' : 'short';
 console.log(`Environment: ${process.env.NODE_ENV}`);
 
 app.use(logger(formatsLogger));
-app.use(cors(corsOptions));
+// app.use(cors(corsOptions));
+app.use(cors({ origin: 'https://echocode.netlify.app' }));
 app.use(express.json());
 app.use(errorHandler);
 
