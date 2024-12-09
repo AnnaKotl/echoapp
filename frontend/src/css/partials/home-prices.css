@@ -150,7 +150,8 @@
 
 .order-btn:hover {
   background: rgba(255, 255, 255, 0.15);
-  color: var(--blue);
+  color: var(--yellow);
+  /* color: var(--blue); */
   /* transform: scale(1.1); */
   /* , var(--transition-tr); */
 }
