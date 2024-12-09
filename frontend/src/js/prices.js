@@ -23,7 +23,7 @@ export function renderServices(services) {
     const featuresHTML = service.features.map(feature => {
       const isNewFeature = !accumulatedFeatures.some(f => f.trim() === feature.trim());
 
-      return `<p class="about-features" style="color: ${isNewFeature ? 'var(--red)' : 'inherit'};">${feature}</p>`;
+      return `<p class="about-features" style="color: ${isNewFeature ? 'var(--green)' : 'inherit'};">${feature}</p>`;
     }).join('');
 
     accumulatedFeatures = [...new Set([...accumulatedFeatures, ...service.features.map(f => f.trim())])];
