@@ -1,9 +1,8 @@
 const corsOptions = {
   origin: (origin, callback) => {
     const allowedOrigins = [
-      'http://localhost:5173',
-      'https://annakotl.github.io',
       'https://echocode.netlify.app',
+      'http://localhost:5173',
       'https://www.echocode.app',
     ];
 
@@ -19,6 +18,7 @@ const corsOptions = {
 };
 
 module.exports = corsOptions;
+
 
 // origin -> 'https://www.echocode.app' - in future
 // local -> 'http://localhost:5173'
