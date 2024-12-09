@@ -2,17 +2,19 @@ const corsOptions = {
   origin: (origin, callback) => {
     const allowedOrigins = [
       'http://localhost:5173', // Local frontend
-      'https://annakotl.github.io', // GitHub
-      'https://echocode.netlify.app', // netlify
+      'https://annakotl.github.io', // GitHub Pages
+      'https://echocode.netlify.app', // Netlify
+      'https://www.echocode.app', // Future production domain
     ];
 
     if (!origin || allowedOrigins.includes(origin)) {
-      callback(null, true); // Allow request
+      callback(null, true);
     } else {
-      callback(new Error('Not allowed by CORS')); // Block request
+      callback(new Error('Not allowed by CORS'));
     }
   },
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  allowedHeaders: ['Content-Type', 'Authorization'],
   optionsSuccessStatus: 200,
 };
 

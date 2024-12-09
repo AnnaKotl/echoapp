@@ -44,18 +44,17 @@ export const sendRequest = async (data) => {
 export async function fetchServices() {
   try {
     const response = await fetch(`${API_URL}/services`);
-    console.log(`${API_URL}/services`);
-    console.log('Response Status:', response.status);
-    console.log('Response Headers:', response.headers.get('Content-Type'));
-    
     if (!response.ok) {
-      throw new Error('Failed to fetch services');
+      throw new Error(`Error fetching services: ${response.statusText} (${response.status})`);
     }
-
     const services = await response.json();
     renderServices(services);
   } catch (error) {
-    console.error("Failed to fetch services:", error);
+    console.error('Failed to fetch services:', error);
+    const container = document.querySelector('.prices-list');
+    if (container) {
+      container.innerHTML = `<p>Error loading services: ${error.message}</p>`;
+    }
   }
 }
 // 💸 /
