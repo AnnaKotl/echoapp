@@ -23,7 +23,7 @@ console.log(`Environment: ${process.env.NODE_ENV}`);
 
 app.use(logger(formatsLogger));
 // app.use(cors(corsOptions)); // local 🩼
-app.use(cors({ origin: 'https://echocode.netlify.app' })); - production 🩼
+app.use(cors({ origin: 'https://echocode.netlify.app' }));  // - production 🩼
 app.use(express.json());
 app.use(errorHandler);
 
