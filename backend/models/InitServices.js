@@ -2,14 +2,16 @@ const mongoose = require('mongoose');
 const Service = require('./Service');
 const connectDB = require('../config/db');
 
+// Junior - Basic, Middle - Standard, Senior - Pro, Lead - Premium
+
 const initialServices = [
     {
-        name: 'Junior',
+        name: 'Basic',
         features: ['UI/UX Design', 'Develop', 'QA', 'Source code'],
         price: 'from 1000$',
     },
     {
-        name: 'Middle',
+        name: 'Standard',
         description: ['14 days support'],
         features: [
             'UI/UX Design',
@@ -21,7 +23,7 @@ const initialServices = [
         price: 'from 1400$',
     },
     {
-        name: 'Senior',
+        name: 'Pro',
         description: ['20 days support'],
         features: [
             'UI/UX Design',
@@ -35,7 +37,7 @@ const initialServices = [
         price: 'from 2500$',
     },
     {
-        name: 'Lead',
+        name: 'Premium',
         description: ['30 days support'],
         features: [
             'UI/UX Design',
