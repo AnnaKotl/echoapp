@@ -6,6 +6,7 @@ const contactRoutes = require('./routes/contact');
 const uploadRoutes = require('./routes/upload');
 const iconRoutes = require('./routes/icons');
 const servicesRouter = require('./routes/services');
+const productsIconsRoutes = require('./routes/productsIcons');
 const errorHandler = require('./helpers/errorHandler');
 const setupSwagger = require('./config/swagger');
 const cors = require('cors');
@@ -22,8 +23,8 @@ const formatsLogger = app.get('env') === 'development' ? 'dev' : 'short';
 console.log(`Environment: ${process.env.NODE_ENV}`);
 
 app.use(logger(formatsLogger));
-// app.use(cors(corsOptions)); // local 🩼
-app.use(cors({ origin: 'https://echocode.netlify.app' }));  // - production 🩼
+app.use(cors(corsOptions));                                              // local 🩼
+// app.use(cors({ origin: 'https://echocode.netlify.app' }));           // - production 🩼
 app.use(express.json());
 app.use(errorHandler);
 
@@ -32,6 +33,7 @@ app.use('/contact', contactRoutes);
 app.use('/upload', uploadRoutes);
 app.use('/icons', iconRoutes);
 app.use('/services', servicesRouter);
+app.use('/products-icons', productsIconsRoutes);
 
 // Swagger
 setupSwagger(app);

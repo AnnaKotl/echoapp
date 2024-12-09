@@ -79,3 +79,19 @@ export async function uploadImage(imageFile) {
   }
 }
 // 🩻 /
+
+// 🎆 Import Products Icons from CLOUDINARY
+export async function fetchProductIcons() {
+  try {
+    const response = await fetch(`${API_URL}/products-icons`);
+    if (!response.ok) {
+      throw new Error('Failed to fetch product icons');
+    }
+    const { icons } = await response.json();
+    return icons;
+  } catch (error) {
+    console.error('Error fetching product icons:', error);
+    return [];
+  }
+}
+// 🎆 /

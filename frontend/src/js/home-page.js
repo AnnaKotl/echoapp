@@ -14,9 +14,9 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  cloneListItems('first-products-list', '.first-products-item', 10);
-  cloneListItems('second-products-list', '.second-products-item', 10);
-  cloneListItems('running-list', '.running-item', 10);
+  // cloneListItems('first-products-list', '.first-products-item', 10);   // PRODUCTS
+  // cloneListItems('second-products-list', '.second-products-item', 10);   //PRODUCTS
+  cloneListItems('running-list', '.running-item', 4);   // running-line 
   //  📲 📱 /
 
   // TEAM list slider 👩🏻‍💻👨🏼‍💻

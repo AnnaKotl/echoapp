@@ -1,6 +1,7 @@
 import '/js/home-page';
 import '/js/config';
 import './js/scroll-to-top';
+import './js/products';
 
 import showToast from './js/toastify';
 import { sendRequest, fetchServices } from './js/api/api';

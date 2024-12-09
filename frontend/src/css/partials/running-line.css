@@ -24,7 +24,7 @@
   gap: 60px;
   justify-content: flex-start;
   align-items: center;
-  animation: scrollLine 150s linear infinite;
+  animation: scrollLine 130s linear infinite;
   will-change: transform;
   flex-shrink: 0;
 }
