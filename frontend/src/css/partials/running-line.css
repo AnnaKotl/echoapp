@@ -49,6 +49,6 @@
 
 .running-img {
   object-fit: contain;
-  width: 180px;
+  width: 150px;
   opacity: var(--opacity-standart);
 }
