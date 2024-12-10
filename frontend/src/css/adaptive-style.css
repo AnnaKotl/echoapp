@@ -78,13 +78,13 @@
   }
   .products-wrap {
     gap: 10px;
+    margin-top: 0px;
   }
   .products-row {
     gap: 10px;
   }
-  .products-item {
-    width: 60px;
-    height: 60px;
+  .products-item img:is(:hover, :focus) {
+    transform: scale(1.05);
   }
 
   /* PRICES */

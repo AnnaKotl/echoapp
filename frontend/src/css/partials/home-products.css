@@ -36,15 +36,19 @@
 .products-row {
   display: flex;
   gap: 20px;
-  animation: scroll-row 50s linear infinite;
+  animation: scroll-row 100s linear infinite;
 }
 
+/* 99.99% - 🩼 */
 @keyframes scroll-row {
   0% {
     transform: translateX(0);
   }
+  99.99% {
+    transform: translateX(-199%);
+  }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-200%);
   }
 }
 

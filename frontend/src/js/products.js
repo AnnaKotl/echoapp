@@ -1,3 +1,5 @@
+// NEED to FIX animation with row icons 📌
+
 import { fetchProductIcons } from '/js/api/api';
 
 const renderProductIcons = async () => {
@@ -26,7 +28,7 @@ const renderProductIcons = async () => {
         (rowIndex + 1) * iconsPerRow
       );
 
-      const iconsWithClones = [...rowIcons, ...rowIcons, ...rowIcons, ...rowIcons];
+      const iconsWithClones = [...rowIcons, ...rowIcons, ...rowIcons, ...rowIcons]; // copy ICONS 🌜🌛
 
       iconsWithClones.forEach(icon => {
         const item = document.createElement('div');
@@ -39,7 +41,8 @@ const renderProductIcons = async () => {
 
       productsWrap.appendChild(rowContainer);
 
-      const animationSpeed = 50; // SPEED ANIMATION 🎪
+      const animationSpeed = 70; // SPEED ANIMATION 🐌 -> 🐆
+
       rowContainer.style.animation = `scroll-row ${animationSpeed}s linear infinite`;
       if (rowIndex % 2 === 1) {
         rowContainer.style.animationDirection = 'reverse';
