@@ -38,6 +38,10 @@
   --light: #f8f9fa;
   --dark: #343a40;
 
+  --filter: drop-shadow(0 0 6px rgba(32, 243, 221, 0.6))
+  drop-shadow(0 0 12px rgba(32, 243, 221, 0.5));
+  /* transition: filter var(--standart-tr-cubic); */
+
   --text-standart-font-size: 20px;
   --text-standart-font-weight: 500;
   --text-standart-line-height: 1.1;
@@ -62,6 +66,8 @@
 }
 /* / */
 /* _________________ */
+
+/* :is(:hover, :focus) */
 
 /* KEYFRAMES */
 /* PRICES & PARTNERSHIP gradient border */

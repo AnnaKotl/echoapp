@@ -13,11 +13,12 @@
 .products-wrap {
   position: relative;
   width: 100%;
+  rotate: 3deg;
 }
 
 .products-item {
   flex-shrink: 0;
-  padding: 6px;
+  padding: 10px;
   background-color: rgba(0, 0, 0, 0);
   box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 0px 0px;
   opacity: 1;
@@ -26,10 +27,18 @@
 }
 
 .products-item img {
-  height: 120px;
-  width: 120px;
+  height: 100px;
+  width: 100px;
   object-fit: contain;
-  opacity: 0.8;
+  opacity: var(--opacity-standart);
+  transition: var(--transition-op), var(--transition-tr),
+    filter var(--standart-tr-cubic);
+}
+
+.products-item img:is(:hover, :focus) {
+  opacity: 0.9;
+  transform: scale(1.1);
+  filter: var(--filter);
 }
 
 .products-title {
