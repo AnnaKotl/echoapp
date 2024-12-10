@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-  // clone PRODUCTS & running-line 📲 📱
+  // clone running-line 📲 📱
   function cloneListItems(listId, itemClass, numCopies) {
     const list = document.getElementById(listId);
     const items = list ? list.querySelectorAll(itemClass) : [];
@@ -13,10 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     }
   }
-
-  // cloneListItems('first-products-list', '.first-products-item', 10);   // PRODUCTS
-  // cloneListItems('second-products-list', '.second-products-item', 10);   //PRODUCTS
-  cloneListItems('running-list', '.running-item', 4);   // running-line 
+  cloneListItems('running-list', '.running-item', 10);   // running-line 
   //  📲 📱 /
 
   // TEAM list slider 👩🏻‍💻👨🏼‍💻

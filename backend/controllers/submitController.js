@@ -12,11 +12,11 @@ const submitRequest = async (req, res, next) => {
             }
         }
 
-        const { name, email, message, selectedService, mobileNumber, socialNetwork, country, city } = validData;
+        const { name, email, message, socialNetwork, selectedService, mobileNumber, country, city } = validData;
 
         const phoneValidator = /^(?:\+?380\d{9}|\d{10})$/; // +380XXXXXXXXX / 0XXXXXXXXX
         if (!phoneValidator.test(mobileNumber)) {
-            return res.status(400).json({ message: 'Invalid phone number format. Please use a valid format: +380XXXXXXXXX or 096XXXXXXXX' });
+            return res.status(400).json({ message: 'Invalid phone number format. Please use a valid format: +380XXXXXXXXX or 0XXXXXXXXXX' });
         }
 
         const newRequest = await Request.create(validData);

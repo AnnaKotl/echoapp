@@ -12,7 +12,7 @@ const requestSchema = new mongoose.Schema({
     required: [true, 'Mobile number is required'],
     validate: {
       validator: (v) => /^(?:\+?380\d{9}|\d{10})$/.test(v),
-      message: 'Mobile number must be in a valid format: +380XXXXXXXXX or 096XXXXXXXX'
+      message: 'Mobile number must be in a valid format: +380XXXXXXXXX or 0XXXXXXXXXX'
     }
   },
   email: {
@@ -41,7 +41,11 @@ const requestSchema = new mongoose.Schema({
   selectedService: {
     type: String,
     required: [true, 'Selected service is required'],
-    enum: ['IOS-app-1', 'IOS-app-2', 'IOS-app-3', 'IOS-app-4', 'IOS-app-5', 'IOS-app-6']
+    enum: ['Basic',
+      'Standard',
+      'Pro',
+      'Premium',
+      'Enterprise']
   },
   message: {
     type: String,

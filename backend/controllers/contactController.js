@@ -12,7 +12,7 @@ const createContactRequest = async (req, res, next) => {
       }
     }
 
-    const { name, email, message, selectedService, mobileNumber, socialNetwork, country, city } = validData;
+    const { name, email, socialNetwork, message, selectedService, mobileNumber, country, city } = validData;
 
     const newRequest = await Request.create(validData);
     console.log("New request saved to DB:", newRequest);  // LOG ----------------------------- > DELETE after DEV

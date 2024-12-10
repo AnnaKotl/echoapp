@@ -15,11 +15,11 @@ const sendEmail = async ({ to, subject, name, email, mobileNumber, socialNetwork
       <p><strong>Name:</strong> ${name}</p>
       <p><strong>Email:</strong> ${email}</p>
       <p><strong>Mobile Number:</strong> ${mobileNumber}</p>
+      <p><strong>Social Network:</strong> ${socialNetwork || 'Not Provided'}</p>
       <p><strong>Country:</strong> ${country}</p>
       <p><strong>City:</strong> ${city || 'Not Provided'}</p>
       <p><strong>Selected Service:</strong> ${selectedService}</p>
       <p><strong>Message:</strong> ${message || 'No message provided'}</p>
-      <p><strong>Social Network:</strong> ${socialNetwork || 'Not Provided'}</p>
     `;
 
     const request = await mailjet.post("send", { version: 'v3.1' }).request({
