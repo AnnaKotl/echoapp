@@ -33,11 +33,6 @@ const requestSchema = new mongoose.Schema({
     minlength: 2,
     maxlength: 50
   },
-  city: {
-    type: String,
-    minlength: 2,
-    maxlength: 50
-  },
   selectedService: {
     type: String,
     required: [true, 'Selected service is required'],

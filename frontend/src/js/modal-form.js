@@ -41,10 +41,6 @@ document.addEventListener('DOMContentLoaded', () => {
             <input type="text" id="country" name="country" class="form-input" placeholder="Enter your country" required>
         </div>
         
-        <div class="form-group">
-            <input type="text" id="city" name="city" class="form-input" placeholder="Enter your city">
-        </div>
-        
             <p class="radio-title-label">Select a service:</p>
         <div class="form-group radio-group" id="selectedServiceGroup">
             <label class="radio-label">

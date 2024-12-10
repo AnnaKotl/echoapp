@@ -7,7 +7,6 @@ const requestSchema = new mongoose.Schema({
   selectedService: { type: String, required: true, trim: true },
   socialNetwork: { type: String, trim: true },
   country: { type: String, required: true, trim: true },
-  city: { type: String, trim: true },
   message: { type: String, trim: true, default: '' },
   createdAt: { type: Date, default: Date.now },
 });

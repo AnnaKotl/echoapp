@@ -21,7 +21,6 @@ const formValidationSchema = Joi.object({
     .allow('')
     .optional(),
   country: Joi.string().min(2).max(50).required(),
-  city: Joi.string().min(2).max(50).optional(),
   selectedService: Joi.string()
     .valid(
       'Basic', 'Standard', 'Pro', 'Premium', 'Enterprise'

@@ -41,24 +41,26 @@
 
 .close-modal-btn {
   position: absolute;
-  top: 20px;
-  right: 20px;
-  width: 30px;
-  height: 30px;
-  color: var(--pink);
+  top: 10px;
+  right: 56px;
+  width: 40px;
+  height: 40px;
+  padding: 5px 20px;
+  color: var(--accent-color);
 }
 
 .close-modal-icon {
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   fill: currentColor;
+  color: var(--accent-color);
 }
 
 .form {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  padding-top: 30px;
+  padding-top: 50px;
 }
 
 .form-input,

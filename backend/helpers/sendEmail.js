@@ -1,7 +1,7 @@
 require('dotenv').config();
 const mailjet = require('node-mailjet').apiConnect(process.env.MJ_APIKEY_PUBLIC, process.env.MJ_APIKEY_PRIVATE);
 
-const sendEmail = async ({ to, subject, name, email, mobileNumber, socialNetwork, country, city, selectedService, message }) => {
+const sendEmail = async ({ to, subject, name, email, mobileNumber, socialNetwork, country, selectedService, message }) => {
   try {
     if (!process.env.SENDER_EMAIL || !to) {
       console.error("Environment variables missing:");
@@ -17,7 +17,6 @@ const sendEmail = async ({ to, subject, name, email, mobileNumber, socialNetwork
       <p><strong>Mobile Number:</strong> ${mobileNumber}</p>
       <p><strong>Social Network:</strong> ${socialNetwork || 'Not Provided'}</p>
       <p><strong>Country:</strong> ${country}</p>
-      <p><strong>City:</strong> ${city || 'Not Provided'}</p>
       <p><strong>Selected Service:</strong> ${selectedService}</p>
       <p><strong>Message:</strong> ${message || 'No message provided'}</p>
     `;

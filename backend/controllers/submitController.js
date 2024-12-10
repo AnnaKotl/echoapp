@@ -12,7 +12,7 @@ const submitRequest = async (req, res, next) => {
             }
         }
 
-        const { name, email, message, socialNetwork, selectedService, mobileNumber, country, city } = validData;
+        const { name, email, message, socialNetwork, selectedService, mobileNumber, country } = validData;
 
         const phoneValidator = /^(?:\+?380\d{9}|\d{10})$/; // +380XXXXXXXXX / 0XXXXXXXXX
         if (!phoneValidator.test(mobileNumber)) {
