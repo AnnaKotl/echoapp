@@ -26,7 +26,7 @@ const renderProductIcons = async () => {
         (rowIndex + 1) * iconsPerRow
       );
 
-      const iconsWithClones = [...rowIcons, ...rowIcons];
+      const iconsWithClones = [...rowIcons, ...rowIcons, ...rowIcons, ...rowIcons];
 
       iconsWithClones.forEach(icon => {
         const item = document.createElement('div');
@@ -39,7 +39,7 @@ const renderProductIcons = async () => {
 
       productsWrap.appendChild(rowContainer);
 
-      const animationSpeed = 30; // SPEED ANIMATION 🎪
+      const animationSpeed = 50; // SPEED ANIMATION 🎪
       rowContainer.style.animation = `scroll-row ${animationSpeed}s linear infinite`;
       if (rowIndex % 2 === 1) {
         rowContainer.style.animationDirection = 'reverse';
