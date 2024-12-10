@@ -6,7 +6,7 @@ const renderProductIcons = async () => {
   try {
     const icons = await fetchProductIcons();
     if (!icons.length) {
-      productsWrap.innerHTML = '<p>No icons available</p>';
+      productsWrap.innerHTML = '<p class="error-message">Oops! Unable to load product icons due to a server connection issue...<br/>Please try refreshing the page or try again later 🥲</p>';
       return;
     }
 
@@ -39,7 +39,7 @@ const renderProductIcons = async () => {
 
       productsWrap.appendChild(rowContainer);
 
-      const animationSpeed = 50; // SPEED ANIMATION 🎪
+      const animationSpeed = 30; // SPEED ANIMATION 🎪
       rowContainer.style.animation = `scroll-row ${animationSpeed}s linear infinite`;
       if (rowIndex % 2 === 1) {
         rowContainer.style.animationDirection = 'reverse';
@@ -55,7 +55,7 @@ const renderProductIcons = async () => {
     }
   } catch (error) {
     console.error('Error rendering product icons:', error);
-    productsWrap.innerHTML = `<p>Error loading icons: ${error.message}</p>`;
+    productsWrap.innerHTML = `<p class="error-message">Error loading icons: ${error.message}</p>`;
   }
 };
 

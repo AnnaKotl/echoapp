@@ -76,11 +76,15 @@
     font-size: var(--mob-title-font-size);
     margin-bottom: var(--mob-margin-title);
   }
-
-  .first-products-item img,
-  .second-products-item img {
-    height: 80px;
-    width: 80px;
+  .products-wrap {
+    gap: 10px;
+  }
+  .products-row {
+    gap: 10px;
+  }
+  .products-item {
+    width: 60px;
+    height: 60px;
   }
 
   /* PRICES */

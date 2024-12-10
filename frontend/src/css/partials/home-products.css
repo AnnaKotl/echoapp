@@ -34,7 +34,7 @@
 .products-row {
   display: flex;
   gap: 20px;
-  animation: scroll-row 50s linear infinite;
+  animation: scroll-row 30s linear infinite;
 }
 
 @keyframes scroll-row {
@@ -82,4 +82,14 @@
   opacity: 0.9;
   transform: scale(1.1);
   filter: var(--filter);
+}
+
+.error-message {
+  text-align: center;
+  font-weight: 500;
+  font-size: 30px;
+  margin: 30px auto 0;
+  color: var(--yellow);
+  max-width: 600px;
+  opacity: var(--opacity-standart);
 }
