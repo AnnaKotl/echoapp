@@ -39,11 +39,19 @@ const renderProductIcons = async () => {
 
       productsWrap.appendChild(rowContainer);
 
-      const animationSpeed = 30;
+      const animationSpeed = 50; // SPEED ANIMATION 🎪
       rowContainer.style.animation = `scroll-row ${animationSpeed}s linear infinite`;
       if (rowIndex % 2 === 1) {
         rowContainer.style.animationDirection = 'reverse';
       }
+
+      rowContainer.addEventListener('mouseenter', () => {
+        rowContainer.style.animationPlayState = 'paused';
+      });
+
+      rowContainer.addEventListener('mouseleave', () => {
+        rowContainer.style.animationPlayState = 'running';
+      });
     }
   } catch (error) {
     console.error('Error rendering product icons:', error);

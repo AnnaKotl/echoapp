@@ -34,7 +34,7 @@
 .products-row {
   display: flex;
   gap: 20px;
-  animation: scroll-row 20s linear infinite;
+  animation: scroll-row 50s linear infinite;
 }
 
 @keyframes scroll-row {
