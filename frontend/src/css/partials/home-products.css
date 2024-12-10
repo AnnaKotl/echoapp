@@ -1,52 +1,3 @@
-.products-list {
-  display: flex;
-  position: relative;
-  transition: transform 0.1s linear;
-}
-
-.products-list-container {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-}
-
-.products-wrap {
-  position: relative;
-  width: 100%;
-  rotate: 3deg;
-}
-
-.products-item {
-  flex-shrink: 0;
-  padding: 10px;
-  background-color: rgba(0, 0, 0, 0);
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 0px 0px;
-  opacity: 1;
-  will-change: transform;
-  transform: none;
-}
-
-.products-item img {
-  height: 100px;
-  width: 100px;
-  object-fit: contain;
-  opacity: var(--opacity-standart);
-  transition: var(--transition-op), var(--transition-tr),
-    filter var(--standart-tr-cubic);
-}
-
-.products-item img:is(:hover, :focus) {
-  opacity: 0.9;
-  transform: scale(1.1);
-  filter: var(--filter);
-}
-
-.products-title {
-  margin-top: 0;
-  text-align: right;
-  background: linear-gradient(330deg, #fd7e14 8%, #ffc107 15%, #007bff 55%);
-}
-
 .products-section {
   padding-bottom: var(--padding-section);
   list-style-type: none;
@@ -58,4 +9,77 @@
     rgba(0, 0, 0, 0) 100%
   );
   overflow: hidden;
+}
+
+.products-title {
+  margin-top: 0;
+  text-align: right;
+  background: linear-gradient(330deg, #fd7e14 8%, #ffc107 15%, #007bff 55%);
+}
+
+.products-list-container {
+  position: relative;
+  width: 100%;
+}
+
+.products-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  position: relative;
+  rotate: 3deg;
+}
+
+.products-row {
+  display: flex;
+  gap: 20px;
+  animation: scroll-row 20s linear infinite;
+}
+
+@keyframes scroll-row {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.products-row:nth-child(even) {
+  animation-direction: reverse;
+}
+
+.products-list {
+  display: flex;
+  position: relative;
+  transition: transform 0.1s linear;
+  will-change: transform;
+}
+
+.products-item {
+  flex-shrink: 0;
+  width: 100px;
+  height: 100px;
+
+  background-color: rgba(0, 0, 0, 0);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 0px 0px;
+  opacity: 1;
+  will-change: transform;
+  transform: none;
+}
+
+.products-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: var(--opacity-standart);
+  transition: var(--transition-op), var(--transition-tr),
+    filter var(--standart-tr-cubic);
+}
+
+.products-item img:is(:hover, :focus) {
+  opacity: 0.9;
+  transform: scale(1.1);
+  filter: var(--filter);
 }

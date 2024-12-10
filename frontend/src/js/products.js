@@ -1,84 +1,53 @@
 import { fetchProductIcons } from '/js/api/api';
 
 const renderProductIcons = async () => {
-  const productsListContainer = document.querySelector('.products-wrap');
+  const productsWrap = document.querySelector('.products-wrap');
 
   try {
     const icons = await fetchProductIcons();
-    console.log(`Fetched ${icons.length} icons from the backend.`);
-
     if (!icons.length) {
-      productsListContainer.innerHTML = '<p>No icons available</p>';
+      productsWrap.innerHTML = '<p>No icons available</p>';
       return;
     }
 
+    const rowsCount = 4;
+    const iconsPerRow = Math.ceil(icons.length / rowsCount);
+
+    productsWrap.innerHTML = '';
+
     const shuffledIcons = icons.sort(() => Math.random() - 0.5);
 
-    const rows = 4;
-    const itemsPerRow = Math.ceil(shuffledIcons.length / rows);
+    for (let rowIndex = 0; rowIndex < rowsCount; rowIndex++) {
+      const rowContainer = document.createElement('div');
+      rowContainer.classList.add('products-row');
 
-    productsListContainer.innerHTML = '';
+      const rowIcons = shuffledIcons.slice(
+        rowIndex * iconsPerRow,
+        (rowIndex + 1) * iconsPerRow
+      );
 
-    for (let i = 0; i < rows; i++) {
-      const ul = document.createElement('ul');
-      ul.classList.add('products-list');
-      ul.dataset.row = i;
-      productsListContainer.appendChild(ul);
-    }
+      const iconsWithClones = [...rowIcons, ...rowIcons];
 
-    const lists = productsListContainer.querySelectorAll('.products-list');
-
-    shuffledIcons.forEach((icon, index) => {
-      const rowIndex = index % rows;
-      const li = document.createElement('li');
-      li.classList.add('products-item');
-      li.innerHTML = `
-        <img
-          src="${icon.url}"
-          alt="${icon.name}"
-          width="100"
-          height="100"
-        />
-      `;
-      lists[rowIndex].appendChild(li);
-    });
-
-    lists.forEach(list => {
-      const originalItems = Array.from(list.children);
-      const clonedItems = originalItems.map(item => item.cloneNode(true));
-
-      clonedItems.forEach(item => list.appendChild(item));
-    });
-
-    const startScrolling = () => {
-      const allLists = document.querySelectorAll('.products-list');
-
-      allLists.forEach((list, index) => {
-        const direction = index % 2 === 0 ? 1 : -1;
-        const speed = 0.01;
-        let position = 0;
-        const listWidth = list.scrollWidth;
-
-        const animate = () => {
-          position += speed * direction;
-
-          if (position >= listWidth) {
-            position = 0;
-          } else if (position <= -listWidth) {
-            position = 0;
-          }
-          list.style.transform = `translateX(${position}px)`;
-          requestAnimationFrame(animate);
-        };
-
-        animate();
+      iconsWithClones.forEach(icon => {
+        const item = document.createElement('div');
+        item.classList.add('products-item');
+        item.innerHTML = `
+          <img src="${icon.url}" alt="${icon.name}" />
+        `;
+        rowContainer.appendChild(item);
       });
-    };
 
-    startScrolling();
+      productsWrap.appendChild(rowContainer);
+
+      const animationSpeed = 30;
+      rowContainer.style.animation = `scroll-row ${animationSpeed}s linear infinite`;
+      if (rowIndex % 2 === 1) {
+        rowContainer.style.animationDirection = 'reverse';
+      }
+    }
   } catch (error) {
     console.error('Error rendering product icons:', error);
-    productsListContainer.innerHTML = `<p>Error loading icons: ${error.message}</p>`;
+    productsWrap.innerHTML = `<p>Error loading icons: ${error.message}</p>`;
   }
 };
 
