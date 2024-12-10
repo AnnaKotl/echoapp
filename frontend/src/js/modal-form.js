@@ -44,23 +44,28 @@ document.addEventListener('DOMContentLoaded', () => {
             <p class="radio-title-label">Select a service:</p>
         <div class="form-group radio-group" id="selectedServiceGroup">
             <label class="radio-label">
-            <input type="radio" name="selectedService" value="Basic" required />
+            <input class="radio-input" type="radio" name="selectedService" value="Basic" required />
+            <span class="radio-circle"></span>
             Basic
             </label>
             <label class="radio-label">
-            <input type="radio" name="selectedService" value="Standard" required />
+            <input class="radio-input" type="radio" name="selectedService" value="Standard" required />
+            <span class="radio-circle"></span>
             Standard
             </label>
             <label class="radio-label">
-            <input type="radio" name="selectedService" value="Pro" required />
+            <input class="radio-input" type="radio" name="selectedService" value="Pro" required />
+            <span class="radio-circle"></span>
             Pro
             </label>
             <label class="radio-label">
-            <input type="radio" name="selectedService" value="Premium" required />
+            <input class="radio-input" type="radio" name="selectedService" value="Premium" required />
+            <span class="radio-circle"></span>
             Premium
             </label>
             <label class="radio-label">
-            <input type="radio" name="selectedService" value="Enterprise" required />
+            <input class="radio-input" type="radio" name="selectedService" value="Enterprise" required />
+            <span class="radio-circle"></span>
             Enterprise
             </label>
         </div>

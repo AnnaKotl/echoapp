@@ -23,7 +23,7 @@
   overflow-x: auto;
 
   padding: 30px;
-  max-width: 600px;
+  max-width: 650px;
   width: 100%;
   max-height: 95vh;
   border-radius: 30px;
@@ -32,7 +32,7 @@
   font-weight: var(--text-standart-font-weight);
   line-height: var(--text-standart-line-height);
 
-  border: 3px solid transparent;
+  border: 2px solid transparent;
   animation: gradientFlowBased 3s infinite linear;
 
   background-color: var(--bgc);
@@ -41,12 +41,13 @@
 
 .close-modal-btn {
   position: absolute;
-  top: 10px;
+  top: 6px;
   right: 56px;
   width: 40px;
   height: 40px;
   padding: 5px 20px;
   color: var(--accent-color);
+  transition: var(--transition-cl), var(--transition-tr);
 }
 
 .close-modal-icon {
@@ -54,13 +55,19 @@
   height: 40px;
   fill: currentColor;
   color: var(--accent-color);
+  transition: var(--transition-cl), var(--transition-tr);
+}
+
+.close-modal-btn:is(:hover, :focus) .close-modal-icon {
+  color: var(--blue);
+  transform: scale(1.1);
 }
 
 .form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  padding-top: 50px;
+  gap: 12px;
+  padding-top: 40px;
 }
 
 .form-input,
@@ -97,34 +104,76 @@
   justify-content: center;
   gap: 20px;
   padding-bottom: 10px;
+
+  font-size: var(--text-standart-font-size);
+  font-weight: var(--text-standart-font-weight);
+  line-height: var(--text-standart-line-height);
 }
 
 .radio-title-label {
   padding: 10px 0 0 32px;
+
+  font-size: var(--text-standart-font-size);
+  font-weight: var(--text-standart-font-weight);
+  line-height: var(--text-standart-line-height);
 }
 
 .radio-label {
+  position: relative;
   display: flex;
   align-items: center;
   gap: 6px;
+  cursor: pointer;
 }
 
 .radio-input {
-  accent-color: #007bff;
+  display: none;
 }
 
-.form-submit-btn {
+.radio-circle {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  
+  border: 3px solid transparent;
+  animation: gradientFlowBased 3s infinite linear;
+
+  background-color: var(--light);
+  transition: var(--transition-bg);
+}
+
+.radio-label:hover .radio-circle {
+  background-color: var(--blue);
+}
+
+.radio-input:checked + .radio-circle {
+  background-color: var(--accent-color);
+}
+
+.radio-input:focus + .radio-circle {
+  background-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+}
+
+.form-button {
+  font-size: var(--text-standart-font-size);
+  font-weight: var(--text-standart-font-weight);
+  line-height: var(--text-standart-line-height);
+
   padding: 10px 15px;
-  background-color: #007bff;
+  background-color: transparent;
   color: white;
-  font-size: 1rem;
-  font-weight: 600;
-  border: none;
-  border-radius: 5px;
+  border-radius: 30px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+
+  border: 2px solid transparent;
+  animation: gradientFlowBased 3s infinite linear;
+
+  transition: var(--transition-cl), var(--transition-bg)
 }
 
-.form-submit-btn:hover {
-  background-color: #0056b3;
+.form-button:hover {
+  background-color: var(--accent-color);
+  color: var(--bgc);
 }

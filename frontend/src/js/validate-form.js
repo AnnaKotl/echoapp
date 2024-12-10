@@ -24,11 +24,6 @@ const validationSchema = Yup.object({
         .max(50)
         .required('Country is required'),
 
-    city: Yup.string()
-        .min(2)
-        .max(50)
-        .optional(),
-
     selectedService: Yup.string()
         .oneOf(
             ['Basic', 'Standard', 'Pro', 'Premium', 'Enterprise'],
