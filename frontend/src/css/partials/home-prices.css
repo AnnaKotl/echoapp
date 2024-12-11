@@ -74,7 +74,7 @@
 .prices-item:is(:hover, :focus) {
   backdrop-filter: blur(30px);
   -webkit-backdrop-filter: blur(30px);
-  transform: scale(1.03);
+  transform: scale(1.02);
 }
 
 .prices-item:is(:hover, :focus) .service-description .price {
@@ -148,7 +148,8 @@
   transition: var(--transition-bg), var(--transition-cl);
 }
 
-.order-btn:hover {
+.order-btn:is(:hover, :focus){
+  outline: none;
   background: rgba(255, 255, 255, 0.15);
   color: var(--yellow);
   /* color: var(--blue); */

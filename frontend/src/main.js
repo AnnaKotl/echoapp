@@ -2,8 +2,6 @@ import '/js/home-page';
 import '/js/config';
 import './js/scroll-to-top';
 import './js/products';
-
-import showToast from './js/toastify';
 import { sendRequest, fetchServices } from './js/api/api';
 
 // 🖼️ Modal imports
@@ -13,29 +11,64 @@ import './js/modal-form';
 // 💸 PRICES impors
 import './js/prices';
 
+// TOAST 🍞 
+import { toast } from 'toastify-js';
+import 'toastify-js/src/toastify.css';
+const showToast = (message, isSuccess = true) => {
+  console.log('Inside showToast function', message);
+  console.log('Toast message:', message);
+  toast({
+    text: message,
+    className: isSuccess ? 'toast toast-success' : 'toast toast-error',
+    duration: 3000,
+    close: true,
+    gravity: 'top',
+    position: 'center',
+    stopOnFocus: true,
+  }).showToast();
+};
+export default showToast;
+// 🍞 /
+
 // init DOM
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('requestForm');
 
   // 🖼️ Modal open
-  if (form) {
-    form.addEventListener('submit', async (e) => {
-      console.log('Submit event triggered');  // LOG ----------------------------- > DELETE after DEV
-      e.preventDefault();
-      const formData = new FormData(form);
-      const formObj = Object.fromEntries(formData);
+  document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('requestForm');
 
-      try {
-        await validationSchema.validate(formObj, { abortEarly: false });
-        const response = await sendRequest(formObj);
-        console.log('Form submitted successfully:', response);
-        showToast('Form submitted successfully!', true);
-      } catch (error) {
-        console.error('Error submitting form:', error);
-        showToast(error.message, false);
-      }
-    });
-  }
+    if (form) {
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        const formData = new FormData(form);
+        const formObj = Object.fromEntries(formData);
+
+        const selectedService = document.querySelector('input[name="selectedService"]:checked');
+        if (!selectedService) {
+          showToast("Please select a service.", false);
+          return;
+        }
+
+        try {
+          await validationSchema.validate(formObj, { abortEarly: false });
+          const response = await sendRequest(formObj);
+          showToast('Form submitted successfully!', true);
+        } catch (error) {
+          console.error('Error submitting form:', error);
+
+          if (error.inner) {
+            error.inner.forEach((err) => {
+              showToast(err.message, false);
+            });
+          } else {
+            showToast(error.message, false);
+          }
+        }
+      });
+    }
+  });
   // 🖼️ /
 
   // 💸 PRICES

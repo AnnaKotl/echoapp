@@ -23,7 +23,7 @@
   overflow-x: auto;
 
   padding: 30px;
-  max-width: 650px;
+  max-width: 600px;
   width: 100%;
   max-height: 95vh;
   border-radius: 30px;
@@ -39,41 +39,61 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
+/* CLOSE MODAL BTN ❌ */
 .close-modal-btn {
   position: absolute;
-  top: 6px;
-  right: 56px;
-  width: 40px;
-  height: 40px;
+  top: 10px;
+  right: 50px;
+  width: 30px;
+  height: 30px;
   padding: 5px 20px;
   color: var(--accent-color);
   transition: var(--transition-cl), var(--transition-tr);
 }
-
 .close-modal-icon {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   fill: currentColor;
   color: var(--accent-color);
   transition: var(--transition-cl), var(--transition-tr);
 }
-
 .close-modal-btn:is(:hover, :focus) .close-modal-icon {
   color: var(--blue);
   transform: scale(1.1);
 }
+/*  ❌ / */
+
+/* CONTACT FORM 📝 */
 
 .form {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 20px;
   padding-top: 40px;
+  color: var(--light);
+}
+
+.form-group {
+  position: relative;
+}
+
+.required-icon {
+  position: absolute;
+  left: 26px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+
+  width: 26px;
+  height: 26px;
+  color: var(--accent-color);
+  fill: var(--accent-color);
 }
 
 .form-input,
 .form-textarea {
   width: 100%;
-  padding: 20px 30px;
+  padding: 16px 30px 16px 38px;
 
   font-size: var(--text-standart-font-size);
   font-weight: var(--text-standart-font-weight);
@@ -81,6 +101,7 @@
 
   border-radius: 30px;
   border: 2px solid transparent;
+  background-color: var(--light);
 
   animation: gradientFlowBased 3s infinite linear;
 }
@@ -88,8 +109,11 @@
 .form-input:focus,
 .form-textarea:focus {
   outline: none;
-  border-color: #007bff;
-  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.form-input:hover,
+.form-textarea:hover {
+  outline: none;
 }
 
 .form-textarea {
@@ -97,6 +121,34 @@
   height: 100px;
 }
 
+input::placeholder,
+textarea::placeholder {
+  outline: none;
+  color: rgba(108, 117, 125, 0.7);
+  line-height: var(--text-standart-line-height);
+  font-weight: 400;
+  font-size: 18px;
+}
+input:focus::placeholder,
+textarea:focus::placeholder {
+  outline: none;
+  color: rgba(108, 117, 125, 0.9);
+}
+
+input,
+textarea {
+  outline: none;
+  font-weight: var(--text-standart-font-weight);
+  line-height: var(--text-standart-line-height);
+  color: rgba(52, 58, 64, 0.8);
+}
+input:focus,
+textarea:focus {
+  outline: none;
+  color: rgba(52, 58, 64, 0.9);
+}
+
+/* RADIO LABEL ✅ */
 .radio-group {
   display: flex;
   flex-wrap: wrap;
@@ -108,72 +160,82 @@
   font-size: var(--text-standart-font-size);
   font-weight: var(--text-standart-font-weight);
   line-height: var(--text-standart-line-height);
+  color: var(--light);
+
+  transition: var(--transition-cl), var(--transition-tr);
 }
-
 .radio-title-label {
-  padding: 10px 0 0 32px;
+  padding: 6px 0 0 40px;
 
-  font-size: var(--text-standart-font-size);
+  font-size: 24px;
   font-weight: var(--text-standart-font-weight);
   line-height: var(--text-standart-line-height);
+  color: var(--light);
 }
-
 .radio-label {
   position: relative;
   display: flex;
   align-items: center;
   gap: 6px;
   cursor: pointer;
-}
+  color: var(--light);
 
+  transition: var(--transition-cl);
+}
+.radio-label:is(:hover, :focus) {
+  color: var(--accent-color);
+}
 .radio-input {
   display: none;
 }
-
 .radio-circle {
   display: inline-block;
-  width: 16px;
-  height: 16px;
+  width: 14px;
+  height: 14px;
   border-radius: 50%;
-  
+
   border: 3px solid transparent;
   animation: gradientFlowBased 3s infinite linear;
 
-  background-color: var(--light);
-  transition: var(--transition-bg);
+  background-color: transparent;
+  transition: var(--transition-bg), var(--transition-cl), var(--transition-tr);
 }
-
 .radio-label:hover .radio-circle {
-  background-color: var(--blue);
+  transform: scale(1.1);
+  background: rgba(255, 255, 255, 0.15);
 }
-
 .radio-input:checked + .radio-circle {
   background-color: var(--accent-color);
+  transform: scale(1.2);
 }
-
 .radio-input:focus + .radio-circle {
-  background-color: var(--blue);
-  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+  background: rgba(255, 255, 255, 0.15);
+  transform: scale(1.1);
 }
+/*  ✅ / */
 
+/* SUBMIT BTN 📫 */
 .form-button {
-  font-size: var(--text-standart-font-size);
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+
+  font-size: 30px;
   font-weight: var(--text-standart-font-weight);
   line-height: var(--text-standart-line-height);
 
-  padding: 10px 15px;
-  background-color: transparent;
-  color: white;
-  border-radius: 30px;
   cursor: pointer;
-
+  border-radius: 24px;
+  color: var(--accent-color);
+  background: transparent;
+  backdrop-filter: blur(5px);
   border: 2px solid transparent;
   animation: gradientFlowBased 3s infinite linear;
-
-  transition: var(--transition-cl), var(--transition-bg)
+  transition: var(--transition-bg), var(--transition-cl);
 }
-
-.form-button:hover {
-  background-color: var(--accent-color);
-  color: var(--bgc);
+.form-button:is(:hover, :focus) {
+  outline: none;
+  background: rgba(255, 255, 255, 0.15);
+  color: var(--blue);
 }
+/*  📫 / */

@@ -1,6 +1,6 @@
 import validationSchema from '/js/validate-form';
 import { sendRequest } from '/js/api/api';
-import showToast from '/js/toastify';
+import showToast from '/main.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     const modalForm = document.getElementById('modalForm');
@@ -22,63 +22,80 @@ document.addEventListener('DOMContentLoaded', () => {
 
     <form id="requestForm" class="form">
         <div class="form-group">
-            <input type="text" id="name" name="name" class="form-input" placeholder="Enter your name" required>
+                <svg class="required-icon" width="1" height="1">
+                    <use href="/icons/sprite.svg#chevron-right"></use>
+                </svg>
+            <input type="text" id="name" name="name" class="form-input" placeholder="Your name" required>
         </div>
         
         <div class="form-group">
-            <input type="text" id="mobileNumber" name="mobileNumber" class="form-input" placeholder="Enter your mobile number" required>
+                <svg class="required-icon" width="1" height="1">
+                    <use href="/icons/sprite.svg#chevron-right"></use>
+                </svg>
+            <input type="text" id="mobileNumber" name="mobileNumber" class="form-input" placeholder="Your mobile number" required>
         </div>
         
         <div class="form-group">
-            <input type="email" id="email" name="email" class="form-input" placeholder="Enter your email" required>
+                <svg class="required-icon" width="1" height="1">
+                    <use href="/icons/sprite.svg#chevron-right"></use>
+                </svg>
+            <input type="email" id="email" name="email" class="form-input" placeholder="Your email" required>
+        </div>
+        
+        <div class="form-group">
+                <svg class="required-icon" width="1" height="1">
+                    <use href="/icons/sprite.svg#chevron-right"></use>
+                </svg>
+            <input type="text" id="country" name="country" class="form-input" placeholder="Your country" required>
         </div>
 
         <div class="form-group">
-            <input type="text" id="socialNetwork" name="socialNetwork" class="form-input" placeholder="Enter your social network">
+            <input type="text" id="socialNetwork" name="socialNetwork" class="form-input" placeholder="Social network for contact">
         </div>
         
-        <div class="form-group">
-            <input type="text" id="country" name="country" class="form-input" placeholder="Enter your country" required>
-        </div>
-        
-            <p class="radio-title-label">Select a service:</p>
+        <p class="radio-title-label">Select a service:</p>
         <div class="form-group radio-group" id="selectedServiceGroup">
-            <label class="radio-label">
-            <input class="radio-input" type="radio" name="selectedService" value="Basic" required />
-            <span class="radio-circle"></span>
-            Basic
+            <label class="radio-label" aria-label="Basic service" title="Detailed information in the Prices section">
+                <input class="radio-input" type="radio" name="selectedService" value="Basic" required tabindex="0" />
+                <span class="radio-circle"></span>
+                Basic
             </label>
-            <label class="radio-label">
-            <input class="radio-input" type="radio" name="selectedService" value="Standard" required />
-            <span class="radio-circle"></span>
-            Standard
+            <label class="radio-label" aria-label="Standard service" title="Detailed information in the Prices section">
+                <input class="radio-input" type="radio" name="selectedService" value="Standard" required tabindex="0" />
+                <span class="radio-circle"></span>
+                Standard
             </label>
-            <label class="radio-label">
-            <input class="radio-input" type="radio" name="selectedService" value="Pro" required />
-            <span class="radio-circle"></span>
-            Pro
+            <label class="radio-label" aria-label="Pro service" title="Detailed information in the Prices section">
+                <input class="radio-input" type="radio" name="selectedService" value="Pro" required tabindex="0" />
+                <span class="radio-circle"></span>
+                Pro
             </label>
-            <label class="radio-label">
-            <input class="radio-input" type="radio" name="selectedService" value="Premium" required />
-            <span class="radio-circle"></span>
-            Premium
+            <label class="radio-label" aria-label="Premium service" title="Detailed information in the Prices section">
+                <input class="radio-input" type="radio" name="selectedService" value="Premium" required tabindex="0" />
+                <span class="radio-circle"></span>
+                Premium
             </label>
-            <label class="radio-label">
-            <input class="radio-input" type="radio" name="selectedService" value="Enterprise" required />
-            <span class="radio-circle"></span>
-            Enterprise
+            <label class="radio-label" aria-label="Enterprise service" title="Detailed information in the Prices section">
+                <input class="radio-input" type="radio" name="selectedService" value="Enterprise" required tabindex="0" />
+                <span class="radio-circle"></span>
+                Enterprise
             </label>
         </div>
 
+
         <div class="form-group">
-            <textarea id="message" name="message" class="form-textarea" placeholder="Enter your message"></textarea>
+            <textarea id="message" name="message" class="form-textarea" placeholder="Add a comment if you wish"></textarea>
         </div>
 
         <button type="submit" class="form-button">Submit</button>
     </form>
+    
   </div>
 `;
-
+        const nameInput = document.getElementById('name');
+        if (nameInput) {
+            nameInput.focus();
+        }
 
         const closeModalBtn = document.getElementById('close-button');
         const form = document.getElementById('requestForm');
@@ -91,6 +108,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 const formData = new FormData(form);
                 const formObj = Object.fromEntries(formData);
 
+                const selectedService = document.querySelector('input[name="selectedService"]:checked');
+                if (!selectedService) {
+                    showToast("Please select a service.", false);
+                    return;
+                }
+
                 try {
                     await validationSchema.validate(formObj, { abortEarly: false });
                     const response = await sendRequest(formObj);
@@ -98,7 +121,14 @@ document.addEventListener('DOMContentLoaded', () => {
                     closeModal();
                 } catch (error) {
                     console.error('Error submitting form:', error);
-                    showToast(error.message, false);
+
+                    if (error.inner) {
+                        error.inner.forEach((err) => {
+                            showToast(err.message, false);
+                        });
+                    } else {
+                        showToast(error.message, false);
+                    }
                 }
             });
         }
@@ -127,57 +157,3 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
-
-
-// const BACKENDSCEMA = ({
-//     name: {
-//         type: String,
-//         required: [true, 'Name is required'],
-//         minlength: 3,
-//         maxlength: 50
-//     },
-//     mobileNumber: {
-//         type: String,
-//         required: [true, 'Mobile number is required'],
-//         validate: {
-//             validator: (v) => /^(?:\+?380\d{9}|\d{10})$/.test(v),
-//             message: 'Mobile number must be in a valid format: +380XXXXXXXXX or 096XXXXXXXX'
-//         }
-//     },
-//     email: {
-//         type: String,
-//         required: [true, 'Email is required'],
-//         validate: {
-//             validator: (v) => /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/.test(v),
-//             message: 'Invalid email format'
-//         }
-//     },
-//     socialNetwork: {
-//         type: String,
-//         maxlength: 100,
-//     },
-//     country: {
-//         type: String,
-//         required: [true, 'Country is required'],
-//         minlength: 2,
-//         maxlength: 50
-//     },
-//     city: {
-//         type: String,
-//         minlength: 2,
-//         maxlength: 50
-//     },
-//     selectedService: {
-//         type: String,
-//         required: [true, 'Selected service is required'],
-//         enum: ['Basic',
-//             'Standard',
-//             'Pro',
-//             'Premium',
-//             'Enterprise']
-//     },
-//     message: {
-//         type: String,
-//         maxlength: 2000
-//     }
-// });

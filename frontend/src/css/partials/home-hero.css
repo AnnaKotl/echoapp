@@ -56,7 +56,8 @@
   transition: var(--transition-bg), var(--transition-cl);
 }
 
-.hero-btn:hover {
+.hero-btn:is(:hover, :focus){
+  outline: none;
   background: rgba(255, 255, 255, 0.15);
   color: var(--blue);
 }

@@ -121,7 +121,8 @@
   transition: var(--transition-bg), var(--transition-cl);
 }
 
-.contact-btn:hover {
+.contact-btn:is(:hover, :focus){
+  outline: none;
   background: rgba(255, 255, 255, 0.15);
   color: var(--blue);
 }
