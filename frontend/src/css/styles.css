@@ -273,7 +273,7 @@ button {
   transition: all var(--standart-tr-cubic);
   opacity: 0;
   transform: translateY(100px);
-  z-index: 2;
+  z-index: 3;
 }
 
 #scroll-button.visible {
