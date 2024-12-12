@@ -1,33 +1,86 @@
 .home-nav-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 0;
-  }
-  
-  .nav-list {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-  }
-  
-  .nav-link {
-    color: var(--light);
-    font-size: var(--text-standart-font-size);
-    padding: 20px;
-    position: relative;
-    border-radius: 30px;
-    transition: var(--transition-cl), var(--transition-op);
-    opacity: 0.8;
-  }
-  
-  .nav-link.active {
-    color: var(--accent-color);
+}
+
+.nav-list {
+  display: flex;
+  gap: 20px;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 6px 0 10px;
+  margin: 0 auto;
+}
+
+.nav-link {
+  color: var(--light);
+  font-size: var(--text-standart-font-size);
+  padding: 20px 6px;
+  position: relative;
+  border-radius: 30px;
+  transition: var(--transition-cl), var(--transition-op);
+  opacity: 0.8;
+}
+
+.nav-link.active {
+  color: var(--accent-color);
+  opacity: 1;
+}
+
+.nav-link:not(.active):is(:hover, :focus) {
+  color: var(--blue);
+  opacity: 1;
+}
+
+/* PRELOADER 🔺 */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 666;
+
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+
+  transition: all var(--standart-tr-cubic);
+}
+
+#preloader-logo {
+  max-width: 800px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: logoFade 2s forwards ease;
+  position: absolute;
+  z-index: 66;
+}
+
+@keyframes logoFade {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
     opacity: 1;
   }
-  
-  .nav-link:not(.active):is(:hover, :focus) {
-    color: var(--blue);
-    opacity: 1;
+  100% {
+    transform: translate(-50%, -130%) scale(0.2);
+    opacity: 0.1;
   }
+}
+
+#preloader.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+#nav-logo {
+  position: relative;
+  z-index: 2;
+  visibility: hidden;
+  transition: visibility 0.3s ease-in;
+
+  transition: visibility 0.3s ease-in, opacity 0.3s ease-in;
+}
+/*  🔺 / */
