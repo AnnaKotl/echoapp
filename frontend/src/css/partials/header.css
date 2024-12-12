@@ -84,8 +84,8 @@
   left: 50%;
   transform: translate(-50%, -50%);
 
-  animation: logoFade 2s forwards ease;  
-  /* 2s */
+  animation: logoFade 3.5s forwards ease;  
+  /* 3.5s */
 
   position: absolute;
   z-index: 66;
@@ -97,7 +97,7 @@
     opacity: 1;
   }
   100% {
-    transform: translate(-50%, -130%) scale(0.2);
+    transform: translate(-50%, -120%) scale(0.3);
     opacity: 0.1;
   }
 }

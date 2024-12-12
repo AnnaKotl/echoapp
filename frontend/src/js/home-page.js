@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function () {
   setTimeout(() => {
     preloader.classList.add('hidden');
     navLogo.style.visibility = 'visible';
-  }, 2000); // 2000
+  }, 3000); // 3000
   /* 🔺 / */
 
 });
