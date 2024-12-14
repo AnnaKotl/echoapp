@@ -1,6 +1,6 @@
-import validationSchema from '/js/validate-form';
+import validationSchema from '/js/helpers/validate-form';
 import { sendRequest } from '/js/api/api';
-import showToast from '/main.js';
+import showToast from '/js/helpers/show-toast';
 import spriteUrl from '/icons/sprite.svg';
 
 document.addEventListener('DOMContentLoaded', () => {

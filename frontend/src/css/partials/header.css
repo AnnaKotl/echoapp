@@ -7,22 +7,24 @@
   max-width: 1200px;
   height: 150px;
   border-radius: 30px;
+  border: 1px solid transparent;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all 0.1s ease;
   z-index: 66;
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  transition: all var(--standart-tr-cubic);
 }
 
 .home-nav-container.scrolled {
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  border-color: rgba(255, 255, 255, 0.1);
 }
 
 .home-nav-container:hover {
-  backdrop-filter: blur(30px);
-  -webkit-backdrop-filter: blur(30px);
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
 }
 
 .nav-list {

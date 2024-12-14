@@ -1,5 +1,5 @@
-import API_URL from '/js/config';
-import { renderServices } from '/js/prices';
+import API_URL from '/js/helpers/config';
+import { renderServices } from '/js/pages/home/prices';
 
 // 💎 Get Icons from backend
 export async function fetchIcons() {

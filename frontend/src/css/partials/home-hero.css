@@ -1,7 +1,7 @@
 .hero-content {
   color: var(--white);
   text-align: left;
-  padding-top: 220px;
+  padding-top: 200px;
 }
 
 .hero-title {
@@ -26,7 +26,7 @@
 .hero-text {
   font-size: 50px;
   max-width: 870px;
-  margin-bottom: var(--margin-bottom);
+  margin-bottom: 60px;
   font-weight: var(--text-standart-font-weight);
   line-height: var(--text-standart-line-height);
 
@@ -47,18 +47,18 @@
   color: var(--accent-color);
   background: transparent;
   backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 30px;
   padding: 12px 24px;
   align-items: center;
   justify-content: center;
-  /* animation: subtlePulse 3s infinite; */
   transition: var(--transition-bg), var(--transition-cl);
+  border: 2px solid transparent;
+  animation: gradientFlowBased 3s infinite linear;
 }
 
 .hero-btn:is(:hover, :focus){
   outline: none;
-  background: rgba(255, 255, 255, 0.15);
+  background: var(--border-color);
   color: var(--blue);
 }
 
@@ -88,8 +88,6 @@
 .hero-btn-container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  max-width: 650px;
 }
 
 .hero-scroll-link {
@@ -102,6 +100,7 @@
   position: relative;
   text-decoration: none;
   animation: subtlePulseIcon 3s infinite;
+  margin: 0 auto 0 17%;
 }
 
 .hero-scroll-icon-top {

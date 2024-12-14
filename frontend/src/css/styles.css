@@ -42,6 +42,9 @@
   drop-shadow(0 0 12px rgba(32, 243, 221, 0.5));
   /* transition: filter var(--standart-tr-cubic); */
 
+  --border-color: rgba(255, 255, 255, 0.1);
+  /* var(--border-color); */
+
   --text-standart-font-size: 20px;
   --text-standart-font-weight: 500;
   --text-standart-line-height: 1.1;

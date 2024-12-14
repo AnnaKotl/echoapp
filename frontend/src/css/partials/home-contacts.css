@@ -112,7 +112,8 @@
   color: var(--accent-color);
   background: transparent;
   backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 2px solid transparent;
+  animation: gradientFlowBased 3s infinite linear;
   border-radius: 30px;
   padding: 12px 24px;
   align-items: center;
@@ -123,7 +124,7 @@
 
 .contact-btn:is(:hover, :focus){
   outline: none;
-  background: rgba(255, 255, 255, 0.15);
+  background: var(--border-color);
   color: var(--blue);
 }
 
