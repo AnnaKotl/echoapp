@@ -20,35 +20,35 @@ attempted value: ${i}
   <div class="modal-content">
     <a class="close-modal-btn" id="close-button">
         <svg class="close-modal-icon" width="10" height="10">
-            <use href="/icons/sprite.svg#icon-cross"></use>
+            <use href="icons/sprite.svg#icon-cross"></use>
          </svg>
     </a>
 
     <form id="requestForm" class="form">
         <div class="form-group">
                 <svg class="required-icon" width="1" height="1">
-                    <use href="/icons/sprite.svg#chevron-right"></use>
+                    <use href="icons/sprite.svg#chevron-right"></use>
                 </svg>
             <input type="text" id="name" name="name" class="form-input" placeholder="Your name" required>
         </div>
         
         <div class="form-group">
                 <svg class="required-icon" width="1" height="1">
-                    <use href="/icons/sprite.svg#chevron-right"></use>
+                    <use href="icons/sprite.svg#chevron-right"></use>
                 </svg>
             <input type="text" id="mobileNumber" name="mobileNumber" class="form-input" placeholder="Your mobile number" required>
         </div>
         
         <div class="form-group">
                 <svg class="required-icon" width="1" height="1">
-                    <use href="/icons/sprite.svg#chevron-right"></use>
+                    <use href="icons/sprite.svg#chevron-right"></use>
                 </svg>
             <input type="email" id="email" name="email" class="form-input" placeholder="Your email" required>
         </div>
         
         <div class="form-group">
                 <svg class="required-icon" width="1" height="1">
-                    <use href="/icons/sprite.svg#chevron-right"></use>
+                    <use href="icons/sprite.svg#chevron-right"></use>
                 </svg>
             <input type="text" id="country" name="country" class="form-input" placeholder="Your country" required>
         </div>
