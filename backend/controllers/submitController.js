@@ -2,7 +2,7 @@ const { HttpError, validators, sendEmail, Request } = require('../helpers');
 
 const submitRequest = async (req, res, next) => {
     try {
-        console.log('Received data for submit-request:', req.body);  // LOG ----------------------------- > DELETE after DEV
+        // console.log('Received data for submit-request:', req.body);
         const validData = validators(req.body);
 
         const requiredFields = ['name', 'email', 'mobileNumber', 'selectedService', 'country'];
@@ -14,13 +14,13 @@ const submitRequest = async (req, res, next) => {
 
         const { name, email, message, socialNetwork, selectedService, mobileNumber, country } = validData;
 
-        const phoneValidator = /^(?:\+?380\d{9}|\d{10})$/; // +380XXXXXXXXX / 0XXXXXXXXX
+        const phoneValidator = /^[\d]{3}[-\s]?[\d]{3}[-\s]?[\d]{3,4}$/;
         if (!phoneValidator.test(mobileNumber)) {
-            return res.status(400).json({ message: 'Invalid phone number format. Please use a valid format: +380XXXXXXXXX or 0XXXXXXXXXX' });
+            return res.status(400).json({ message: 'Please enter a valid mobile number, at least 5 digits long' });
         }
 
         const newRequest = await Request.create(validData);
-        console.log("New request saved:", newRequest);  // LOG ----------------------------- > DELETE after DEV
+        // console.log("New request saved:", newRequest);
 
         await sendEmail({
             to: process.env.RECIPIENT_EMAIL,

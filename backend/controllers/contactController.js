@@ -2,7 +2,7 @@ const { HttpError, validators, sendEmail, Request } = require('../helpers');
 
 const createContactRequest = async (req, res, next) => {
   try {
-    console.log('Received data:', req.body);  // LOG ----------------------------- > DELETE after DEV
+    console.log('Received data:', req.body);
     const validData = validators(req.body);
 
     const requiredFields = ['name', 'email', 'mobileNumber', 'selectedService', 'country'];
@@ -15,7 +15,7 @@ const createContactRequest = async (req, res, next) => {
     const { name, email, socialNetwork, message, selectedService, mobileNumber, country } = validData;
 
     const newRequest = await Request.create(validData);
-    console.log("New request saved to DB:", newRequest);  // LOG ----------------------------- > DELETE after DEV
+    // console.log("New request saved to DB:", newRequest);
 
     await sendEmail({
       to: process.env.RECIPIENT_EMAIL,

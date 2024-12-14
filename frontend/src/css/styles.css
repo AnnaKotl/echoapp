@@ -39,7 +39,7 @@
   --dark: #343a40;
 
   --filter: drop-shadow(0 0 6px rgba(32, 243, 221, 0.6))
-  drop-shadow(0 0 12px rgba(32, 243, 221, 0.5));
+    drop-shadow(0 0 12px rgba(32, 243, 221, 0.5));
   /* transition: filter var(--standart-tr-cubic); */
 
   --border-color: rgba(255, 255, 255, 0.1);
@@ -315,48 +315,6 @@ button {
   }
 }
 /* / */
-/* _________________ */
-
-/* TOAST css 🍞 */
-.toast {
-  position: fixed;
-  bottom: 30px;
-  left: 10%;
-  padding: 30px;
-  color: var(--light);
-  border-radius: 30px;
-  opacity: 0;
-  animation: fadeInOut 3s forwards;
-  z-index: 999 !important;
-}
-.toast-success {
-  background-color: var(--green);
-}
-.toast-error {
-  background-color: var(--red);
-}
-.toastify {
-  z-index: 999 !important;
-}
-@keyframes fadeInOut {
-  0% {
-    opacity: 0;
-    bottom: 10px;
-  }
-  25% {
-    opacity: 1;
-    bottom: 20px;
-  }
-  75% {
-    opacity: 1;
-    bottom: 20px;
-  }
-  100% {
-    opacity: 0;
-    bottom: 10px;
-  }
-}
-/*  🍞 / */
 /* _________________ */
 
 /* PRIMARY STYLE */

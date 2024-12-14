@@ -14,7 +14,7 @@ const formValidationSchema = Joi.object({
     .required()
     .custom((value, helpers) => capitalizeName(value)),
   mobileNumber: Joi.string()
-    .pattern(/^[\s\S]{4,20}$/)
+    .pattern(/^[\d]{3}[-\s]?[\d]{3}[-\s]?[\d]{3,4}$/)
     .required(),
   email: Joi.string().email().required(),
   socialNetwork: Joi.string()
@@ -30,7 +30,7 @@ const formValidationSchema = Joi.object({
 });
 
 const validators = (data) => {
-  console.log('Validating data:', data);  // LOG ----------------------------- > DELETE after DEV
+  // console.log('Validating data:', data);
   const { error, value } = formValidationSchema.validate(data, {
     abortEarly: false,
   });

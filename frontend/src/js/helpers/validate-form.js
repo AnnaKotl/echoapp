@@ -1,14 +1,13 @@
 import * as Yup from 'yup';
 
 const validationSchema = Yup.object({
-
     name: Yup.string()
-        .min(3)
-        .max(50)
+        .min(3, 'Name must be at least 3 characters')
+        .max(50, 'Name must not exceed 50 characters')
         .required('Name is required'),
 
     mobileNumber: Yup.string()
-        .matches(/^(?:\+?380\d{9}|\d{10})$/, 'Mobile number must be in a valid format: +380XXXXXXXXX or 096XXXXXXXX')
+        .matches(/^[\d]{3}[-\s]?[\d]{3}[-\s]?[\d]{3,4}$/, 'Please enter a valid mobile number, at least 5 digits long')
         .required('Mobile number is required'),
 
     email: Yup.string()
@@ -16,12 +15,12 @@ const validationSchema = Yup.object({
         .required('Email is required'),
 
     socialNetwork: Yup.string()
-        .max(100)
+        .max(100, 'Social network URL must not exceed 100 characters')
         .optional(),
 
     country: Yup.string()
-        .min(2)
-        .max(50)
+        .min(2, 'Country name must be at least 2 characters')
+        .max(50, 'Country name must not exceed 50 characters')
         .required('Country is required'),
 
     selectedService: Yup.string()
@@ -32,7 +31,7 @@ const validationSchema = Yup.object({
         .required('Service is required'),
 
     message: Yup.string()
-        .max(2000)
+        .max(2000, 'Message must not exceed 2000 characters')
         .optional()
 });
 

@@ -1,16 +1,16 @@
 import Toastify from 'toastify-js';
-import 'toastify-js/src/toastify.css';
+import "toastify-js/src/toastify.css";
 
-const showToast = (message, isSuccess = true) => {
-  Toastify({
-      text: message,
-      className: isSuccess ? 'toast toast-success' : 'toast toast-error',
-      duration: 3000,
-      close: true,
-      gravity: 'top',
-      position: 'center',
-      stopOnFocus: true,
-  }).showToast();
-};
-
-export default showToast;
+export default function showToast(message, isSuccess = true) {
+    Toastify({
+        text: message,
+        duration: 6000,
+        close: true,
+        gravity: "top",
+        position: "right",
+        style: {
+          background: isSuccess ? "#20f3dd" : "##dc3545",
+        },
+        stopOnFocus: true,
+    }).showToast();
+}

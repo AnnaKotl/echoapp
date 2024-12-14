@@ -11,8 +11,8 @@ const requestSchema = new mongoose.Schema({
     type: String,
     required: [true, 'Mobile number is required'],
     validate: {
-      validator: (v) => /^(?:\+?380\d{9}|\d{10})$/.test(v),
-      message: 'Mobile number must be in a valid format: +380XXXXXXXXX or 0XXXXXXXXXX'
+      validator: (v) => /^[\d]{3}[-\s]?[\d]{3}[-\s]?[\d]{3,4}$/.test(v),
+      message: 'Please enter a valid mobile number, at least 5 digits long'
     }
   },
   email: {

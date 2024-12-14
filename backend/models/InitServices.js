@@ -88,5 +88,3 @@ initializeServices();
 // node models/InitServices.js
 
 // INIT ONSE ore for TEST ------- ❗️
-
-// BEFORE PROD - DELETE --------- ❌
