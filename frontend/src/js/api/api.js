@@ -20,7 +20,7 @@ export async function fetchIcons() {
 // 🖼️ Modal request to backend
 export const sendRequest = async (data) => {
   try {
-    console.log('Sending data:', data);  // LOG ----------------------------- > DELETE after DEV
+    // console.log('Sending data:', data);
     const response = await fetch(`${API_URL}/submit-request`, {
       method: 'POST',
       headers: {
@@ -53,7 +53,7 @@ export async function fetchServices() {
     console.error('Failed to fetch services:', error);
     const container = document.querySelector('.prices-list');
     if (container) {
-      container.innerHTML = `<p>Error loading services: ${error.message}</p>`;
+      container.innerHTML = `<p class="error-message">Error loading services: ${error.message}</p>`;
     }
   }
 }

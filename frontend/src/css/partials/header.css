@@ -100,11 +100,9 @@
   justify-content: center;
   align-items: center;
   z-index: 666;
-
   background: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(30px);
   -webkit-backdrop-filter: blur(30px);
-
   transition: all var(--standart-tr-cubic);
 }
 
@@ -114,7 +112,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
 
-  animation: logoFade 3s forwards ease;  
+  animation: logoFade 3.5s forwards ease;  
   /* 3.5s */
 
   position: absolute;
@@ -126,7 +124,7 @@
     transform: translate(-50%, -50%) scale(1);
     opacity: 1;
   }
-  70% {
+  60% {
     transform: translate(-50%, -50%) scale(1);
     opacity: 1;
   }

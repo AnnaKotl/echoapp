@@ -167,31 +167,25 @@ html {
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
-
 *,
 *::after,
 *::before {
   box-sizing: inherit;
 }
-
 html,
 body {
   margin: 0;
   padding: 0;
   height: 100%;
 }
-
 body {
   font-family: 'Karla', serif;
   font-style: normal;
-
   font-weight: 500;
   font-size: 18px;
-
-  color: var(--white);
+  color: var(--light);
   background-color: var(--bgc);
 }
-
 h1,
 h2,
 h3,
@@ -201,34 +195,29 @@ h6 {
   line-height: 1.2;
   margin: 0;
 }
-
 p {
   margin: 0;
-  line-height: 1.5;
+  line-height: var(--text-standart-line-height);
 }
-
 a {
   text-decoration: none;
   cursor: pointer;
-  line-height: 1.2;
+  line-height: var(--text-standart-line-height);
   outline: none;
 }
-
 ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-
 img {
   display: block;
 }
-
 button {
   cursor: pointer;
   border: none;
   background-color: transparent;
-  line-height: 1.2;
+  line-height: var(--text-standart-line-height);
 }
 /* / */
 /* _________________ */
@@ -254,10 +243,8 @@ button {
   font-weight: var(--title-standart-font-weight);
   line-height: var(--text-standart-line-height);
   margin-bottom: var(--margin-bottom);
-
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-
   color: var(--light);
 }
 /* / */
@@ -322,13 +309,13 @@ button {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 30px;
   overflow: hidden;
 }
 
 @media (max-width: 767px) {
   .container {
-    padding: 0 10px;
+    padding: 0 16px;
   }
 }
 
@@ -344,7 +331,7 @@ button {
 
 @media (min-width: 1025px) {
   .container {
-    max-width: 1200px;
+    max-width: 1300px;
     padding: 0 30px;
   }
 }

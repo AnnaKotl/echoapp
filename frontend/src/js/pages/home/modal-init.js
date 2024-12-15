@@ -1,6 +1,5 @@
 import validationSchema from '/js/helpers/validate-form';
 import { sendRequest } from '/js/api/api';
-import showToast from '/js/helpers/show-toast';
 
 export function initializeModalForm(showToast) {
     const form = document.getElementById('requestForm');
@@ -13,7 +12,6 @@ export function initializeModalForm(showToast) {
 
         const formData = new FormData(form);
         const formObj = Object.fromEntries(formData);
-
         const requiredFields = ['name', 'mobileNumber', 'email', 'country'];
         const emptyFields = requiredFields.filter((field) => !formObj[field]);
 
@@ -40,7 +38,6 @@ export function initializeModalForm(showToast) {
             showToast('Form submitted successfully!', true);
 
             form.reset();
-
             modalForm.classList.remove('modal-open');
             modalForm.innerHTML = '';
             document.body.style.overflow = '';

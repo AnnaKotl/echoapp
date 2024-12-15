@@ -1,15 +1,11 @@
 import showToast from '/js/helpers/show-toast';
 import spriteUrl from '/icons/sprite.svg';
-import { fetchServices } from '/js/api/api';
 import { initializeModalForm } from '/js/pages/home/modal-init';
 
 document.addEventListener('DOMContentLoaded', () => {
     const modalForm = document.getElementById('modalForm');
-    // const openModalBtns = document.querySelectorAll('#openModal');
     const openModalBtns = document.querySelectorAll('.js-open-modal');
     const container = document.querySelector('.prices-list');
-
-
     const openModal = (serviceName) => {
         modalForm.classList.add('modal-open');
         document.body.style.overflow = 'hidden';

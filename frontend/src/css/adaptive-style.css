@@ -32,8 +32,8 @@
   }
   .hero-btn {
     margin: 0 auto;
-    max-width: 220px;
     font-size: 30px;
+    margin-bottom: 10px;
   }
   .hero-btn-container {
     width: 300px;
@@ -102,7 +102,8 @@
   }
   .prices-item {
     padding: 20px;
-    height: 440px;
+    height: 100%;
+    max-height: 440px;
     width: 340px;
     min-width: none;
     max-width: none;
@@ -146,8 +147,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    margin: 0 auto 6px;
-
+    margin: 20px auto 6px;
     max-width: 300px;
     max-height: 60px;
     padding: 10px;
@@ -247,7 +247,7 @@
   }
   .contact-btn {
     margin: 50px 0 30px;
-    max-width: 200px;
+    max-width: 240px;
     font-size: 30px;
   }
   .adress-container {

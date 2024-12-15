@@ -28,7 +28,7 @@ const renderProductIcons = async () => {
         (rowIndex + 1) * iconsPerRow
       );
 
-      const iconsWithClones = [...rowIcons, ...rowIcons, ...rowIcons, ...rowIcons, ...rowIcons, ...rowIcons]; // copy ICONS 🌜🌛
+      const iconsWithClones = [...rowIcons, ...rowIcons, ...rowIcons, ...rowIcons, ...rowIcons, ...rowIcons]; // so many copy ICONS 🌜🌛
 
       iconsWithClones.forEach(icon => {
         const item = document.createElement('div');
@@ -41,7 +41,7 @@ const renderProductIcons = async () => {
 
       productsWrap.appendChild(rowContainer);
 
-      const animationSpeed = 80; // 70 SPEED ANIMATION 🐆->🐌  
+      const animationSpeed = 80; // 70-norm (SPEED ANIMATION 🐆->🐌)
 
       rowContainer.style.animation = `scroll-row ${animationSpeed}s linear infinite`;
       if (rowIndex % 2 === 1) {
