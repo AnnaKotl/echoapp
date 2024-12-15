@@ -13,18 +13,13 @@
   justify-content: center;
   transition: all 0.1s ease;
   z-index: 66;
-  backdrop-filter: blur(30px);
-  -webkit-backdrop-filter: blur(30px);
   transition: all var(--standart-tr-cubic);
 }
 
 .home-nav-container.scrolled {
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
   border-color: var(--border-color);
-}
-
-.home-nav-container:hover {
-  backdrop-filter: blur(40px);
-  -webkit-backdrop-filter: blur(40px);
 }
 
 .nav-list {
@@ -70,8 +65,8 @@
   left: 50%;
   transform: translate(-50%, -50%);
   transition: visibility var(--standart-tr-cubic), var(--transition-op), var(--transition-cl);
-  color: var(--light);
   font-size: var(--text-standart-font-size);
+  color: var(--blue);
   padding: 20px 6px;
 }
 #nav-logo {

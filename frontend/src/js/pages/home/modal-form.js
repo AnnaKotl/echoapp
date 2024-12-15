@@ -1,12 +1,15 @@
 import showToast from '/js/helpers/show-toast';
 import spriteUrl from '/icons/sprite.svg';
+import { fetchServices } from '/js/api/api';
 import { initializeModalForm } from '/js/pages/home/modal-init';
 
 document.addEventListener('DOMContentLoaded', () => {
     const modalForm = document.getElementById('modalForm');
-    const openModalBtns = document.querySelectorAll('#openModal');
+    // const openModalBtns = document.querySelectorAll('#openModal');
+    const openModalBtns = document.querySelectorAll('.js-open-modal');
 
-    const openModal = () => {
+
+    const openModal = (serviceName) => {
         modalForm.classList.add('modal-open');
         document.body.style.overflow = 'hidden';
         document.body.style.pointerEvents = 'none';
@@ -76,6 +79,13 @@ document.addEventListener('DOMContentLoaded', () => {
   </div>
 `;
 
+        if (serviceName) {
+            const radioBtn = document.querySelector(`input[name="selectedService"][value="${serviceName}"]`);
+            if (radioBtn) {
+                radioBtn.checked = true;
+            }
+        }
+
         const closeModalBtn = document.getElementById('close-button');
         closeModalBtn.addEventListener('click', closeModal);
 
@@ -90,7 +100,10 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     openModalBtns.forEach(btn => {
-        btn.addEventListener('click', openModal);
+        btn.addEventListener('click', (e) => {
+            const serviceName = e.target.getAttribute('data-service');
+            openModal(serviceName);
+        });
     });
 
     modalForm.addEventListener('click', (e) => {

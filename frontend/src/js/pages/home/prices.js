@@ -1,5 +1,3 @@
-// 💸 PRICES
-
 export function renderServices(services) {
   const container = document.querySelector('.prices-list');
 
@@ -16,8 +14,6 @@ export function renderServices(services) {
   const baseFeatures = ['UI/UX Design', 'Develop', 'QA', 'Source code', 'Custom Project Management'];
 
   let accumulatedFeatures = [...baseFeatures];
-
-  console.log('Rendering services:', services);
 
   const servicesHTML = services.map(service => {
     const featuresHTML = service.features.map(feature => {
@@ -42,7 +38,7 @@ export function renderServices(services) {
           </div>
           <div class="order-container">
             <p class="price">${service.price}</p>
-            <button type="button" class="order-btn">Order</button>
+            <button type="button" class="order-btn js-open-modal" data-service="${service.name}">Order</button>
           </div>
         </div>
       </li>`;
@@ -50,5 +46,3 @@ export function renderServices(services) {
 
   container.innerHTML = servicesHTML;
 }
-
-// 💸 /
