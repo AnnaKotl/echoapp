@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalForm = document.getElementById('modalForm');
     // const openModalBtns = document.querySelectorAll('#openModal');
     const openModalBtns = document.querySelectorAll('.js-open-modal');
+    const container = document.querySelector('.prices-list');
 
 
     const openModal = (serviceName) => {
@@ -57,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
 
         <p class="radio-title-label">Select a service:</p>
-        <div class="form-group radio-group" id="selectedServiceGroup">
+         <div class="form-group radio-group" id="selectedServiceGroup">
             ${['Basic', 'Standard', 'Pro', 'Premium', 'Enterprise']
                 .map(
                     service => `
@@ -98,6 +99,13 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.style.overflow = '';
         document.body.style.pointerEvents = '';
     };
+
+    container.addEventListener('click', (e) => {
+        if (e.target && e.target.classList.contains('js-open-modal')) {
+            const serviceName = e.target.getAttribute('data-service');
+            openModal(serviceName);
+        }
+    });
 
     openModalBtns.forEach(btn => {
         btn.addEventListener('click', (e) => {
