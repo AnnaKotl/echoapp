@@ -26,7 +26,7 @@
       sizes="180x180"
       href="./assets/apple-icon-180x180-DwFLB3EL.png"
     />
-    <link rel="manifest" href="./assets/manifest-T1QazQWf.json" />
+    <!-- <link rel="manifest" href="/favicon/manifest.json" /> -->
     <!-- / -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -52,14 +52,14 @@
       referrerpolicy="no-referrer"
     />
     <!-- / -->
-    <script type="module" crossorigin src="./assets/main-B0J-0gjw.js"></script>
-    <link rel="modulepreload" crossorigin href="./assets/main-CsqEiTjm.js">
-    <link rel="stylesheet" crossorigin href="./assets/main-sTvEyHkP.css">
+    <script type="module" crossorigin src="./assets/main-eNT93gsO.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/main-CTrqyTI8.js">
+    <link rel="stylesheet" crossorigin href="./assets/main-C1aFbFMR.css">
   </head>
 
   <body>
     <!-- HEADER -->
-    <div id="preloader">
+    <div id="preloader" class="hidden">
   <img src="./assets/fulllogo-transparent-DsEnb0os.png" alt="Logo" id="preloader-logo">
 </div>
 
@@ -73,7 +73,7 @@
           <li><a href="/pages/prices.html" class="nav-link">Prices</a></li>
           <li><a href="/pages/partnership.html" class="nav-link">Partnership</a></li>
 
-          <li>
+          <li class="home-link-logo">
             <a href="/index.html">
               <img
                 src="./assets/icononly-transp-LGCOmZMi.png"
@@ -82,6 +82,7 @@
                 class="logo-nav"
                 id="nav-logo"
               />
+              <span id="home-text" class="hidden">Home</span>
             </a>
           </li>
 
@@ -102,15 +103,21 @@
     <div class="hero-content">
       <h1 class="hero-title">echocode.app</h1>
       <p class="hero-text">
-        specializes in the full cycle of iOS mobile app development.<br>We handle
-        projects of any complexity and focus – from creating a unique design to
-        successfully publishing in the App Store.
+        specializes in the full cycle of iOS mobile app development.<br />We
+        handle projects of any complexity and focus – from creating a unique
+        design to successfully publishing in the App Store.
       </p>
 
       <div class="hero-btn-container">
-        <button type="button" class="hero-btn" id="openModal">Contact us</button>
+        <button type="button" class="hero-btn" id="openModal">
+          Contact us
+        </button>
 
-        <a href="#based-on-section" class="hero-scroll-link" title="Scroll to the Based on">
+        <a
+          href="#based-on-section"
+          class="hero-scroll-link js-scroll-link"
+          title="Scroll to the Based on"
+        >
           <svg class="hero-scroll-icon-top" width="1" height="1">
             <use href="./assets/sprite-DY-l4dVz.svg#icon-keyboard_arrow_down"></use>
           </svg>
@@ -118,7 +125,6 @@
             <use href="./assets/sprite-DY-l4dVz.svg#icon-keyboard_arrow_down"></use>
           </svg>
         </a>
-        
       </div>
     </div>
   </div>
@@ -631,7 +637,7 @@ Our grounded expertise for your new heights
           <div>
             <a
               href="#contacts-section"
-              class="career-scroll-link"
+              class="career-scroll-link js-scroll-link"
               title="Scroll to the Contacts"
             >
               <svg class="career-scroll-icon-top" width="100" height="100">
@@ -653,7 +659,7 @@ Our grounded expertise for your new heights
           <div>
             <a
               href="#contacts-section"
-              class="career-scroll-link"
+              class="career-scroll-link js-scroll-link"
               title="Scroll to the Contacts"
             >
               <svg class="career-scroll-icon-top" width="100" height="100">
