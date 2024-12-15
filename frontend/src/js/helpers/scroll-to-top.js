@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  const scrollLink = document.querySelector('.hero-scroll-link');
+  const scrollLink = document.querySelector('.js-scroll-link');
 
   scrollLink.addEventListener('click', (event) => {
     event.preventDefault();

@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 .map(
                     service => `
                 <label for="service${service}" class="radio-label">
-                    <input id="service${service}" class="radio-input" type="radio" name="selectedService" value="${service}" required />
+                    <input id="service${service}" class="radio-input" type="radio" name="selectedService" value="${service}" ${service === 'Basic' ? 'checked' : ''} required />
                     <span class="radio-circle"></span>
                     ${service}
                 </label>`
