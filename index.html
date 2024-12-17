@@ -52,9 +52,9 @@
       referrerpolicy="no-referrer"
     />
     <!-- / -->
-    <script type="module" crossorigin src="./assets/main-CxDlVCPL.js"></script>
-    <link rel="modulepreload" crossorigin href="./assets/main-DY_sh1ia.js">
-    <link rel="stylesheet" crossorigin href="./assets/main-CIDC9oyl.css">
+    <script type="module" crossorigin src="./assets/main-DnMf3ZUt.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/main-BhA4a7By.js">
+    <link rel="stylesheet" crossorigin href="./assets/main-GFh_3ykn.css">
   </head>
 
   <body>
@@ -68,13 +68,17 @@
     <div class="home-nav-container">
       <div class="nav-list-container">
         <ul class="nav-list">
-          <!-- <li><a href="/index.html" class="nav-link">Home</a></li> -->
-          <li><a href="/pages/products.html" class="nav-link">Products</a></li>
+          <!-- <li><a href="/pages/products.html" class="nav-link">Products</a></li>
           <li><a href="/pages/prices.html" class="nav-link">Prices</a></li>
-          <li><a href="/pages/partnership.html" class="nav-link">Partnership</a></li>
+          <li><a href="/pages/partnership.html" class="nav-link">Partnership</a></li> -->
 
+          <li><a href="#products" class="nav-link">Products</a></li>
+          <li><a href="#prices" class="nav-link">Prices</a></li>
+          <li><a href="#partnership" class="nav-link">Partnership</a></li>
+
+          <!-- href="/index.html" -->
           <li class="home-link-logo">
-            <a href="/index.html">
+            <a href="#">
               <img
                 src="./assets/icononly-transp-LGCOmZMi.png"
                 alt="logo"
@@ -86,9 +90,13 @@
             </a>
           </li>
 
-          <li><a href="/pages/team.html" class="nav-link">Team</a></li>
+          <li><a href="#team" class="nav-link">Team</a></li>
+          <li><a href="#career" class="nav-link">Career</a></li>
+          <li><a href="#contacts" class="nav-link">Contacts</a></li>
+
+          <!-- <li><a href="/pages/team.html" class="nav-link">Team</a></li>
           <li><a href="/pages/career.html" class="nav-link">Career</a></li>
-          <li><a href="/pages/contacts.html" class="nav-link">Contacts</a></li>
+          <li><a href="/pages/contacts.html" class="nav-link">Contacts</a></li> -->
         </ul>        
       </div>
 
@@ -98,7 +106,7 @@
 
     <main>
       <!-- HERO SECTION -->
-      <section class="hero-section section">
+      <section class="hero-section section"  id="hero">
   <div class="hero-container container">
     <div class="hero-content">
       <h1 class="hero-title">echocode.app</h1>
@@ -187,7 +195,7 @@
 </section>
 
       <!-- PRODUCTS -->
-      <section class="products-section">
+      <section class="products-section" id="products">
   <div class="products-container container">
     <div class="products-title-container">
       <a href="/echoapp-front/pages/products.html" class="products-title-link">
@@ -207,7 +215,7 @@
 
       <!-- Prices -->
       <section class="prices-section" id="prices-section">
-  <div class="prices-container container">
+  <div class="prices-container container" id="prices">
     <h4 class="title">Prices</h4>
 
     <ul class="prices-list">
@@ -236,7 +244,7 @@
 </section>
 
       <!-- Partnership -->
-      <section class="partner-section">
+      <section class="partner-section" id="partnership">
   <div class="partner-container container">
     <!-- title -->
     <div class="partner-title-wrap">
@@ -248,8 +256,8 @@
       <!-- address buttom 'EXPLORE MORE' PC -->
       <address class="partner-link-address  partner-link-pc">
         <a class="partner-link"
-          href="mailto:example@email.com"
-          aria-label="example@email.com"
+          href="mailto:hello@echocode.app"
+          aria-label="hello@echocode.app"
           >Explore more
         </a>
       </address>
@@ -589,7 +597,7 @@ Our grounded expertise for your new heights
 </section>
 
       <!-- Team -->
-      <section class="team-section">
+      <section class="team-section" id="team">
   <div class="team-container container">
     <div class="team-content">
       <!-- TEAM list 👩🏻‍💻👨🏼‍💻 -->
@@ -618,7 +626,7 @@ Our grounded expertise for your new heights
 </section>
 
       <!-- Career -->
-      <section class="career-section">
+      <section class="career-section" id="career">
   <div class="career-container container">
     <h5 class="title">Career</h5>
     <div class="career-wrap">
@@ -681,7 +689,7 @@ Our grounded expertise for your new heights
 
       <!-- Contacts -->
       <section class="contacts-section" id="contacts-section">
-  <div class="contacts-container container">
+  <div class="contacts-container container" id="contacts">
     <h5 class="title">Contacts</h5>
 
     <div class="contacts-social-container">
@@ -689,9 +697,12 @@ Our grounded expertise for your new heights
         <ul class="social-list">
           <li class="social-item">
             <a
-              href="https://www.linkedin.com/company/echocode/about/?viewAsMember=true"
+              href="http://linkedin.com/company/echocode"
               class="social-link"
               aria-label="LinkedIn"
+              title="Visit our LinkedIn page"
+              target="_blank"
+              rel="noopener noreferrer"
               >LinkedIn
               <svg class="social-link-icon" width="1" height="1">
                 <use href="./assets/sprite-DY-l4dVz.svg#icon-linkedin"></use>
@@ -700,7 +711,13 @@ Our grounded expertise for your new heights
           </li>
 
           <li class="social-item">
-            <a href="" class="social-link" aria-label="Instagram"
+            <a
+              href="http://instagram.com/echocode.app"
+              class="social-link"
+              aria-label="Instagram"
+              title="Visit our Instagram page"
+              target="_blank"
+              rel="noopener noreferrer"
               >Instagram
               <svg class="social-link-icon" width="1" height="1">
                 <use href="./assets/sprite-DY-l4dVz.svg#icon-instagram"></use>
@@ -708,17 +725,26 @@ Our grounded expertise for your new heights
             </a>
           </li>
 
-          <li class="social-item">
+          <!-- <li class="social-item">
             <a href="" class="social-link" aria-label="Facebook"
+        title="Visit the GitHub page of this website's developer"
+        target="_blank"
+        rel="noopener noreferrer"
               >Facebook
               <svg class="social-link-icon" width="1" height="1">
-                <use href="./assets/sprite-DY-l4dVz.svg#icon-facebook"></use>
+                <use href="/icons/sprite.svg#icon-facebook"></use>
               </svg>
             </a>
-          </li>
+          </li> -->
 
           <li class="social-item">
-            <a href="" class="social-link" aria-label="Telegram"
+            <a
+              href="https://t.me/echocode_app"
+              class="social-link"
+              aria-label="Telegram"
+              title="Contact us on Telegram"
+              target="_blank"
+              rel="noopener noreferrer"
               >Telegram
               <svg class="social-link-icon" width="1" height="1">
                 <use href="./assets/sprite-DY-l4dVz.svg#icon-telegram"></use>
@@ -727,7 +753,13 @@ Our grounded expertise for your new heights
           </li>
 
           <li class="social-item">
-            <a href="" class="social-link" aria-label="WhatsApp"
+            <a
+              href="https://wa.me/380977775973"
+              class="social-link"
+              aria-label="WhatsApp"
+              title="Contact us on WhatsApp"
+              target="_blank"
+              rel="noopener noreferrer"
               >WhatsApp
               <svg class="social-link-icon" width="1" height="1">
                 <use href="./assets/sprite-DY-l4dVz.svg#icon-whatsapp"></use>
@@ -740,34 +772,35 @@ Our grounded expertise for your new heights
       <div class="contacts-content">
         <p class="contacts-text">
           Write us by email or contact us on any available social network.
-          You're always welcome!
+          <br />You're always welcome!
         </p>
 
-        <button type="button" class="contact-btn js-open-modal" id="openModal">Contact us</button>
+        <button type="button" class="contact-btn js-open-modal" id="openModal">
+          Contact us
+        </button>
 
         <div class="adress-container">
+          <address>
           <ul class="address-list">
             <li class="social-item">
-              <address>
+              
                 <a
-                  href="tel:+123456789"
+                  href="tel:+380977775973"
                   class="social-link address-flex-container"
-                  aria-label="+123456789"
-                  >+123456789
+                  aria-label="Call us at +380977775973"
+                  >+380977775973
                   <svg class="social-link-icon" width="1" height="1">
                     <use href="./assets/sprite-DY-l4dVz.svg#icon-phonelink"></use>
                   </svg>
                 </a>
-              </address>
             </li>
 
             <li class="social-item">
-              <address>
                 <a
-                  href="mailto:example@email.com"
+                  href="mailto:hello@echocode.app"
                   class="social-link address-flex-container"
-                  aria-label="example@email.com"
-                  >example@email.com
+                  aria-label="Email us at hello@echocode.app"
+                  >hello@echocode.app
                   <svg class="social-link-icon" width="1" height="1">
                     <use href="./assets/sprite-DY-l4dVz.svg#icon-email"></use>
                   </svg>
