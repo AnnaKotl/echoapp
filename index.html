@@ -52,9 +52,9 @@
       referrerpolicy="no-referrer"
     />
     <!-- / -->
-    <script type="module" crossorigin src="./assets/main-DnMf3ZUt.js"></script>
-    <link rel="modulepreload" crossorigin href="./assets/main-BhA4a7By.js">
-    <link rel="stylesheet" crossorigin href="./assets/main-GFh_3ykn.css">
+    <script type="module" crossorigin src="./assets/main-joPnXME9.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/main-CH_-1bWW.js">
+    <link rel="stylesheet" crossorigin href="./assets/main-B2rXYZPp.css">
   </head>
 
   <body>
@@ -198,9 +198,7 @@
       <section class="products-section" id="products">
   <div class="products-container container">
     <div class="products-title-container">
-      <a href="/echoapp-front/pages/products.html" class="products-title-link">
         <h3 class="products-title title">Our products</h3>
-      </a>
     </div>
   </div>
 
@@ -592,26 +590,33 @@
       <section class="team-section" id="team">
   <div class="team-container container">
     <div class="team-content">
-      <!-- TEAM list 👩🏻‍💻👨🏼‍💻 -->
-      <ul class="team-list" aria-live="polite">
-        <li class="advantage">Passion</li>
-        <li class="advantage">Experience</li>
-        <li class="advantage">Friendly Staff</li>
-        <li class="advantage">Innovation</li>
-        <li class="advantage">The Best!</li>
-      </ul>
-      <!-- 👩🏻‍💻👨🏼‍💻 / -->
-      <div class="team-bg-img"></div>
-      <div class="team-description">
+      <div class="team-wrap">
         <h5 class="team-title">
           Our <span class="team-title-accent">Team</span>
         </h5>
-        <p class="team-text">
-          We have a great knack for innovation and problem-solving and are
-          always up for a challenge. We are friendly, knowledgeable, and highly
-          collaborative. Above all, we are passionate about developing
-          applications that make a difference and improve users' lives.
-        </p>
+        <!-- TEAM list 👩🏻‍💻👨🏼‍💻 -->
+        <ul class="team-list" aria-live="polite">
+          <li class="advantage">Passion</li>
+          <li class="advantage">Experience</li>
+          <li class="advantage">Friendly Staff</li>
+          <li class="advantage">Innovation</li>
+          <li class="advantage">The Best!</li>
+        </ul>
+      </div>
+      <!-- 👩🏻‍💻👨🏼‍💻 / -->
+      <div class="team-bg-img"></div>
+      <div class="team-description">
+        <div class="team-text-wrap">
+          <p class="team-text">
+            We thrive on innovation and problem-solving, embracing every
+            challenge with enthusiasm.
+          </p>
+          <p class="team-subtext">
+            Our team is <span>friendly</span>,<br /><span>knowledgeable</span>,<br />and <span>thrives</span><br />on collaboration.
+            <br />Above all, we are passionate about developing applications
+            that make a difference and improve users' lives.
+          </p>
+        </div>
       </div>
     </div>
   </div>
@@ -620,62 +625,46 @@
       <!-- Career -->
       <section class="career-section" id="career">
   <div class="career-container container">
-    <h5 class="title">Career</h5>
-    <div class="career-wrap">
-      <p class="career-text">
-        If you have something exciting in mind, write us an email or any other
-        messenger. We look forward to engaging with you ideas and exploring
-        potential opportunities. Our doors are always open.
-      </p>
-      <div class="career-contacts-wrap">
-        <!-- | 👩🏻‍💻 👨🏼‍💻 -->
-        <div class="career-scroll-wrap">
-          <p class="text-career">
-            We're always looking for developers, marketers, designers and other
-            brilliant people!
-          </p>
-          <div>
-            <a
-              href="#contacts-section"
-              class="career-scroll-link js-scroll-link"
-              title="Scroll to the Contacts"
-            >
-              <svg class="career-scroll-icon-top" width="100" height="100">
-                <use href="./assets/sprite-DY-l4dVz.svg#icon-keyboard_arrow_down"></use>
-              </svg>
-              <svg class="career-scroll-icon" width="100" height="100">
-                <use href="./assets/sprite-DY-l4dVz.svg#icon-keyboard_arrow_down"></use>
-              </svg>
-            </a>
-          </div>
-        </div>
-        <!-- | 👩🏻‍💻 👨🏼‍💻 / -->
-        <!-- || 👩🏻‍💻 👨🏼‍💻 -->
-        <div class="career-scroll-wrap">
-          <p class="text-career">
-            Have a partnership proposal? Leave your contacts, we will contact
-            you soon!
-          </p>
-          <div>
-            <a
-              href="#contacts-section"
-              class="career-scroll-link js-scroll-link"
-              title="Scroll to the Contacts"
-            >
-              <svg class="career-scroll-icon-top" width="100" height="100">
-                <use href="./assets/sprite-DY-l4dVz.svg#icon-keyboard_arrow_down"></use>
-              </svg>
-              <svg class="career-scroll-icon" width="100" height="100">
-                <use href="./assets/sprite-DY-l4dVz.svg#icon-keyboard_arrow_down"></use>
-              </svg>
-            </a>
-          </div>
-        </div>
-        <!-- || 👩🏻‍💻 👨🏼‍💻 / -->
-      </div>
-    </div>
+    <!-- <div class="career-bg-img"></div> -->
 
-    <div class="career-bg-img"></div>
+    <h5 class="title">Career</h5>
+
+    <div class="video-wrapper-career">
+      <address class="career-text-accent">
+        If you have something exciting in mind, write us an
+        <a
+          href="mailto:hello@echocode.app"
+          class="address-career"
+          aria-label="Email us at hello@echocode.app"
+          >email
+        </a>
+        or any other messenger.
+      </address>
+
+      <div class="video-wrap-career">
+        <video autoplay loop muted id="video-career" aria-hidden="true">
+          <source src="./assets/video-ios-mob-CcNxn4ZX.mp4" type="video/mp4" />
+        </video>
+        <div class="video-shadow"></div>
+      </div>
+
+      <div class="career-wrap">
+        <p class="text-career text-career-left">
+          Have a partnership proposal? Leave your contacts, we will contact you
+          soon!
+        </p>
+
+        <p class="text-career text-career-right">
+          We're always looking for developers, marketers, designers and other
+          brilliant people!
+        </p>
+      </div>
+
+      <p class="career-text">
+        We look forward to engaging with your ideas and exploring potential
+        opportunities.<br />Our doors are always open.
+      </p>
+    </div>
   </div>
 </section>
 
