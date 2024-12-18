@@ -254,7 +254,7 @@ button {
 #scroll-button {
   position: fixed;
   bottom: 30px;
-  right: 30px;
+  right: 0;
   padding: 30px;
   background-color: transparent;
   color: var(--accent-color);

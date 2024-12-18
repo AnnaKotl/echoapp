@@ -1,14 +1,14 @@
 .prices-section {
-  padding-bottom: var(--padding-section);
+  padding-top: var(--padding-section);
   position: relative;
   z-index: 1;
 }
 
 /* reverse */
-/* .prices-bg-images {
+.prices-bg-images {
   position: absolute;
   right: 0;
-  bottom: -10%;
+  bottom: -15%;
   width: 110%;
   height: 110%;
   background-image: url('/images/bg-img-21-reverse.png');
@@ -18,9 +18,9 @@
   pointer-events: none;
   opacity: 0.4;
   z-index: -1;
-} */
+}
 
-.prices-bg-images {
+/* .prices-bg-images {
   position: absolute;
   left: 0;
   bottom: -10%;
@@ -33,7 +33,7 @@
   pointer-events: none;
   opacity: 0.4;
   z-index: -1;
-}
+} */
 
 .prices-container > h4 {
   background: linear-gradient(330deg, #dc3545 75%, #ffc107 95%, #fd7e14 100%);

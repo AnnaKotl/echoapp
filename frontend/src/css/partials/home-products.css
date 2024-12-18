@@ -1,5 +1,4 @@
 .products-section {
-  padding-bottom: 100px;
   list-style-type: none;
   mask-image: linear-gradient(
     to right,
@@ -9,7 +8,9 @@
     rgba(0, 0, 0, 0) 100%
   );
   overflow: hidden;
-  padding-bottom: var(--padding-section);
+  padding-top: var(--padding-section);
+  padding-bottom: 80px;
+  z-index: 2;
 }
 
 .products-title {

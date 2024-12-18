@@ -3,19 +3,25 @@
   font-size: 72px;
   font-weight: var(--title-standart-font-weight);
   line-height: var(--text-standart-line-height);
-  margin-bottom: var(--margin-bottom);
+  margin-bottom: 0;
   color: var(--light);
 }
 
 .team-title-accent {
-  background: linear-gradient(330deg, #ffc107 40%, #fd7e14 60%, #dc3545 90%);
+  background: linear-gradient(
+    300deg,
+    #007bff 10%,
+    #6610f2 40%,
+    #6f42c1 50%,
+    #e83e8c 90%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-transform: uppercase;
 }
 
 .team-section {
-  padding-bottom: var(--padding-section);
+  padding-top: 80px;
   position: relative;
   z-index: 1;
 }
@@ -24,13 +30,41 @@
   margin-left: auto;
 }
 
-.team-text {
+.team-text-wrap {
   font-size: 30px;
   font-weight: 200;
   line-height: var(--text-standart-line-height);
   text-align: right;
-  max-width: 380px;
+}
+
+.team-text {
+  font-size: 50px;
+  font-weight: 500;
+  max-width: 600px;
   margin-left: auto;
+
+  background: linear-gradient(
+    300deg,
+    #e83e8c 20%,
+    #6f42c1 40%,
+    #6610f2 50%,
+    #007bff 60%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.team-subtext {
+  text-align: right;
+  font-size: 30px;
+  font-weight: 200;
+  max-width: 360px;
+  margin: 30px 0 0 auto;
+}
+
+.team-subtext span {
+  color: var(--pink);
+  font-weight: 500;
 }
 
 .team-content {
@@ -39,13 +73,19 @@
   gap: 60px;
 }
 
+.team-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
 .team-bg-img {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 70%;
-  height: 70%;
+  width: 60%;
+  height: 60%;
   background-image: url('/images/ios-new-web.webp');
   background-position: center center;
   background-size: contain;
@@ -72,18 +112,20 @@
   color: var(--light);
   opacity: 0.8;
   transition: all var(--standart-tr-cubic);
-  padding: 6px;
+  padding: 8px;
 }
 
 .advantage.active {
   opacity: 1;
   transform: scale(1.1);
-  background: linear-gradient(
-    330deg,
-    #dc3545 10%,
-    #fd7e14 50%,
-    #ffc107 80%
+  color: var(--blue);
+  /* background: linear-gradient(
+    300deg,
+    #007bff 10%,
+    #6610f2 40%,
+    #6f42c1 50%,
+    #e83e8c 90%
   );
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent; */
 }
