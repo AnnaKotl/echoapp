@@ -13,10 +13,10 @@
   text-align: center;
   background: linear-gradient(
     300deg,
-    #f8f9fa 10%,
-    #20f3dd 40%,
+    #f8f9fa 0%,
+    #20f3dd 20%,
     #17a2b8 50%,
-    #007bff 70%
+    #007bff 60%
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -65,7 +65,7 @@
 
 .career-flex-wrap {
   display: flex;
-  gap: 30px;
+  gap: 60px;
   justify-content: space-between;
   flex-direction: column;
 }
@@ -76,7 +76,7 @@
   font-weight: 200;
   max-width: 700px;
   font-size: 30px;
-  line-height: 1.2;
+  line-height: var(--text-standart-line-height);
 }
 
 .career-text {
@@ -86,7 +86,6 @@
 .bottom-career-wrap {
   margin-top: auto;
   display: flex;
-  gap: 10px;
   align-items: flex-start;
 }
 
@@ -112,8 +111,8 @@
   font-weight: var(--text-standart-font-weight);
   text-align: center;
   border-radius: 30px;
-  max-width: 400px;
-  height: 120px;
+  max-width: 360px;
+  height: 140px;
   border: 1px solid transparent;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
