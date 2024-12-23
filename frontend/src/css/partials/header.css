@@ -129,7 +129,7 @@
     opacity: 0.8;
   }
   100% {
-    transform: translate(-50%, -130%) scale(0.3);
+    transform: translate(-50%, -132%) scale(0.3);
     opacity: 0.1;
   }
 }
