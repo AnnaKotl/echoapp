@@ -96,6 +96,7 @@
   left: 0;
   width: 100vw;
   height: 100vh;
+  object-fit: contain;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -129,7 +130,7 @@
     opacity: 0.8;
   }
   100% {
-    transform: translate(-50%, -132%) scale(0.3);
+    transform: translate(-50%, -130%) scale(0.3);
     opacity: 0.1;
   }
 }
