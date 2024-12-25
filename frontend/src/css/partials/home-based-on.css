@@ -1,11 +1,6 @@
 .based-on-container > h2 {
   text-align: center;
-  background: linear-gradient(
-    330deg,
-    #6610f2 30%,
-    #007bff 40%,
-    #20f3dd 60%
-  );
+  background: linear-gradient(330deg, #6610f2 30%, #007bff 40%, #20f3dd 60%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -83,7 +78,7 @@
   font-size: 36px;
   font-weight: var(--text-standart-font-weight);
   opacity: 1;
-  
+
   transition: all var(--standart-tr-cubic);
 }
 
@@ -146,4 +141,39 @@
 
 .based-on-item:hover .based-on-info {
   opacity: 1;
+}
+
+/* MOB adaptive css */
+@media (max-width: 767px) {
+  .based-on-container > h2 {
+    font-size: 40px;
+    margin-bottom: var(--mob-margin-title);
+  }
+  .based-on-item {
+    padding: 20px;
+  }
+  .based-on-title {
+    font-size: var(--text-standart-font-size);
+  }
+  .based-on-info {
+    font-size: 18px;
+    font-weight: 200;
+  }
+}
+
+/* MOB + TABLET adaptive css */
+@media (max-width: 1024px) {
+  .based-on-list-container {
+    gap: 10px;
+  }
+  .based-on-item {
+    width: calc(50% - 10px);
+  }
+}
+
+/* TABLET adaptive css */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .based-on-title {
+    font-size: 30px;
+  }
 }

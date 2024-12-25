@@ -1,18 +1,14 @@
+.contacts-section {
+  overflow: hidden;
+  position: relative;
+}
+
 .contacts-container > h5 {
   text-align: left;
-  background: linear-gradient(
-    300deg,
-    #20f3dd 60%,
-    #20c997 80%,
-    #17a2b8 90%
-  );
+  background: linear-gradient(300deg, #20f3dd 60%, #20c997 80%, #17a2b8 90%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-
-.contacts-section {
-  position: relative;
 }
 
 .contacts-bg-img {
@@ -122,7 +118,7 @@
   transition: var(--transition-bg), var(--transition-cl);
 }
 
-.contact-btn:is(:hover, :focus){
+.contact-btn:is(:hover, :focus) {
   outline: none;
   background: var(--border-color);
   color: var(--blue);
@@ -145,4 +141,97 @@
   gap: 10px;
   font-style: normal;
   align-items: center;
+}
+
+/* MOB + TABLET adaptive css */
+@media (max-width: 1024px) {
+  .contacts-container > h5 {
+    text-align: center;
+    font-size: var(--mob-title-font-size);
+    margin-bottom: var(--mob-margin-title);
+  }
+  .contacts-bg-img {
+    left: 0;
+    bottom: -10%;
+  }
+  .contacts-social-container {
+    flex-direction: column;
+    gap: 30px;
+    max-width: 600px;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  .social-container {
+    display: flex;
+    justify-content: center;
+  }
+  .social-list {
+    text-align: left;
+    display: inline-block;
+  }
+  .social-item {
+    padding: 10px 0;
+  }
+  .social-link {
+    font-size: 26px;
+  }
+  .social-link-icon {
+    width: 30px;
+    height: 30px;
+  }
+  .contacts-content {
+    margin-left: 0;
+  }
+  .contacts-text {
+    max-width: 300px;
+    text-align: center;
+    margin: 0 auto;
+    font-size: var(--text-standart-font-size);
+  }
+  .contact-btn {
+    max-width: 200px;
+    margin: 0;
+    font-size: var(--text-standart-font-size);
+    margin: 30px auto 0;
+  }
+  .adress-container {
+    margin: 20px auto 0;
+  }
+  .address-list {
+    text-align: left;
+    display: inline-block;
+  }
+  .address-flex-container {
+    align-items: center;
+    font-size: 26px;
+  }
+}
+
+/* TABLET adaptive css */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .contacts-bg-img {
+    left: 0;
+    bottom: 0;
+  }
+  .contacts-social-container {
+    flex-direction: column;
+    gap: 60px;
+  }
+  .contacts-text {
+    max-width: none;
+    text-align: left;
+  }
+  .contact-btn {
+    margin: 60px 0;
+    max-width: 200px;
+  }
+  .adress-container {
+    margin: 0;
+  }
+  .address-list {
+    align-items: start;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 0;
+  }
 }

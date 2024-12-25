@@ -31,3 +31,13 @@
   opacity: 1;
   color: var(--accent-color);
 }
+
+/* MOB + TABLET adaptive css */
+@media (max-width: 1024px) {
+  .footer-container {
+    flex-direction: column-reverse;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+  }
+}

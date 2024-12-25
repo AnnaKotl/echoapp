@@ -93,3 +93,27 @@
   transform: scale(1.1);
   filter: var(--filter);
 }
+
+/* MOB adaptive css */
+@media (max-width: 767px) {
+  .products-title-container > h3 {
+    text-align: center;
+    font-size: var(--mob-title-font-size);
+    margin-bottom: var(--mob-margin-title);
+    background: linear-gradient(330deg, #fd7e14 30%, #ffc107 40%, #007bff 70%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .products-wrap {
+    gap: 10px;
+    margin-top: 30px;
+  }
+  .products-row {
+    gap: 10px;
+  }
+  .products-item img:is(:hover, :focus) {
+    transform: scale(1.05);
+  }
+}
+
