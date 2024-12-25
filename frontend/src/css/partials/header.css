@@ -17,8 +17,8 @@
 }
 
 .home-nav-container.scrolled {
-  backdrop-filter: blur(30px);
   -webkit-backdrop-filter: blur(30px);
+  backdrop-filter: blur(30px);
   border-color: var(--border-color);
 }
 
@@ -102,8 +102,8 @@
   align-items: center;
   z-index: 666;
   background: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(30px);
   -webkit-backdrop-filter: blur(30px);
+  backdrop-filter: blur(30px);
   transition: all var(--standart-tr-cubic);
 }
 

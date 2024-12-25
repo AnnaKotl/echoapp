@@ -19,6 +19,7 @@
     #007bff 60%
   );
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -114,8 +115,8 @@
   max-width: 360px;
   height: 140px;
   border: 1px solid transparent;
-  backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 
   animation: gradientFlowBased 3s infinite linear;
 }
@@ -129,6 +130,7 @@
     #007bff 90%
   );
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -141,5 +143,6 @@
     #f8f9fa 90%
   );
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }

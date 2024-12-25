@@ -18,6 +18,7 @@
     #20f3dd 90%
   );
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 
   color: var(--light);
@@ -39,6 +40,7 @@
     #007bff 90%
   );
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -46,6 +48,7 @@
   font-size: 50px;
   color: var(--accent-color);
   background: transparent;
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   border-radius: 30px;
   padding: 12px 24px;

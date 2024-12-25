@@ -94,6 +94,7 @@
     margin-bottom: var(--mob-margin-title);
     background: linear-gradient(330deg, #dc3545 40%, #ffc107 70%, #fd7e14 90%);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
   }
   .prices-list {

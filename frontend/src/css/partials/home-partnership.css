@@ -17,12 +17,14 @@
 .partner-title-left {
   background: linear-gradient(330deg, #e83e8c 20%, #dc3545 40%, #fd7e14 80%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .partner-title-right {
   background: linear-gradient(330deg, #fd7e14 30%, #dc3545 60%, #e83e8c 90%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -65,7 +67,7 @@
   text-align: center;
   margin: 10px 0 0 auto;
   z-index: 2;
-
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   font-size: 30px;
   line-height: var(--text-standart-line-height);
@@ -103,6 +105,7 @@
     #ffc107 90%
   );
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 

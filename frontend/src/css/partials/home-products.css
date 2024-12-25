@@ -1,5 +1,12 @@
 .products-section {
   list-style-type: none;
+  -webkit-mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 1) 12.5%,
+    rgba(0, 0, 0, 1) 87.5%,
+    rgba(0, 0, 0, 0) 100%
+  );
   mask-image: linear-gradient(
     to right,
     rgba(0, 0, 0, 0) 0%,
