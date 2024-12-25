@@ -234,6 +234,16 @@ button {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+.error-message {
+  text-align: center;
+  font-weight: 500;
+  font-size: 30px;
+  margin: 30px auto 0;
+  color: var(--yellow);
+  max-width: 600px;
+  opacity: var(--opacity-standart);
+}
 /* _________________ */
 
 /* TITLE */

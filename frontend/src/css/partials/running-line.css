@@ -1,6 +1,7 @@
 .running-line-section {
   position: relative;
   overflow: hidden;
+  padding-top: 40px;
 }
 
 .running-container {

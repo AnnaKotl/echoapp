@@ -70,17 +70,13 @@
   flex-direction: column;
 }
 
-.career-text,
 .career-text-accent {
   font-style: normal;
   font-weight: 200;
   max-width: 700px;
   font-size: 30px;
   line-height: var(--text-standart-line-height);
-}
-
-.career-text {
-  text-align: left;
+  padding-top: 30px;
 }
 
 .bottom-career-wrap {
