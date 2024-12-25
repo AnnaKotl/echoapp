@@ -85,6 +85,7 @@ initializeServices();
 
 // Initialize servises ------ PRICES
 
+// cd /Users/annakotlyar/Desktop/projects/echoapp/backend
 // node models/InitServices.js
 
 // INIT ONSE ore for TEST ------- ❗️
