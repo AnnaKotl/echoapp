@@ -10,7 +10,7 @@ const initialServices = [
     {
         name: 'Basic',
         features: ['UI/UX Design', 'Develop', 'QA', 'Source code'],
-        price: 'from 1000$',
+        price: 'from $1000',
     },
     {
         name: 'Standard',
@@ -22,7 +22,7 @@ const initialServices = [
             'Source code',
             'Publishing',
         ],
-        price: 'from 1400$',
+        price: 'from $1400',
     },
     {
         name: 'Pro',
@@ -34,9 +34,9 @@ const initialServices = [
             'Source code',
             'Publishing',
             'Apple developer account',
-            'Meta for AppStore',
+            'Meta for App Store',
         ],
-        price: 'from 2500$',
+        price: 'from $2500',
     },
     {
         name: 'Premium',
@@ -48,10 +48,10 @@ const initialServices = [
             'Source code',
             'Publishing',
             'Apple developer account',
-            'Meta for AppStore',
+            'Meta for App Store',
             'Appstore traffic',
         ],
-        price: 'from 5000$',
+        price: 'from $5000',
     },
     {
         name: 'Enterprise',
