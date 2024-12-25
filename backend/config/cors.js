@@ -21,6 +21,6 @@ const corsOptions = {
 module.exports = corsOptions;
 
 
-// origin -> 'https://www.echocode.app' - in future
+// origin -> 'https://www.echocode.app'
 // local -> 'http://localhost:5173'
 // netlify -> 'https://echocode.netlify.app/'

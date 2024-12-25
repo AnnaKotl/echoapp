@@ -12,6 +12,6 @@ const API_URL = process.env.NODE_ENV === 'production'
 
 // console.log("API URL:", API_URL);
 // console.log(import.meta.env);
-console.log(import.meta.env.MODE);
+// console.log(import.meta.env.MODE);
 
 export default API_URL;
