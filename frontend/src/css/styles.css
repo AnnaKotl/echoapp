@@ -255,8 +255,8 @@ button {
 #scroll-button {
   position: fixed;
   bottom: 30px;
-  right: 0;
-  padding: 30px;
+  right: 10px;
+  padding: 10px;
   background-color: transparent;
   color: var(--accent-color);
   border: none;
@@ -285,8 +285,8 @@ button {
 #scroll-button.visible:hover .scroll-icon {
   opacity: 1;
   transform: scale(1.2);
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(32, 243, 221, 0.6);
 }
 #scroll-button.visible:hover {
   opacity: 1;
@@ -313,10 +313,16 @@ button {
   padding: 0 30px;
   overflow: hidden;
 }
+.section {
+  padding: 140px 0 0;
+}
 
 @media (max-width: 767px) {
   .container {
     padding: 0 16px;
+  }
+  .section {
+    padding: var(--mob-padding-section) 0 0;
   }
 }
 

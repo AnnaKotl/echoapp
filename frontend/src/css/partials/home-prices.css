@@ -1,5 +1,4 @@
 .prices-section {
-  padding-top: var(--padding-section);
   position: relative;
   z-index: 1;
 }

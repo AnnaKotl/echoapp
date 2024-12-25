@@ -12,7 +12,6 @@
 }
 
 .based-on-section {
-  padding: 140px 0 0;
   background-color: var(--bgc);
   z-index: 2;
 }

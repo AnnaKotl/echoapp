@@ -1,3 +1,9 @@
+/* MOBILE ver. */
+.logo-nav-mob {
+  display: none;
+}
+/* / */
+
 .home-nav-container {
   position: fixed;
   top: 0;
@@ -64,7 +70,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  transition: visibility var(--standart-tr-cubic), var(--transition-op), var(--transition-cl);
+  transition: visibility var(--standart-tr-cubic), var(--transition-op),
+    var(--transition-cl);
   font-size: var(--text-standart-font-size);
   color: var(--blue);
   padding: 20px 6px;
@@ -73,7 +80,8 @@
   visibility: visible;
   opacity: 1;
   position: relative;
-  transition: visibility var(--standart-tr-cubic), var(--transition-op), var(--transition-cl);
+  transition: visibility var(--standart-tr-cubic), var(--transition-op),
+    var(--transition-cl);
 }
 .home-link-logo:hover #nav-logo {
   visibility: hidden;
@@ -113,7 +121,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
 
-  animation: logoFade 3.5s forwards ease;  
+  animation: logoFade 3.5s forwards ease;
   /* 3.5s */
 
   position: absolute;

@@ -15,7 +15,6 @@
     rgba(0, 0, 0, 0) 100%
   );
   overflow: hidden;
-  padding-top: var(--padding-section);
   padding-bottom: 80px;
   z-index: 2;
 }
