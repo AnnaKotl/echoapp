@@ -1,14 +1,13 @@
-.contacts-section {
-  overflow: hidden;
-  position: relative;
-}
-
 .contacts-container > h5 {
   text-align: left;
   background: linear-gradient(300deg, #20f3dd 60%, #20c997 80%, #17a2b8 90%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.contacts-section {
+  position: relative;
 }
 
 .contacts-bg-img {
@@ -204,34 +203,5 @@
   .address-flex-container {
     align-items: center;
     font-size: 26px;
-  }
-}
-
-/* TABLET adaptive css */
-@media (min-width: 768px) and (max-width: 1024px) {
-  .contacts-bg-img {
-    left: 0;
-    bottom: 0;
-  }
-  .contacts-social-container {
-    flex-direction: column;
-    gap: 60px;
-  }
-  .contacts-text {
-    max-width: none;
-    text-align: left;
-  }
-  .contact-btn {
-    margin: 60px 0;
-    max-width: 200px;
-  }
-  .adress-container {
-    margin: 0;
-  }
-  .address-list {
-    align-items: start;
-    flex-direction: column;
-    gap: 30px;
-    margin-top: 0;
   }
 }
