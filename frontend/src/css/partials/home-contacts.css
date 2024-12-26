@@ -113,7 +113,6 @@
   padding: 12px 24px;
   align-items: center;
   justify-content: center;
-  /* animation: subtlePulse 3s infinite; */
   transition: var(--transition-bg), var(--transition-cl);
 }
 

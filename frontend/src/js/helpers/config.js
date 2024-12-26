@@ -15,3 +15,5 @@ const API_URL = process.env.NODE_ENV === 'production'
 // console.log(import.meta.env.MODE);
 
 export default API_URL;
+
+// 'https://www.echocode.app' - hosting

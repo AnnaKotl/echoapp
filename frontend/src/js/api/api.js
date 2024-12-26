@@ -1,6 +1,33 @@
 import API_URL from '/js/helpers/config';
 import { renderServices } from '/js/pages/home/prices';
 
+// 🖇️ CACHE & Local Storage
+const CACHE_EXPIRY_TIME = 60 * 60 * 1000;
+function getCachedData(key) {
+  const cachedData = localStorage.getItem(key);
+  const cachedTime = localStorage.getItem(`${key}_time`);
+  
+  if (cachedData && cachedTime) {
+    const elapsedTime = Date.now() - Number(cachedTime);
+    if (elapsedTime < CACHE_EXPIRY_TIME) {
+      return JSON.parse(cachedData);
+    } else {
+      localStorage.removeItem(key);
+      localStorage.removeItem(`${key}_time`);
+    }
+  }
+  return null;
+}
+function setCachedData(key, data) {
+  localStorage.setItem(key, JSON.stringify(data));
+  localStorage.setItem(`${key}_time`, Date.now());
+}
+export function clearCache(key) {
+  localStorage.removeItem(key);
+  localStorage.removeItem(`${key}_time`);
+}
+// 🖇️ /
+
 // 💎 Get Icons from backend
 export async function fetchIcons() {
   try {
@@ -9,6 +36,7 @@ export async function fetchIcons() {
       throw new Error('Failed to fetch icons');
     }
     const data = await response.json();
+    setCachedData('icons', data.icons); // cache
     return data.icons;
   } catch (error) {
     console.error('Error fetching icons:', error);
@@ -48,6 +76,7 @@ export async function fetchServices() {
       throw new Error(`Error fetching services: ${response.statusText} (${response.status})`);
     }
     const services = await response.json();
+    setCachedData('services', services); // cache
     renderServices(services);
   } catch (error) {
     console.error('Failed to fetch services:', error);
@@ -88,6 +117,7 @@ export async function fetchProductIcons() {
       throw new Error('Failed to fetch product icons');
     }
     const { icons } = await response.json();
+    setCachedData('productIcons', icons); // cache
     return icons;
   } catch (error) {
     console.error('Error fetching product icons:', error);
@@ -95,3 +125,10 @@ export async function fetchProductIcons() {
   }
 }
 // 🎆 /
+
+// Clear CACHE 🖇️
+export function clearAllCaches() {
+  clearCache('icons');
+  clearCache('services');
+  clearCache('productIcons');
+}

@@ -27,20 +27,31 @@ export default defineConfig({
   },
 });
 
+
+
+// HELPERS:
+
+
 // cd /Users/annakotlyar/Desktop/projects/echoapp
 // npm run start
 
-// push
+
+// push:
+
 // git status
 // git add .
 // git commit -m " "
 // git push origin main
 
-// build
+
+// build:
+
 // cd frontend
 // npm run build
 
-// or this build
+
+// or this build:
+
 // cd frontend
 // npm install
 // npm run build

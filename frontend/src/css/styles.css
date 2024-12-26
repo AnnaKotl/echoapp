@@ -1,5 +1,5 @@
-/* IMPORTS */
-/* partials */
+@import 'normalize.css';
+
 @import url('./partials/footer.css');
 @import url('./partials/header.css');
 @import url('./partials/home-based-on.css');
@@ -11,13 +11,9 @@
 @import url('./partials/home-prices.css');
 @import url('./partials/home-products.css');
 @import url('./partials/home-team.css');
-/* other */
-@import url('./modal.css');
-@import 'normalize.css';
-/* / */
-/* _________________ */
 
-/* ROOTS */
+@import url('./modal.css');
+
 :root {
   --bgc: #010205;
   --accent-color: #20f3dd;
@@ -39,10 +35,8 @@
 
   --filter: drop-shadow(0 0 6px rgba(32, 243, 221, 0.6))
     drop-shadow(0 0 12px rgba(32, 243, 221, 0.5));
-  /* transition: filter var(--standart-tr-cubic); */
 
   --border-color: rgba(255, 255, 255, 0.1);
-  /* var(--border-color); */
 
   --text-standart-font-size: 20px;
   --text-standart-font-weight: 500;
@@ -50,7 +44,6 @@
   --title-standart-font-weight: 700;
 
   --opacity-standart: 0.6;
-
   --margin-bottom: 30px;
   --padding-section: 140px;
 
@@ -60,19 +53,13 @@
   --transition-cl: color 300ms cubic-bezier(0.4, 0, 0.2, 1);
   --transition-op: opacity 300ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-/* mobile */
+
 :root {
   --mob-padding-section: 100px;
   --mob-margin-title: 50px;
   --mob-title-font-size: 40px;
 }
-/* / */
-/* _________________ */
 
-/* :is(:hover, :focus) */
-
-/* KEYFRAMES */
-/* PRICES & PARTNERSHIP gradient border */
 @keyframes gradientFlow {
   0% {
     box-shadow: 0 0 0 2px rgba(232, 62, 140, 0.6), 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -90,7 +77,7 @@
     box-shadow: 0 0 0 2px rgba(232, 62, 140, 0.6), 0 4px 6px rgba(0, 0, 0, 0.1);
   }
 }
-/* BASED ON & CAREER gradient border */
+
 @keyframes gradientFlowBased {
   0% {
     box-shadow: 0 0 0 2px rgba(32, 243, 221, 0.6), 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -111,7 +98,7 @@
     box-shadow: 0 0 0 2px rgba(32, 243, 221, 0.6), 0 4px 6px rgba(0, 0, 0, 0.1);
   }
 }
-/* BUTTON scale */
+
 @keyframes subtlePulse {
   0% {
     transform: scale(1);
@@ -123,7 +110,7 @@
     transform: scale(1);
   }
 }
-/* ICON scale */
+
 @keyframes subtlePulseIcon {
   0% {
     transform: scale(1);
@@ -135,7 +122,7 @@
     transform: scale(1);
   }
 }
-/* PARTNERSHIP link (border gradient + scale) */
+
 @keyframes combinedEffect {
   0% {
     box-shadow: 0 0 0 2px rgba(232, 62, 140, 0.6), 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -158,10 +145,7 @@
     transform: scale(1);
   }
 }
-/* / */
-/* _________________ */
 
-/* NORMALIZE */
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -218,8 +202,6 @@ button {
   background-color: transparent;
   line-height: var(--text-standart-line-height);
 }
-/* / */
-/* _________________ */
 
 .visually-hidden {
   position: absolute;
@@ -243,7 +225,6 @@ button {
   max-width: 600px;
   opacity: var(--opacity-standart);
 }
-/* _________________ */
 
 /* TITLE */
 .title {

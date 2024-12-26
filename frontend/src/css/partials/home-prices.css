@@ -155,9 +155,6 @@
   outline: none;
   background: var(--border-color);
   color: var(--yellow);
-  /* color: var(--blue); */
-  /* transform: scale(1.1); */
-  /* , var(--transition-tr); */
 }
 
 /* MOB adaptive css */

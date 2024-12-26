@@ -180,7 +180,6 @@
 
 /* TABLET adaptive css */
 @media (min-width: 768px) and (max-width: 1024px) {
-  /* HERO */
   .prices-bg-images {
     display: block;
   }

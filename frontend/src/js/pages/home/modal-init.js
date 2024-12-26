@@ -1,5 +1,6 @@
 import validationSchema from '/js/helpers/validate-form';
 import { sendRequest } from '/js/api/api';
+import showToast from '/js/helpers/show-toast';
 
 export function initializeModalForm(showToast) {
     const form = document.getElementById('requestForm');

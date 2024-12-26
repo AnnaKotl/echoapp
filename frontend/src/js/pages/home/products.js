@@ -28,7 +28,7 @@ const renderProductIcons = async () => {
         (rowIndex + 1) * iconsPerRow
       );
 
-      const iconsWithClones = [...rowIcons, ...rowIcons, ...rowIcons, ...rowIcons, ...rowIcons, ...rowIcons]; // so many copy ICONS 🌜🌛
+      const iconsWithClones = [...rowIcons, ...rowIcons, ...rowIcons, ...rowIcons, ...rowIcons, ...rowIcons]; // 🩼 so many copy ICONS 🌜🌛
 
       iconsWithClones.forEach(icon => {
         const item = document.createElement('div');
