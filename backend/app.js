@@ -8,7 +8,6 @@ const iconRoutes = require('./routes/icons');
 const servicesRouter = require('./routes/services');
 const productsIconsRoutes = require('./routes/productsIcons');
 const errorHandler = require('./helpers/errorHandler');
-const keepAlive = require('./helpers/keepAlive');
 const setupSwagger = require('./config/swagger');
 const cors = require('cors');
 const corsOptions = require('./config/cors');
@@ -18,10 +17,7 @@ dotenv.config();
 connectDB();
 
 const app = express();
-keepAlive();
 
-// const formatsLogger = app.get('env') === 'development' ? 'dev' : 'short';
-// console.log(`Environment: ${process.env.NODE_ENV}`);
 const formatsLogger = app.get('env') === 'development' ? 'dev' : 'short';
 console.log(`Environment: ${process.env.NODE_ENV || 'development'}`);
 
@@ -32,8 +28,6 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 app.use(logger(formatsLogger));
-// app.use(cors(corsOptions));                                        // - local 🩼
-// app.use(cors({ origin: 'https://echocode.netlify.app' }));           // - production 🩼
 app.use(express.json());
 app.use(errorHandler);
 
