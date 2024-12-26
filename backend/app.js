@@ -36,6 +36,10 @@ app.use('/icons', iconRoutes);
 app.use('/services', servicesRouter);
 app.use('/products-icons', productsIconsRoutes);
 
+app.get('/', (req, res) => {
+  res.status(200).send('Backend is live 🚀');
+});
+
 app.get('/health', (req, res) => {
   res.status(200).send('OK');
 });
