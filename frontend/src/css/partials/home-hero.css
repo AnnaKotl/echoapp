@@ -26,9 +26,9 @@
 .hero-text {
   font-size: 50px;
   max-width: 870px;
-  margin-bottom: 60px;
+  margin-bottom: 30px;
   font-weight: var(--text-standart-font-weight);
-  line-height: var(--text-standart-line-height);
+  line-height: 1.2;
 
   background: linear-gradient(
     330deg,

@@ -73,10 +73,10 @@
 
 .based-on-title {
   text-align: left;
+  margin-right: auto;
   font-size: 36px;
   font-weight: var(--text-standart-font-weight);
   opacity: 1;
-  margin-right: auto;
 
   transition: all var(--standart-tr-cubic);
 }
@@ -147,6 +147,9 @@
   .based-on-container > h2 {
     font-size: 40px;
     margin-bottom: var(--mob-margin-title);
+  }
+  .based-on-item {
+    padding: 20px;
   }
   .based-on-title {
     font-size: var(--text-standart-font-size);
