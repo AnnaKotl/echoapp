@@ -35,6 +35,10 @@ app.use('/icons', iconRoutes);
 app.use('/services', servicesRouter);
 app.use('/products-icons', productsIconsRoutes);
 
+app.get('/health', (req, res) => {
+  res.status(200).send('OK');
+});
+
 // Swagger
 setupSwagger(app);
 
