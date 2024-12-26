@@ -8,18 +8,19 @@ const iconRoutes = require('./routes/icons');
 const servicesRouter = require('./routes/services');
 const productsIconsRoutes = require('./routes/productsIcons');
 const errorHandler = require('./helpers/errorHandler');
+const keepAlive = require('./helpers/keepAlive');
 const setupSwagger = require('./config/swagger');
 const cors = require('cors');
 const corsOptions = require('./config/cors');
 const logger = require('morgan');
 
 dotenv.config();
-
-const app = express();
 connectDB();
 
-const formatsLogger = app.get('env') === 'development' ? 'dev' : 'short';
+const app = express();
+keepAlive();
 
+const formatsLogger = app.get('env') === 'development' ? 'dev' : 'short';
 console.log(`Environment: ${process.env.NODE_ENV}`);
 
 app.use(logger(formatsLogger));
@@ -39,7 +40,6 @@ app.get('/health', (req, res) => {
   res.status(200).send('OK');
 });
 
-// Swagger
 setupSwagger(app);
 
 app.use((_, res) => {
