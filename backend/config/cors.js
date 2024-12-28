@@ -1,8 +1,8 @@
-const allowedOrigins = [
-  'https://echocode.netlify.app',
-  'http://localhost:5173',
-  'https://www.echocode.app',
-];
+// const allowedOrigins = [
+//   'https://echocode.netlify.app',
+//   'http://localhost:5173',
+//   'https://www.echocode.app',
+// ];
 
 /**
  * CORS Configuration:
@@ -23,6 +23,8 @@ const allowedOrigins = [
  * 
  * If a request is made from an unauthorized domain, it will be rejected with a CORS error.
  */
+
+const allowedOrigins = ['https://echocode.app', 'https://www.echocode.app'];
 
 const corsOptions = {
   origin: (origin, callback) => {
