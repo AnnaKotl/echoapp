@@ -24,11 +24,16 @@
  * If a request is made from an unauthorized domain, it will be rejected with a CORS error.
  */
 
-const allowedOrigins = ['https://echocode.app', 'https://www.echocode.app'];
+const allowedOrigins = [
+  'https://echocode.app',
+  'https://www.echocode.app',
+  'https://echocode.netlify.app',
+  'http://localhost:5173',
+];
 
 const corsOptions = {
   origin: (origin, callback) => {
-    if (!origin || allowedOrigins.includes(origin)) {
+    if (!origin || allowedOrigins.some(allowedOrigin => origin.includes(allowedOrigin))) {
       callback(null, true);
     } else {
       callback(new Error('Not allowed by CORS'));
@@ -36,7 +41,7 @@ const corsOptions = {
   },
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   allowedHeaders: ['Content-Type', 'Authorization'],
-  credentials: true, // Allows cookies to be sent with cross-origin requests
+  credentials: true,
   optionsSuccessStatus: 200,
 };
 

@@ -25,15 +25,9 @@ const formatsLogger = app.get('env') === 'development' ? 'dev' : 'short';
 console.log(`Environment: ${process.env.NODE_ENV || 'development'}`);
 
 if (process.env.NODE_ENV === 'production') {
-  app.use(cors({
-    origin: 'https://www.echocode.app',  // https://www.echocode.app - on hosting 🎈  https://echocode.netlify.app - local+prod
-    credentials: true
-  }));
+  app.use(cors(corsOptions));
 } else {
-  app.use(cors({
-    ...corsOptions,
-    credentials: true
-  }));
+  app.use(cors(corsOptions));
 }
 
 app.use(logger(formatsLogger));
