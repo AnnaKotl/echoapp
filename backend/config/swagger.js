@@ -16,8 +16,8 @@ const setupSwagger = (app) => {
         },
       ],
     },
-    apis: ['./routes/contact.js'],
-  };
+    apis: ['./routes/**/*.js'],
+  };  
 
   const specs = swaggerJsDoc(options);
   app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(specs));
