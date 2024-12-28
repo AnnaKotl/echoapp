@@ -51,6 +51,7 @@ export const sendRequest = async (data) => {
     // console.log('Sending data:', data);
     const response = await fetch(`${API_URL}/submit-request`, {
       method: 'POST',
+      credentials: 'include', 
       headers: {
         'Content-Type': 'application/json',
       },
@@ -95,6 +96,7 @@ export async function uploadImage(imageFile) {
 
   const response = await fetch(`${API_URL}/upload`, {
     method: 'POST',
+    credentials: 'include', 
     body: formData,
   });
 
