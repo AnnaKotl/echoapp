@@ -1,7 +1,6 @@
 const express = require('express');
 const dotenv = require('dotenv');
 const connectDB = require('./config/db');
-
 const createSubmitRequest = require('./routes/submit-form');
 const contactRoutes = require('./routes/contact');
 const uploadRoutes = require('./routes/upload');
@@ -9,7 +8,6 @@ const iconRoutes = require('./routes/icons');
 const servicesRouter = require('./routes/services');
 const productsIconsRoutes = require('./routes/productsIcons');
 const adminRoutes = require('./routes/admin');
-
 const errorHandler = require('./helpers/errorHandler');
 const setupSwagger = require('./config/swagger');
 const cors = require('cors');
@@ -21,12 +19,14 @@ connectDB();
 
 const app = express();
 
+console.log('Allowed origins:', process.env.ALLOWED_ORIGINS);
+
 const formatsLogger = app.get('env') === 'development' ? 'dev' : 'short';
 console.log(`Environment: ${process.env.NODE_ENV || 'development'}`);
 
 if (process.env.NODE_ENV === 'production') {
   app.use(cors({
-    origin: 'https://echocode.netlify.app',  // https://www.echocode.app - on hosting 🎈
+    origin: process.env.ALLOWED_ORIGINS.split(','),
     credentials: true
   }));
 } else {
