@@ -26,7 +26,7 @@ console.log(`Environment: ${process.env.NODE_ENV || 'development'}`);
 
 if (process.env.NODE_ENV === 'production') {
   app.use(cors({
-    origin: 'https://echocode.netlify.app',  // https://www.echocode.app - on hosting 🎈
+    origin: 'https://www.echocode.app',  // https://www.echocode.app - on hosting 🎈  https://echocode.netlify.app - local+prod
     credentials: true
   }));
 } else {
