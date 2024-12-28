@@ -143,20 +143,28 @@
 }
 
 /* MOB adaptive css */
+/* MOB adaptive css */
 @media (max-width: 767px) {
   .based-on-container > h2 {
     font-size: 40px;
     margin-bottom: var(--mob-margin-title);
   }
+  .based-on-list-container {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    gap: 20px;
+  }
   .based-on-item {
+    max-width: 340px;
+    margin: 0 auto;
     padding: 20px;
   }
   .based-on-title {
     font-size: var(--text-standart-font-size);
   }
-  .based-on-info {
-    font-size: 18px;
-    font-weight: 200;
+  #video-based {
+    display: none;
   }
 }
 

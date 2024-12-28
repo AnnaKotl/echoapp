@@ -166,12 +166,7 @@
     gap: 30px;
   }
   .team-bg-img {
-    width: 50%;
-    height: 50%;
-    left: 50%;
-    bottom: 0;
-    background-position: center bottom;
-    transform: translate(-50%, -50%);
+    display: none;
   }
   .team-subtext {
     text-align: center;
@@ -180,7 +175,6 @@
   }
   .team-text-wrap {
     text-align: center;
-    height: 500px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
