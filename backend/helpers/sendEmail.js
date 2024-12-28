@@ -21,7 +21,6 @@ const mailjet = require('node-mailjet').apiConnect(process.env.MJ_APIKEY_PUBLIC,
  * In case of missing variables or errors, an error is thrown.
  */
 
-
 const sendEmail = async ({ to, subject, name, email, mobileNumber, socialNetwork, country, selectedService, message }) => {
   try {
     if (!process.env.SENDER_EMAIL || !to) {

@@ -11,6 +11,6 @@ const requestSchema = new mongoose.Schema({
   createdAt: { type: Date, default: Date.now },
 });
 
-const Request = mongoose.model('Request', requestSchema);
+const Request = mongoose.models.Request || mongoose.model('Request', requestSchema);
 
 module.exports = { Request };
