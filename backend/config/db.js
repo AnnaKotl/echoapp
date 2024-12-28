@@ -15,5 +15,4 @@ const connectDB = async () => {
 
 module.exports = connectDB;
 
-
 // connect to DB (Mongoos)
