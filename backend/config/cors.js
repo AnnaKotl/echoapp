@@ -18,6 +18,9 @@ const allowedOrigins = [
  * - Content-Type
  * - Authorization
  * 
+ * Credentials (cookies) are allowed to be sent with cross-origin requests.
+ * To enable this functionality, the `credentials: true` option must be set in CORS configuration.
+ * 
  * If a request is made from an unauthorized domain, it will be rejected with a CORS error.
  */
 
@@ -31,7 +34,7 @@ const corsOptions = {
   },
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   allowedHeaders: ['Content-Type', 'Authorization'],
-  credentials: true,
+  credentials: true, // Allows cookies to be sent with cross-origin requests
   optionsSuccessStatus: 200,
 };
 

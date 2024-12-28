@@ -5,6 +5,49 @@ const { uploadImage, deleteTempFile } = require('../services/cloudinaryService')
 const upload = multer({ dest: 'temp/' });
 const router = express.Router();
 
+/**
+ * @swagger
+ * /upload:
+ *   post:
+ *     summary: Upload an image to Cloudinary
+ *     description: Uploads an image to Cloudinary and returns the image URL.
+ *     consumes:
+ *       - multipart/form-data
+ *     parameters:
+ *       - name: image
+ *         in: formData
+ *         description: The image file to upload.
+ *         required: true
+ *         type: file
+ *     responses:
+ *       200:
+ *         description: Successfully uploaded the image
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 success:
+ *                   type: boolean
+ *                   example: true
+ *                 imageUrl:
+ *                   type: string
+ *                   example: 'https://res.cloudinary.com/dv10ghdyb/image/upload/v1731940181/admin_assets/l2dxyigwr1xh15v1vwug.png'
+ *       500:
+ *         description: Internal Server Error
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 success:
+ *                   type: boolean
+ *                   example: false
+ *                 message:
+ *                   type: string
+ *                   example: 'Failed to upload image'
+ */
+
 router.post('/', upload.single('image'), async (req, res) => {
   const filePath = req.file.path;
 
