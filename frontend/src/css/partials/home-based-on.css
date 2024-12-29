@@ -26,6 +26,12 @@
   box-shadow: 0 20px 40px rgba(5, 11, 23, 0.8);
 }
 
+.video-wrap-based,
+.video-shadow,
+#video-based {
+  display: block;
+}
+
 .video-wrap-based {
   position: absolute;
   top: 0;
@@ -162,8 +168,10 @@
     padding: 20px;
   }
   .based-on-title {
-    font-size: var(--text-standart-font-size);
+    font-size: 26px;
   }
+  .video-wrap-based,
+  .video-shadow,
   #video-based {
     display: none;
   }

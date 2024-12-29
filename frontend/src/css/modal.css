@@ -249,8 +249,9 @@ textarea:focus {
 @media (max-width: 767px) {
   .modal-content {
     padding: 20px;
-    max-width: 500px;
-    width: 95%;
+    max-width: 460px;
+    width: 85%;
+    height: 90%;
     font-size: var(--text-standart-font-size);
   }
   .form-input,
