@@ -155,7 +155,9 @@
     gap: 20px;
   }
   .based-on-item {
-    max-width: 340px;
+    width: 340px;
+    max-width: none;
+    min-width: none;
     margin: 0 auto;
     padding: 20px;
   }
@@ -172,14 +174,14 @@
   .based-on-list-container {
     gap: 10px;
   }
-  .based-on-item {
-    width: calc(50% - 10px);
-  }
 }
 
 /* TABLET adaptive css */
 @media (min-width: 768px) and (max-width: 1024px) {
   .based-on-title {
     font-size: 30px;
+  }
+  .based-on-item {
+    width: calc(50% - 10px);
   }
 }

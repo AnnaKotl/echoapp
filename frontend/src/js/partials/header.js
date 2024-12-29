@@ -71,8 +71,10 @@ if (isFirstVisit) {
   const offsetY = navLogoRect.top - preloaderLogoRect.top;
   const scaleRatio = navLogoRect.width / preloaderLogoRect.width;
   preloaderLogo.style.transform = `translate(${offsetX}px, ${offsetY}px) scale(${scaleRatio})`;
+  document.body.style.overflow = 'hidden';
   setTimeout(() => {
     preloader.classList.add('hidden');
+    document.body.style.overflow = 'visible';
     navLogo.style.visibility = 'visible';
     sessionStorage.setItem('visited', 'true');
   }, 3500);

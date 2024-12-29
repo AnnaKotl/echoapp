@@ -150,12 +150,8 @@
 
 /* MOB adaptive css */
 @media (max-width: 767px) {
-  #preloader {
-    width: 90vw;
-    height: 90vh;
-  }
   #preloader-logo {
-    max-width: 600px;
+    max-width: 300px;
   }
 }
 
