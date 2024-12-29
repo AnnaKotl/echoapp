@@ -1,4 +1,4 @@
-import"./main-DUvLDTtA.js";const r="/admin/requests",o=void 0;async function a(){try{const t=await fetch(`${r}?secret=${o}`);if(!t.ok)throw new Error("Failed to fetch admin requests");return await t.json()}catch(t){return console.error("Error fetching requests:",t),[]}}document.addEventListener("DOMContentLoaded",async()=>{if(new URLSearchParams(window.location.search).get("secret")===void 0){const s=document.querySelector(".requests-list"),n=await a();n.length>0?s.innerHTML=n.map(e=>`
+import"./main-DWEroQmY.js";const r="/admin/requests",o=void 0;async function a(){try{const t=await fetch(`${r}?secret=${o}`);if(!t.ok)throw new Error("Failed to fetch admin requests");return await t.json()}catch(t){return console.error("Error fetching requests:",t),[]}}document.addEventListener("DOMContentLoaded",async()=>{if(new URLSearchParams(window.location.search).get("secret")===void 0){const s=document.querySelector(".requests-list"),n=await a();n.length>0?s.innerHTML=n.map(e=>`
           <div class="request-item">
             <p><strong>Name:</strong> ${e.name}</p>
             <p><strong>Email:</strong> ${e.email}</p>
