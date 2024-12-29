@@ -13,8 +13,9 @@ const formValidationSchema = Joi.object({
     .max(100)
     .required()
     .custom((value, helpers) => capitalizeName(value)),
-  mobileNumber: Joi.string()
-    .pattern(/^[\d]{3}[-\s]?[\d]{3}[-\s]?[\d]{3,4}$/)
+    mobileNumber: Joi.string()
+    .min(5)
+    .pattern(/^[\d\s()+\-]{5,}$/)
     .required(),
   email: Joi.string().email().required(),
   socialNetwork: Joi.string()

@@ -7,7 +7,7 @@ const validationSchema = Yup.object({
         .required('Name is required'),
 
     mobileNumber: Yup.string()
-        .matches(/^[\d]{3}[-\s]?[\d]{3}[-\s]?[\d]{3,4}$/, 'Please enter a valid mobile number, at least 5 digits long')
+        .matches(/^[\d\s()+\-]{5,}$/, 'Please enter a valid mobile number, at least 5 characters long')
         .required('Mobile number is required'),
 
     email: Yup.string()

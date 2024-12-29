@@ -14,7 +14,7 @@ const submitRequest = async (req, res, next) => {
 
         const { name, email, message, socialNetwork, selectedService, mobileNumber, country } = validData;
 
-        const phoneValidator = /^[\d]{3}[-\s]?[\d]{3}[-\s]?[\d]{3,4}$/;
+        const phoneValidator = /^[\d\s()+\-]{5,}$/;
         if (!phoneValidator.test(mobileNumber)) {
             return res.status(400).json({ message: 'Please enter a valid mobile number, at least 5 digits long' });
         }
