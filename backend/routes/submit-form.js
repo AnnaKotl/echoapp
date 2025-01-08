@@ -19,10 +19,10 @@ const { submitRequest } = require('../controllers/submitController');
  *             properties:
  *               name:
  *                 type: string
- *                 example: "Anna Kotliar"
+ *                 example: "User Name"
  *               email:
  *                 type: string
- *                 example: "Kotlyaranya1771@gmail.com"
+ *                 example: "some-email@gmail.com"
  *               message:
  *                 type: string
  *                 example: "I would like to know more about your services."
