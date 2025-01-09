@@ -63,22 +63,26 @@ const initialServices = [
 
 const initializeServices = async () => {
     try {
-        await connectDB();
-        console.log('Connected to the database.');
-
-        await Service.deleteMany();
-        console.log('Existing services removed.');
-
-        await Service.insertMany(initialServices);
-        console.log('Services initialized successfully.');
-
-        mongoose.connection.close();
-        console.log('Database connection closed.');
+      await connectDB();
+      console.log('Connected to the database.');
+  
+      await Service.deleteMany();
+      console.log('Existing services removed.');
+  
+      for (const service of initialServices) {
+        await Service.create(service);
+        console.log(`Service ${service.name} initialized.`);
+      }
+  
+      console.log('All services initialized successfully.');
+      mongoose.connection.close();
+      console.log('Database connection closed.');
     } catch (error) {
-        console.error('Error initializing services:', error);
-        process.exit(1);
+      console.error('Error initializing services:', error);
+      process.exit(1);
     }
-};
+  };
+  
 
 initializeServices();
 
