@@ -28,8 +28,11 @@ const allowedOrigins = [
   'https://echocode.app',
   'https://www.echocode.app',
   'https://echocode.netlify.app',
+  'https://annakotl.github.io/echoapp/',
   'http://localhost:5173',
 ];
+
+// ALLOWED_ORIGINS=https://echocode.netlify.app,https://www.echocode.app
 
 const corsOptions = {
   origin: (origin, callback) => {
