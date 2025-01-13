@@ -16,6 +16,7 @@ Thank you for taking the time to contribute to EchoApp! Below you will find guid
    Клонуйте ваш форк на локальний комп’ютер:
    ```bash
    git clone https://github.com/<your_username>/echoapp.git
+   
 3. Install dependencies | Встановлення залежностей
 Use the following script to install all dependencies:
 Використовуйте наступний скрипт для встановлення залежностей:
