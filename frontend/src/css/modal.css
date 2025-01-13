@@ -45,8 +45,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  top: 10px;
-  right: 50px;
+  top: 6px;
+  right: 10px;
   min-width: 30px;
   min-height: 30px;
   padding: 5px 10px;
@@ -267,8 +267,8 @@ textarea:focus {
     font-size: var(--text-standart-font-size);
   }
   .close-modal-btn {
-    top: 6px;
-    right: 30px;
+    top: 2px;
+    right: 4px;
   }
   .form-input,
   .form-textarea {
