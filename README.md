@@ -1,6 +1,6 @@
-# EchoApp
+# EchocodeApp
 
-EchoApp is a multi-page landing website with a backend and admin panel, designed for EchoCode. The website allows users to submit contact forms, view products, and interact with content managed through an easy-to-use admin panel.
+EchocodeApp is a multi-page landing website with a backend and admin panel, designed for EchoCode. The website allows users to submit contact forms, view products, and interact with content managed through an easy-to-use admin panel.
 
 **Please note: This website is still in development.**
 
