@@ -6,7 +6,7 @@ At EchoApp, we take security seriously and are committed to keeping our software
 
 If you find a security vulnerability, please report it to us privately. We use the following process for reporting:
 
-1. **Email us** at: [kotlyaranya1771"gmail.com]
+1. **Email to the developer** at: kotlyaranya1771gmail.com
 2. Provide a detailed description of the vulnerability, including:
    - Steps to reproduce
    - Expected behavior
