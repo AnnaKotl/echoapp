@@ -22,3 +22,6 @@ document.addEventListener('DOMContentLoaded', () => {
     video.removeAttribute('autoplay');
   }
 });
+
+// © Footer config
+document.getElementById("year").textContent = new Date().getFullYear();
