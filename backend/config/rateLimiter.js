@@ -1,5 +1,8 @@
 const { RateLimiterMongo } = require('rate-limiter-flexible');
 const mongoose = require('mongoose');
+const dotenv = require('dotenv');
+
+dotenv.config();
 
 mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log('MongoDB connected for rate limiter'))
