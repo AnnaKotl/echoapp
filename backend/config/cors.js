@@ -44,6 +44,9 @@
 
 // module.exports = corsOptions;
 
+const dotenv = require('dotenv');
+dotenv.config();
+
 const allowedOrigins = process.env.ALLOWED_ORIGINS
   ? process.env.ALLOWED_ORIGINS.split(',')
   : [
@@ -54,9 +57,11 @@ const allowedOrigins = process.env.ALLOWED_ORIGINS
       'http://localhost:5173',
     ];
 
+// ALLOWED_ORIGINS=https://echocode.netlify.app,https://www.echocode.app
+
 const corsOptions = {
   origin: (origin, callback) => {
-    if (!origin || allowedOrigins.includes(origin)) {
+    if (!origin || allowedOrigins.some(allowedOrigin => origin.includes(allowedOrigin))) {
       callback(null, true);
     } else {
       callback(new Error('Not allowed by CORS'));
