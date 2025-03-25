@@ -16,7 +16,7 @@ const cors = require('cors');
 const corsOptions = require('./config/cors');
 const logger = require('morgan');
 
-const ping = require('./helpers/ping');
+// const ping = require('./helpers/ping');
 
 dotenv.config();
 connectDB();
@@ -71,5 +71,5 @@ app.use((err, req, res, next) => {
 const PORT = process.env.PORT || 5001;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
-  ping.keepAlive();
+  // ping.keepAlive();
 });
