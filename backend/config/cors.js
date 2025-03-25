@@ -18,44 +18,15 @@
  * If a request is made from an unauthorized domain, it will be rejected with a CORS error.
  */
 
-// const allowedOrigins = [
-//   'https://echocode.app',
-//   'https://www.echocode.app',
-//   'https://echocode.netlify.app',
-//   'https://annakotl.github.io/echoapp/',
-//   'http://localhost:5173',
-// ];
+const allowedOrigins = [
+  'https://echocode.app',
+  'https://www.echocode.app',
+  'https://echocode.netlify.app',
+  'https://annakotl.github.io/echoapp/',
+  'http://localhost:5173',
+];
 
-// // ALLOWED_ORIGINS=https://echocode.netlify.app,https://www.echocode.app
-
-// const corsOptions = {
-//   origin: (origin, callback) => {
-//     if (!origin || allowedOrigins.some(allowedOrigin => origin.includes(allowedOrigin))) {
-//       callback(null, true);
-//     } else {
-//       callback(new Error('Not allowed by CORS'));
-//     }
-//   },
-//   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-//   allowedHeaders: ['Content-Type', 'Authorization'],
-//   credentials: true,
-//   optionsSuccessStatus: 200,
-// };
-
-// module.exports = corsOptions;
-
-const dotenv = require('dotenv');
-dotenv.config();
-
-const allowedOrigins = process.env.ALLOWED_ORIGINS
-  ? process.env.ALLOWED_ORIGINS.split(',')
-  : [
-      'https://echocode.app',
-      'https://www.echocode.app',
-      'https://echocode.netlify.app',
-      'https://annakotl.github.io/echoapp/',
-      'http://localhost:5173',
-    ];
+// ALLOWED_ORIGINS=https://echocode.netlify.app,https://www.echocode.app
 
 // ALLOWED_ORIGINS=https://echocode.netlify.app,https://www.echocode.app
 
