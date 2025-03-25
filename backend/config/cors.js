@@ -1,9 +1,3 @@
-// const allowedOrigins = [
-//   'https://echocode.netlify.app',
-//   'http://localhost:5173',
-//   'https://www.echocode.app',
-// ];
-
 /**
  * CORS Configuration:
  * This API allows cross-origin requests from the following domains:
@@ -50,9 +44,6 @@
 
 // module.exports = corsOptions;
 
-const dotenv = require('dotenv');
-dotenv.config();
-
 const allowedOrigins = process.env.ALLOWED_ORIGINS
   ? process.env.ALLOWED_ORIGINS.split(',')
   : [
@@ -65,7 +56,6 @@ const allowedOrigins = process.env.ALLOWED_ORIGINS
 
 const corsOptions = {
   origin: (origin, callback) => {
-    // Дозволяє запити без origin (наприклад, Postman)
     if (!origin || allowedOrigins.includes(origin)) {
       callback(null, true);
     } else {
