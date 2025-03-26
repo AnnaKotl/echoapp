@@ -46,6 +46,8 @@ app.use('/icons', iconRoutes);
 app.use('/services', servicesRouter);
 app.use('/products-icons', productsIconsRoutes);
 
+app.use('/favicon.ico', express.static(path.join(__dirname, 'public', 'favicon.ico')));
+
 app.get('/', (req, res) => {
   res.status(200).send('Backend is live 🚀');
 });
