@@ -18,6 +18,8 @@ const logger = require('morgan');
 
 const ping = require('./helpers/ping');
 
+const path = require('path');
+
 dotenv.config();
 connectDB();
 
@@ -50,6 +52,10 @@ app.get('/', (req, res) => {
 
 app.get('/health', (req, res) => {
   res.status(200).send('OK');
+});
+
+app.get('/robots.txt', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'robots.txt'));
 });
 
 setupSwagger(app);
