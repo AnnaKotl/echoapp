@@ -28,7 +28,7 @@ const allowedOrigins = [
   'https://echocode.app',
   'https://www.echocode.app',
   'https://echocode.netlify.app',
-  'https://annakotl.github.io/echoapp/',
+  'https://annakotl.github.io',
   'http://localhost:5173',
 ];
 
