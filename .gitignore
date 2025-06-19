@@ -1,35 +1,44 @@
+# Node
 node_modules/
-.env
-.env.production
-.idea
-.vscode
-
-temp/*
-temp/.gitkeep
-public/avatars/*
-!public/avatars/.gitkeep
-
-# Logs
-logs
-*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
+*.log
+.env
+.env.production
 
-node_modules
-dist
-dist-ssr
+# Environment files (secrets)
+frontend/.env
+frontend/.env.production
+backend/.env
+backend/.env.production
+
+# Build outputs
+frontend/dist/
+backend/dist/
+dist-ssr/
 *.local
 
-# Editor directories and files
-.vscode/*
+# IDEs and editor configs
+.vscode/
 !.vscode/extensions.json
-.idea
+.idea/
 .DS_Store
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+
+# Custom project folders
+temp/
+temp/.gitkeep
+
+# Uploads (except .gitkeep)
+public/avatars/*
+!public/avatars/.gitkeep
+
+# Logs directory
+logs/

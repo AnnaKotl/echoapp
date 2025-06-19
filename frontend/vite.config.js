@@ -23,36 +23,26 @@ export default defineConfig({
   plugins: [
     injectHTML(),
   ],
-  define: {
-    'process.env': process.env
-  },
 });
 
 
 
 // HELPERS:
 
-
 // cd /Users/annakotlyar/Desktop/projects/echoapp
 // npm run start
 
-
 // push:
-
 // git status
 // git add .
 // git commit -m " "
 // git push origin main
 
-
 // build:
-
 // cd frontend
 // npm run build
 
-
 // or this build:
-
 // cd frontend
 // npm install
 // npm run build
