@@ -1,0 +1,12 @@
+name: Keep Render backend alive
+
+on:
+  schedule:
+    - cron: '*/10 * * * *'
+
+jobs:
+  keep-alive:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping backend to keep alive
+        run: curl -I https://echoapp.onrender.com/health || echo 'Ping failed'
