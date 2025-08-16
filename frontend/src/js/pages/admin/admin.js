@@ -1,44 +1,47 @@
-import { fetchAdminRequests } from '/js/api/adminApi.js';
+import { fetchAdminRequests, deleteAdminRequest } from '/js/api/adminApi.js';
 
-document.addEventListener('DOMContentLoaded', async () => {
+document.addEventListener('DOMContentLoaded', () => {
+  const viewBtn = document.querySelector('.btn-view-requests');
   const requestsContainer = document.querySelector('.requests-list');
 
-  try {
+  viewBtn.addEventListener('click', async () => {
+    requestsContainer.innerHTML = '<p>Loading...</p>';
     const requests = await fetchAdminRequests();
-    requestsContainer.innerHTML = requests.length
-      ? requests.map(r => `<p>${r.name} (${r.email})</p>`).join('')
-      : '<p>No requests</p>';
-  } catch (err) {
-    console.error('Auth error or fetch failed:', err);
-    if (err.message.includes('401')) {
-      window.location.href = '/';
+
+    if (requests.length === 0) {
+      requestsContainer.innerHTML = '<p>No requests found.</p>';
+      return;
     }
-  }
+
+    requestsContainer.innerHTML = requests.map(req => `
+      <div class="a-from-wrapper" data-id="${req._id}">
+        <div class="a-form-item"><strong>Name:</strong> ${req.name}</div>
+        <div class="a-form-item"><strong>Email:</strong> ${req.email}</div>
+        <div class="a-form-item"><strong>Mobile:</strong> ${req.mobileNumber || 'N/A'}</div>
+        <div class="a-form-item"><strong>Country:</strong> ${req.country}</div>
+        <div class="a-form-item"><strong>Social Network:</strong> ${req.socialNetwork || 'N/A'}</div>
+        <div class="a-form-item"><strong>Service:</strong> ${req.selectedService}</div>
+        <div class="a-form-item"><strong>Message:</strong> ${req.message || 'No message provided'}</div>
+        <div class="a-form-item"><strong>Date:</strong> ${new Date(req.createdAt).toLocaleDateString()}</div>
+        <button class="btn-delete-request">Delete</button>
+      </div>
+    `).join('');
+
+    // додаємо обробку видалення
+    requestsContainer.querySelectorAll('.btn-delete-request').forEach(btn => {
+      btn.addEventListener('click', async (e) => {
+        const wrapper = e.target.closest('.a-from-wrapper');
+        const id = wrapper.dataset.id;
+        const confirmed = confirm('Are you sure you want to delete this request?');
+        if (!confirmed) return;
+
+        const success = await deleteAdminRequest(id);
+        if (success) {
+          wrapper.remove();
+        } else {
+          alert('Failed to delete request.');
+        }
+      });
+    });
+  });
 });
-
-// document.addEventListener('DOMContentLoaded', async () => {
-//   const requestsContainer = document.querySelector('.requests-list');
-
-//   try {
-//     const requests = await fetchAdminRequests();
-
-//     if (requests.length > 0) {
-//       requestsContainer.innerHTML = requests.map(req => `
-//         <div class="request-item">
-//           <p><strong>Name:</strong> ${req.name}</p>
-//           <p><strong>Email:</strong> ${req.email}</p>
-//           <p><strong>Mobile:</strong> ${req.mobileNumber || 'N/A'}</p>
-//           <p><strong>Country:</strong> ${req.country}</p>
-//           <p><strong>Social Network:</strong> ${req.socialNetwork || 'N/A'}</p>
-//           <p><strong>Service:</strong> ${req.selectedService}</p>
-//           <p><strong>Message:</strong> ${req.message || 'No message provided'}</p>
-//           <p><strong>Date:</strong> ${new Date(req.createdAt).toLocaleDateString()}</p>
-//         </div>
-//       `).join('');
-//     } else {
-//       requestsContainer.innerHTML = '<p>No requests found.</p>';
-//     }
-//   } catch (error) {
-//     window.location.href = '/';
-//   }
-// });

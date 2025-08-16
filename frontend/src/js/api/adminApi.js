@@ -1,35 +1,43 @@
-const API_URL = '/admin/requests';
-const SECRET_KEY = import.meta.env.VITE_SECRET_KEY;
+// const API_URL = '/admin/requests';
+
+const API_URL = 'http://localhost:5001/admin/requests'; 
+
+const SECRET_KEY = import.meta.env.VITE_SECRET_KEY; 
 
 export async function fetchAdminRequests() {
-  const res = await fetch('/admin/requests', {
-    headers: {
-      'Authorization': `Bearer ${import.meta.env.VITE_SECRET_KEY}`
+  try {
+    const response = await fetch(API_URL, {
+      headers: {
+        'Authorization': `Bearer ${SECRET_KEY}`,
+      },
+    });
+
+    if (!response.ok) {
+      throw new Error('Auth error or fetch failed');
     }
-  });
 
-  if (!res.ok) {
-    throw new Error(`HTTP error! status: ${res.status}`);
+    const data = await response.json();
+    return data.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+  } catch (err) {
+    console.error('Failed to load requests:', err);
+    return [];
   }
-
-  return await res.json();
 }
 
-// export async function fetchAdminRequests() {
-//   try {
-//     const response = await fetch(API_URL, {
-//       headers: {
-//         'Authorization': `Bearer ${SECRET_KEY}`
-//       }
-//     });
-
-//     if (!response.ok) {
-//       throw new Error('Unauthorized or failed fetch');
-//     }
-
-//     return await response.json();
-//   } catch (error) {
-//     console.error(error);
-//     throw error;
-//   }
-// }
+export async function deleteAdminRequest(id) {
+  try {
+    const response = await fetch(`${API_URL}/${id}`, {
+      method: 'DELETE',
+      headers: {
+        'Authorization': `Bearer ${SECRET_KEY}`,
+      },
+    });
+    if (!response.ok) {
+      throw new Error('Delete failed');
+    }
+    return true;
+  } catch (err) {
+    console.error('Failed to delete request:', err);
+    return false;
+  }
+}

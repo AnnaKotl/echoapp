@@ -1,0 +1,20 @@
+.btn-view-requests {
+  font-size: 30px;
+  color: var(--accent-color);
+  border: 2px solid var(--accent-color); 
+  background: transparent;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border-radius: 30px;
+  padding: 12px 24px;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--standart-tr-cubic);
+}
+
+.btn-view-requests:is(:hover, :focus) {
+  outline: none;
+  background: var(--border-color);
+  color: var(--blue);
+  border: 2px solid var(--blue);
+}

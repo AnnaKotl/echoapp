@@ -2,10 +2,6 @@ const mongoose = require('mongoose');
 const Service = require('./Service');
 const connectDB = require('../config/db');
 
-// 'Basic', 'Standard', 'Pro', 'Premium', 'Enterprise'
-
-// Junior - Basic, Middle - Standard, Senior - Pro, Lead - Premium
-
 const initialServices = [
     {
         name: 'Basic',
