@@ -2,8 +2,6 @@ const API_URL = import.meta.env.DEV
   ? 'http://localhost:5001/admin/requests'
   : '/admin/requests';
 
-console.log('VITE_ADMIN_SECRET:', import.meta.env.VITE_ADMIN_SECRET);
-
 export async function fetchAdminRequests() {
   try {
     const response = await fetch(API_URL, {
@@ -13,7 +11,6 @@ export async function fetchAdminRequests() {
     });
 
     console.log('Status:', response.status);
-    console.log('Response text:', await response.clone().text());
 
     if (!response.ok) {
       throw new Error('Auth error or fetch failed');
