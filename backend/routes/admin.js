@@ -7,6 +7,7 @@ const router = express.Router();
 router.use((req, res, next) => {
   const auth = req.headers.authorization || '';
   const token = auth.replace('Bearer ', '');
+
   if (token !== process.env.ADMIN_SECRET_KEY) {
     return res.status(401).json({ message: 'Unauthorized' });
   }
@@ -23,12 +24,9 @@ router.get('/requests', async (req, res) => {
 router.delete('/requests/:id', async (req, res) => {
   try {
     const request = await Request.findById(req.params.id);
-    if (!request) {
-      return res.status(404).json({ message: 'Not found' });
-    }
+    if (!request) return res.status(404).json({ message: 'Not found' });
 
     await ArchivedRequest.create(request.toObject());
-
     await Request.findByIdAndDelete(req.params.id);
 
     res.json({ message: 'Archived and removed from active list' });

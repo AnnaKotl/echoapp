@@ -3,10 +3,9 @@ const path = require('path');
 const router = express.Router();
 
 router.get('/', (req, res) => {
-  const auth = req.headers.authorization || '';
-  const token = auth.replace('Bearer ', '');
-
-  if (token !== process.env.ADMIN_SECRET_KEY) {
+  const secret = req.query.secret || '';
+  
+  if (secret !== process.env.ADMIN_SECRET_KEY) {
     return res.status(401).send('Unauthorized');
   }
 

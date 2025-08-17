@@ -2,17 +2,21 @@ const API_URL = import.meta.env.DEV
   ? 'http://localhost:5001/admin/requests'
   : '/admin/requests';
 
+const ADMIN_SECRET = import.meta.env.VITE_ADMIN_SECRET;
+
 export async function fetchAdminRequests() {
   try {
     const response = await fetch(API_URL, {
       headers: {
-        'Authorization': `Bearer ${import.meta.env.VITE_ADMIN_SECRET}`,
+        'Authorization': `Bearer ${ADMIN_SECRET}`,
       },
     });
 
     console.log('Status:', response.status);
 
     if (!response.ok) {
+      const text = await response.text();
+      console.error('Response text:', text);
       throw new Error('Auth error or fetch failed');
     }
 
@@ -28,7 +32,7 @@ export async function deleteAdminRequest(id) {
     const response = await fetch(`${API_URL}/${id}`, {
       method: 'DELETE',
       headers: {
-        'Authorization': `Bearer ${import.meta.env.VITE_ADMIN_SECRET}`,
+        'Authorization': `Bearer ${ADMIN_SECRET}`,
       },
     });
 

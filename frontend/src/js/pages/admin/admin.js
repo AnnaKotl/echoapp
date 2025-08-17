@@ -4,43 +4,73 @@ document.addEventListener('DOMContentLoaded', () => {
   const viewBtn = document.querySelector('.btn-view-requests');
   const requestsContainer = document.querySelector('.requests-list');
 
-  viewBtn.addEventListener('click', async () => {
+  let isVisible = false;
+
+  const renderRequests = async () => {
     requestsContainer.innerHTML = '<p>Loading...</p>';
     const requests = await fetchAdminRequests();
 
-    if (requests.length === 0) {
+    if (!requests || requests.length === 0) {
       requestsContainer.innerHTML = '<p>No requests found.</p>';
       return;
     }
 
-    requestsContainer.innerHTML = requests.map(req => `
-      <div class="a-from-wrapper" data-id="${req._id}">
-        <div class="a-form-item"><strong>Name:</strong> ${req.name}</div>
-        <div class="a-form-item"><strong>Email:</strong> ${req.email}</div>
-        <div class="a-form-item"><strong>Mobile:</strong> ${req.mobileNumber || 'N/A'}</div>
-        <div class="a-form-item"><strong>Country:</strong> ${req.country}</div>
-        <div class="a-form-item"><strong>Social Network:</strong> ${req.socialNetwork || 'N/A'}</div>
-        <div class="a-form-item"><strong>Service:</strong> ${req.selectedService}</div>
-        <div class="a-form-item"><strong>Message:</strong> ${req.message || 'No message provided'}</div>
-        <div class="a-form-item"><strong>Date:</strong> ${new Date(req.createdAt).toLocaleDateString()}</div>
-        <button class="btn-delete-request">Delete</button>
-      </div>
-    `).join('');
+    const ul = document.createElement('ul');
 
-    requestsContainer.querySelectorAll('.btn-delete-request').forEach(btn => {
-      btn.addEventListener('click', async (e) => {
-        const wrapper = e.target.closest('.a-from-wrapper');
-        const id = wrapper.dataset.id;
+    requests.forEach(req => {
+      const li = document.createElement('li');
+      li.dataset.id = req._id;
+
+      const div = document.createElement('div');
+
+      const fields = [
+        `Name: ${req.name}`,
+        `Email: ${req.email}`,
+        `Mobile: ${req.mobileNumber || 'N/A'}`,
+        `Country: ${req.country}`,
+        `Social Network: ${req.socialNetwork || 'N/A'}`,
+        `Service: ${req.selectedService}`,
+        `Message: ${req.message || 'No message provided'}`,
+        `Date: ${new Date(req.createdAt).toLocaleDateString()}`
+      ];
+
+      fields.forEach(text => {
+        const p = document.createElement('p');
+        p.textContent = text;
+        div.appendChild(p);
+      });
+
+      const deleteBtn = document.createElement('button');
+      deleteBtn.textContent = 'Delete';
+      deleteBtn.addEventListener('click', async () => {
         const confirmed = confirm('Are you sure you want to delete this request?');
         if (!confirmed) return;
 
-        const success = await deleteAdminRequest(id);
+        const success = await deleteAdminRequest(req._id);
         if (success) {
-          wrapper.remove();
+          li.remove();
         } else {
           alert('Failed to delete request.');
         }
       });
+
+      div.appendChild(deleteBtn);
+      li.appendChild(div);
+      ul.appendChild(li);
     });
+
+    requestsContainer.innerHTML = '';
+    requestsContainer.appendChild(ul);
+  };
+
+  viewBtn.addEventListener('click', async () => {
+    if (!isVisible) {
+      await renderRequests();
+      viewBtn.textContent = 'Hide requests';
+    } else {
+      requestsContainer.innerHTML = '';
+      viewBtn.textContent = 'View requests';
+    }
+    isVisible = !isVisible;
   });
 });
