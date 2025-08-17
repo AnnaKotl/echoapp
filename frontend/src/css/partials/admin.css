@@ -55,7 +55,7 @@
   transition: all var(--standart-tr-cubic);
 }
 
-.btn-view-requests:is(:hover, :focus) {
+.btn-view-requests:is(:hover) {
   outline: none;
   background: var(--border-color);
   color: var(--blue);

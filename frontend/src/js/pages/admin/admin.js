@@ -6,8 +6,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let isVisible = false;
 
-  const renderRequests = async () => {
-    requestsContainer.innerHTML = '<p>Loading...</p>';
+  const formatDate = (dateStr) => {
+    if (!dateStr) return 'Invalid date';
+    const d = new Date(dateStr);
+    return isNaN(d.getTime()) ? 'Invalid date' : d.toLocaleString();
+  };
+
+const renderRequests = async () => {
+  requestsContainer.innerHTML = '<p>Loading...</p>';
+
+  try {
     const requests = await fetchAdminRequests();
 
     if (!requests || requests.length === 0) {
@@ -15,52 +23,60 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
+    // Сортування від новішого до старішого
+    requests.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+
     const ul = document.createElement('ul');
 
     requests.forEach(req => {
-      const li = document.createElement('li');
-      li.dataset.id = req._id;
+        const li = document.createElement('li');
+        li.dataset.id = req._id;
 
-      const div = document.createElement('div');
+        // div всередині li
+        const div = document.createElement('div');
 
-      const fields = [
-        `Name: ${req.name}`,
-        `Email: ${req.email}`,
-        `Mobile: ${req.mobileNumber || 'N/A'}`,
-        `Country: ${req.country}`,
-        `Social Network: ${req.socialNetwork || 'N/A'}`,
-        `Service: ${req.selectedService}`,
-        `Message: ${req.message || 'No message provided'}`,
-        `Date: ${new Date(req.createdAt).toLocaleDateString()}`
-      ];
+        // масив полів для рендеру
+        const fields = [
+          `Name: ${req.name}`,
+          `Email: ${req.email}`,
+          `Mobile: ${req.mobileNumber || 'N/A'}`,
+          `Country: ${req.country}`,
+          `Social Network: ${req.socialNetwork || 'N/A'}`,
+          `Service: ${req.selectedService}`,
+          `Message: ${req.message || 'No message provided'}`,
+          `Date: ${formatDate(req.createdAt)}`
+        ];
 
-      fields.forEach(text => {
-        const p = document.createElement('p');
-        p.textContent = text;
-        div.appendChild(p);
+        fields.forEach(text => {
+          const p = document.createElement('p');
+          p.textContent = text;
+          div.appendChild(p);
+        });
+
+        // кнопка видалення
+        const deleteBtn = document.createElement('button');
+        deleteBtn.textContent = 'Delete';
+        deleteBtn.addEventListener('click', async () => {
+          const confirmed = confirm('Are you sure you want to delete this request?');
+          if (!confirmed) return;
+
+          const success = await deleteAdminRequest(req._id);
+          if (success) li.remove();
+          else alert('Failed to delete request.');
+        });
+
+        div.appendChild(deleteBtn);
+        li.appendChild(div);
+        ul.appendChild(li);
       });
 
-      const deleteBtn = document.createElement('button');
-      deleteBtn.textContent = 'Delete';
-      deleteBtn.addEventListener('click', async () => {
-        const confirmed = confirm('Are you sure you want to delete this request?');
-        if (!confirmed) return;
+      requestsContainer.innerHTML = '';
+      requestsContainer.appendChild(ul);
 
-        const success = await deleteAdminRequest(req._id);
-        if (success) {
-          li.remove();
-        } else {
-          alert('Failed to delete request.');
-        }
-      });
-
-      div.appendChild(deleteBtn);
-      li.appendChild(div);
-      ul.appendChild(li);
-    });
-
-    requestsContainer.innerHTML = '';
-    requestsContainer.appendChild(ul);
+    } catch (err) {
+      console.error('Failed to load requests:', err);
+      requestsContainer.innerHTML = '<p>Error loading requests.</p>';
+    }
   };
 
   viewBtn.addEventListener('click', async () => {
