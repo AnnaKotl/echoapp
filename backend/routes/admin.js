@@ -16,8 +16,16 @@ router.use((req, res, next) => {
 
 // GET /admin/requests
 router.get('/requests', async (req, res) => {
-  const requests = await Request.find().sort({ createdAt: -1 });
-  res.json(requests);
+  const requests = await Request.find().sort({ createdAt: -1 }).lean();
+
+  const requestsWithDate = requests.map(r => {
+    if (!r.createdAt) {
+      r.createdAt = r._id.getTimestamp();
+    }
+    return r;
+  });
+
+  res.json(requestsWithDate);
 });
 
 // DELETE /admin/requests/:id

@@ -6,36 +6,33 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let isVisible = false;
 
-  const formatDate = (dateStr) => {
-    if (!dateStr) return 'Invalid date';
-    const d = new Date(dateStr);
-    return isNaN(d.getTime()) ? 'Invalid date' : d.toLocaleString();
+  // Функція для форматування дати
+  const formatDate = (req) => {
+    // Використовуємо createdAt якщо є, інакше беремо дату з ObjectId
+    const dateValue = req.createdAt ? new Date(req.createdAt) : req._id?.getTimestamp?.();
+    if (!dateValue || isNaN(dateValue.getTime())) return 'Invalid date';
+    return dateValue.toLocaleString();
   };
 
-const renderRequests = async () => {
-  requestsContainer.innerHTML = '<p>Loading...</p>';
+  const renderRequests = async () => {
+    requestsContainer.innerHTML = '<p>Loading...</p>';
 
-  try {
-    const requests = await fetchAdminRequests();
+    try {
+      const requests = await fetchAdminRequests();
 
-    if (!requests || requests.length === 0) {
-      requestsContainer.innerHTML = '<p>No requests found.</p>';
-      return;
-    }
+      if (!requests || requests.length === 0) {
+        requestsContainer.innerHTML = '<p>No requests found.</p>';
+        return;
+      }
 
-    // Сортування від новішого до старішого
-    requests.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+      const ul = document.createElement('ul');
 
-    const ul = document.createElement('ul');
-
-    requests.forEach(req => {
+      requests.forEach(req => {
         const li = document.createElement('li');
         li.dataset.id = req._id;
 
-        // div всередині li
         const div = document.createElement('div');
 
-        // масив полів для рендеру
         const fields = [
           `Name: ${req.name}`,
           `Email: ${req.email}`,
@@ -44,7 +41,7 @@ const renderRequests = async () => {
           `Social Network: ${req.socialNetwork || 'N/A'}`,
           `Service: ${req.selectedService}`,
           `Message: ${req.message || 'No message provided'}`,
-          `Date: ${formatDate(req.createdAt)}`
+          `Date: ${formatDate(req)}`
         ];
 
         fields.forEach(text => {
@@ -53,7 +50,7 @@ const renderRequests = async () => {
           div.appendChild(p);
         });
 
-        // кнопка видалення
+        // Кнопка видалення/архівації
         const deleteBtn = document.createElement('button');
         deleteBtn.textContent = 'Delete';
         deleteBtn.addEventListener('click', async () => {
