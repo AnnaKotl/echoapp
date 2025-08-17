@@ -27,7 +27,6 @@ document.addEventListener('DOMContentLoaded', () => {
       </div>
     `).join('');
 
-    // додаємо обробку видалення
     requestsContainer.querySelectorAll('.btn-delete-request').forEach(btn => {
       btn.addEventListener('click', async (e) => {
         const wrapper = e.target.closest('.a-from-wrapper');
