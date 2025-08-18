@@ -51,19 +51,73 @@
     <main>
       <!-- main content -->
 
-    <load ="partials/admin-main.html" />
+      <load ="partials/admin-main.html" />
 
-    <load ="partials/admin-requests.html" />
+      <load ="partials/admin-requests.html" />
 
-    <load ="partials/admin-config-home.html" />
-
+      <load ="partials/admin-config-home.html" />
     </main>
+
     <!-- FOOTER -->
-    <load ="partials/footer.html" />
-    <!-- SCROLL -->
-    <load ="partials/scroll-button.html" />
+    <footer class="admin-section">
+      <div class="footer-section admin-container">
+        <div class="footer-container">
+          <footer><span id="year" class="footer-text"></span></footer>
+          <a
+            href="https://www.google.com/maps?q=50.4501,30.5234"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="footer-text"
+          >
+            Kyiv - Ukraine
+          </a>
+          <p class="footer-text">
+            If you have any questions or ideas, feel free to contact the website
+            developer.
+          </p>
+          <div class="admin-footer-wrapp">
+            <a
+              href="https://github.com/AnnaKotl"
+              class="admin-footer-link"
+              title="Visit the GitHub page of this website's developer"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg class="admin-footer-icon" width="1" height="1">
+                <use href="/icons/sprite.svg#icon-github"></use>
+              </svg>
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/ankotliar"
+              class="admin-footer-link"
+              aria-label="LinkedIn"
+              title="LinkedIn of this website's developer"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg class="admin-footer-icon" width="1" height="1">
+                <use href="/icons/sprite.svg#icon-linkedin"></use>
+              </svg>
+            </a>
+            <a
+              href="https://t.me/anna_kotli"
+              class="admin-footer-link"
+              aria-label="Telegram"
+              title="Telegram of this website's developer"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg class="admin-footer-icon" width="1" height="1">
+                <use href="/icons/sprite.svg#icon-telegram"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
     <!-- SCRIPT -->
     <script type="module" src="/js/pages/admin/admin.js"></script>
-    <!-- <script type="module" src="/main.js"></script> -->
   </body>
 </html>

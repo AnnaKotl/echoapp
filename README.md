@@ -6,8 +6,6 @@ EchocodeApp is a multi-page landing website with a backend and admin panel, desi
 
 💎 Site on domain: [https://echocode.app/](https://echocode.app/)
 
-🧩 Netlify Render: [https://echocode.netlify.app/](https://echocode.netlify.app/)
-
 💾 Swagger: [https://echoapp.onrender.com/api-docs/](https://echoapp.onrender.com/api-docs/)
 
 ## Features
