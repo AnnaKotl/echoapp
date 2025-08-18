@@ -12,26 +12,6 @@
   color: var(--light);
 }
 
-.github-link {
-  color: var(--light);
-  padding: 10px;
-  transition: var(--transition-cl), var(--transition-op);
-}
-
-.github-icon {
-  width: 30px;
-  height: 30px;
-  color: var(--light);
-  fill: currentColor;
-  opacity: 0.8;
-  transition: var(--transition-cl), var(--transition-op);
-}
-
-.github-link:is(:hover, :focus) .github-icon {
-  opacity: 1;
-  color: var(--accent-color);
-}
-
 /* MOB + TABLET adaptive css */
 @media (max-width: 1024px) {
   .footer-container {

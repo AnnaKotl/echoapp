@@ -216,10 +216,36 @@
 
 .upload-btn {
   max-height: 60px;
-  max-width: 140px;
+  max-width: 220px;
 }
 
 /* /🩻 Upload Icon  */
+
+.admin-footer-wrapp {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.admin-footer-link {
+  color: var(--light);
+  padding: 10px;
+  transition: var(--transition-cl), var(--transition-op);
+}
+.admin-footer-icon {
+  width: 30px;
+  height: 30px;
+  color: var(--light);
+  fill: currentColor;
+  opacity: 0.8;
+  transition: var(--transition-cl), var(--transition-op);
+}
+
+.admin-footer-link:is(:hover, :focus) .admin-footer-icon {
+  opacity: 1;
+  color: var(--accent-color);
+}
 
 @media (max-width: 767px) {
   .admin-container {
