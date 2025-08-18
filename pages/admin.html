@@ -45,28 +45,139 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <script type="module" crossorigin src="../assets/admin-BgqWmI0W.js"></script>
-    <link rel="modulepreload" crossorigin href="../assets/main-BolQBBjN.js">
-    <link rel="stylesheet" crossorigin href="../assets/main-J2Q3YkY5.css">
+    <script type="module" crossorigin src="../assets/admin-BO1zft6f.js"></script>
+    <link rel="modulepreload" crossorigin href="../assets/styles-CeeS4djN.js">
+    <link rel="modulepreload" crossorigin href="../assets/config-DF9vnxqS.js">
+    <link rel="stylesheet" crossorigin href="../assets/styles-BbCOPdvH.css">
   </head>
   <body>
-    <!-- HEADER -->
-    <header></header>
     <main>
       <!-- main content -->
-      <div>ADMIN PANEL work 🎉</div>
 
-      <div class="admin-content">
-        <h1>Requests List</h1>
-        <div class="requests-list"></div>
+    <section class="admin-section">
+  <div class="admin-container">
+    <h1 class="admin-title">
+      ADMIN PANEL for
+      <a
+        class="admin-link"
+        href="https://echocode.app/"
+        aria-label="Echocode"
+        title="Link to page"
+        target="_blank"
+        rel="noopener noreferrer"
+        >Echocode.app</a
+      >
+    </h1>
+
+    <div class="admin-info-wrapp">
+      <div class="admin-info-container">
+        <!-- Requests from clients -->
+        <ul class="admin-info-items">
+          <li class="admin-info-item">
+            <strong>▹ Requests from clients:</strong><br />
+            Click “View requests” to load all client requests from the database.
+          </li>
+          <li class="admin-info-item">
+            Use “Hide requests” to collapse the list and clear the panel view.
+          </li>
+          <li class="admin-info-item">
+            Each request has a Delete button. Confirming deletion will remove
+            the request from the admin panel and move it to the archive in the
+            database.
+          </li>
+        </ul>
+        <!-- Configuration -->
+        <ul class="admin-info-items">
+          <li class="admin-info-item">
+            <strong>▹ Configuration:</strong><br />
+            Admins can upload one or multiple product icons in the "Our Products" section, with instant preview before uploading.
+          </li>
+          <li class="admin-info-item">
+            Supported format - <strong>SVG</strong>. All uploaded icons are saved in Cloudinary under the folder 
+            <a
+              href="https://console.cloudinary.com/app/c-ff8feab984c1a79abc97a44a0e8208/assets/media_library/folders/c9d60585b009469cf8eec140990416b50b?view_mode=mosaic"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Cloudinary"
+              title="Link to cloudinary folder"
+              class="admin-info-link"
+              >products-icons</a
+            >.
+          </li>
+          <li class="admin-info-item">
+            After upload, product icons automatically appear in the “Our
+            Products” section of the website without additional actions.
+          </li>
+        </ul>
       </div>
+    </div>
+
+    <div class="admin-bg-img"></div>
+  </div>
+</section>
+
+
+    <section class="admin-section">
+  <div class="admin-container">
+    <hr class="admin-line"/>
+    <div class="admin-content">
+      <div class="admin-requests-wrapp">
+        <h2 class="admin-title">Requests from clients:</h2>
+        <button class="admin-btn-requests admin-button">View requests</button>
+      </div>
+
+      <div class="admin-requests-list"></div>
+    </div>
+  </div>
+</section>
+
+
+    <section class="admin-section">
+  <div class="admin-container">
+    <hr class="admin-line" />
+    <h3 class="admin-title">Configuration</h3>
+
+    <div class="admin-form-wrapp">
+      <h4 class="admin-title-form">section "Our Products" on Home page:</h4>
+
+      <form id="uploadForm" class="upload-form">
+        <div class="upload-form-wrapp">
+          <label for="iconFile" class="upload-label"
+            >Choose icons (SVG-format) for upload</label
+          >
+          <input
+            type="file"
+            id="iconFile"
+            class="a-upload-input"
+            name="images"
+            accept="image/*"
+            multiple
+            required
+            title="Upload product icons"
+          />
+        </div>
+        <button type="submit" class="upload-btn admin-button">🚀 Upload</button>
+      </form>
+
+      <div class="admin-preview-wrapp">
+        <p>Preview upload icons:</p>
+
+        <div class="admin-preview-icons"></div>
+
+        <div id="uploadStatus"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
     </main>
     <!-- FOOTER -->
     <footer class="section">
   <div class="footer-section container">
     <div class="footer-container">
       <!-- GITHUB of developer ✨ -->
-      <a
+      <!-- <a
         href="https://github.com/AnnaKotl"
         class="github-link"
         title="Visit the GitHub page of this website's developer"
@@ -74,9 +185,9 @@
         rel="noopener noreferrer"
       >
         <svg class="github-icon" width="1" height="1">
-          <use href="../assets/sprite-DY-l4dVz.svg#icon-github"></use>
+          <use href="/icons/sprite.svg#icon-github"></use>
         </svg>
-      </a>
+      </a> -->
       <!-- ✨ / -->
       <!-- <p class="footer-text">2024</p> -->
       <footer><span id="year" class="footer-text"></span></footer>
@@ -104,5 +215,6 @@
   </svg>
 </button>
     <!-- SCRIPT -->
+    <!-- <script type="module" src="/main.js"></script> -->
   </body>
 </html>
