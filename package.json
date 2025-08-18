@@ -18,7 +18,6 @@
     "vite-plugin-static-copy": "^2.2.0"
   },
   "dependencies": {
-    "moment": "^2.30.1",
     "toastify-js": "^1.12.0"
   },
   "author": "",
