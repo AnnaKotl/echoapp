@@ -1,6 +1,10 @@
 import { fetchAdminRequests, deleteAdminRequest } from '/js/api/adminApi.js';
 import moment from 'moment';
 
+// © Footer config
+document.getElementById("year").textContent = new Date().getFullYear();
+
+// 📩 Requests
 document.addEventListener('DOMContentLoaded', () => {
   const viewBtn = document.querySelector('.admin-btn-requests');
   const requestsContainer = document.querySelector('.admin-requests-list');
@@ -113,3 +117,5 @@ document.addEventListener('DOMContentLoaded', () => {
     isVisible = !isVisible;
   });
 });
+
+// 🩻 Add icons

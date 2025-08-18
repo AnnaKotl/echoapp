@@ -1,8 +1,61 @@
 <section class="admin-section">
-
   <div class="admin-container">
+    <h1 class="admin-title">
+      ADMIN PANEL for
+      <a
+        class="admin-link"
+        href="https://echocode.app/"
+        aria-label="Echocode"
+        title="Link to page"
+        target="_blank"
+        rel="noopener noreferrer"
+        >Echocode.app</a
+      >
+    </h1>
 
-      <h1 class="admin-title">ADMIN PANEL</h1>
+    <div class="admin-info-wrapp">
+      <div class="admin-info-container">
+        <!-- Requests from clients -->
+        <ul class="admin-info-items">
+          <li class="admin-info-item">
+            <strong>▹ Requests from clients:</strong><br />
+            Click “View requests” to load all client requests from the database.
+          </li>
+          <li class="admin-info-item">
+            Use “Hide requests” to collapse the list and clear the panel view.
+          </li>
+          <li class="admin-info-item">
+            Each request has a Delete button. Confirming deletion will remove
+            the request from the admin panel and move it to the archive in the
+            database.
+          </li>
+        </ul>
+        <!-- Configuration -->
+        <ul class="admin-info-items">
+          <li class="admin-info-item">
+            <strong>▹ Configuration:</strong><br />
+            In section "Our Products" on Home page admins can upload product icons.
+          </li>
+          <li class="admin-info-item">
+            All uploaded icons are stored in Cloudinary under the folder
+            <a
+              href="https://console.cloudinary.com/app/c-ff8feab984c1a79abc97a44a0e8208/assets/media_library/folders/c9d60585b009469cf8eec140990416b50b?view_mode=mosaic"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Cloudinary"
+              title="Link to cloudinary folder"
+              class="admin-info-link"
+              >products-icons</a
+            >.
+          </li>
+          <li class="admin-info-item">
+            After upload, product icons automatically appear in the “Our
+            Products” section of the website without additional actions.
+          </li>
+        </ul>
+      </div>
+    </div>
 
+    <div class="admin-bg-img"></div>
   </div>
 </section>
