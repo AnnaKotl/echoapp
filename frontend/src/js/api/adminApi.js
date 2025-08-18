@@ -1,17 +1,11 @@
-const API_URL = import.meta.env.DEV
-  ? 'http://localhost:5001/admin/requests'
-  : '/admin/requests';
-
-const UPLOAD_URL = import.meta.env.DEV
-  ? 'http://localhost:5001/upload'
-  : '/upload';
+import API_URL from '/js/helpers/config';
 
 const ADMIN_SECRET = import.meta.env.VITE_ADMIN_SECRET;
 
 // 📩 Requests
 export async function fetchAdminRequests() {
   try {
-    const response = await fetch(API_URL, {
+    const response = await fetch(`${API_URL}/admin/requests`, {
       headers: { 'Authorization': `Bearer ${ADMIN_SECRET}` }
     });
     if (!response.ok) throw new Error('Auth error or fetch failed');
@@ -24,7 +18,7 @@ export async function fetchAdminRequests() {
 
 export async function deleteAdminRequest(id) {
   try {
-    const response = await fetch(`${API_URL}/${id}`, {
+    const response = await fetch(`${API_URL}/admin/requests/${id}`, {
       method: 'DELETE',
       headers: { 'Authorization': `Bearer ${ADMIN_SECRET}` }
     });
@@ -42,7 +36,7 @@ export async function uploadIcon(file) {
   formData.append('image', file);
 
   try {
-    const response = await fetch(UPLOAD_URL, { method: 'POST', body: formData });
+    const response = await fetch(`${API_URL}/upload`, { method: 'POST', body: formData });
     const result = await response.json();
     if (!result.success) throw new Error(result.message || 'Upload failed');
     return result.imageUrl;

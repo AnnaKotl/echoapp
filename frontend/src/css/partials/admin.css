@@ -185,8 +185,9 @@
 }
 
 #uploadStatus {
-  color: var(--accent-color);
-  font-size: 20px;
+  color: var(--light);
+  font-size: 18px;
+  padding-bottom: 30px;
 }
 
 .admin-preview-icons {
