@@ -9,7 +9,7 @@ const initAdminUpload = () => {
 
     previewWrapp.style.display = "none";
 
-    let previewImages = []; // масив прев’ю img елементів
+    let previewImages = [];
 
     fileInput.addEventListener("change", () => {
         previewDiv.innerHTML = '';
@@ -33,7 +33,7 @@ const initAdminUpload = () => {
             reader.readAsDataURL(file);
 
             previewDiv.appendChild(img);
-            previewImages.push({ file, img }); // зберігаємо відповідність файл → елемент
+            previewImages.push({ file, img });
         }
     });
 
@@ -44,17 +44,17 @@ const initAdminUpload = () => {
             return;
         }
 
-        statusDiv.innerHTML = ''; // очищаємо статус перед новим завантаженням
+        statusDiv.innerHTML = '';
 
         for (const { file, img } of previewImages) {
-            const fileStatus = document.createElement('p'); // окремий рядок для файлу
+            const fileStatus = document.createElement('p');
             fileStatus.textContent = `⏳ Uploading ${file.name}...`;
             statusDiv.appendChild(fileStatus);
 
             try {
                 const imageUrl = await uploadIcon(file);
-                img.src = imageUrl; // оновлюємо прев’ю
-                fileStatus.textContent = `✅ ${file.name} uploaded successfully!`; // оновлюємо статус
+                img.src = imageUrl;
+                fileStatus.textContent = `✅ ${file.name} uploaded successfully!`;
             } catch (error) {
                 fileStatus.textContent = `❌ Failed to upload ${file.name}: ${error.message}`;
             }
