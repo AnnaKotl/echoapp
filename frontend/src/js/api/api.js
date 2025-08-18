@@ -115,12 +115,14 @@ export async function uploadImage(imageFile) {
 export async function fetchProductIcons() {
   try {
     const response = await fetch(`${API_URL}/products-icons`);
-    if (!response.ok) {
-      throw new Error('Failed to fetch product icons');
-    }
+    if (!response.ok) throw new Error('Failed to fetch product icons');
+    
     const { icons } = await response.json();
-    setCachedData('productIcons', icons); // cache
-    return icons;
+
+    const validIcons = icons.filter(icon => icon.url && icon.url.trim() !== '');
+
+    setCachedData('productIcons', validIcons);
+    return validIcons;
   } catch (error) {
     console.error('Error fetching product icons:', error);
     return [];

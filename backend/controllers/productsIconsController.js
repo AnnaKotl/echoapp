@@ -20,14 +20,16 @@ const getProductsIcons = async (req, res, next) => {
       .max_results(200)
       .execute();
 
-    const icons = resources.map((resource) => ({
-      url: resource.secure_url,
-      name: resource.public_id.split('/').pop().split('.')[0],
-    }));
+    const validIcons = resources
+      .filter(resource => resource.secure_url)
+      .map(resource => ({
+        url: resource.secure_url,
+        name: resource.public_id.split('/').pop().split('.')[0],
+      }));
 
-    cache.setCachedData(cacheKey, icons);
+    await cache.setCachedData(cacheKey, validIcons);
 
-    res.status(200).json({ icons });
+    res.status(200).json({ icons: validIcons });
   } catch (error) {
     console.error('Error fetching icons:', error);
     next(error);

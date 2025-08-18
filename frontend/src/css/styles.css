@@ -13,6 +13,7 @@
 @import url('./partials/home-team.css');
 
 @import url('./modal.css');
+@import url('./partials/admin.css');
 
 :root {
   --bgc: #010205;
