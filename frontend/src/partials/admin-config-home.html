@@ -1,10 +1,37 @@
 <section class="admin-section">
-
   <div class="admin-container">
+    <hr class="admin-line" />
+    <h3 class="admin-title">Configuration</h3>
 
-      <h3 class="admin-title">Configuration</h3>
+    <div class="admin-form-wrapp">
+      <h4 class="admin-title-form">section "Our Products" on Home page:</h4>
 
-      <h4 class="admin-title">section "Our Products"</h4>
+      <form id="uploadForm" class="upload-form">
+        <div class="upload-form-wrapp">
+          <label for="iconFile" class="upload-label"
+            >Choose icons (SVG-format) for upload</label
+          >
+          <input
+            type="file"
+            id="iconFile"
+            class="a-upload-input"
+            name="images"
+            accept="image/*"
+            multiple
+            required
+            title="Upload product icons"
+          />
+        </div>
+        <button type="submit" class="upload-btn admin-button">🚀 Upload</button>
+      </form>
 
+      <div class="admin-preview-wrapp">
+        <p>Preview upload icons:</p>
+
+        <div class="admin-preview-icons"></div>
+
+        <div id="uploadStatus"></div>
+      </div>
+    </div>
   </div>
 </section>
