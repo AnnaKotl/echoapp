@@ -5,12 +5,17 @@ const ArchivedRequest = require('../models/ArchivedRequest');
 const router = express.Router();
 
 router.use((req, res, next) => {
-  const auth = req.headers.authorization || '';
-  const token = auth.replace('Bearer ', '');
+  const env = process.env.NODE_ENV || 'development';
 
-  if (token !== process.env.ADMIN_SECRET_KEY) {
-    return res.status(401).json({ message: 'Unauthorized' });
+  if (env === 'production') {
+    const auth = req.headers.authorization || '';
+    const token = auth.replace('Bearer ', '');
+
+    if (token !== process.env.ADMIN_SECRET_KEY) {
+      return res.status(401).json({ message: 'Unauthorized' });
+    }
   }
+
   next();
 });
 
