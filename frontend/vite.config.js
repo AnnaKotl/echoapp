@@ -14,7 +14,7 @@ export default defineConfig({
         prices: './src/pages/prices.html',
         products: './src/pages/products.html',
         team: './src/pages/team.html',
-        // admin: './src/pages/admin.html',
+        admin: './src/pages/admin.html',
       },
     },
     outDir: '../dist',
