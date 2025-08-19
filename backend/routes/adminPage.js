@@ -4,16 +4,15 @@ const path = require('path');
 const router = express.Router();
 
 router.get('/', (req, res) => {
-  const env = process.env.NODE_ENV || 'development';
+  const secret = req.query.secret;
 
-  if (env === 'production') {
-    const secret = req.query.secret || '';
+  if (process.env.NODE_ENV === 'production') {
     if (secret !== process.env.ADMIN_SECRET_KEY) {
-      return res.status(401).send('Unauthorized');
+      return res.status(401).send('Unauthorized: invalid secret');
     }
   }
 
-  res.sendFile(path.join(__dirname, '../frontend/dist/pages/admin.html'));
+  res.sendFile(path.join(__dirname, '../../frontend/dist/pages/admin.html'));
 });
 
 module.exports = router;

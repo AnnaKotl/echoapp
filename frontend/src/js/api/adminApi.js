@@ -1,33 +1,26 @@
 import API_URL from '/js/helpers/config';
 
-const ADMIN_SECRET = import.meta.env.VITE_ADMIN_SECRET;
+const params = new URLSearchParams(window.location.search);
+const ADMIN_SECRET = params.get('secret') || sessionStorage.getItem('adminSecret');
+
+if (ADMIN_SECRET) sessionStorage.setItem('adminSecret', ADMIN_SECRET);
 
 // 📩 Requests
 export async function fetchAdminRequests() {
-  try {
-    const response = await fetch(`${API_URL}/admin/requests`, {
-      headers: { 'Authorization': `Bearer ${ADMIN_SECRET}` }
-    });
-    if (!response.ok) throw new Error('Auth error or fetch failed');
-    return await response.json();
-  } catch (error) {
-    console.error('Failed to load requests:', error);
-    throw error;
-  }
+  const response = await fetch(`${API_URL}/admin/requests`, {
+    headers: { 'Authorization': `Bearer ${ADMIN_SECRET}` }
+  });
+  if (!response.ok) throw new Error('Auth error or fetch failed');
+  return await response.json();
 }
 
 export async function deleteAdminRequest(id) {
-  try {
-    const response = await fetch(`${API_URL}/admin/requests/${id}`, {
-      method: 'DELETE',
-      headers: { 'Authorization': `Bearer ${ADMIN_SECRET}` }
-    });
-    if (!response.ok) throw new Error('Delete failed');
-    return true;
-  } catch (err) {
-    console.error('Failed to delete request:', err);
-    return false;
-  }
+  const response = await fetch(`${API_URL}/admin/requests/${id}`, {
+    method: 'DELETE',
+    headers: { 'Authorization': `Bearer ${ADMIN_SECRET}` }
+  });
+  if (!response.ok) throw new Error('Delete failed');
+  return true;
 }
 
 // 🩻 Upload Icon
