@@ -1,26 +1,27 @@
 {
-    "name": "echoapp-frontend",
-    "private": true,
-    "version": "0.0.0",
-    "type": "module",
-    "scripts": {
-        "start": "concurrently \"npm run start:backend\" \"npm run start:frontend\"",
-        "start:backend": "cd ./backend && npm start",
-        "start:frontend": "vite",
-        "dev": "vite",
-        "build": "vite build"
-    },
-    "devDependencies": {
-        "glob": "^8.1.0",
-        "vite": "^6.3.5",
-        "vite-plugin-full-reload": "^1.2.0",
-        "vite-plugin-html-inject": "^1.1.2"
-    },
-    "dependencies": {
-        "moment": "^2.30.1",
-        "normalize.css": "^8.0.1",
-        "toast": "^0.5.4",
-        "toastify-js": "^1.12.0",
-        "yup": "^1.5.0"
-    }
+  "name": "echoapp-frontend",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "concurrently \"npm run start:backend\" \"npm run start:frontend\"",
+    "start:backend": "cd ./backend && npm start",
+    "start:frontend": "vite",
+    "dev": "vite",
+    "build": "vite build",
+    "build:for-backend": "vite build && mv dist ../backend/frontend/dist"
+  },
+  "devDependencies": {
+    "glob": "^8.1.0",
+    "vite": "^6.3.5",
+    "vite-plugin-full-reload": "^1.2.0",
+    "vite-plugin-html-inject": "^1.1.2"
+  },
+  "dependencies": {
+    "moment": "^2.30.1",
+    "normalize.css": "^8.0.1",
+    "toast": "^0.5.4",
+    "toastify-js": "^1.12.0",
+    "yup": "^1.5.0"
+  }
 }
