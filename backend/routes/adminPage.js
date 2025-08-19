@@ -13,7 +13,8 @@ router.get('/', (req, res) => {
     }
   }
 
-  res.sendFile(path.join(__dirname, '../../frontend/dist/pages/admin.html'));
+  res.sendFile(path.join(__dirname, './frontend/dist/pages/admin.html'));
+  // res.sendFile(path.join(__dirname, '../../frontend/dist/pages/admin.html'));
 });
 
 module.exports = router;
