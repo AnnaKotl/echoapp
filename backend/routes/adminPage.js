@@ -8,8 +8,8 @@ router.get('/', (req, res) => {
 
   if (process.env.NODE_ENV === 'production') {
     if (secret !== process.env.ADMIN_SECRET_KEY) {
-      return res.redirect('/'); 
-      // return res.status(401).send('Unauthorized: invalid secret');
+      // return res.redirect('/'); 
+      return res.status(401).send('Unauthorized: invalid secret');
     }
   }
 

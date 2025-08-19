@@ -8,8 +8,7 @@
     "start:backend": "cd ./backend && npm start",
     "start:frontend": "vite",
     "dev": "vite",
-    "build": "vite build",
-    "build:for-backend": "node_modules/.bin/vite build && mv dist ../backend/frontend/dist"
+    "build": "vite build"
   },
   "devDependencies": {
     "glob": "^8.1.0",
@@ -22,9 +21,6 @@
     "normalize.css": "^8.0.1",
     "toast": "^0.5.4",
     "toastify-js": "^1.12.0",
-    "yup": "^1.5.0",
-    "vite": "^6.3.5",
-    "vite-plugin-full-reload": "^1.2.0",
-    "vite-plugin-html-inject": "^1.1.2"
+    "yup": "^1.5.0"
   }
 }
