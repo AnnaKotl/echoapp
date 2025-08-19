@@ -9,7 +9,7 @@
     "start:frontend": "vite",
     "dev": "vite",
     "build": "vite build",
-    "build:for-backend": "vite build && mv dist ../backend/frontend/dist"
+    "build:for-backend": "npx vite build && mv dist ../backend/frontend/dist"
   },
   "devDependencies": {
     "glob": "^8.1.0",
