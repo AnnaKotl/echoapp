@@ -11,6 +11,8 @@ export const getAuthHeader = () => ({
   'Authorization': `Bearer ${sessionStorage.getItem(sessionAdminKey) || ''}`
 });
 
+const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+
 export function initAdminLogin() {
   if (sessionStorage.getItem(sessionAdminKey)) {
     showAdminContent();
@@ -41,12 +43,13 @@ export function initAdminLogin() {
       const { token } = await response.json();
       sessionStorage.setItem(sessionAdminKey, token);
 
+      await delay(500);
       showAdminContent();
     } catch (err) {
+      await delay(500);
       loginError.style.display = 'block';
       loginError.textContent = '🚫 Invalid password';
-      console.error('Admin login failed:', err);
+      console.error('🚫 Admin login failed:', err);
     }
   });
 }
-
