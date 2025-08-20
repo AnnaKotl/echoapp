@@ -5,8 +5,8 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 mongoose.connect(process.env.MONGO_URI)
-  .then(() => console.log('MongoDB connected for rate limiter'))
-  .catch(err => console.error('MongoDB connection error for rate limiter:', err));
+  .then(() => console.log('🔋 MongoDB connected for rate limiter'))
+  .catch(err => console.error('🔺 MongoDB connection error for rate limiter:', err));
 
 const mongoClient = mongoose.connection.getClient();
 

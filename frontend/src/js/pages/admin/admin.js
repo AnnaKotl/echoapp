@@ -1,8 +1,8 @@
-// © Footer config
-document.getElementById("year").textContent = new Date().getFullYear();
+import { initAdminLogin } from './admin-login.js';
 
-import { initAdminRequests } from './admin-requests.js';
-import { initAdminUpload } from './admin-upload.js';
+document.addEventListener('DOMContentLoaded', () => {
+  // © footer year
+  document.getElementById("year").textContent = new Date().getFullYear();
 
-initAdminRequests();
-initAdminUpload();
+  initAdminLogin();
+});

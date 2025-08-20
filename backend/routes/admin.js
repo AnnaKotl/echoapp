@@ -1,22 +1,33 @@
 const express = require('express');
 const { Request } = require('../models/Request');
 const ArchivedRequest = require('../models/ArchivedRequest');
-
 const router = express.Router();
 
-router.use((req, res, next) => {
-  if (process.env.NODE_ENV === 'production') {
-    const auth = req.headers.authorization || '';
-    const token = auth.replace('Bearer ', '');
-    if (token !== process.env.ADMIN_SECRET_KEY) {
-      return res.status(401).json({ message: 'Unauthorized' });
-    }
+/**
+ * Middleware: Admin authentication via POST token (Bearer)
+ */
+const adminAuth = (req, res, next) => {
+  const auth = req.headers.authorization || '';
+  const token = auth.replace('Bearer ', '');
+  if (!token || token !== process.env.ADMIN_PASSWORD) {
+    return res.status(401).json({ message: '🚫 Unauthorized: invalid token' });
   }
   next();
-});
+};
 
-// GET /admin/requests
-router.get('/requests', async (req, res) => {
+/**
+ * @swagger
+ * /admin/requests:
+ *   get:
+ *     summary: Get all active requests
+ *     tags: [Admin]
+ *     security:
+ *       - bearerAuth: []
+ *     responses:
+ *       200:
+ *         description: List of requests
+ */
+router.get('/requests', adminAuth, async (req, res) => {
   try {
     const requests = await Request.find().sort({ createdAt: -1 }).lean();
     const requestsWithDate = requests.map(r => {
@@ -26,21 +37,43 @@ router.get('/requests', async (req, res) => {
     res.json(requestsWithDate);
   } catch (err) {
     console.error(err);
-    res.status(500).json({ message: 'Server error' });
+    res.status(500).json({ message: '🛑 Server error' });
   }
 });
 
-// DELETE /admin/requests/:id
-router.delete('/requests/:id', async (req, res) => {
+/**
+ * @swagger
+ * /admin/requests/{id}:
+ *   delete:
+ *     summary: Archive and delete a request
+ *     tags: [Admin]
+ *     security:
+ *       - bearerAuth: []
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: string
+ *         description: Request ID to delete
+ *     responses:
+ *       200:
+ *         description: Request archived and removed
+ *       404:
+ *         description: Request not found
+ */
+router.delete('/requests/:id', adminAuth, async (req, res) => {
   try {
     const request = await Request.findById(req.params.id);
     if (!request) return res.status(404).json({ message: 'Not found' });
+
     await ArchivedRequest.create(request.toObject());
     await Request.findByIdAndDelete(req.params.id);
+
     res.json({ message: 'Archived and removed from active list' });
   } catch (err) {
     console.error(err);
-    res.status(500).json({ message: 'Delete failed' });
+    res.status(500).json({ message: '🛑 Delete failed' });
   }
 });
 

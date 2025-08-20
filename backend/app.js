@@ -8,15 +8,8 @@ const cors = require('cors');
 // Database connection
 const connectDB = require('./config/db');
 
-// API and page routes
-const createSubmitRequest = require('./routes/submit-form');
-const contactRoutes = require('./routes/contact');
-const uploadRoutes = require('./routes/upload');
-const iconRoutes = require('./routes/icons');
-const servicesRouter = require('./routes/services');
-const productsIconsRoutes = require('./routes/productsIcons');
-const adminPage = require('./routes/adminPage');
-const adminApiRoutes = require('./routes/admin');
+// Routes
+const routes = require('./routes/index');
 
 // Helpers & config
 const errorHandler = require('./helpers/errorHandler');
@@ -37,6 +30,7 @@ console.log(`Environment: ${process.env.NODE_ENV || 'development'}`);
 
 // Enable CORS with custom options
 app.use(cors(corsOptions));
+app.options('*', cors(corsOptions));
 
 // Serve static files from 'public'
 app.use(express.static(path.join(__dirname, 'public')));
@@ -47,19 +41,8 @@ app.use(logger(formatsLogger));
 // Parse JSON request bodies
 app.use(express.json());
 
-// Serve admin HTML page (requires ?secret= query param)
-app.use('/pages/admin', adminPage);
-
-// Admin API routes (require Authorization: Bearer <secret>)
-app.use('/admin', adminApiRoutes);
-
-// Public API routes
-app.use('/submit-request', createSubmitRequest);
-app.use('/contact', contactRoutes);
-app.use('/upload', uploadRoutes);
-app.use('/icons', iconRoutes);
-app.use('/services', servicesRouter);
-app.use('/products-icons', productsIconsRoutes);
+// All routes
+app.use('/', routes);
 
 // Serve favicon
 app.use('/favicon.ico', express.static(path.join(__dirname, 'public', 'favicon.ico')));
@@ -73,12 +56,10 @@ app.get('/health', (req, res) => {
   res.status(200).send('OK 🐸');
 });
 
-// Serve robots.txt
 app.get('/robots.txt', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'robots.txt'));
 });
 
-// Provide CORS configuration info (for debugging)
 app.get('/cors-info', (req, res) => {
   res.json({
     allowedOrigins,
@@ -94,7 +75,7 @@ setupSwagger(app);
 // Error handling
 app.use(errorHandler);
 
-// 404 handler for undefined routes
+// 404 handler
 app.use((_, res) => {
   res.status(404).json({ message: '🚫 API endpoint not found' });
 });
@@ -113,6 +94,6 @@ app.use((err, req, res, next) => {
 // Start server
 const PORT = process.env.PORT || 5001;
 app.listen(PORT, () => {
-  console.log(`✅✅✅ Server running on port 🔋 ${PORT} ⚙️`);
+  console.log(`🔋 Server running on port ${PORT}⚙️`);
   ping.keepAlive();
 });

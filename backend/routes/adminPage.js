@@ -1,20 +1,54 @@
 const express = require('express');
 const path = require('path');
-
 const router = express.Router();
 
-router.get('/', (req, res) => {
-  const secret = req.query.secret;
+/**
+ * @swagger
+ * /pages/admin/login:
+ *   post:
+ *     summary: Admin login
+ *     description: Provide password to receive access token
+ *     tags:
+ *       - Admin
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               password:
+ *                 type: string
+ *                 example: "supersecret"
+ *     responses:
+ *       200:
+ *         description: Access granted, token returned
+ *       401:
+ *         description: Invalid password
+ */
+router.post('/login', (req, res) => {
+  const { password } = req.body;
 
-  if (process.env.NODE_ENV === 'production') {
-    if (secret !== process.env.ADMIN_SECRET_KEY) {
-      // return res.redirect('/'); 
-      return res.status(401).send('Unauthorized: invalid secret');
-    }
+  if (!password || password !== process.env.ADMIN_PASSWORD) {
+    return res.status(401).json({ message: '🚫 Unauthorized: invalid password' });
   }
 
-  res.sendFile(path.join(__dirname, 'frontend/dist/pages/admin.html'));
-  // res.sendFile(path.join(__dirname, '../../frontend/dist/pages/admin.html'));
+  // Повертаємо токен, який на фронті збережемо в localStorage
+  res.json({ token: process.env.ADMIN_PASSWORD });
+});
+
+/**
+ * @swagger
+ * /pages/admin:
+ *   get:
+ *     summary: Serve admin panel HTML
+ *     tags: [Admin]
+ *     responses:
+ *       200:
+ *         description: Admin page served
+ */
+router.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, '../frontend/dist/pages/admin.html'));
 });
 
 module.exports = router;

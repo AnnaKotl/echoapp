@@ -1,16 +1,26 @@
 const Service = require('../models/Service');
 const HttpError = require('../helpers/HttpError');
+const cache = require('../config/cache');
+
+const CACHE_KEY = 'all-services';
 
 // GET 
 const getAllServices = async (req, res, next) => {
   try {
+    const cachedServices = cache.getCachedData(CACHE_KEY);
+    if (cachedServices) {
+      console.log('✅ Services from cache');
+      return res.json(cachedServices);
+    }
+
     const services = await Service.find();
-    // console.log('Services fetched from DB:', services); 
+    cache.setCachedData(CACHE_KEY, services, 3600);
+    console.log('📦 Services from DB');
+
     res.json(services);
   } catch (error) {
-    console.error('Error fetching services from DB:', error.message);
-    // next(HttpError(500, 'Unable to fetch services'));
-    next(error); 
+    console.error('Error fetching services:', error.message);
+    next(error);
   }
 };
 
@@ -24,6 +34,9 @@ const createService = async (req, res, next) => {
     }
 
     const newService = await Service.create({ name, description, features, price });
+
+    cache.invalidateCache(CACHE_KEY);
+
     res.status(201).json(newService);
   } catch (error) {
     next(HttpError(500, 'Unable to create service'));
@@ -41,6 +54,8 @@ const updateService = async (req, res, next) => {
       return next(HttpError(404, 'Service not found'));
     }
 
+    cache.invalidateCache(CACHE_KEY);
+
     res.json(updatedService);
   } catch (error) {
     next(HttpError(500, 'Unable to update service'));
@@ -57,6 +72,8 @@ const deleteService = async (req, res, next) => {
       return next(HttpError(404, 'Service not found'));
     }
 
+    cache.invalidateCache(CACHE_KEY);
+
     res.status(204).send();
   } catch (error) {
     next(HttpError(500, 'Unable to delete service'));
@@ -69,5 +86,3 @@ module.exports = {
   updateService,
   deleteService,
 };
-
-// PRICES

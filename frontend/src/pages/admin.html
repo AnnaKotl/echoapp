@@ -51,11 +51,33 @@
     <main>
       <!-- main content -->
 
-      <load ="partials/admin-main.html" />
+      <!-- login form -->
+      <div id="admin-login-container">
+        <form id="admin-login-form">
+          <p class="a-form-subtitle">
+            ADMIN PANEL:<br />only site administrators are allowed to access
+            this page
+          </p>
 
-      <load ="partials/admin-requests.html" />
+          <p id="login-error" class="a-login-error" style="display: none"></p>
+          
+          <input
+            type="password"
+            id="admin-password"
+            placeholder="Enter password"
+            required
+            autofocus
+          />
+          <button type="submit">Login</button>
+        </form>
+      </div>
 
-      <load ="partials/admin-config-home.html" />
+      <!-- admin-panel content -->
+      <div id="admin-content" style="display: none">
+        <load ="partials/admin-main.html" />
+        <load ="partials/admin-requests.html" />
+        <load ="partials/admin-config-home.html" />
+      </div>
     </main>
 
     <!-- FOOTER -->

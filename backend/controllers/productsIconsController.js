@@ -2,14 +2,16 @@ const cloudinary = require('../config/cloudinary');
 const cache = require('../config/cache');
 const rateLimiter = require('../config/rateLimiter');
 
+const CACHE_KEY = 'products-icons';
+const CACHE_TTL = 3600;
+
 const getProductsIcons = async (req, res, next) => {
   try {
     await rateLimiter.consume(req.ip);
-    const cacheKey = 'products-icons';
-    const cachedIcons = await cache.getCachedData(cacheKey);
 
+    const cachedIcons = cache.getCachedData(CACHE_KEY);
     if (cachedIcons) {
-      console.log('Data from cache');
+      console.log('✅ Products icons from cache');
       return res.status(200).json({ icons: cachedIcons });
     }
 
@@ -27,11 +29,12 @@ const getProductsIcons = async (req, res, next) => {
         name: resource.public_id.split('/').pop().split('.')[0],
       }));
 
-    await cache.setCachedData(cacheKey, validIcons);
+    cache.setCachedData(CACHE_KEY, validIcons, CACHE_TTL);
 
+    console.log('📦 Products icons from Cloudinary');
     res.status(200).json({ icons: validIcons });
   } catch (error) {
-    console.error('Error fetching icons:', error);
+    console.error('❌ Error fetching icons:', error);
     next(error);
   }
 };

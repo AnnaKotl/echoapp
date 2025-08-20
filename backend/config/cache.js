@@ -1,33 +1,55 @@
-const Cache = require('../models/Cache');
+// Простий in-memory cache
+const cacheStore = new Map();
 
-async function getCachedData(key) {
-  try {
-    const cached = await Cache.findOne({ key });
+/**
+ * Отримати дані з кеша
+ * @param {string} key
+ * @returns {any|null}
+ */
+function getCachedData(key) {
+  const cached = cacheStore.get(key);
 
-    if (cached && cached.expiration > new Date()) {
-      return cached.data;
-    }
+  if (!cached) return null;
 
-    return null;
-  } catch (err) {
-    console.error('Error fetching cached data:', err);
-    return null;
+  const { data, expiration } = cached;
+  if (expiration > Date.now()) {
+    return data;
   }
+
+  // Якщо TTL вийшов – очищаємо
+  cacheStore.delete(key);
+  return null;
 }
 
-async function setCachedData(key, data, ttl = 3600) {
-  try {
-    const expiration = new Date(Date.now() + ttl * 1000);
-
-    const cached = await Cache.findOneAndUpdate(
-      { key },
-      { data, expiration },
-      { upsert: true, new: true }
-    );
-    // console.log('Cache saved:', cached);
-  } catch (err) {
-    console.error('Error saving cached data:', err);
-  }
+/**
+ * Записати дані в кеш
+ * @param {string} key
+ * @param {any} data
+ * @param {number} ttl seconds (default: 3600)
+ */
+function setCachedData(key, data, ttl = 3600) {
+  const expiration = Date.now() + ttl * 1000;
+  cacheStore.set(key, { data, expiration });
 }
 
-module.exports = { getCachedData, setCachedData };
+/**
+ * Видалити конкретний ключ з кеша
+ * @param {string} key
+ */
+function invalidateCache(key) {
+  cacheStore.delete(key);
+}
+
+/**
+ * Повністю очистити кеш
+ */
+function clearCache() {
+  cacheStore.clear();
+}
+
+module.exports = { 
+  getCachedData, 
+  setCachedData, 
+  invalidateCache, 
+  clearCache 
+};
