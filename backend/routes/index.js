@@ -15,7 +15,7 @@ const adminCacheRoutes = require('./adminCache');
 router.use('/contact', contactRoutes);
 router.use('/products-icons', productsIconsRoutes);
 router.use('/services', servicesRoutes);
-router.use('/submit', submitRoutes);
+router.use('/submit-request', submitRoutes);
 router.use('/upload', uploadRoutes);
 router.use('/icons', iconsRoutes);
 

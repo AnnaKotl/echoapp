@@ -24,7 +24,7 @@ const submitRequest = async (req, res, next) => {
 
         await sendEmail({
             to: process.env.RECIPIENT_EMAIL,
-            subject: 'New request received',
+            subject: '📩 New contact request from echocode.app',
             ...validData,
         });
 

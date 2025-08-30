@@ -33,7 +33,6 @@ router.post('/login', (req, res) => {
     return res.status(401).json({ message: '🚫 Unauthorized: invalid password' });
   }
 
-  // Повертаємо токен, який на фронті збережемо в localStorage
   res.json({ token: process.env.ADMIN_PASSWORD });
 });
 

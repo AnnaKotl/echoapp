@@ -1,4 +1,3 @@
-// Простий in-memory cache
 const cacheStore = new Map();
 
 /**

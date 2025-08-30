@@ -30,23 +30,127 @@ const sendEmail = async ({ to, subject, name, email, mobileNumber, socialNetwork
       throw new Error('Recipient or sender email is missing');
     }
 
-    const htmlContent = `
-      <h3>New Contact Request</h3>
-      <p><strong>Name:</strong> ${name}</p>
-      <p><strong>Email:</strong> ${email}</p>
-      <p><strong>Mobile Number:</strong> ${mobileNumber}</p>
-      <p><strong>Social Network:</strong> ${socialNetwork || 'Not Provided'}</p>
-      <p><strong>Country:</strong> ${country}</p>
-      <p><strong>Selected Service:</strong> ${selectedService}</p>
-      <p><strong>Message:</strong> ${message || 'No message provided'}</p>
-    `;
+    // const htmlContent = `
+    //   <h1>New Contact Request</h1>
+    //   <p><strong>Name:</strong> ${name}</p>
+    //   <p><strong>Email:</strong> ${email}</p>
+    //   <p><strong>Mobile Number:</strong> ${mobileNumber}</p>
+    //   <p><strong>Social Network:</strong> ${socialNetwork || 'Not Provided'}</p>
+    //   <p><strong>Country:</strong> ${country}</p>
+    //   <p><strong>Selected Service:</strong> ${selectedService}</p>
+    //   <p><strong>Message:</strong> ${message || 'No message provided'}</p>
+    // `;
+const htmlContent = `
+<html>
+  <head>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f7f7f7;
+        color: #333;
+        padding: 20px;
+      }
+      .container {
+        max-width: 600px;
+        margin: auto;
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        padding: 25px;
+      }
+      h1 {
+        color: #20f3dd;
+        font-size: 30px;
+        margin-bottom: 20px;
+      }
+      .field-card {
+        background-color: #f0fdfd;
+        border-left: 4px solid #20f3dd;
+        padding: 12px 16px;
+        margin-bottom: 15px;
+        border-radius: 6px;
+      }
+      .label {
+        font-weight: bold;
+        color: #052522ff;
+        font-size: 14px;
+      }
+      .value {
+        display: block;
+        font-size: 18px;
+        margin-top: 4px;
+        color: #000;
+      }
+      .footer {
+        margin-top: 40px;
+        font-size: 11px;
+        color: #85a09eff;
+        font-weight: 100;
+        line-height: 1.4;
+        border-top: 1px solid #eee;
+        padding-top: 10px;
+      }
+      a {
+        text-decoration: none;
+        color: #20f3dd;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>📩 New contact request from echocode.app</h1>
+
+      <div class="field-card">
+        <span class="label">1️⃣ Name:</span>
+        <span class="value">${name}</span>
+      </div>
+
+      <div class="field-card">
+        <span class="label">2️⃣ Email:</span>
+        <span class="value">${email}</span>
+      </div>
+
+      <div class="field-card">
+        <span class="label">3️⃣ Mobile Number:</span>
+        <span class="value">${mobileNumber}</span>
+      </div>
+
+      <div class="field-card">
+        <span class="label">4️⃣ Social Network:</span>
+        <span class="value">${socialNetwork || '➖'}</span>
+      </div>
+
+      <div class="field-card">
+        <span class="label">5️⃣ Country:</span>
+        <span class="value">${country}</span>
+      </div>
+
+      <div class="field-card">
+        <span class="label">6️⃣ Selected Service:</span>
+        <span class="value">${selectedService}</span>
+      </div>
+
+      <div class="field-card">
+        <span class="label">7️⃣ Message:</span>
+        <span class="value">${message || '➖'}</span>
+      </div>
+
+      <div class="footer">
+        This email was automatically sent from <strong>new_request@send.echocode.app</strong> via Mailjet.<br>
+        Please do not reply to this email.<br>
+        &copy; ${new Date().getFullYear()} ECHOCODE.APP
+      </div>
+    </div>
+  </body>
+</html>
+`;
 
     const request = await mailjet.post("send", { version: 'v3.1' }).request({
       Messages: [
         {
           From: {
             Email: process.env.SENDER_EMAIL,
-            Name: 'Website Contact Form',
+            Name: 'New client',
           },
           To: [
             {

@@ -21,11 +21,11 @@ const setupSwagger = (app) => {
       },
       servers: [
         {
-          url: 'http://localhost:5001/api',
+          url: 'http://localhost:5001', // http://localhost:5001/api-docs
         },
       ],
     },
-    apis: ['./routes/**/*.js'],
+    apis: [__dirname + '/../routes/**/*.js'],
   };  
 
   const specs = swaggerJsDoc(options);
