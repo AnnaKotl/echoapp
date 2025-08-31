@@ -11,6 +11,7 @@
 @import url('./partials/home-prices.css');
 @import url('./partials/home-products.css');
 @import url('./partials/home-team.css');
+@import url('./partials/portfolio.css');
 
 @import url('./modal.css');
 @import url('./partials/admin.css');
@@ -163,7 +164,8 @@ body {
   height: 100%;
 }
 body {
-  font-family: 'Karla', 'Inter', serif;
+  font-family: 'Work Sans', sans-serif; 
+  /* 'Inter' */
   font-style: normal;
   font-weight: 500;
   font-size: 18px;

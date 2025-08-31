@@ -13,6 +13,7 @@ export default defineConfig({
         partnership: './src/pages/partnership.html',
         prices: './src/pages/prices.html',
         products: './src/pages/products.html',
+        portfolio: './src/pages/portfolio.html',
         team: './src/pages/team.html',
         admin: './src/pages/admin.html',
       },
