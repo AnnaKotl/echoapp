@@ -40,24 +40,6 @@ function setActiveLink() {
 setActiveLink();
 // 📌 /
 
-// HOME link with LOGO 🔺
-const logo = document.querySelector('#nav-logo');
-const homeText = document.querySelector('#home-text');
-const homeLinkLogo = document.querySelector('.home-link-logo');
-homeLinkLogo.addEventListener('mouseenter', () => {
-  logo.style.visibility = 'hidden';
-  logo.style.opacity = '0';
-  homeText.style.visibility = 'visible';
-  homeText.style.opacity = '1';
-});
-homeLinkLogo.addEventListener('mouseleave', () => {
-  logo.style.visibility = 'visible';
-  logo.style.opacity = '1';
-  homeText.style.visibility = 'hidden';
-  homeText.style.opacity = '0';
-});
-// 📌 /
-
 // PRELOADER 🔺
 const preloader = document.getElementById('preloader');
 const preloaderLogo = document.getElementById('preloader-logo');

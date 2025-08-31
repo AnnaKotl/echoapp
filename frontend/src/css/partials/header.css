@@ -4,14 +4,12 @@
   left: 50%;
   transform: translateX(-50%);
   width: 90%;
-  max-width: 1200px;
   height: 150px;
   border-radius: 30px;
   border: 1px solid transparent;
   display: flex;
   align-items: center;
-  justify-content: center;
-  transition: all 0.1s ease;
+  justify-content: space-between;
   z-index: 66;
   transition: all var(--standart-tr-cubic);
 }
@@ -22,26 +20,37 @@
   border-color: var(--border-color);
 }
 
-.nav-list {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr) auto repeat(3, 1fr);
+.nav-list-container {
+  display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
-  gap: 30px;
+}
+
+.nav-logo-container {
+  margin-right: 60px;
+}
+
+.nav-items-container {
+  margin-left: auto;
+}
+
+.nav-list {
+  display: flex;
 }
 
 .logo-nav {
   width: 100px;
   height: auto;
-  margin: 0 30px;
 }
 
 .nav-link {
   color: var(--light);
   font-size: var(--text-standart-font-size);
-  padding: 20px 6px;
+  padding: 20px;
+  margin: 0 10px;
   position: relative;
+  text-align: center;
+  align-items: center;
   transition: var(--transition-cl), var(--transition-op);
   opacity: 0.8;
 }
@@ -55,41 +64,6 @@
   color: var(--blue);
   opacity: 1;
 }
-
-/* HOME link with LOGO 🔺 */
-#home-text {
-  visibility: hidden;
-  opacity: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transition: visibility var(--standart-tr-cubic), var(--transition-op),
-    var(--transition-cl);
-  font-size: var(--text-standart-font-size);
-  color: var(--blue);
-  padding: 20px 6px;
-}
-#nav-logo {
-  visibility: visible;
-  opacity: 1;
-  position: relative;
-  transition: visibility var(--standart-tr-cubic), var(--transition-op),
-    var(--transition-cl);
-}
-.home-link-logo:hover #nav-logo {
-  visibility: hidden;
-  opacity: 0;
-}
-.home-link-logo:hover #home-text {
-  visibility: visible;
-  opacity: 0.8;
-}
-#home-text:is(:hover, :focus) {
-  color: var(--blue);
-  opacity: 1;
-}
-/* 🔺 / */
 
 /* PRELOADER 🔺 */
 #preloader {
@@ -142,26 +116,18 @@
 }
 /*  🔺 / */
 
-/* MOBILE ver. */
-.logo-nav-mob {
-  display: none;
-}
-/* / */
-
-/* MOB adaptive css */
 @media (max-width: 767px) {
   #preloader-logo {
     max-width: 300px;
   }
 }
 
+@media (min-width: 768px) and (max-width: 1024px) {
+}
+
 /* MOB + TABLET adaptive css */
 @media (max-width: 1024px) {
-  .home-nav {
-    display: none;
-  }
-  .logo-nav-mob {
-    display: block;
-    margin: 20px auto 60px;
-  }
+}
+
+@media (min-width: 1025px) {
 }
