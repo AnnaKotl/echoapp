@@ -45,23 +45,34 @@ const preloader = document.getElementById('preloader');
 const preloaderLogo = document.getElementById('preloader-logo');
 const navLogo = document.getElementById('nav-logo');
 const isFirstVisit = !sessionStorage.getItem('visited');
+
 if (isFirstVisit) {
   preloader.classList.remove('hidden');
-  const navLogoRect = navLogo.getBoundingClientRect();
-  const preloaderLogoRect = preloaderLogo.getBoundingClientRect();
-  const offsetX = navLogoRect.left - preloaderLogoRect.left;
-  const offsetY = navLogoRect.top - preloaderLogoRect.top;
-  const scaleRatio = navLogoRect.width / preloaderLogoRect.width;
-  preloaderLogo.style.transform = `translate(${offsetX}px, ${offsetY}px) scale(${scaleRatio})`;
   document.body.style.overflow = 'hidden';
+
+  setTimeout(() => {
+    preloaderLogo.style.animation = 'logoFadeOut 2.5s forwards ease';
+  }, 1000);
+
   setTimeout(() => {
     preloader.classList.add('hidden');
     document.body.style.overflow = 'visible';
     navLogo.style.visibility = 'visible';
     sessionStorage.setItem('visited', 'true');
-  }, 3500);
+  }, 3000);
 } else {
   preloader.remove();
   navLogo.style.visibility = 'visible';
 }
 // 🔺 /
+
+// 🍔 menu
+document.addEventListener("DOMContentLoaded", () => {
+  const burger = document.getElementById("burger");
+  const navMenu = document.querySelector(".nav-items-container");
+
+  burger.addEventListener("click", () => {
+    navMenu.classList.toggle("open");
+  });
+});
+// 🍔 /
