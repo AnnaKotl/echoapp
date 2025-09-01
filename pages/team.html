@@ -1,25 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <!-- FAVICON -->
-    <link rel="icon" type="image/png" href="../assets/favicon-96x96-CQAYkvFq.png" sizes="96x96">
-    <link rel="icon" type="image/png" href="../assets/favicon-32x32-CV59s1SA.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="../assets/favicon-16x16-BX8WYJeL.png" sizes="16x16">
-    <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-icon-180x180-DwFLB3EL.png">
+    <link
+      rel="icon"
+      type="image/png"
+      href="../assets/favicon-96x96-CQAYkvFq.png"
+      sizes="96x96"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="../assets/favicon-32x32-CV59s1SA.png"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="../assets/favicon-16x16-BX8WYJeL.png"
+      sizes="16x16"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../assets/apple-icon-180x180-DwFLB3EL.png"
+    />
     <!-- <link rel="manifest" href="/favicon/manifest.json"> -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>echocode</title>
     <!-- FONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <!-- STYLE -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css" integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q==" crossorigin="anonymous" referrerpolicy="no-referrer">
-    <script type="module" crossorigin src="../assets/styles-BJIRokvr.js"></script>
-    <script type="module" crossorigin src="../assets/main-j5nBWDfI.js"></script>
-    <link rel="stylesheet" crossorigin href="../assets/styles-3ML25yS2.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+      integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script type="module" crossorigin src="../assets/styles-DRs7dFkI.js"></script>
+    <script type="module" crossorigin src="../assets/main-BgsRx730.js"></script>
+    <link rel="stylesheet" crossorigin href="../assets/styles-CEm0tvuI.css">
     <link rel="stylesheet" crossorigin href="../assets/main-U_b-ZeMd.css">
   </head>
   <body>
@@ -36,18 +64,9 @@
   <nav class="home-nav">
     <div class="home-nav-container">
       <div class="nav-list-container">
-        <ul class="nav-list">
-          <!-- <li><a href="/pages/products.html" class="nav-link">Products</a></li>
-          <li><a href="/pages/prices.html" class="nav-link">Prices</a></li>
-          <li><a href="/pages/partnership.html" class="nav-link">Partnership</a></li> -->
 
-          <li><a href="#products" class="nav-link">Products</a></li>
-          <li><a href="#prices" class="nav-link">Prices</a></li>
-          <li><a href="#partnership" class="nav-link">Partnership</a></li>
-
-          <!-- href="/index.html" -->
-          <li class="home-link-logo">
-            <a href="#">
+        <div class="nav-logo-container">            
+            <a href="/">
               <img
                 src="../assets/icononly-transp-LGCOmZMi.png"
                 alt="logo"
@@ -55,31 +74,39 @@
                 class="logo-nav"
                 id="nav-logo"
               />
-              <span id="home-text" class="hidden">Home</span>
             </a>
-          </li>
+        </div>
 
-          <li><a href="#team" class="nav-link">Team</a></li>
-          <li><a href="#career" class="nav-link">Career</a></li>
-          <li><a href="#contacts" class="nav-link">Contacts</a></li>
+        <div class="burger" id="burger">
+          <svg class="burger-icon" width="1" height="1">
+            <use href="../assets/sprite-CsPiArDK.svg#icon-menu-alt-burger"></use>
+          </svg>
+        </div>
 
-          <!-- <li><a href="/pages/team.html" class="nav-link">Team</a></li>
-          <li><a href="/pages/career.html" class="nav-link">Career</a></li>
-          <li><a href="/pages/contacts.html" class="nav-link">Contacts</a></li> -->
-        </ul>
+        <div class="nav-items-container">
+          <ul class="nav-list">
+
+            <li><a href="/" class="nav-link">Home</a></li>
+
+            <!-- <li><a href="/pages/products.html" class="nav-link">Products</a></li> -->
+
+            <li><a href="/pages/portfolio.html" class="nav-link">Portfolio</a></li>
+
+            <!-- <li><a href="/pages/prices.html" class="nav-link">Prices</a></li> -->
+
+            <!-- <li><a href="/pages/partnership.html" class="nav-link">Partnership</a></li> -->
+
+            <!-- <li><a href="/pages/team.html" class="nav-link">Team</a></li> -->
+
+            <!-- <li><a href="/pages/career.html" class="nav-link">Career</a></li> -->
+
+            <li><a href="/pages/contacts.html" class="nav-link">Contacts</a></li>
+
+          </ul>
+        </div>
       </div>
     </div>
   </nav>
-  <!-- mobile ver. -->
-  <a href="#">
-    <img
-      src="../assets/icononly-transp-LGCOmZMi.png"
-      alt="logo"
-      width="150"
-      class="logo-nav-mob"
-    />
-  </a>
-  <!-- / -->
 </header>
     <main>
       <!-- main content -->
@@ -123,7 +150,7 @@
     <!-- SCROLL -->
     <button id="scroll-button" class="hidden" title="Scroll to the top">
   <svg class="scroll-icon" width="1" height="1">
-    <use href="../assets/sprite-DY-l4dVz.svg#icon-keyboard_arrow_down"></use>
+    <use href="../assets/sprite-CsPiArDK.svg#icon-keyboard_arrow_down"></use>
   </svg>
 </button>
     <!-- SCRIPT -->
