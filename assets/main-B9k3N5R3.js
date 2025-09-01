@@ -1,4 +1,4 @@
-import"./styles-CTaKNtFn.js";import{A as Q}from"./config-DF9vnxqS.js";import{T as Ee,g as $e}from"./main-DJUka45H.js";function Fe(s){const e=document.querySelector(".prices-list");if(!e){console.error("Container .prices-list not found");return}if(!e||!s||s.length===0){console.error("No services available");return}let r=[...["UI/UX Design","Develop","QA","Source code","Custom Project Management"]];const n=s.map(i=>{const a=i.features.map(u=>`<p class="about-features" style="color: ${!r.some(c=>c.trim()===u.trim())?"var(--accent-color)":"inherit"};">${u}</p>`).join("");r=[...new Set([...r,...i.features.map(u=>u.trim())])];const o=i.description&&i.description.length>0?i.description.map(u=>`<p>${u}</p>`).join(""):"";return`
+import"./styles-y7FTqnwo.js";import{A as Q}from"./config-DF9vnxqS.js";import{T as Ee,g as $e}from"./main-DJUka45H.js";function Fe(s){const e=document.querySelector(".prices-list");if(!e){console.error("Container .prices-list not found");return}if(!e||!s||s.length===0){console.error("No services available");return}let r=[...["UI/UX Design","Develop","QA","Source code","Custom Project Management"]];const n=s.map(i=>{const a=i.features.map(u=>`<p class="about-features" style="color: ${!r.some(c=>c.trim()===u.trim())?"var(--accent-color)":"inherit"};">${u}</p>`).join("");r=[...new Set([...r,...i.features.map(u=>u.trim())])];const o=i.description&&i.description.length>0?i.description.map(u=>`<p>${u}</p>`).join(""):"";return`
       <li class="prices-item">
         <div class="prices-item-container">
           <h4 class="service-name">${i.name}</h4>
@@ -96,6 +96,7 @@ attempted value: ${a}
             >
         </div>
 
+        <div class="form-group-wrapp">
         <p class="radio-title-label">Select a service:</p>
          <div class="form-group radio-group" id="selectedServiceGroup">
             ${["Basic","Standard","Pro","Premium","Enterprise"].map(l=>`
@@ -111,6 +112,7 @@ attempted value: ${a}
                     <span class="radio-circle"></span>
                     ${l}
                 </label>`).join("")}
+        </div>
         </div>
 
         <div class="form-group">
