@@ -52,14 +52,14 @@ if (isFirstVisit) {
 
   setTimeout(() => {
     preloaderLogo.style.animation = 'logoFadeOut 2.5s forwards ease';
-  }, 1000);
+  }, 2000);
 
   setTimeout(() => {
     preloader.classList.add('hidden');
     document.body.style.overflow = 'visible';
     navLogo.style.visibility = 'visible';
     sessionStorage.setItem('visited', 'true');
-  }, 3000);
+  }, 3500);
 } else {
   preloader.remove();
   navLogo.style.visibility = 'visible';

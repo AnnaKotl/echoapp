@@ -24,8 +24,8 @@
 }
 
 .hero-text {
-  font-size: 50px;
-  max-width: 870px;
+  font-size: 48px;
+  max-width: 900px;
   margin-bottom: 30px;
   font-weight: var(--text-standart-font-weight);
   line-height: 1.2;
@@ -44,7 +44,7 @@
 }
 
 .hero-btn {
-  font-size: 50px;
+  font-size: 40px;
   color: var(--accent-color);
   background: transparent;
   -webkit-backdrop-filter: blur(10px);
@@ -166,6 +166,9 @@
 @media (max-width: 1024px) {
   .hero-bg-images {
     display: none;
+  }  
+  .hero-title {
+    padding-top: 140px;
   }
   .hero-content {
     padding-top: 0;

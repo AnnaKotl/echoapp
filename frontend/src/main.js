@@ -7,3 +7,6 @@ import '/js/partials/header';
 
 // NPM global uses import
 import 'toastify-js/src/toastify.css';
+
+// © Footer config
+document.getElementById("year").textContent = new Date().getFullYear();
