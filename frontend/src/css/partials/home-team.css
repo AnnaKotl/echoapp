@@ -120,16 +120,11 @@
 .advantage.active {
   opacity: 1;
   transform: scale(1.1);
-  color: var(--blue);
-  /* background: linear-gradient(
-    300deg,
-    #007bff 10%,
-    #6610f2 40%,
-    #6f42c1 50%,
-    #e83e8c 90%
-  );
+  background: linear-gradient(99.05deg, #bc3cd8 0.07%, #c54b8c 106.32%);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; */
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
 }
 
 /* MOB + TABLET adaptive css */

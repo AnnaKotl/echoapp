@@ -131,6 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
             >
         </div>
 
+        <div class="form-group-wrapp">
         <p class="radio-title-label">Select a service:</p>
          <div class="form-group radio-group" id="selectedServiceGroup">
             ${['Basic', 'Standard', 'Pro', 'Premium', 'Enterprise']
@@ -150,6 +151,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 </label>`
                 )
                 .join('')}
+        </div>
         </div>
 
         <div class="form-group">

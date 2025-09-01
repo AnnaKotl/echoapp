@@ -20,7 +20,7 @@
 .home-nav-container.scrolled {
   -webkit-backdrop-filter: blur(30px);
   backdrop-filter: blur(30px);
-  border-color: var(--border-color);
+  border-color: rgba(255, 255, 255, 0.1);
   max-width: 900px; /* If nav < 4 links */
 }
 
@@ -50,23 +50,47 @@
 }
 
 .nav-link {
-  color: var(--light);
+  position: relative;
+  text-transform: uppercase;
+  color:  var(--light);
   font-size: var(--text-standart-font-size);
+  font-weight: 600;
   padding: 10px 30px;
   position: relative;
   text-align: center;
-  transition: var(--transition-cl), var(--transition-op);
-  opacity: 0.9;
+  transition: all var(--standart-tr-cubic);
 }
 
-.nav-link.active {
-  color: var(--accent-color);
-  opacity: 1;
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: var(--light);
+  transition: all var(--standart-tr-cubic);
+  transform: translateX(-50%);
 }
 
 .nav-link:not(.active):is(:hover, :focus) {
-  color: var(--blue);
-  opacity: 1;
+  background: linear-gradient(99.05deg, #bc3cd8 0.07%, #c54b8c 106.32%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.nav-link:not(.active):is(:hover, :focus)::after {
+  width: 10%;
+}
+
+.nav-link.active {
+  background: linear-gradient(99.05deg, #bc3cd8 0.07%, #c54b8c 106.32%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
 }
 
 /* 🍔 */

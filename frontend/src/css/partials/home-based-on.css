@@ -4,6 +4,8 @@
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+
+  /* background: linear-gradient(99.05deg, #bc3cd8 0.07%, #c54b8c 106.32%); */
 }
 
 .based-on-section {
@@ -66,7 +68,7 @@
   z-index: 2;
   background: transparent;
 
-  animation: gradientFlowBased 3s infinite linear;
+  animation: gradientFlow 3s infinite linear;
 }
 
 .based-on-box {
