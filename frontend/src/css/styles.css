@@ -32,6 +32,7 @@
   --light: rgb(227, 228, 230);
   --border-color: rgba(227, 228, 230, 0.55);
   --light-opacity: rgb(227, 228, 230, 0.8);
+    --bgc-light: rgba(196, 196, 196, 1);
 
   --accent-color: rgb(197, 75, 140);
   --accent-secondary: rgb(188, 60, 216);

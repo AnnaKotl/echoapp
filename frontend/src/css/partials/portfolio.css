@@ -1,11 +1,5 @@
 /* GLOBAL CSS for Portfolio pages */
-
-:root {
-  --portfolio-title: #e3e4e6;
-  --portfolio-text: rgba(227, 228, 230, 0.55);
-  --portfolio-bgc-light: rgba(196, 196, 196, 1);
-}
-
+/*  */
 .portfolio-section {
   padding-top: 112px;
 }
@@ -21,7 +15,7 @@
 .portfolio-subtitle,
 .portfolio-sub-title {
   font-weight: 600;
-  color: var(--portfolio-title);
+  color: var(--light);
 }
 
 .portfolio-title {
@@ -40,17 +34,16 @@
 .portfolio-text {
   font-weight: 300;
   line-height: 1.5;
-  color: var(--portfolio-text);
+  color: var(--border-color);
 }
-
+/*  */
 /* GLOBAL CSS for Portfolio pages / */
-
 /*  */
 
 /* Portfolio main page CSS */
-
-/* HERO */
-
+/*  */
+/* HERO: */
+/*  */
 .hero-portfolio-section {
   padding-top: 230px;
 }
@@ -72,8 +65,9 @@
   font-size: 56px;
   margin-top: 60px;
 }
-
-/* CARDS */
+/*  */
+/* CARDS: */
+/*  */
 .portfolio-cards-container {
   margin-top: 112px;
 }
@@ -88,11 +82,11 @@
   position: relative;
   width: 594px;
   height: 490px;
-  background-color: var(--portfolio-bgc-light);
+  background-color: var(--bgc-light);
 }
 
 .portfolio-card-img::after {
-  /* download img 🩼 */
+  /* 🩼 */
   content: '';
   position: absolute;
   top: 0;
@@ -133,7 +127,7 @@
 
 .portfolio-card-accent-text {
   font-weight: 600;
-  color: var(--portfolio-title);
+  color: var(--light);
 }
 
 .portfolio-app-link,
@@ -141,7 +135,7 @@
   font-style: normal;
   line-height: 1.5;
   letter-spacing: 0.04em;
-  color: var(--portfolio-title);
+  color: var(--light);
 }
 
 .portfolio-app-link {
@@ -168,7 +162,7 @@
   width: 100%;
   overflow: hidden;
 
-  border: 1px solid var(--portfolio-text);
+  border: 1px solid var(--border-color);
   border-radius: 100px;
   color: var(--light);
   background: transparent;
@@ -211,9 +205,14 @@
   opacity: 1;
   transform: scale(1);
 }
-
+/*  */
 /* Portfolio main page CSS / */
 /*  */
-/* Adaptive */
 
+/*  */
+/* Adaptive */
+/*  */
+
+/*  */
 /* Adaptive / */
+/*  */
