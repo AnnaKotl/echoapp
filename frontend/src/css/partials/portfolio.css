@@ -34,6 +34,7 @@
 .portfolio-text {
   font-weight: 300;
   line-height: 1.5;
+  letter-spacing: 0.06em;
   color: var(--border-color);
 }
 /*  */
@@ -68,8 +69,19 @@
 /*  */
 /* CARDS: */
 /*  */
-.portfolio-cards-container {
+/* .portfolio-cards-container {
   margin-top: 112px;
+} */
+
+.portfolio-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 112px;
+}
+
+.portfolio-cards-container {
+  margin: 0;
+  text-align: left;
 }
 
 .portfolio-card {
@@ -115,6 +127,18 @@
   right: 18px;
 }
 
+.watermark-ecommerce {
+  /* E-commerce */
+  bottom: 190px;
+  left: 44px;
+}
+
+.watermark-food {
+  /* FOOD & DRINK */
+  bottom: 10px;
+  right: 120px;
+}
+
 .portfolio-card-wrapp > h3 {
   text-transform: uppercase;
   margin-bottom: 16px;
@@ -123,6 +147,11 @@
 .portfolio-card-text {
   font-size: 32px;
   margin-bottom: 24px;
+
+}
+
+.portfolio-card-text-food {
+  letter-spacing: 0.04em;
 }
 
 .portfolio-card-accent-text {
