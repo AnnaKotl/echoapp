@@ -19,7 +19,7 @@ export function renderServices(services) {
     const featuresHTML = service.features.map(feature => {
       const isNewFeature = !accumulatedFeatures.some(f => f.trim() === feature.trim());
 
-      return `<p class="about-features" style="color: ${isNewFeature ? 'var(--accent-color)' : 'inherit'};">${feature}</p>`;
+      return `<p class="about-features" style="color: ${isNewFeature ? 'var(--yellow);)' : 'inherit'};">${feature}</p>`;
     }).join('');
 
     accumulatedFeatures = [...new Set([...accumulatedFeatures, ...service.features.map(f => f.trim())])];
@@ -32,6 +32,7 @@ export function renderServices(services) {
       <li class="prices-item">
         <div class="prices-item-container">
           <h4 class="service-name">${service.name}</h4>
+    <hr class="prices-line"/>
           ${descriptionHTML ? `<div class="service-description">${descriptionHTML}</div>` : ''}
           <div class="about-service">
             ${featuresHTML}

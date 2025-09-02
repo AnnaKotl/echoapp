@@ -4,8 +4,6 @@
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-
-  /* background: linear-gradient(99.05deg, #bc3cd8 0.07%, #c54b8c 106.32%); */
 }
 
 .based-on-section {
@@ -50,27 +48,6 @@
   border-radius: 30px;
 }
 
-.based-on-item {
-  width: calc(33.33% - 20px);
-  height: 280px;
-  padding: 30px;
-  border-radius: 30px;
-  color: rgba(248, 249, 250, 0.9);
-  transition: all var(--standart-tr-cubic);
-  border: 2px solid transparent;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  overflow: hidden;
-  cursor: pointer;
-
-  position: relative;
-  z-index: 2;
-  background: transparent;
-
-  animation: gradientFlow 3s infinite linear;
-}
-
 .based-on-box {
   display: flex;
   justify-content: center;
@@ -99,41 +76,49 @@
   color: var(--light);
 }
 
+.based-on-item {
+  width: calc(33.33% - 20px);
+  height: 280px;
+  padding: 30px;
+  border-radius: 30px;
+  color: rgba(248, 249, 250, 0.9);
+  transition: all var(--standart-tr-cubic);
+  border: 2px solid transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  cursor: pointer;
+
+  position: relative;
+  z-index: 2;
+  background: transparent;
+
+  animation: gradientFlow 3s infinite linear;
+}
+
 .based-on-item:nth-child(1):hover {
-  border-color: var(--accent-color);
-  background-color: rgba(32, 243, 221, 0.7);
+  background-color: var(--orange);
 }
 
 .based-on-item:nth-child(2):hover {
-  border-color: var(--blue);
-  background-color: rgba(0, 123, 255, 0.7);
+  background-color: var(--accent-secondary);
 }
 
 .based-on-item:nth-child(3):hover {
-  border-color: var(--purple);
-  background-color: rgba(111, 66, 193, 0.7);
+  background-color: var(--accent-color);
 }
 
 .based-on-item:nth-child(4):hover {
-  border-color: var(--red);
-  background-color: rgba(220, 53, 69, 0.7);
+  background-color: var(--red);
 }
 
 .based-on-item:nth-child(5):hover {
-  border-color: var(--pink);
-  background-color: rgba(232, 62, 140, 0.7);
+  background-color: var(--purple);
 }
 
 .based-on-item:nth-child(6):hover {
-  border-color: var(--indigo);
-  background-color: rgba(102, 16, 242, 0.7);
-}
-
-.based-on-item:hover {
-  background-color: transparent;
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
-  animation: none;
+  background-color: var(--blue);
 }
 
 .based-on-item:hover .based-on-info {
