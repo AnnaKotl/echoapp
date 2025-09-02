@@ -161,7 +161,26 @@
   background-color: var(--bgc-grey);
 }
 /*  */
+
+/* Screens */
+.screens-title {
+  text-align: center;
+  padding-top: 35px;
+  z-index: 2;
+}
+.screens-section {
+  position: relative;
+  width: 100%;
+  height: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+/*  */
 /* === Snandard style / === */
+/*  */
+
+/*  */
+/* === ALL styles from PAGE cleaning === */
 /*  */
 
 /*  */
@@ -206,18 +225,17 @@
 .cleaning-idea-text {
   margin-top: 12px;
 }
-
 /*  */
 /* Project Idea / */
 /*  */
+
+/*  */
+/* Implementation: */
+/*  */
 .cleaning-implementation-wrapp {
   display: flex;
-  align-items: baseline;
+  align-items: first baseline;
   gap: 56px;
-}
-
-.cleaning-implementation-title {
-  transform: translateY(6px);
 }
 
 .cleaning-implementation-text {
@@ -225,11 +243,14 @@
   font-size: 20px;
   letter-spacing: 0.06em;
 }
-/*  */
-/* Implementation */
+
 .cleaning-implementation-section {
   padding-top: 80px;
 }
+/*  */
+/* Implementation / */
+/*  */
+
 /* The development phase involved: */
 /*  */
 
@@ -252,6 +273,9 @@
 /*  */
 /* Planning: */
 /*  */
+.cleaning-planning-section {
+  padding-bottom: 96px;
+}
 .decorate-flex-section-container {
   display: flex;
   gap: 24px;
@@ -289,9 +313,9 @@
 }
 
 .tables-wrapp {
-  display: flex;
-  gap: 110px;
-  /* justify-content: space-between; */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1, auto);
 }
 
 .table {
@@ -339,15 +363,13 @@
 }
 .clients-item {
   max-width: 420px;
-border: 1px solid var(--clients);
-color: var(--clients);;
+  border: 1px solid var(--clients);
+  color: var(--clients);
 
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
 }
 
 /* cleaners */
@@ -358,9 +380,43 @@ flex-grow: 0;
 }
 .cleaners-item {
   max-width: 485px;
-border: 1px solid var(--cleaners);
-color: var(--cleaners);;
+  border: 1px solid var(--cleaners);
+  color: var(--cleaners);
 }
 /*  */
 /* TABLES / */
 /* === */
+
+/* === */
+/* Screens: */
+/*  */
+/* cleaning page */
+.cleaning-screens {
+  background: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 20%),
+    linear-gradient(0deg, #000 0%, rgba(0, 0, 0, 0) 20%),
+    image-set(
+      url('/images/cleaning/cleaning-screens-1x.webp') 1x,
+      url('/images/cleaning/cleaning-screens-2x.webp') 2x,
+      url('/images/cleaning/cleaning-screens-3x.webp') 3x,
+      url('/images/cleaning/cleaning-screens-1x.png') type('image/png') 1x
+    );
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+/*  */
+/* Screens / */
+/*  */
+
+/*  */
+/* Prototype: */
+/*  */
+
+@media (min-width: 1025px) {
+  .prototype-title {
+    min-width: 430px;
+  }
+}
+/*  */
+/* Prototype / */
+/*  */
