@@ -22,8 +22,8 @@
   position: relative;
   overflow-x: auto;
 
-  padding: 30px;
-  max-width: 500px;
+  padding: 20px;
+  max-width: 480px;
   width: 100%;
   max-height: 95vh;
   border-radius: 30px;
@@ -45,12 +45,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  top: 6px;
+  top: 5px;
   right: 10px;
   min-width: 30px;
   min-height: 30px;
   padding: 5px 10px;
-  color: var(--accent-color);
+  color: var(--border-color);
   transition: var(--transition-cl), var(--transition-tr);
 }
 .close-modal-icon {
@@ -60,7 +60,6 @@
   width: 100%;
   height: 100%;
   fill: currentColor;
-  color: var(--light-opacity);
   transition: var(--transition-cl), var(--transition-tr);
 }
 .close-modal-icon svg {
@@ -80,7 +79,7 @@
 .form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 12px;
   padding-top: 30px;
   color: var(--light);
 }
@@ -112,7 +111,7 @@
   line-height: var(--text-standart-line-height);
 
   border-radius: 30px;
-  border: 2px solid transparent;
+  border: 1px solid transparent;
   background-color: var(--light);
 
   animation: gradientFlow 3s infinite linear;
@@ -140,11 +139,13 @@ textarea::placeholder {
   line-height: var(--text-standart-line-height);
   font-weight: 400;
   font-size: 18px;
+  transition: all var(--standart-tr-cubic);
 }
 input:focus::placeholder,
 textarea:focus::placeholder {
   outline: none;
   color: rgba(108, 117, 125, 1);
+  font-weight: 500;
 }
 
 input,
@@ -152,24 +153,26 @@ textarea {
   outline: none;
   font-weight: var(--text-standart-font-weight);
   line-height: var(--text-standart-line-height);
+  font-weight: 400;
   color: rgba(52, 58, 64, 0.8);
 }
 input:focus,
 textarea:focus {
   outline: none;
+  font-weight: 500;
   color: rgba(52, 58, 64, 0.9);
 }
 
 /* RADIO LABEL ✅ */
 .form-group-wrapp {
-  margin: 0 auto 0 16px;
+  margin: 0 auto 0 38px;
 }
 .radio-group {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: flex-start;
-  gap: 20px;
+  gap: 16px;
   padding: 10px;
 
   font-size: var(--text-standart-font-size);
@@ -177,7 +180,6 @@ textarea:focus {
   line-height: var(--text-standart-line-height);
   letter-spacing: -0.02em;
   color: var(--light);
-
   transition: var(--transition-cl), var(--transition-tr);
 }
 .radio-title-label {
@@ -191,10 +193,9 @@ textarea:focus {
   position: relative;
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 4px;
   cursor: pointer;
   color: var(--light-opacity);
-
   transition: var(--transition-cl);
 }
 .radio-label:is(:hover, :focus) {
@@ -205,10 +206,10 @@ textarea:focus {
 }
 .radio-circle {
   display: inline-block;
-  width: 14px;
-  height: 14px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
-  border: 3px solid transparent;
+  border: 1px solid transparent;
   animation: gradientFlow 3s infinite linear;
   background-color: transparent;
   transition: all var(--standart-tr-cubic);
@@ -218,39 +219,27 @@ textarea:focus {
   transform: scale(1.2);
 }
 .radio-label:hover .radio-circle {
-  transform: scale(1.1);
+  transform: scale(1.2);
   background-color: rgba(197, 75, 140, 0.6);
 }
 .radio-input:checked + .radio-circle {
   background-color: var(--accent-color);
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 .radio-input:focus + .radio-circle {
   background: var(--border-color);
-  transform: scale(1.1);
+  transform: scale(1.2);
 }
 /*  ✅ / */
 
 /* SUBMIT BTN 📫 */
 .form-button {
-  text-transform: uppercase;
-  font-weight: 400;
-  padding: 10px 20px;
-  font-size: 24px;
-  font-weight: var(--text-standart-font-weight);
-  line-height: var(--text-standart-line-height);
-  border-radius: 100px;
-  color: var(--light);
-  background: transparent;
-  border: 1px solid var(--border-color);
+  font-size: 20px;
   margin: 0 auto;
-  transition: all var(--standart-tr-cubic);
+  padding: 8px 16px;
 }
 .form-button:is(:hover, :focus) {
-  outline: none;
-  padding: 10px 28px;
-  background: linear-gradient(99.05deg, #bc3cd8 0.07%, #c54b8c 106.32%);
-  border: 1px solid var(--portfolio-title);
+  padding: 8px 26px;
 }
 /*  📫 / */
 

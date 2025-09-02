@@ -7,8 +7,7 @@
 .hero-title {
   margin: 0;
   font-size: 72px;
-  text-transform: uppercase;
-  font-weight: var(--title-standart-font-weight);
+  font-weight: var(--title-standart-font-weight);  
   background: linear-gradient(
     330deg,
     #c54b8c 20%,
@@ -23,12 +22,15 @@
 }
 
 .hero-text {
+  margin-bottom: 10px;
+  max-width: 700px;
+
+  text-transform: uppercase;
   font-size: 40px;
-  max-width: 800px;
-  margin-bottom: 30px;
-  font-weight: 400;
   line-height: 1.5;
-  color: var(--light);
+  font-weight: 300;
+  color: var(--light-opacity);
+  letter-spacing: -0.02;
   /* background: linear-gradient(
     330deg,
     #f8f9fa 0%,
@@ -42,26 +44,24 @@
   -webkit-text-fill-color: transparent; */
 }
 
-.hero-btn {
-  text-transform: uppercase;
-  font-size: 30px;
-  font-weight: 400;
-  letter-spacing: 0.04em;
+.hero-subtext {
+  max-width: 800px;
   line-height: 1.5;
-  border-radius: 100px;
-  background: transparent;
+  font-weight: 500;
+  letter-spacing: 0.04;
+  font-size: 32px;
+  padding-bottom: 70px;
   color: var(--light);
-  padding: 10px 30px;
-  transition: all var(--standart-tr-cubic);
-  border: 1px solid var(--border-color);
+}
+
+.hero-btn {
+  font-size: 26px;
+  padding: 8px 30px;
   margin: 0;
 }
 
 .hero-btn:is(:hover, :focus) {
-  outline: none;
-  background: linear-gradient(99.05deg, #bc3cd8 0.07%, #c54b8c 106.32%);
-  border: 1px solid var(--light);
-  padding: 10px 40px;
+  padding: 8px 36px;
 }
 
 .hero-section {
@@ -102,19 +102,25 @@
   align-items: center;
   justify-content: center;
   gap: 1px;
-  color: var(--accent-color);
   text-decoration: none;
 }
 
 .hero-scroll-icon-top {
   opacity: 0.3;
-  margin-bottom: -108px;
+  margin-bottom: -106px;
+}
+
+.hero-scroll-icon-top {
+  fill: var(--border-color);
+
+}
+.hero-scroll-icon-bottom {
+  fill: var(--light);
 }
 
 .hero-scroll-icon-top,
 .hero-scroll-icon-bottom {
   transform: rotate(90deg) scale(1);
-  fill: currentColor;
   width: 130px;
   height: 130px;
   transition: var(--transition-tr), var(--transition-op);

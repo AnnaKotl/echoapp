@@ -165,7 +165,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ></textarea>
         </div>
 
-        <button type="submit" class="form-button">Submit</button>
+        <button type="submit" class="form-button standart-button">Submit</button>
     </form>
   </div>
 `;

@@ -21,7 +21,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   pointer-events: none;
-  opacity: var(--opacity-standart);
+  opacity: 0.3;
   z-index: -1;
 }
 
@@ -49,14 +49,12 @@
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
-  gap: 20px;
-  font-size: 30px;
+  gap: 10px;
+  font-size: 26px;
   text-align: left;
   justify-content: flex-start;
   margin-left: 0;
-
-  opacity: 0.9;
-  transition: var(--transition-op), var(--transition-cl);
+  transition: var(--transition-cl);
 }
 
 .social-link-icon {
@@ -71,8 +69,7 @@
 }
 
 .social-link:hover {
-  color: var(--light);
-  opacity: 1;
+  color: var(--neon);
 }
 
 .social-link:hover .social-link-icon {
@@ -89,10 +86,9 @@
 }
 
 .contacts-text {
-  max-width: 500px;
-  font-weight: 200;
+  font-weight: 300;
   line-height: var(--text-standart-line-height);
-  font-size: 30px;
+  font-size: 24px;
   text-align: right;
   margin-left: auto;
 }
@@ -100,21 +96,12 @@
 .contact-btn {
   margin-left: auto;
   margin-top: 20px;
-  font-size: 24px;
-  background: transparent;
-  color: var(--light);
-  transition: var(--standart-tr-cubic);
-  border: 1px solid var(--border-color);
-  border-radius: 100px;
-  padding: 10px 20px;
-  transition: var(--standart-tr-cubic);
+  font-size: 20px;
+  padding: 8px 16px;
 }
 
 .contact-btn:is(:hover, :focus) {
-  outline: none;
-  background: linear-gradient(99.05deg, #bc3cd8 0.07%, #c54b8c 106.32%);
-  border: 1px solid var(--light);
-  padding: 10px 28px;
+  padding: 8px 26px;
 }
 
 .adress-container {
@@ -126,7 +113,7 @@
   align-items: center;
   justify-content: flex-end;
   margin: auto 0 0;
-  gap: 60px;
+  gap: 30px;
 }
 
 .address-flex-container {

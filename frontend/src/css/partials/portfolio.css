@@ -11,13 +11,6 @@
   margin: 0 auto;
 }
 
-.portfolio-title,
-.portfolio-subtitle,
-.portfolio-sub-title {
-  font-weight: 600;
-  color: var(--light);
-}
-
 .portfolio-title {
   font-size: 56px;
 }
@@ -159,17 +152,13 @@
   color: var(--light);
 }
 
-.portfolio-app-link,
-.portfolio-button {
+.portfolio-app-link {
+  font-weight: 300;
+  font-size: 18px;
   font-style: normal;
   line-height: 1.5;
   letter-spacing: 0.04em;
   color: var(--light);
-}
-
-.portfolio-app-link {
-  font-weight: 300;
-  font-size: 18px;
 }
 
 .portfolio-button-wrapp {
@@ -178,32 +167,22 @@
 
 .portfolio-button {
   position: relative;
-  text-transform: uppercase;
-  font-weight: 400;
   font-size: 16px;
+  padding: 8px 8px 8px 16px;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 8px 8px 8px 16px;
   gap: 8px;
   min-height: 40px;
   max-width: 170px;
   width: 100%;
   overflow: hidden;
-
-  border: 1px solid var(--border-color);
-  border-radius: 100px;
-  color: var(--light);
-  background: transparent;
-  transition: all var(--standart-tr-cubic);
 }
 
 .portfolio-button:hover,
 .portfolio-button:focus {
   min-width: 190px;
   max-width: 190px;
-  background: linear-gradient(99.05deg, #bc3cd8 0.07%, #c54b8c 106.32%);
-  border: 1px solidvar(--light);
 }
 
 .portfolio-card-icon {
