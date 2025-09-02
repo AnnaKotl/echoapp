@@ -22,22 +22,22 @@ updateHeaderStyles();
 window.addEventListener('scroll', updateHeaderStyles);
 
 // ACTIVE PAGE logic 📌
-const navLinks = document.querySelectorAll('.nav-link');
-function setActiveLink() {
-  const currentPath = window.location.pathname;
-  navLinks.forEach(link => {
-    const linkPath = link.getAttribute('href');
-    if (
-      (currentPath === '/' && linkPath === '/index.html') ||
-      currentPath === linkPath
-    ) {
-      link.classList.add('active');
-    } else {
-      link.classList.remove('active');
-    }
-  });
-}
-setActiveLink();
+// const navLinks = document.querySelectorAll('.nav-link');
+// function setActiveLink() {
+//   const currentPath = window.location.pathname;
+//   navLinks.forEach(link => {
+//     const linkPath = link.getAttribute('href');
+//     if (
+//       (currentPath === '/' && linkPath === '/index.html') ||
+//       currentPath === linkPath
+//     ) {
+//       link.classList.add('active');
+//     } else {
+//       link.classList.remove('active');
+//     }
+//   });
+// }
+// setActiveLink();
 // 📌 /
 
 // PRELOADER 🔺
