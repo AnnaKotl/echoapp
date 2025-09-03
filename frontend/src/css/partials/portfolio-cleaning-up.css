@@ -470,7 +470,7 @@
 
 .idea-bg-ellipse-1 {
   position: absolute;
-      top: 20px;
+  top: 20px;
   left: 110px;
 
   overflow: visible;
@@ -521,8 +521,8 @@
   top: 8px;
   left: 18px;
 }
-  /* shadow left | */
-.shadow-left-1 {  
+/* shadow left | */
+.shadow-left-1 {
   position: absolute;
   top: 342px;
   left: -25px;
@@ -540,8 +540,8 @@
   height: 85px;
 }
 
-    /* shadow left || */
-.shadow-left-2 {  
+/* shadow left || */
+.shadow-left-2 {
   position: absolute;
   top: 50px;
   left: 365px;
@@ -575,11 +575,11 @@
   right: 18px;
 }
 
-    /* shadow right | */
-    .shadow-right-1 {
+/* shadow right | */
+.shadow-right-1 {
   position: absolute;
-  top: 365px;
-  right: -205px;
+  top: 369px;
+  right: -212px;
   overflow: visible;
   pointer-events: none;
 
