@@ -399,11 +399,13 @@
 /* */
 .idea-section {
   padding-bottom: 120px;
-  background: linear-gradient(
+  padding-top: 91px;
+  background-color: #fff;
+  /* background: linear-gradient(
     180deg,
     rgba(158, 197, 240, 0) 0%,
     rgba(158, 197, 240, 0.5) 100%
-  );
+  ); */
 }
 
 .idea-flex-container {
@@ -419,7 +421,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto;
   min-width: 549px;
   min-height: 428px;
 }
@@ -435,35 +436,51 @@
   right: 0;
 }
 
+.idea-ellipse-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  pointer-events: none;
+  z-index: 1;
+}
+
 .idea-bg-ellipse-1 {
   position: absolute;
-  bottom: 0;
-  left: 50px;
+      top: 20px;
+  left: 110px;
+
+  overflow: visible;
+  pointer-events: none;
 
   background: image-set(
     url('/images/screens/Ellipse--1-1x.webp') 1x,
     url('/images/screens/Ellipse--1-2x.webp') 2x
   );
   background-position: center;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   width: 378px;
   height: 378px;
 }
 .idea-bg-ellipse-2 {
   position: absolute;
-  bottom: 0;
-  left: 0;
+  left: -10px;
+  bottom: -80px;
+  overflow: visible;
+  pointer-events: none;
 
   background: image-set(
     url('/images/screens/Ellipse--2-1x.webp') 1x,
     url('/images/screens/Ellipse--2-2x.webp') 2x
   );
   background-position: center;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
-  width: 540px;
-  height: 540px;
+  width: 640px;
+  height: 640px;
 }
 
 /* | */
