@@ -41,6 +41,7 @@
 /* img + (h + ul) */
 /*  */
 .flex-section-container {
+  position: relative;
   display: flex;
   gap: 56px;
   align-items: center;

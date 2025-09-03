@@ -41,6 +41,56 @@
   background-color: var(--bgc-light);
   border-radius: 12px;
 }
+
+/* 🔺 */
+/* with .portfolio-card-img-wrapp {pos.rel.} 
+or
+flex-section-container
+*/
+.bg-icon-blur-left,
+.bg-icon-blur-right,
+.center-right-blur-icon {
+  z-index: -1;
+  filter: blur(125px);
+  pointer-events: none;
+  width: 814px;
+  height: 814px;
+}
+/* <div class="bg-icon-blur-left"></div> */
+.bg-icon-blur-left {
+  position: absolute;
+  top: -30%;
+  left: -50%;
+  background: image-set(url('/images/bg-icon.png') 1x);
+  background-position: top left;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+/* <div class="bg-icon-blur-right"></div> */
+.bg-icon-blur-right {
+  position: absolute;
+  top: -30%;
+  right: -50%;
+  background: image-set(url('/images/bg-icon.png') 1x);
+  background-position: top right;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+/* <div class="bg-icon-blur-center-right"></div> */
+.center-right-blur {
+  position: relative;
+}
+.center-right-blur-icon {
+  position: absolute;
+  top: 30%;
+  right: -30%;
+  background: image-set(url('/images/bg-icon.png') 1x);
+  background-position: center right;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* 🔺  / */
 /*  */
 /* GLOBAL CSS for Portfolio pages / */
 /*  */
@@ -75,9 +125,10 @@
 /*  */
 /* CARDS: */
 /*  */
-/* .portfolio-cards-container {
-  margin-top: 112px;
-} */
+
+.portfolio-cards-section {
+  padding-bottom: 120px;
+}
 
 .portfolio-cards {
   display: flex;
