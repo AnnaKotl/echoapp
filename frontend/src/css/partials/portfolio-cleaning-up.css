@@ -166,7 +166,6 @@
 
 /*  */
 /* features */
-/*  */
 .features-wrapp {
   background: rgba(255, 255, 255, 0.09);
   border-radius: 12px;
@@ -208,6 +207,7 @@
   background-color: var(--bgc-grey);
 }
 /*  */
+
 /* Technology Stack: */
 .technology-items {
   display: grid;
@@ -231,6 +231,7 @@
   background-color: var(--bgc-grey);
 }
 /*  */
+
 /* Screens */
 .screens-title {
   text-align: center;
@@ -255,6 +256,11 @@
 /*  */
 /* HERO: */
 /*  */
+.hero-flex-wrapper {
+}
+.hero-flex-container {
+}
+
 .cleaning-hero-title {
   font-size: 70px;
   background: linear-gradient(99.05deg, #00ffc8 0.07%, #ffffff 106.32%);
@@ -270,18 +276,62 @@
   margin-top: 12px;
 }
 
-.hero-flex-wrapper {
-
+.hero-pictures-wrapp {
 }
-.hero-flex-container {
+.hero-pictures {
+}
 
+/* | */
+.hero-pictures-1-wrapp {
+  position: relative;
+}
+.hero-phone-1 {
+  /* 📱 */
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 193.4px;
+  height: 459.47px;
+}
+.hero-pictures-1 {
+  /* 🎆 */
+  position: absolute;
+  top: 6px;
+  right: 18px;
+
+  width: 171.5px;
+  height: 445.55px;
+}
+
+/* || */
+.hero-pictures-2-wrapp {
+  position: relative;
+}
+.hero-phone-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 193.25px;
+height: 459.47px;
+}
+.hero-pictures-2 {
+  position: absolute;
+  top: 6px;
+  left: 18px;
+  width: 171.34px;
+height: 445.48px;
 }
 /*  */
 /* Project Idea: */
 /* */
 .cleaning-idea-section {
-  background: linear-gradient(180deg, rgba(158, 197, 240, 0) 0%, rgba(158, 197, 240, 0.5) 100%);
-
+  background: linear-gradient(
+    180deg,
+    rgba(158, 197, 240, 0) 0%,
+    rgba(158, 197, 240, 0.5) 100%
+  );
 }
 .cleaning-idea-title {
   text-transform: none;
@@ -295,31 +345,14 @@
 /* Project Idea / */
 /*  */
 
-/* The development phase involved: */
-/*  */
-
-/*  */
-/* The development phase involved / */
-/*  */
-
 /*  */
 /* Challenges We Solved: */
 /*  */
-
 .cleaning-challenges-title {
   margin-bottom: 40px;
 }
-
 /*  */
 /* Challenges We Solved / */
-/*  */
-
-/*  */
-/* Planning: */
-/*  */
-
-/*  */
-/* Planning / */
 /*  */
 
 /*  */
@@ -388,11 +421,6 @@
   max-width: 420px;
   border: 1px solid var(--clients);
   color: var(--clients);
-
-  /* Inside auto layout */
-  flex: none;
-  order: 0;
-  flex-grow: 0;
 }
 
 /* cleaners */
@@ -434,7 +462,6 @@
 /*  */
 /* Prototype: */
 /*  */
-
 @media (min-width: 1025px) {
   .prototype-title {
     min-width: 430px;
