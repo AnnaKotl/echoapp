@@ -42,6 +42,11 @@
 .portfolio-upper-text {
   text-transform: uppercase;
 }
+
+.portfolio-bgc-img {
+  background-color: var(--bgc-light);
+  border-radius: 12px;
+}
 /*  */
 /* GLOBAL CSS for Portfolio pages / */
 /*  */
@@ -101,7 +106,6 @@
   position: relative;
   width: 594px;
   height: 490px;
-  background-color: var(--bgc-light);
 }
 
 .portfolio-card-img::after {
