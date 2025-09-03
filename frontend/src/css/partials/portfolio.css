@@ -15,12 +15,6 @@
   font-size: 56px;
 }
 
-.semibold-title {
-  text-transform: none;
-  font-size: 56px;
-  letter-spacing: -0.02em;
-}
-
 .no-transform {
   text-transform: none;
 }

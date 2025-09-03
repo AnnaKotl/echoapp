@@ -82,6 +82,31 @@
 }
 
 /*  */
+/* Interactive Prototype + Implementation section */
+/*  */
+.semibold-wrapp {
+  display: flex;
+  align-items: first baseline;
+  gap: 56px;
+}
+.semibold-title {
+  text-transform: none;
+  font-size: 56px;
+  letter-spacing: -0.02em;
+}
+.upper-text {
+  text-transform: uppercase;
+  font-size: 20px;
+  letter-spacing: 0.06em;
+}
+.semibold-flex-section {
+  padding-top: 80px;
+}
+/*  */
+/*  / */
+/*  */
+
+/*  */
 /* ul witn bgc */
 /* for PLANNING sections */
 .planning-section {
@@ -183,7 +208,29 @@
   background-color: var(--bgc-grey);
 }
 /*  */
-
+/* Technology Stack: */
+.technology-items {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  align-items: start;
+}
+.technology-items li {
+  background: rgba(255, 255, 255, 0.09);
+  border-radius: 12px;
+  padding: 24px;
+}
+.technology-decorate {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  text-align: left;
+  border-radius: 12px;
+  padding: 12px;
+  background-color: var(--bgc-grey);
+}
+/*  */
 /* Screens */
 .screens-title {
   text-align: center;
@@ -249,28 +296,6 @@
 }
 /*  */
 /* Project Idea / */
-/*  */
-
-/*  */
-/* Implementation: */
-/*  */
-.cleaning-implementation-wrapp {
-  display: flex;
-  align-items: first baseline;
-  gap: 56px;
-}
-
-.cleaning-implementation-text {
-  text-transform: uppercase;
-  font-size: 20px;
-  letter-spacing: 0.06em;
-}
-
-.cleaning-implementation-section {
-  padding-top: 80px;
-}
-/*  */
-/* Implementation / */
 /*  */
 
 /* The development phase involved: */
@@ -393,8 +418,8 @@
 /*  */
 /* cleaning page */
 .cleaning-screens {
-  background: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 20%),
-    linear-gradient(0deg, #000 0%, rgba(0, 0, 0, 0) 20%),
+  background: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 30%),
+    linear-gradient(0deg, #000 0%, rgba(0, 0, 0, 0) 30%),
     image-set(
       url('/images/cleaning/cleaning-screens-1x.webp') 1x,
       url('/images/cleaning/cleaning-screens-2x.webp') 2x,
