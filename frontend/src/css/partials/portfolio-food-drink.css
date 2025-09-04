@@ -26,49 +26,6 @@ Project Idea:
   );
 }
 
-.idea-decorate-items {
-  padding: 0;
-  background: transparent;
-  border-radius: 0;
-  gap: 10px;
-  margin-top: 12px;
-  padding-left: 26px;
-}
-
-/* 
-The development phase
-*/
-.phase-strong-text {
-  font-weight: 700;
-  font-size: 18px;
-}
-
-.strong-decorate-items li::before {
-  content: '•';
-  position: absolute;
-  left: -1em;
-  font-size: 1.2em;
-  color: var(--light);
-  line-height: 1;
-  top: 0.15em;
-}
-
-/* 
-Features
-*/
-.features-items {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
-  align-items: start;
-}
-.features-items li {
-  background: rgba(255, 255, 255, 0.09);
-  border-radius: 12px;
-  padding: 24px;
-  height: 100%;
-}
-
 /* 
 Screens
 */
@@ -86,11 +43,4 @@ Screens
   background-repeat: no-repeat;
   height: 1100px;
   padding-bottom: 60px;
-}
-
-/* 
-Prototype
-*/
-.prototype-pages-section {
-  padding-bottom: 52px;
 }
