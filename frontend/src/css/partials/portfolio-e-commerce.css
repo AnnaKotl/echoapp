@@ -75,12 +75,7 @@ Screens
 .commerce-screens {
     background: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 30%),
     linear-gradient(0deg, #000 0%, rgba(0, 0, 0, 0) 30%),
-    image-set(
-      url('/images/e-commerce/screens-1x.webp') 1x,
-      url('/images/e-commerce/screens-2x.webp') 2x,
-      url('/images/e-commerce/screens-3x.webp') 3x,
-      url('/images/e-commerce/screens-1x.png') type('image/png') 1x
-    );
+    url('/images/portfolio/e-commerce/screens.svg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
