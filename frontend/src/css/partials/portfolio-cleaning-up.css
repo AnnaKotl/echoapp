@@ -267,10 +267,7 @@ HERO
   top: 97px;
   right: 97px;
 
-  background: image-set(
-    url('/images/screens/Ellipse1-1x.webp') 1x,
-    url('/images/screens/Ellipse1-2x.webp') 2x
-  );
+  background: url('/images/portfolio/cleaners/Ellipse-1-min.svg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -282,10 +279,7 @@ HERO
   bottom: 0;
   left: 0;
 
-  background: image-set(
-    url('/images/screens/Ellipse2-1x.webp') 1x,
-    url('/images/screens/Ellipse2-2x.webp') 2x
-  );
+  background: url('/images/portfolio/cleaners/Ellipse-2-min.svg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -392,10 +386,7 @@ Project Idea:
   top: 20px;
   left: 110px;
 
-  background: image-set(
-    url('/images/screens/Ellipse--1-1x.webp') 1x,
-    url('/images/screens/Ellipse--1-2x.webp') 2x
-  );
+  background: url('/images/portfolio/cleaners/Ellipse1-min.svg');
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -409,11 +400,7 @@ Project Idea:
   bottom: -80px;
   overflow: visible;
   pointer-events: none;
-
-  background: image-set(
-    url('/images/screens/Ellipse--2-1x.webp') 1x,
-    url('/images/screens/Ellipse--2-2x.webp') 2x
-  );
+  background: url('/images/portfolio/cleaners/Ellipse2-min.svg');
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -446,11 +433,7 @@ Project Idea:
   left: -25px;
   overflow: visible;
   pointer-events: none;
-
-  background: image-set(
-    url('/images/screens/Shadow-left-1-1x.webp') 1x,
-    url('/images/screens/Shadow-left-1-2x.webp') 2x
-  );
+  background: url('/images/portfolio/cleaners/Shadow.svg');
   background-position: bottom left;
   background-size: contain;
   background-repeat: no-repeat;
@@ -465,11 +448,7 @@ Project Idea:
   left: 365px;
   overflow: visible;
   pointer-events: none;
-
-  background: image-set(
-    url('/images/screens/Shadow-left-2-1x.webp') 1x,
-    url('/images/screens/Shadow-left-2-2x.webp') 2x
-  );
+  background: url('/images/portfolio/cleaners/Shadow2.svg');
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -500,11 +479,7 @@ Project Idea:
   right: -212px;
   overflow: visible;
   pointer-events: none;
-
-  background: image-set(
-    url('/images/screens/Shadow-right-1x.webp') 1x,
-    url('/images/screens/Shadow-right-2x.webp') 2x
-  );
+  background: url('/images/portfolio/cleaners/Shadow3.svg');
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -637,13 +612,7 @@ Screens:
 }
 .cleaning-screens {
   background: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 30%),
-    linear-gradient(0deg, #000 0%, rgba(0, 0, 0, 0) 30%),
-    image-set(
-      url('/images/cleaning/cleaning-screens-1x.webp') 1x,
-      url('/images/cleaning/cleaning-screens-2x.webp') 2x,
-      url('/images/cleaning/cleaning-screens-3x.webp') 3x,
-      url('/images/cleaning/cleaning-screens-1x.png') type('image/png') 1x
-    );
+    linear-gradient(0deg, #000 0%, rgba(0, 0, 0, 0) 30%), url('/images/portfolio/cleaners/screens.svg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

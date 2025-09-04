@@ -96,10 +96,7 @@ with
 .bg-portfolio-img-left {
   bottom: -3%;
   left: 2%;
-  background: image-set(
-    url('/images/cleaning/cleaning-hero1x.webp') 1x,
-    url('/images/cleaning/cleaning-hero2x.webp') 2x
-  );
+  background: url('/images/portfolio/cleaners/Untitled-1-top.svg');
   background-position: bottom left;
   background-size: cover;
   background-repeat: no-repeat;
@@ -112,11 +109,7 @@ with
 .bg-portfolio-img-right {
   bottom: 0;
   right: 0;
-
-  background: image-set(
-    url('/images/screens/idea-bg-1x.webp') 1x,
-    url('/images/screens/idea-bg-2x.webp') 2x
-  );
+  background: url('/images/portfolio/cleaners/Untitled-1-bottom.svg');
   background-position: bottom right;
   background-size: cover;
   background-repeat: no-repeat;
@@ -130,11 +123,7 @@ with
   transform: rotate(180deg);
   bottom: -15%;
   left: 0;
-
-  background: image-set(
-    url('/images/screens/idea-bg-1x.webp') 1x,
-    url('/images/screens/idea-bg-2x.webp') 2x
-  );
+  background: url('/images/portfolio/cleaners/Untitled-1-bottom.svg');
   background-position: bottom left;
   background-size: cover;
   background-repeat: no-repeat;
@@ -143,11 +132,7 @@ with
   transform: rotate(180deg);
   bottom: -5%;
   left: 0;
-
-  background: image-set(
-    url('/images/screens/idea-bg-1x.webp') 1x,
-    url('/images/screens/idea-bg-2x.webp') 2x
-  );
+  background: url('/images/portfolio/cleaners/Untitled-1-bottom.svg');
   background-position: bottom left;
   background-size: cover;
   background-repeat: no-repeat;
