@@ -1,36 +1,12 @@
-/* root */
-:root {
-  --clients: rgba(24, 232, 236, 1);
-  --cleaners: rgba(176, 254, 255, 1);
-  --black: rgba(24, 24, 24, 1);
-}
-
-.portfolio-pages-section {
-  padding-bottom: 80px;
-}
-
-.no-transform-h2-title {
-  text-transform: none;
-  margin-bottom: 40px;
-}
-
-.hero-no-transform-h2-title {
-  text-transform: none;
-}
-
-.uppercase-h4-title {
-  letter-spacing: 0em;
-}
-
 .outline-title {
-/* h4 with border */
+  /* h4 with border */
   padding: 12px 20px;
   border-radius: 12px;
   border: 1px solid #ffffff;
 }
 
 .flex-section-container {
-/* img + (h + ul) */
+  /* img + (h + ul) */
   position: relative;
   display: flex;
   gap: 56px;
@@ -38,7 +14,7 @@
 }
 
 .flex-wrapp {
-/* h + ul */
+  /* h + ul */
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -51,7 +27,7 @@
 }
 
 .decorate-items {
-/* ul with • */
+  /* ul with • */
   gap: 20px;
   padding-left: 30px;
 }
@@ -122,14 +98,14 @@ for PLANNING sections */
 }
 
 .bg-decorate-wrapp {
-/* h4 + (ul witn bgc) */
+  /* h4 + (ul witn bgc) */
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
 
 .decorate-flex-wrapp {
-/* ul + ul + ul (witn bgc)*/
+  /* ul + ul + ul (witn bgc)*/
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -160,7 +136,7 @@ for PLANNING sections */
   margin-bottom: 10px;
 }
 .features-decorate-items {
-/* ul 2 columns */
+  /* ul 2 columns */
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, auto);
@@ -215,16 +191,11 @@ for PLANNING sections */
   padding: 12px;
   background-color: var(--bgc-grey);
 }
-
 /*  */
 
-/*  */
-/* === ALL styles from PAGE cleaning === */
-/*  */
-
-/*  */
-/* HERO: */
-/*  */
+/* 
+HERO: 
+*/
 .cleaning-hero-section {
   position: relative;
   padding-bottom: 41px;
@@ -261,8 +232,8 @@ for PLANNING sections */
   margin-top: 12px;
 }
 
-/* tel 1 + tel 2 in div */
 .pos-pictures-wrapp {
+  /* tel 1 + tel 2 in div */
   position: relative;
   display: flex;
   align-items: center;
@@ -313,8 +284,8 @@ for PLANNING sections */
   height: 645px;
 }
 
-/* | */
 .hero-pictures-1-wrapp {
+  /* | */
   position: relative;
   z-index: 3;
 }
@@ -331,8 +302,8 @@ for PLANNING sections */
   right: 18px;
 }
 
-/* || */
 .hero-pictures-2-wrapp {
+  /* || */
   position: relative;
   z-index: 4;
 }
@@ -347,8 +318,10 @@ for PLANNING sections */
   left: 18px;
 }
 /*  */
-/* Project Idea: */
-/* */
+
+/* 
+Project Idea: 
+*/
 .idea-section {
   position: relative;
   padding-bottom: 120px;
@@ -365,10 +338,11 @@ for PLANNING sections */
   align-items: center;
   justify-content: space-between;
   gap: 90px;
+  min-height: 540px;
 }
 
-/* tel 1 + tel 2 in div */
 .idea-pos-pictures-wrapp {
+  /* tel 1 + tel 2 in div */
   position: relative;
   display: flex;
   align-items: center;
@@ -400,12 +374,11 @@ for PLANNING sections */
 }
 
 .idea-bg-ellipse-1 {
+  /* | */
   position: absolute;
+  pointer-events: none;
   top: 20px;
   left: 110px;
-
-  overflow: visible;
-  pointer-events: none;
 
   background: image-set(
     url('/images/screens/Ellipse--1-1x.webp') 1x,
@@ -418,6 +391,7 @@ for PLANNING sections */
   height: 378px;
 }
 .idea-bg-ellipse-2 {
+  /* || */
   position: absolute;
   left: -10px;
   bottom: -80px;
@@ -435,25 +409,26 @@ for PLANNING sections */
   height: 640px;
 }
 
-/* | */
 .idea-pictures-1-wrapp {
+  /* | */
   position: relative;
   z-index: 4;
 }
 .idea-phone-1 {
   /* 📱 */
   position: absolute;
-  top: 0;
+  top: -3px;
   left: 0;
 }
 .idea-pictures-1 {
   /* 🎆 */
   position: absolute;
-  top: 8px;
+  top: 5px;
   left: 18px;
 }
-/* shadow left | */
+
 .shadow-left-1 {
+  /* shadow left | */
   position: absolute;
   top: 342px;
   left: -25px;
@@ -471,8 +446,8 @@ for PLANNING sections */
   height: 85px;
 }
 
-/* shadow left || */
 .shadow-left-2 {
+  /* shadow left || */
   position: absolute;
   top: 50px;
   left: 365px;
@@ -490,8 +465,8 @@ for PLANNING sections */
   height: 347px;
 }
 
-/* || */
 .idea-pictures-2-wrapp {
+  /* || */
   position: relative;
   z-index: 3;
 }
@@ -506,8 +481,8 @@ for PLANNING sections */
   right: 18px;
 }
 
-/* shadow right | */
 .shadow-right-1 {
+  /* shadow right | */
   position: absolute;
   top: 369px;
   right: -212px;
@@ -530,7 +505,7 @@ for PLANNING sections */
 }
 
 .idea-text {
-margin-top: 22px;
+  margin-top: 22px;
 }
 
 .color-idea-title {
@@ -542,33 +517,28 @@ margin-top: 22px;
   color: var(--light);
 }
 /*  */
-/* Project Idea / */
-/*  */
 
-/*  */
-/* Challenges We Solved: */
-/*  */
+/* 
+Challenges We Solved: 
+*/
 .cleaning-challenges-title {
   margin-bottom: 40px;
 }
 /*  */
-/* Challenges We Solved / */
-/*  */
 
-/*  */
-/* Features: */
-/*  */
+
+/* 
+Features: 
+*/
 .features-subtitle {
   font-weight: 600;
   font-size: 20px;
 }
 /*  */
-/* Features / */
-/*  */
 
-/* === */
-/* TABLES: */
-/*  */
+/* 
+TABLES: 
+*/
 .tables-container {
   padding-top: 34px;
 }
@@ -611,8 +581,8 @@ margin-top: 22px;
   padding: 8px;
 }
 
-/* clients */
 .table-clients {
+/* clients */
   background-color: var(--clients);
   min-width: 210px;
   max-width: 220px;
@@ -623,8 +593,8 @@ margin-top: 22px;
   color: var(--clients);
 }
 
-/* cleaners */
 .table-cleaners {
+/* cleaners */
   background-color: var(--cleaners);
   min-width: 245px;
   max-width: 250px;
@@ -635,13 +605,10 @@ margin-top: 22px;
   color: var(--cleaners);
 }
 /*  */
-/* TABLES / */
-/* === */
 
-/* === */
-/* Screens: */
-/*  */
-/* cleaning page */
+/* 
+Screens: 
+*/
 .screens-title {
   text-align: center;
   padding-top: 35px;
@@ -650,11 +617,6 @@ margin-top: 22px;
 .screens-section {
   position: relative;
   width: 100%;
-  /* width: 100%;
-  height: 100%; */
-  /* height: 100vw;
-  margin-left: 50%;
-  transform: translateX(-50%); */
 }
 .cleaning-screens {
   background: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 30%),
@@ -671,17 +633,14 @@ margin-top: 22px;
   height: 1100px;
 }
 /*  */
-/* Screens / */
-/*  */
 
-/*  */
-/* Prototype: */
-/*  */
+/* 
+Prototype: 
+*/
 @media (min-width: 1025px) {
   .prototype-title {
     min-width: 430px;
   }
 }
-/*  */
-/* Prototype / */
+
 /*  */

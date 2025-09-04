@@ -1,45 +1,72 @@
 /* GLOBAL CSS for Portfolio pages */
 
-/*  SECTION
-    CONTAINER
+:root {
+  --clients: rgba(24, 232, 236, 1);
+  --cleaners: rgba(176, 254, 255, 1);
+  --black: rgba(24, 24, 24, 1);
+}
+
+/*  
+SECTION
+CONTAINER
 */
-.portfolio-section {
-  padding-top: 112px;
-}
-
-.padding-bottom-section {
-  padding-bottom: 112px;
-}
-
 .portfolio-container {
   width: 100%;
-  max-width: 1200px;
-  padding: 0 80px;
   margin: 0 auto;
+  padding-left: clamp(20px, 5vw, 110px);
+  padding-right: clamp(20px, 5vw, 110px);
   overflow: hidden;
 }
 
-@media (max-width: 767px) {
-  .portfolio-container {
-    max-width: 700px;
-    padding: 0 20px;
-  }
+.portfolio-section {
+  /* 112 */
+  padding-top: clamp(60px, 7vw, 112px);
+}
+
+.portfolio-pages-section {
+  /* 80 */
+  padding-bottom: clamp(60px, 7vw, 80px);
+}
+
+.padding-bottom-section {
+  /* 112 */
+  padding-bottom: clamp(60px, 7vw, 112px);
+}
+
+.margine-bottom {
+  /* 112 */
+  margin-bottom: clamp(60px, 7vw, 112px);
+}
+
+/* === TABLET (768–1023px) === */
+@media (min-width: 768px) and (max-width: 1023px) {
   .portfolio-section {
-    padding-top: 80px;
+    padding-top: 96px;
   }
   .padding-bottom-section {
-    padding-bottom: 80px;
+    padding-bottom: 96px;
   }
-}
+  .margine-bottom {
+    margin-bottom: 96px;
+  }
 
-@media (min-width: 768px) and (max-width: 1024px) {
   .portfolio-container {
-    max-width: 800px;
-    padding: 0 110px;
+    max-width: 960px;
+    padding: 0 40px;
   }
 }
 
-@media (min-width: 1025px) {
+/* === DESKTOP (≥1024px) === */
+@media (min-width: 1024px) {
+  .portfolio-section {
+    padding-top: 112px;
+  }
+  .padding-bottom-section {
+    padding-bottom: 112px;
+  }
+  .margine-bottom {
+    margin-bottom: 112px;
+  }
   .portfolio-container {
     max-width: 1440px;
     padding: 0 110px;
@@ -82,7 +109,7 @@ with
   bg-reletive-wrapp
 */
 .bg-portfolio-img-right {
-  bottom: -5%;
+  bottom: 0;
   right: 0;
 
   background: image-set(
@@ -171,11 +198,24 @@ with
 /* 🔺 */
 
 /* 
-    TEXT 
-    TITLE
+TEXT 
+TITLE
 */
 .portfolio-title {
   font-size: 56px;
+}
+
+.no-transform-h2-title {
+  text-transform: none;
+  margin-bottom: 40px;
+}
+
+.hero-no-transform-h2-title {
+  text-transform: none;
+}
+
+.uppercase-h4-title {
+  letter-spacing: 0em;
 }
 
 .no-transform {
@@ -200,17 +240,22 @@ with
   text-transform: uppercase;
 }
 
+/* 
+🎆 bgc
+*/
 .portfolio-bgc-img {
   background-color: var(--bgc-light);
   border-radius: 12px;
 }
-
 /*  */
 
-/* Portfolio main page CSS */
-/*  */
-/* HERO: */
-/*  */
+/* 
+Portfolio main page CSS 
+*/
+
+/* 
+HERO: 
+*/
 .hero-portfolio-section {
   padding-top: 230px;
 }
