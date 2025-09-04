@@ -80,7 +80,8 @@ CONTAINER
 }
 .bg-portfolio-img-left,
 .bg-portfolio-img-right,
-.bg-portfolio-img-left-rotate {
+.bg-portfolio-img-left-rotate,
+.commerce-left-rotate {
   position: absolute;
   pointer-events: none;
   z-index: -1;
@@ -125,9 +126,22 @@ with
 with 
   bg-reletive-wrapp
 */
+.commerce-left-rotate {
+  transform: rotate(180deg);
+  bottom: -15%;
+  left: 0;
+
+  background: image-set(
+    url('/images/screens/idea-bg-1x.webp') 1x,
+    url('/images/screens/idea-bg-2x.webp') 2x
+  );
+  background-position: bottom left;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 .bg-portfolio-img-left-rotate {
   transform: rotate(180deg);
-  bottom: 0;
+  bottom: -5%;
   left: 0;
 
   background: image-set(

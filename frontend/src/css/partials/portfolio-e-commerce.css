@@ -52,3 +52,45 @@ font-size: 18px;
   line-height: 1;
   top: 0.15em;
 }
+
+/* 
+Features
+*/
+.features-items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  align-items: start;
+}
+.features-items li {
+  background: rgba(255, 255, 255, 0.09);
+  border-radius: 12px;
+  padding: 24px;
+  height: 100%;
+}
+
+/* 
+Screens
+*/
+.commerce-screens {
+    background: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 30%),
+    linear-gradient(0deg, #000 0%, rgba(0, 0, 0, 0) 30%),
+    image-set(
+      url('/images/e-commerce/screens-1x.webp') 1x,
+      url('/images/e-commerce/screens-2x.webp') 2x,
+      url('/images/e-commerce/screens-3x.webp') 3x,
+      url('/images/e-commerce/screens-1x.png') type('image/png') 1x
+    );
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 1100px;
+  padding-bottom: 60px;
+}
+
+/* 
+Prototype
+*/
+.prototype-pages-section {
+  padding-bottom: 52px;
+}
