@@ -194,18 +194,18 @@ for PLANNING sections */
 /*  */
 
 /* 
+ALL components
 HERO: 
 */
-.cleaning-hero-section {
-  position: relative;
-  padding-bottom: 41px;
-  padding-top: 150px;
+.pages-hero-title {
+  font-size: 70px;
+  color: var(--light);
 }
 
-.hero-flex-wrapper {
-  display: flex;
-  flex-direction: column;
+.hero-width-wrapp {
+  max-width: 450px;
 }
+
 .hero-flex-container {
   display: flex;
   align-items: center;
@@ -214,22 +214,31 @@ HERO:
   gap: 30px;
 }
 
-.cleaning-hero-title {
-  font-size: 70px;
+.cleaning-hero-section {
+  padding-bottom: 41px;
+  padding-top: 150px;
+}
+
+.pages-flex-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.pages-main-text {
+  font-size: 18px;
+  color: var(--light);
+  margin-top: 12px;
+}
+
+/* 
+Cleaning-APP
+HERO
+ */
+.cleaning-hero-wrapp h1 {
   background: linear-gradient(99.05deg, #00ffc8 0.07%, #ffffff 106.32%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  color: var(--light);
-}
-
-.hero-width-wrapp {
-  max-width: 450px;
-}
-.hero-main-text {
-  font-size: 18px;
-  color: var(--light);
-  margin-top: 12px;
 }
 
 .pos-pictures-wrapp {
@@ -324,8 +333,11 @@ Project Idea:
 */
 .idea-section {
   position: relative;
-  padding-bottom: 120px;
-  padding-top: 91px;
+  padding-bottom: 60px;
+  padding-top: 40px;
+}
+
+.cleaning-idea-section {
   background: linear-gradient(
     180deg,
     rgba(158, 197, 240, 0) 0%,
@@ -503,18 +515,23 @@ Project Idea:
 .width-idea-wrapp {
   max-width: 650px;
 }
-
+.idea-text-top {
+  margin-top: 12px;
+}
 .idea-text {
   margin-top: 22px;
 }
 
 .color-idea-title {
   text-transform: none;
+  color: var(--light);
+}
+
+.cleaning-idea-title {
   background: linear-gradient(99.05deg, #00ffc8 0.07%, #ffffff 106.32%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  color: var(--light);
 }
 /*  */
 
