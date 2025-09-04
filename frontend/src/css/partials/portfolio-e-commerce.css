@@ -1,4 +1,6 @@
-/* hero */
+/* 
+HERO 
+*/
 .commerce-hero-wrapp h1 {
   background: linear-gradient(99.05deg, #f1d5b2 0.07%, #ffffff 106.32%);
   -webkit-background-clip: text;
@@ -6,6 +8,9 @@
   background-clip: text;
 }
 
+/* 
+Project Idea:
+*/
 .commerce-idea-title {
   background: linear-gradient(99.05deg, #f1d5b2 0.07%, #ffffff 106.32%);
   -webkit-background-clip: text;
@@ -28,4 +33,22 @@
   gap: 10px;
   margin-top: 12px;
   padding-left: 26px;
+}
+
+/* 
+The development phase
+*/
+.phase-strong-text {
+font-weight: 700;
+font-size: 18px;
+}
+
+.strong-decorate-items li::before {
+  content: '•';
+  position: absolute;
+  left: -1em;
+  font-size: 1.2em;
+  color: var(--light);
+  line-height: 1;
+  top: 0.15em;
 }
