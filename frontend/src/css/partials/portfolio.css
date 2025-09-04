@@ -1,16 +1,179 @@
 /* GLOBAL CSS for Portfolio pages */
-/*  */
+
+/*  SECTION
+    CONTAINER
+*/
 .portfolio-section {
   padding-top: 112px;
 }
 
-.portfolio-container {
-  width: 100%; /* or max-width: 1220px(figma) */
-  padding-left: 110px;
-  padding-right: 110px;
-  margin: 0 auto;
+.padding-bottom-section {
+  padding-bottom: 112px;
 }
 
+.portfolio-container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 80px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+@media (max-width: 767px) {
+  .portfolio-container {
+    max-width: 700px;
+    padding: 0 20px;
+  }
+  .portfolio-section {
+    padding-top: 80px;
+  }
+  .padding-bottom-section {
+    padding-bottom: 80px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .portfolio-container {
+    max-width: 800px;
+    padding: 0 110px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .portfolio-container {
+    max-width: 1440px;
+    padding: 0 110px;
+  }
+}
+
+/* ✨ */
+.bg-reletive-wrapp {
+  position: relative;
+  overflow: visible;
+}
+.bg-portfolio-img-left,
+.bg-portfolio-img-right,
+.bg-portfolio-img-left-rotate {
+  position: absolute;
+  pointer-events: none;
+  z-index: -1;
+  width: 635px;
+  height: 635px;
+}
+/* ✨
+  <div class="bg-portfolio-img-left"></div>
+with 
+  class - bg-reletive-wrapp
+*/
+.bg-portfolio-img-left {
+  bottom: -3%;
+  left: 2%;
+  background: image-set(
+    url('/images/cleaning/cleaning-hero1x.webp') 1x,
+    url('/images/cleaning/cleaning-hero2x.webp') 2x
+  );
+  background-position: bottom left;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+/* ✨ 
+  <div class="bg-portfolio-img-right"></div> 
+with 
+  bg-reletive-wrapp
+*/
+.bg-portfolio-img-right {
+  bottom: -5%;
+  right: 0;
+
+  background: image-set(
+    url('/images/screens/idea-bg-1x.webp') 1x,
+    url('/images/screens/idea-bg-2x.webp') 2x
+  );
+  background-position: bottom right;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+/* ✨ 
+   <div class="bg-portfolio-img-left-rotate"></div>
+with 
+  bg-reletive-wrapp
+*/
+.bg-portfolio-img-left-rotate {
+  transform: rotate(180deg);
+  bottom: 0;
+  left: 0;
+
+  background: image-set(
+    url('/images/screens/idea-bg-1x.webp') 1x,
+    url('/images/screens/idea-bg-2x.webp') 2x
+  );
+  background-position: bottom left;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+/* ✨ */
+
+/* 🔺 */
+.bg-blur-wrapp {
+  position: relative;
+}
+.bg-icon-blur-left,
+.bg-icon-blur-right,
+.bg-icon-blur-center {
+  z-index: -1;
+  filter: blur(125px);
+  pointer-events: none;
+  width: 814px;
+  height: 814px;
+}
+/* 🔺 
+  <div class="bg-icon-blur-left"></div>
+with 
+  class - bg-blur-wrapp 
+*/
+.bg-icon-blur-left {
+  position: absolute;
+  top: 5%;
+  left: -30%;
+  background: image-set(url('/images/bg-icon.png') 1x);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+/* 🔺
+  <div class="bg-icon-blur-right"></div> 
+with 
+  class - bg-blur-wrapp 
+*/
+.bg-icon-blur-right {
+  position: absolute;
+  top: -10%;
+  right: 0;
+  background: image-set(url('/images/bg-icon.png') 1x);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+/* 🔺
+  <div class="bg-icon-blur-center"></div>
+with 
+  class - bg-blur-wrapp 
+*/
+.bg-icon-blur-center {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: image-set(url('/images/bg-icon.png') 1x);
+  background-position: bottom right;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+/* 🔺 */
+
+/* 
+    TEXT 
+    TITLE
+*/
 .portfolio-title {
   font-size: 56px;
 }
@@ -42,57 +205,6 @@
   border-radius: 12px;
 }
 
-/* 🔺 */
-/* with .portfolio-card-img-wrapp {pos.rel.} 
-or
-flex-section-container
-*/
-.bg-icon-blur-left,
-.bg-icon-blur-right,
-.center-right-blur-icon {
-  z-index: -1;
-  filter: blur(125px);
-  pointer-events: none;
-  width: 814px;
-  height: 814px;
-}
-/* <div class="bg-icon-blur-left"></div> */
-.bg-icon-blur-left {
-  position: absolute;
-  top: -30%;
-  left: -50%;
-  background: image-set(url('/images/bg-icon.png') 1x);
-  background-position: top left;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-/* <div class="bg-icon-blur-right"></div> */
-.bg-icon-blur-right {
-  position: absolute;
-  top: -30%;
-  right: -50%;
-  background: image-set(url('/images/bg-icon.png') 1x);
-  background-position: top right;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-/* <div class="bg-icon-blur-center-right"></div> */
-.center-right-blur {
-  position: relative;
-}
-.center-right-blur-icon {
-  position: absolute;
-  top: 30%;
-  right: -30%;
-  background: image-set(url('/images/bg-icon.png') 1x);
-  background-position: center right;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-/* 🔺  / */
-/*  */
-/* GLOBAL CSS for Portfolio pages / */
 /*  */
 
 /* Portfolio main page CSS */
@@ -122,25 +234,8 @@ flex-section-container
   letter-spacing: 0.06em;
   color: var(--border-color);
 }
-/*  */
+
 /* CARDS: */
-/*  */
-
-.portfolio-cards-section {
-  padding-bottom: 120px;
-}
-
-.portfolio-cards {
-  display: flex;
-  flex-direction: column;
-  gap: 112px;
-}
-
-.portfolio-cards-container {
-  margin: 0;
-  text-align: left;
-}
-
 .portfolio-card {
   display: flex;
   gap: 32px;
@@ -203,12 +298,8 @@ flex-section-container
 .portfolio-card-text {
   font-size: 32px;
   margin-bottom: 24px;
-  letter-spacing: 0.06em;
+  letter-spacing: 0;
   color: var(--border-color);
-}
-
-.portfolio-card-text-food {
-  letter-spacing: 0.04em;
 }
 
 .portfolio-card-accent-text {

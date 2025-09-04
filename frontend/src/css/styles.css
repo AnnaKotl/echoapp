@@ -167,6 +167,7 @@ body {
     #010101 100%
   );
   background-color: #010101;
+  overflow-x: hidden;
 }
 h1,
 h2,
