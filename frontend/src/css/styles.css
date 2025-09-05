@@ -253,6 +253,8 @@ button {
   border-radius: 30px;
   transition: all var(--standart-tr-cubic);
   border: 1px solid transparent;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   animation: gradientFlow 5s infinite linear;
 }
 .neon-btn:is(:hover, :focus) {
@@ -372,7 +374,7 @@ button {
   overflow: hidden;
 }
 .section {
-  padding: 140px 0 0;
+  padding: 120px 0 0;
 }
 
 @media (max-width: 767px) {

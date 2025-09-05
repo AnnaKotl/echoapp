@@ -68,17 +68,13 @@
 
 .address-career {
   font-weight: 500;
-  color: var(--accent-color);
+  color: var(--neon);
   line-height: var(--text-standart-line-height);
   transition: var(--transition-cl);
 }
 
 .address-career:is(:hover, :focus) {
-  background: linear-gradient(99.05deg, #bc3cd8 0.07%, #c54b8c 106.32%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
+  color: var(--blue);
 }
 
 .text-career {
