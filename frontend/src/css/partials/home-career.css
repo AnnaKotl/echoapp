@@ -1,5 +1,6 @@
 .career-section {
   overflow: hidden;
+  padding-top: 80px;
 }
 
 .career-container {
@@ -21,7 +22,7 @@
   -webkit-text-fill-color: transparent;
 }
 
-.video-wrapper-career {
+.position-wrapper-career {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -52,11 +53,12 @@
 
 .career-text-accent {
   font-style: normal;
-  font-weight: 200;
-  max-width: 700px;
+  font-weight: 300;
   font-size: 30px;
   line-height: var(--text-standart-line-height);
   padding-top: 30px;
+  text-transform: uppercase;
+  max-width: 800px;
 }
 
 .bottom-career-wrap {
@@ -90,14 +92,14 @@
   line-height: var(--text-standart-line-height);
   font-weight: var(--text-standart-font-weight);
   text-align: center;
-  border-radius: 30px;
+  border-radius: 12px;
   max-width: 380px;
   height: 140px;
   border: 1px solid transparent;
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
 
-  animation: gradientFlow 3s infinite linear;
+  animation: gradientFlow 5s infinite linear;
 }
 
 .text-career-left {

@@ -45,7 +45,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 30px;
+  border-radius: 12px;
 }
 
 .based-on-box {
@@ -59,7 +59,7 @@
 .based-on-title {
   text-align: left;
   margin-right: auto;
-  font-size: 36px;
+  font-size: 30px;
   font-weight: var(--text-standart-font-weight);
   opacity: 1;
 
@@ -70,7 +70,7 @@
   font-size: var(--text-standart-font-size);
   font-weight: var(--text-standart-font-weight);
   opacity: 0;
-  transition: var(--transition-op);
+  transition: all var(--standart-tr-cubic);
   flex-grow: 1;
 
   color: var(--light);
@@ -80,10 +80,10 @@
   width: calc(33.33% - 20px);
   height: 280px;
   padding: 30px;
-  border-radius: 30px;
+  border-radius: 12px;
   color: rgba(248, 249, 250, 0.9);
   transition: all var(--standart-tr-cubic);
-  border: 2px solid transparent;
+  border: 1px solid transparent;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -93,8 +93,9 @@
   position: relative;
   z-index: 2;
   background: transparent;
+  transition: all var(--standart-tr-cubic);
 
-  animation: gradientFlow 3s infinite linear;
+  animation: gradientFlow 5s infinite linear;
 }
 
 .based-on-item:nth-child(1):hover {

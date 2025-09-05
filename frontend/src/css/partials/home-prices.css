@@ -3,7 +3,6 @@
   z-index: 1;
 }
 
-/* reverse */
 .prices-bg-images {
   position: absolute;
   right: 0;
@@ -47,13 +46,14 @@
   margin: 0 auto;
 
   color: var(--light-opacity);
-  border-radius: 30px;
+  border-radius: 12px;
+  border: 1px solid transparent;
   padding: 20px 10px;
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
 
   transition: all var(--standart-tr-cubic);
-  animation: gradientFlow 3s infinite linear;
+  animation: gradientFlow 5s infinite linear;
 }
 
 .prices-item-container {

@@ -23,17 +23,17 @@
   overflow-x: auto;
 
   padding: 20px;
-  max-width: 480px;
+  max-width: 400px;
   width: 100%;
   max-height: 95vh;
-  border-radius: 30px;
+  border-radius: 12px;
 
   font-size: var(--text-standart-font-size);
   font-weight: var(--text-standart-font-weight);
   line-height: var(--text-standart-line-height);
 
   border: 2px solid transparent;
-  animation: gradientFlow 3s infinite linear;
+  animation: gradientFlow 5s infinite linear;
 
   background-color: var(--bgc);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -110,11 +110,11 @@
   font-weight: var(--text-standart-font-weight);
   line-height: var(--text-standart-line-height);
 
-  border-radius: 30px;
+  border-radius: 12px;
   border: 1px solid transparent;
   background-color: var(--light);
 
-  animation: gradientFlow 3s infinite linear;
+  animation: gradientFlow 5s infinite linear;
 }
 
 .form-input:focus,
@@ -210,7 +210,7 @@ textarea:focus {
   height: 12px;
   border-radius: 50%;
   border: 1px solid transparent;
-  animation: gradientFlow 3s infinite linear;
+  animation: gradientFlow 5s infinite linear;
   background-color: transparent;
   transition: all var(--standart-tr-cubic);
 }
@@ -234,7 +234,7 @@ textarea:focus {
 
 /* SUBMIT BTN 📫 */
 .form-button {
-  font-size: 20px;
+  font-size: 16px;
   margin: 0 auto;
   padding: 8px 16px;
 }
