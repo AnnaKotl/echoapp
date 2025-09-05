@@ -144,7 +144,7 @@
 /* MOB adaptive css */
 @media (max-width: 767px) {
   .hero-content {
-    padding-top: 70px;
+    padding-top: 120px;
     margin: 0 auto;
     text-align: center;
   }
