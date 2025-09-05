@@ -43,7 +43,7 @@
 
   min-width: 200px;
   max-width: calc(20% - 20px);
-  height: 460px;
+  min-height: 460px;
   margin: 0 auto;
 
   color: var(--light-opacity);
@@ -144,7 +144,8 @@
   .prices-item {
     padding: 20px;
     height: 100%;
-    max-height: 440px;
+    min-height: 300px;
+    max-height: 100%;
     width: 340px;
     min-width: none;
     max-width: none;
