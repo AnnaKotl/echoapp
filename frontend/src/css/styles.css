@@ -345,7 +345,7 @@ button {
   opacity: 1;
   transform: scale(1.1);
   fill: var(--light);
-  background: var(--accent-color);
+  background: var(--bgc-grey);
   border: 1px solid var(--light);
 }
 #scroll-button.visible:hover {
