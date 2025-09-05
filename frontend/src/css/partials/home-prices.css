@@ -122,12 +122,8 @@
 }
 
 .order-btn {
-  font-size: 16px;
-  padding: 8px 16px;
-}
-
-.order-btn:is(:hover, :focus) {
-  padding: 8px 24px;
+  font-size: 20px;
+  padding: 10px 20px;
 }
 
 /* MOB adaptive css */

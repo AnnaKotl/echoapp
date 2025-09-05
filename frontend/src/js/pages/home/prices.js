@@ -39,7 +39,7 @@ export function renderServices(services) {
           </div>
           <div class="order-container">
             <p class="price">${service.price}</p>
-            <button type="button" class="order-btn js-open-modal standart-button" data-service="${service.name}">Order</button>
+            <button type="button" class="order-btn js-open-modal neon-btn" data-service="${service.name}">Order</button>
           </div>
         </div>
       </li>`;

@@ -46,8 +46,8 @@
   --gray: #6c757d;
   --dark: #343a40;
 
-  --filter: drop-shadow(0 0 8px rgba(197, 75, 140, 0.6))
-    drop-shadow(0 0 14px rgba(197, 75, 140, 0.5));
+  --filter: drop-shadow(0 0 8px rgba(32, 243, 221, 0.6))
+    drop-shadow(0 0 14px rgba(32, 243, 221, 0.5));
 
   --text-standart-font-size: 20px;
   --text-standart-font-weight: 400;
@@ -82,7 +82,7 @@
     box-shadow: 0 0 0 2px rgba(220, 53, 69, 0.6), 0 4px 6px rgba(0, 0, 0, 0.1);
   }
   80% {
-    box-shadow: 0 0 0 2px rgba(111, 66, 193, 0.6), 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 0 2px rgba(32, 243, 221, 0.6), 0 4px 6px rgba(0, 0, 0, 0.1);
   }
   100% {
     box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.6), 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -115,7 +115,7 @@
     transform: scale(1);
   }
   80% {
-    box-shadow: 0 0 0 2px rgba(111, 66, 193, 0.6), 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 0 2px rgba(32, 243, 221, 0.6), 0 4px 6px rgba(0, 0, 0, 0.1);
     transform: scale(1.02);
   }
   100% {
@@ -215,7 +215,7 @@ button {
   border: none;
   background-color: transparent;
 }
-
+/* BUTTON | */
 .standart-button {
   line-height: 1.5;
   letter-spacing: 0.04em;
@@ -241,12 +241,38 @@ button {
   is(:hover, :focus) - padding: 8px 26px; ~
   */
 }
-
 .standart-button:is(:hover, :focus) {
   outline: none;
   background: linear-gradient(99.05deg, #bc3cd8 0.07%, #c54b8c 106.32%);
   border: 1px solidvar(--light);
 }
+/* BUTTON  ||*/
+.neon-btn {
+  color: var(--neon);
+  background: transparent;
+  border-radius: 30px;
+  transition: all var(--standart-tr-cubic);
+  border: 1px solid transparent;
+  animation: gradientFlow 5s infinite linear;
+}
+.neon-btn:is(:hover, :focus) {
+  outline: none;
+  color: var(--accent-secondary);
+  background-color: var(--bgc-grey);
+}
+.large-btn {
+  font-size: 30px;
+  padding: 12px 24px;
+}
+.medium-btn {
+  font-size: 24px;
+  padding: 10px 20px;
+}
+.normal-btn {
+  font-size: 20px;
+  padding: 8px 16px;
+}
+/*  */
 
 .visually-hidden {
   position: absolute;

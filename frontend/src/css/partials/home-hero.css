@@ -7,11 +7,12 @@
 .hero-title {
   margin: 0;
   font-size: 72px;
-  font-weight: var(--title-standart-font-weight);  
+  font-weight: var(--title-standart-font-weight);
   background: linear-gradient(
     300deg,
-    #c54b8c 10%,
-    #bc3cd8 30%,
+    #f8f9fa 0%,
+    #ffc107 20%,
+    #e83e8c 40%,
     #007bff 70%,
     #20f3dd 90%
   );
@@ -28,17 +29,6 @@
   font-weight: 300;
   color: var(--light-opacity);
   letter-spacing: -0.02;
-  /* background: linear-gradient(
-    330deg,
-    #f8f9fa 0%,
-    #ffc107 10%,
-    #fd7e14 30%,
-    #e83e8c 60%,
-    #007bff 90%
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent; */
 }
 
 .hero-subtext {
@@ -49,15 +39,15 @@
   color: var(--light);
 }
 
-.hero-btn {
+/* .hero-btn {
   font-size: 26px;
   padding: 8px 30px;
   margin: 0;
-}
+} */
 
-.hero-btn:is(:hover, :focus) {
+/* .hero-btn:is(:hover, :focus) {
   padding: 8px 36px;
-}
+} */
 
 .hero-section {
   position: relative;
@@ -71,27 +61,12 @@
   justify-content: space-between;
   margin-bottom: 90px;
 }
+
 .hero-wrapp {
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
-/* .hero-bg-images {
-  position: absolute;
-  bottom: -35%;
-  right: 0;
-  width: 80%;
-  height: 80%;
-
-  background-image: url('/images/ios-banner.webp');
-  background-position: bottom right;
-  background-size: contain;
-  background-repeat: no-repeat;
-
-  pointer-events: none;
-  z-index: -1;
-  opacity: 0.6;
-} */
 
 .hero-btn-container {
   display: flex;
@@ -119,7 +94,6 @@
 
 .hero-scroll-icon-top {
   fill: var(--border-color);
-
 }
 .hero-scroll-icon-bottom {
   fill: var(--light);

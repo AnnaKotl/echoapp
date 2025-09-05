@@ -98,12 +98,6 @@
 .contact-btn {
   margin-left: auto;
   margin-top: 20px;
-  font-size: 20px;
-  padding: 8px 16px;
-}
-
-.contact-btn:is(:hover, :focus) {
-  padding: 8px 26px;
 }
 
 .adress-container {
