@@ -374,38 +374,47 @@ button {
 /* PRIMARY STYLE */
 .container {
   width: 100%;
-  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 30px;
+  padding-left: clamp(20px, 5vw, 110px);
+  padding-right: clamp(20px, 5vw, 110px);
   overflow: hidden;
 }
 .section {
-  padding: 120px 0 0;
+  padding-top: clamp(60px, 7vw, 112px);
 }
-
-@media (max-width: 767px) {
+.section {
+  padding-bottom: clamp(60px, 7vw, 80px);
+}
+.section {
+  padding-bottom: clamp(60px, 7vw, 112px);
+}
+/* @media (max-width: 767px) {
   .container {
     padding: 0 16px;
   }
   .section {
     padding: var(--mob-padding-section) 0 0;
   }
+} */
+/* === TABLET (768–1023px) === */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    max-width: 960px;
+    padding: 0 40px;
+  }
+  .section {
+    padding-top: 96px;
+  }
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+/* === DESKTOP (≥1024px) === */
+@media (min-width: 1024px) {
   .container {
-    max-width: 750px;
-    padding: 0 20px;
+    max-width: 1440px;
+    padding: 0 110px;
   }
-  .hero-bg-images {
-    background-size: 70%;
-  }
-}
-
-@media (min-width: 1025px) {
-  .container {
-    max-width: 1300px;
-    padding: 0 30px;
+  .section {
+    padding-top: 112px;
   }
 }
 /* / */
