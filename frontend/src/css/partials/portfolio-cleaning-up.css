@@ -637,7 +637,6 @@ Prototype:
   background-size: cover;
   background-repeat: no-repeat;
   height: 649px;
-  pointer-events: none;
 }
 
 .prototype {
