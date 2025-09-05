@@ -93,12 +93,18 @@
 @keyframes subtlePulse {
   0% {
     transform: scale(1);
+    filter: drop-shadow(0 0 4px rgba(197, 75, 140, 0.4))
+    drop-shadow(0 0 6px rgba(188, 60, 216, 0.3));
   }
   50% {
-    transform: scale(1.01);
+    transform: scale(1.02);
+  filter: drop-shadow(0 0 8px rgba(197, 75, 140, 0.5))
+    drop-shadow(0 0 10px rgba(188, 60, 216, 0.4));
   }
   100% {
     transform: scale(1);
+    filter: drop-shadow(0 0 4px rgba(197, 75, 140, 0.4))
+    drop-shadow(0 0 6px rgba(188, 60, 216, 0.3));
   }
 }
 
@@ -131,7 +137,6 @@
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-fill-color: transparent;
 }
 
 html {
@@ -254,8 +259,6 @@ button {
   border-radius: 100px;
   transition: all var(--standart-tr-cubic);
   border: 1px solid transparent;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
   animation: gradientFlow 5s infinite linear;
 }
 .neon-btn:is(:hover, :focus) {

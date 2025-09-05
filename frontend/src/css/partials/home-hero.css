@@ -39,16 +39,6 @@
   color: var(--light);
 }
 
-/* .hero-btn {
-  font-size: 26px;
-  padding: 8px 30px;
-  margin: 0;
-} */
-
-/* .hero-btn:is(:hover, :focus) {
-  padding: 8px 36px;
-} */
-
 .hero-section {
   position: relative;
   z-index: 1;
@@ -66,6 +56,11 @@
   display: flex;
   flex-direction: column;
   gap: 30px;
+}
+
+.hero-img {
+  animation: subtlePulse 5s infinite linear;
+  transition: all var(--standart-tr-cubic);
 }
 
 .hero-btn-container {
