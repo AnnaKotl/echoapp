@@ -23,6 +23,7 @@
   background-repeat: no-repeat;
   pointer-events: none;
   opacity: 0.3;
+  /* filter: blur(10px); */
   z-index: -1;
 }
 

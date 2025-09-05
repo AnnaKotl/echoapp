@@ -13,6 +13,7 @@
   background-position: bottom right;
   background-size: contain;
   background-repeat: no-repeat;
+  filter: blur(10px);
   pointer-events: none;
   opacity: 0.4;
   z-index: -1;
@@ -49,8 +50,8 @@
   border-radius: 12px;
   border: 1px solid transparent;
   padding: 20px 10px;
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
+  /* -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px); */
 
   transition: all var(--standart-tr-cubic);
   animation: gradientFlow 5s infinite linear;
