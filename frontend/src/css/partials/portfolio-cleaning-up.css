@@ -563,45 +563,26 @@ TABLES:
 }
 
 /* ---> */
-@media (min-width: 768px) and (max-width: 1284px) {
-.clients-items,
-.cleaners-items {
-  margin-top: 30px;
-  padding-left: 0;
+@media (max-width: 1284px) {
+  .clients-items,
+  .cleaners-items {
+    margin-top: 30px;
+    padding-left: 10px;
+  }
+  .tables-wrapp {
+    gap: 30px;
+  }
+  .clients-item::before,
+.cleaners-item::before {
+  content: url('/images/portfolio/Vector-3.svg');
+  position: absolute;
+  left: -20px;
+  fill: var(--grey-border);
 }
-.tables-wrapp {
-  gap: 20px;
 }
-}
-
-@media (min-width: 1285px) {
 .table-left,
 .table-right {
   position: relative;
-}
-.table-left::before {
-  content: '';
-  position: absolute;
-  left: 15px;
-  top: 0;
-  background: url('/images/portfolio/Vector-1.svg') no-repeat center center;
-  background-size: cover;
-  width: 2.5px;
-  height: 95.7%;
-  background-color: var(--grey-border);
-  z-index: -1;
-}
-.table-right::before {
-  content: '';
-  position: absolute;
-  left: 15px;
-  top: 0;
-  background: url('/images/portfolio/Vector-2.svg') no-repeat center center;
-  background-size: cover;
-  width: 2.5px;
-  height: 75.2%;
-  background-color: var(--grey-border);
-  z-index: -1;
 }
 .clients-item::before,
 .cleaners-item::before {
@@ -610,6 +591,31 @@ TABLES:
   left: -84px;
   fill: var(--grey-border);
 }
+@media (min-width: 1285px) {
+  .table-left::before {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 0;
+    background: url('/images/portfolio/Vector-1.svg') no-repeat center center;
+    background-size: cover;
+    width: 2.5px;
+    height: 95.7%;
+    background-color: var(--grey-border);
+    z-index: -1;
+  }
+  .table-right::before {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 0;
+    background: url('/images/portfolio/Vector-2.svg') no-repeat center center;
+    background-size: cover;
+    width: 2.5px;
+    height: 75.2%;
+    background-color: var(--grey-border);
+    z-index: -1;
+  }
 }
 /*  */
 
@@ -623,6 +629,8 @@ TABLES:
   letter-spacing: 0.06em;
   border-radius: 8px;
   padding: 8px;
+  width: fit-content;
+  max-width: 100%;
 }
 
 .table-clients {
