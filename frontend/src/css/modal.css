@@ -110,7 +110,7 @@
   font-weight: var(--text-standart-font-weight);
   line-height: var(--text-standart-line-height);
 
-  border-radius: 30px;
+  border-radius: 12px;
   border: 1px solid transparent;
   background-color: var(--light);
 

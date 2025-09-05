@@ -217,7 +217,7 @@ HERO:
 
 .cleaning-hero-section {
   padding-bottom: 41px;
-  padding-top: 150px;
+  padding-top: 120px;
 }
 
 .pages-flex-wrapper {
@@ -562,8 +562,60 @@ TABLES:
   padding-left: 100px;
 }
 
+/* ---> */
+@media (min-width: 768px) and (max-width: 1284px) {
+.clients-items,
+.cleaners-items {
+  margin-top: 30px;
+  padding-left: 0;
+}
+.tables-wrapp {
+  gap: 20px;
+}
+}
+
+@media (min-width: 1285px) {
+.table-left,
+.table-right {
+  position: relative;
+}
+.table-left::before {
+  content: '';
+  position: absolute;
+  left: 15px;
+  top: 0;
+  background: url('/images/portfolio/Vector-1.svg') no-repeat center center;
+  background-size: cover;
+  width: 2.5px;
+  height: 95.7%;
+  background-color: var(--grey-border);
+  z-index: -1;
+}
+.table-right::before {
+  content: '';
+  position: absolute;
+  left: 15px;
+  top: 0;
+  background: url('/images/portfolio/Vector-2.svg') no-repeat center center;
+  background-size: cover;
+  width: 2.5px;
+  height: 75.2%;
+  background-color: var(--grey-border);
+  z-index: -1;
+}
+.clients-item::before,
+.cleaners-item::before {
+  content: url('/images/portfolio/Vector-3.svg');
+  position: absolute;
+  left: -84px;
+  fill: var(--grey-border);
+}
+}
+/*  */
+
 .clients-item,
 .cleaners-item {
+  position: relative;
   text-transform: uppercase;
   font-weight: 600;
   font-size: 18px;
@@ -596,6 +648,9 @@ TABLES:
   border: 1px solid var(--cleaners);
   color: var(--cleaners);
 }
+
+/* -----> */
+
 /*  */
 
 /* 

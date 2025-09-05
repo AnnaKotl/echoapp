@@ -26,6 +26,7 @@
   --light-opacity: rgb(227, 228, 230, 0.8);
   --bgc-light: rgba(196, 196, 196, 1);
   --bgc-grey: rgba(255, 255, 255, 0.09);
+  --grey-border: rgba(203, 212, 220, 1);
 
   --accent-color: rgb(197, 75, 140);
   --accent-secondary: rgb(188, 60, 216);
@@ -250,7 +251,7 @@ button {
 .neon-btn {
   color: var(--neon);
   background: transparent;
-  border-radius: 30px;
+  border-radius: 100px;
   transition: all var(--standart-tr-cubic);
   border: 1px solid transparent;
   backdrop-filter: blur(10px);
