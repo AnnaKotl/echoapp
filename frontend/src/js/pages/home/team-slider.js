@@ -10,6 +10,6 @@ export function activateAdvantages() {
         currentIndex = (currentIndex + 1) % advantages.length;
     }
 
-    setInterval(highlightNextAdvantage, 1500);
+    setInterval(highlightNextAdvantage, 1700);
     highlightNextAdvantage();
 }

@@ -134,7 +134,7 @@
   width: 100%;
   background: transparent;
   border: 1px solid transparent;
-  transition: var(--transition-bg);
+  transition: all var(--standart-tr-cubic);
   animation: gradientFlow 5s infinite linear;
 }
 

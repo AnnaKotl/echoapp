@@ -17,7 +17,7 @@ if (isFirstVisit) {
     document.body.style.overflow = 'visible';
     navLogo.style.visibility = 'visible';
     sessionStorage.setItem('visited', 'true');
-  }, 3000);
+  }, 3500);
 } else {
   preloader.remove();
   navLogo.style.visibility = 'visible';

@@ -4,23 +4,6 @@
   z-index: 1;
 }
 
-/* .team-bg-img {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 70%;
-  height: 70%;
-  background-image: url('/images/ios-new-web.webp');
-  background-position: center right;
-  background-size: contain;
-  background-repeat: no-repeat;
-  pointer-events: none;
-  opacity: 0.7;
-  z-index: -1;
-  pointer-events: none;
-} */
-
 .team-wrap {
   display: flex;
   gap: 90px;
@@ -28,7 +11,7 @@
 }
 
 .team-title {
-  text-align: center;
+  text-align: left;
   font-size: 50px;
   font-weight: var(--title-standart-font-weight);
   line-height: var(--text-standart-line-height);
@@ -71,8 +54,6 @@
   font-weight: 500;
 }
 
-/*  TEAM list 👩🏻‍💻👨🏼‍💻  */
-
 .team-video-wrapp {
   position: relative;
   overflow: hidden;
@@ -90,10 +71,9 @@
 .team-list {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
   justify-content: center;
   gap: 10px;
-  max-height: 700px;
 }
 
 .advantage {

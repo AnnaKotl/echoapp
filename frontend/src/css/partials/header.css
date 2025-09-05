@@ -47,6 +47,13 @@
 .logo-nav {
   width: 80px;
   height: auto;
+  transition: all var(--standart-tr-cubic);
+}
+
+.logo-nav:is(:hover, :focus) {
+  transform: scale(1.02);
+    filter: drop-shadow(0 0 10px rgba(32, 243, 221, 0.4))
+    drop-shadow(0 0 14px rgba(32, 243, 221, 0.3));
 }
 
 .nav-link {
@@ -165,8 +172,8 @@
 }
 
 #preloader-logo {
-  max-width: 700px;
-  width: 80%;
+  max-width: 900px;
+  width: 90%;
   height: auto;
 }
 
