@@ -39,3 +39,15 @@ Screens
   height: 1100px;
   padding-bottom: 60px;
 }
+
+/* 
+Prototype
+*/
+.food-proto {
+  background: url('/images/portfolio/proto-bg-3.svg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 649px;
+  pointer-events: none;
+}

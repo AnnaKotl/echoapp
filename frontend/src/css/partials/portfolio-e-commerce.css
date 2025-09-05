@@ -27,7 +27,7 @@ Project Idea:
 }
 
 .idea-decorate-items {
-    padding: 0;
+  padding: 0;
   background: transparent;
   border-radius: 0;
   gap: 10px;
@@ -39,8 +39,8 @@ Project Idea:
 The development phase
 */
 .phase-strong-text {
-font-weight: 700;
-font-size: 18px;
+  font-weight: 700;
+  font-size: 18px;
 }
 
 .strong-decorate-items li::before {
@@ -73,7 +73,7 @@ Features
 Screens
 */
 .commerce-screens {
-    background: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 30%),
+  background: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 30%),
     linear-gradient(0deg, #000 0%, rgba(0, 0, 0, 0) 30%),
     url('/images/portfolio/e-commerce/screens.svg');
   background-position: center;
@@ -88,4 +88,13 @@ Prototype
 */
 .prototype-pages-section {
   padding-bottom: 52px;
+}
+
+.commerce-proto {
+  background: url('/images/portfolio/proto-bg-2.svg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 649px;
+  pointer-events: none;
 }

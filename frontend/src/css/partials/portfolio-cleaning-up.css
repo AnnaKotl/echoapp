@@ -519,7 +519,6 @@ Challenges We Solved:
 }
 /*  */
 
-
 /* 
 Features: 
 */
@@ -575,7 +574,7 @@ TABLES:
 }
 
 .table-clients {
-/* clients */
+  /* clients */
   background-color: var(--clients);
   min-width: 210px;
   max-width: 220px;
@@ -587,7 +586,7 @@ TABLES:
 }
 
 .table-cleaners {
-/* cleaners */
+  /* cleaners */
   background-color: var(--cleaners);
   min-width: 245px;
   max-width: 250px;
@@ -613,11 +612,13 @@ Screens:
 }
 .cleaning-screens {
   background: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 30%),
-    linear-gradient(0deg, #000 0%, rgba(0, 0, 0, 0) 30%), url('/images/portfolio/cleaners/screens.svg');
+    linear-gradient(0deg, #000 0%, rgba(0, 0, 0, 0) 30%),
+    url('/images/portfolio/cleaners/screens.svg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   height: 1100px;
+  pointer-events: none;
 }
 /*  */
 
@@ -628,6 +629,27 @@ Prototype:
   .prototype-title {
     min-width: 430px;
   }
+}
+
+.cleaning-proto {
+  background: url('/images/portfolio/proto-bg-1.svg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 649px;
+  pointer-events: none;
+}
+
+.prototype {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.figma-prototype {
+  border: none;
+  margin: 0;
+  padding: 0;
 }
 
 /*  */
