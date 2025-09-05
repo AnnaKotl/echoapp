@@ -180,7 +180,10 @@ for PLANNING sections */
   background: rgba(255, 255, 255, 0.09);
   border-radius: 12px;
   padding: 24px;
-  height: 100%;
+  /* height: 100%; */
+
+  height: fit-content;
+  max-height: 100%;
 }
 .technology-decorate {
   font-weight: 600;
