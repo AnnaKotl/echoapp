@@ -77,17 +77,17 @@
 }
 
 .features-container {
-display: flex;
-flex-direction: column;
-gap: 6px;
-margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 30px;
 }
 
 .about-service {
   text-align: center;
   line-height: var(--text-standart-line-height);
   font-size: 18px;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .order-container {

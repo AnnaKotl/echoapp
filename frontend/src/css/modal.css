@@ -128,17 +128,16 @@
 input::placeholder,
 textarea::placeholder {
   outline: none;
-  color: rgba(108, 117, 125, 0.7);
+  color: rgba(108, 117, 125, 0.8);
   line-height: var(--text-standart-line-height);
-  font-weight: 400;
-  font-size: 18px;
+  font-weight: 300;
+  font-size: clamp(14px, 7vw, 18px);
   transition: all var(--standart-tr-cubic);
 }
 input:focus::placeholder,
 textarea:focus::placeholder {
   outline: none;
-  color: rgba(108, 117, 125, 1);
-  font-weight: 500;
+  color: rgba(108, 117, 125, 0.3);
 }
 
 input,
@@ -227,10 +226,7 @@ textarea:focus {
 
 /* SUBMIT BTN 📫 */
 .form-button {
-  font-size: 24px;
   margin: 0 auto;
-  /* width: 100%; */
-  padding: 12px 24px;
 }
 /*  📫 / */
 
@@ -248,15 +244,14 @@ textarea:focus {
   .form-textarea {
     padding: 10px 20px 10px 38px;
   }
+  .form-group-wrapp {
+    margin-left: 0;
+  }
   .radio-title-label {
     font-size: var(--text-standart-font-size);
   }
   .radio-circle {
     width: 10px;
     height: 10px;
-  }
-  .form-button {
-    padding: 10px 18px;
-    font-size: 20px;
   }
 }

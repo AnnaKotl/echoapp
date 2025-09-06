@@ -253,16 +253,16 @@ button {
   background-color: var(--bgc-grey);
 }
 .large-btn {
-  font-size: 30px;
-  padding: 12px 24px;
+  font-size: clamp(20px, 7vw, 30px);
+  padding: clamp(8px, 7vw, 12px) clamp(16px, 7vw, 24px);
 }
 .medium-btn {
-  font-size: 24px;
-  padding: 10px 20px;
+  font-size: clamp(18px, 7vw, 26px);
+  padding: clamp(8px, 7vw, 10px) clamp(16px, 7vw, 20px);
 }
 .normal-btn {
-  font-size: 20px;
-  padding: 8px 16px;
+  font-size: clamp(16px, 7vw, 20px);
+  padding: clamp(6px, 7vw, 8px) clamp(12px, 7vw, 16px);
 }
 /*  */
 
@@ -289,7 +289,7 @@ button {
   opacity: var(--opacity-standart);
 }
 
-/* TITLE */
+/* TITLE standard */
 .title {
   font-size: clamp(40px, 7vw, 56px);
   font-weight: var(--title-standart-font-weight);
@@ -324,8 +324,8 @@ button {
   pointer-events: none;
 }
 .scroll-icon {
-  width: 80px;
-  height: 80px;
+  width: clamp(50px, 5vw, 80px);
+  height: clamp(50px, 5vw, 80px);
   border-radius: 50%;
   border: 1px solid var(--border-color);
   fill: var(--border-color);
@@ -347,13 +347,8 @@ button {
     right: 6px;
     padding: 10px;
   }
-  .scroll-icon {
-    width: 60px;
-    height: 60px;
-  }
 }
 /* / */
-/* _________________ */
 
 /* PRIMARY STYLE */
 .container {
@@ -366,14 +361,7 @@ button {
 .section {
   padding-bottom: clamp(60px, 7vw, 112px);
 }
-/* @media (max-width: 767px) {
-  .container {
-    padding: 0 16px;
-  }
-  .section {
-    padding: var(--mob-padding-section) 0 0;
-  }
-} */
+
 /* === TABLET (768–1023px) === */
 @media (min-width: 768px) and (max-width: 1023px) {
   .container {
@@ -388,9 +376,4 @@ button {
     max-width: 1440px;
     padding: 0 110px;
   }
-  /* .section {
-    padding-bottom: 112px;
-  } */
 }
-/* / */
-/* _________________ */

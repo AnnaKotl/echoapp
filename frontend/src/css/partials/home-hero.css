@@ -6,7 +6,7 @@
 .hero-content {
   color: var(--light);
   text-align: left;
-  padding-top: 150px;
+  padding-top: clamp(120px, 7vw, 150px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -17,7 +17,7 @@
   gap: 30px;
   align-items: stretch;
   justify-content: space-between;
-  margin-bottom: 90px;
+  margin-bottom: clamp(30px, 7vw, 90px);
 }
 
 .hero-wrapp {
@@ -29,7 +29,7 @@
 
 .hero-title {
   margin: 0;
-  font-size: 72px;
+  font-size: clamp(40px, 7vw, 72px);
   font-weight: var(--title-standart-font-weight);
   background: linear-gradient(
     300deg,
@@ -47,28 +47,24 @@
 
 .hero-text {
   text-transform: uppercase;
-  font-size: 32px;
+  font-size: clamp(26px, 7vw, 32px);
   line-height: 1.5;
   font-weight: 300;
   color: var(--light-opacity);
   letter-spacing: 0.04em;
 }
 
-.hero-subtext {
-  font-size: 24px;
-}
-
 .hero-subtext,
 .mob-hero-subtext {
   line-height: 1.5;
   font-weight: 500;
+  font-size: clamp(20px, 7vw, 24px);
   letter-spacing: 0.06em;
   color: var(--light);
 }
 
 .mob-hero-subtext {
   display: none;
-  font-size: 20px;
 }
 
 .hero-img-wrapp {
@@ -79,7 +75,7 @@
 .hero-img {
   height: 100%;
   width: 100%;
-  object-fit: cover;
+  object-fit: contain;
   overflow: hidden;
   animation: subtlePulse 5s infinite linear;
   transition: all var(--standart-tr-cubic);
@@ -144,16 +140,11 @@
 /* MOB adaptive css */
 @media (max-width: 767px) {
   .hero-content {
-    padding-top: 120px;
     margin: 0 auto;
     text-align: center;
   }
-  .hero-title {
-    font-size: 50px;
-  }
   .hero-text {
     text-align: left;
-    font-size: 30px;
   }
   .hero-subtext {
     display: none;
@@ -164,8 +155,6 @@
   }
   .hero-btn {
     margin: 0 auto;
-    font-size: 20px;
-    padding: 8px 16px;
   }
   .hero-btn-container {
     justify-content: space-between;
@@ -182,15 +171,15 @@
     left: 0;
     transform: none;
     margin-right: auto;
-    margin-left: 60px;
+    margin-left: clamp(10px, 7vw, 30px);
   }
   .hero-scroll-icon-top,
   .hero-scroll-icon-bottom {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
   }
   .hero-scroll-icon-top {
-    margin-bottom: -80px;
+    margin-bottom: -100px;
   }
 }
 
@@ -198,22 +187,5 @@
 @media (max-width: 1024px) {
   .hero-wrapper {
     flex-direction: column;
-    gap: 30px;
-    margin-bottom: 30px;
   }
-}
-
-/* TABLET adaptive css */
-@media (min-width: 768px) and (max-width: 1024px) {
-  /* .hero-wrapper {
-  gap: 10px;
-  align-items: center;
-}
-.hero-wrapp {
-max-width: 400px;
-}
-.hero-img {
-  max-width: 300px;
-  object-fit: contain;
-} */
 }
