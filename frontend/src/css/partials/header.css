@@ -21,7 +21,7 @@
   -webkit-backdrop-filter: blur(30px);
   backdrop-filter: blur(30px);
   border-color: rgba(255, 255, 255, 0.1);
-  max-width: 60%;
+  max-width: 90%;
 }
 
 .nav-list-container {
@@ -45,7 +45,7 @@
 }
 
 .logo-nav {
-  width: clamp(60px, 5vw, 80px);
+  width: 80px;
   height: auto;
   transition: all var(--standart-tr-cubic);
 }
@@ -101,12 +101,12 @@
 .burger {
   display: none;
   cursor: pointer;
-  margin: 0 0 0 auto;
+  margin: auto 0 auto;
   color: var(--light);
 }
 .burger-icon {
-  width: clamp(50px, 5vw, 70px);
-  height: clamp(50px, 5vw, 70px);
+  width: 70px;
+  height: 70px;
   color: var(--light);
   fill: var(--light);
   opacity: 0.9;
@@ -114,15 +114,28 @@
 }
 
 @media (max-width: 767px) {
-  .burger {
+  .logo-nav,
+  .burger-icon {
     display: block;
+    vertical-align: middle;
+    object-fit: contain;
+  }
+  .logo-nav,
+  .burger-icon {
+    width: 60px;
+    height: 60px;
+  }
+  .burger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .burger-wrapper {
     display: flex;
+    align-items: center;
     justify-content: space-between;
     width: 100%;
-    padding-top: 10px;
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
   }
   .nav-items-container {
     display: none;
@@ -134,20 +147,22 @@
     backdrop-filter: blur(30px);
     border-color: rgba(255, 255, 255, 0.1);
     border-radius: 30px;
-    min-height: 60%;
+    min-height: 340px;
     max-width: 90%;
     margin-top: 10px;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     transition: all var(--standart-tr-cubic);
   }
   .home-nav-container.expanded .nav-items-container {
     display: flex;
+    align-items: center;
     width: 100%;
+    margin-top: 30px;
   }
   .home-nav-container.expanded .nav-list-container {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     width: 100%;
   }
   .nav-list {
@@ -156,6 +171,9 @@
   }
   .nav-link {
     font-size: clamp(20px, 5vw, 30px);
+  }
+  .home-nav-container.scrolled {
+    max-width: 90%;
   }
 }
 
