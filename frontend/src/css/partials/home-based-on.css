@@ -1,5 +1,6 @@
 .based-on-section {
   z-index: 2;
+  padding-top: clamp(60px, 7vw, 112px);
 }
 
 .based-on-container > h2 {
@@ -149,10 +150,6 @@
 
 /* MOB adaptive css */
 @media (max-width: 767px) {
-  .based-on-container > h2 {
-    font-size: 40px;
-    margin-bottom: var(--mob-margin-title);
-  }
   .based-on-list-container {
     gap: 10px;
   }

@@ -16,27 +16,32 @@ export function renderServices(services) {
   let accumulatedFeatures = [...baseFeatures];
 
   const servicesHTML = services.map(service => {
+    const descriptionHTML = service.description && service.description.length > 0
+      ? service.description.map(desc => `<p class="service-description">${desc}</p>`).join('')
+      : '';
+
     const featuresHTML = service.features.map(feature => {
       const isNewFeature = !accumulatedFeatures.some(f => f.trim() === feature.trim());
 
-      return `<p class="about-features" style="color: ${isNewFeature ? 'var(--yellow);)' : 'inherit'};">${feature}</p>`;
+      return `<p class="about-service" style="color: ${isNewFeature ? 'var(--yellow)' : 'inherit'};">${feature}</p>`;
     }).join('');
 
     accumulatedFeatures = [...new Set([...accumulatedFeatures, ...service.features.map(f => f.trim())])];
-
-    const descriptionHTML = service.description && service.description.length > 0
-      ? service.description.map(desc => `<p>${desc}</p>`).join('')
-      : '';
 
     return `
       <li class="prices-item">
         <div class="prices-item-container">
           <h4 class="service-name">${service.name}</h4>
-    <hr class="prices-line"/>
-          ${descriptionHTML ? `<div class="service-description">${descriptionHTML}</div>` : ''}
-          <div class="about-service">
+          <hr class="prices-line"/>
+
+          <div class="description-container">
+            ${descriptionHTML}
+          </div>
+
+          <div class="features-container">
             ${featuresHTML}
           </div>
+
           <div class="order-container">
             <p class="price">${service.price}</p>
             <button type="button" class="order-btn js-open-modal neon-btn" data-service="${service.name}">Order</button>
