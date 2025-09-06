@@ -56,6 +56,6 @@
 
 .running-img {
   object-fit: contain;
-  height: clamp(20px, 5vw, 40px);
+  height: clamp(30px, 5vw, 40px);
   opacity: var(--opacity-standart);
 }

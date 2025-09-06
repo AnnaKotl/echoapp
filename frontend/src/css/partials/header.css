@@ -3,10 +3,10 @@
   top: 0;
   left: 50%;
   transform: translateX(-50%);
+  max-width: 1440px;
   width: 100%;
-  max-width: clamp(600px, 5vw, 1220px);
   margin: 0 auto;
-  height: clamp(60px, 5vw, 130px);
+  height: clamp(80px, 5vw, 130px);
   border-radius: 30px;
   border: 1px solid transparent;
   display: flex;
@@ -21,7 +21,7 @@
   -webkit-backdrop-filter: blur(30px);
   backdrop-filter: blur(30px);
   border-color: rgba(255, 255, 255, 0.1);
-  max-width: clamp(300px, 5vw, 700px);
+  max-width: 60%;
 }
 
 .nav-list-container {
@@ -52,18 +52,17 @@
 
 .logo-nav:is(:hover, :focus) {
   transform: scale(1.02);
-    filter: drop-shadow(0 0 10px rgba(32, 243, 221, 0.4))
+  filter: drop-shadow(0 0 10px rgba(32, 243, 221, 0.4))
     drop-shadow(0 0 14px rgba(32, 243, 221, 0.3));
 }
 
 .nav-link {
   position: relative;
   text-transform: uppercase;
-  color:  var(--light);
-  font-size: var(--text-standart-font-size);
+  color: var(--light);
+  font-size: clamp(18px, 5vw, 20px);
   font-weight: 600;
   padding: 10px 30px;
-  position: relative;
   text-align: center;
   transition: all var(--standart-tr-cubic);
 }
@@ -85,7 +84,6 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  text-fill-color: transparent;
 }
 
 .nav-link:not(.active):is(:hover, :focus)::after {
@@ -97,58 +95,67 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  text-fill-color: transparent;
 }
 
 /* 🍔 */
 .burger {
   display: none;
-  font-size: 2rem;
   cursor: pointer;
-  margin-left: auto;
+  margin: 0 0 0 auto;
   color: var(--light);
 }
-
 .burger-icon {
-  width: 40px;
-  height: 40px;
+  width: clamp(50px, 5vw, 70px);
+  height: clamp(50px, 5vw, 70px);
   color: var(--light);
   fill: var(--light);
   opacity: 0.9;
-}
-
-/* 📱 🖥️ */
-@media (max-width: 1024px) {
-  .nav-link {
-    font-size: 14px;
-    padding: 8px 12px;
-  }
+  margin: 0;
 }
 
 @media (max-width: 767px) {
-  .nav-items-container {
-    display: none;
-    position: absolute;
-    top: 100%;
-    right: 10px;
-    width: 200px;
-    background: rgba(0, 0, 0, 0.9);
-    border-radius: 15px;
-    flex-direction: column;
-    padding: 10px;
-  }
-
-  .nav-items-container.open {
-    display: flex;
-  }
-
-  .nav-list {
-    flex-direction: column;
-    gap: 10px;
-  }
-
   .burger {
     display: block;
+  }
+  .burger-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 10px;
+    margin-bottom: 30px;
+  }
+  .nav-items-container {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+  .home-nav-container.expanded {
+    -webkit-backdrop-filter: blur(30px);
+    backdrop-filter: blur(30px);
+    border-color: rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    min-height: 60%;
+    max-width: 90%;
+    margin-top: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: all var(--standart-tr-cubic);
+  }
+  .home-nav-container.expanded .nav-items-container {
+    display: flex;
+    width: 100%;
+  }
+  .home-nav-container.expanded .nav-list-container {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+  .nav-list {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .nav-link {
+    font-size: clamp(20px, 5vw, 30px);
   }
 }
 
@@ -167,8 +174,7 @@
 }
 
 #preloader-logo {
-  max-width: 900px;
-  width: 90%;
+  max-width: 60%;
   height: auto;
 }
 
@@ -179,7 +185,7 @@
   }
   to {
     opacity: 0;
-    transform: scale(1);
+    transform: scale(0.9);
   }
 }
 
@@ -194,38 +200,6 @@
 
 @media (max-width: 767px) {
   #preloader-logo {
-    max-width: 250px;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-  .home-nav-container {
-    max-width: 750px;
-    padding: 0 20px;
-    height: 80px;
-  }
-  .home-nav-container.scrolled {
-    max-width: 650px; /* If nav < 4 links */
-  }
-}
-
-/* 🖥️ >1025px */
-@media (min-width: 1025px) {
-  .home-nav-container {
-    max-width: 1300px;
-    padding: 0 30px;
-  }
-  .home-nav-container.scrolled {
-    max-width: 1000px; /* If nav < 4 links */
-  }
-}
-
-@media (max-width: 767px) {
-  .home-nav-container {
-    padding: 0 16px;
-    height: 70px;
-  }
-  .home-nav-container.scrolled {
-    max-width: 450px; /* If nav < 4 links */
+    max-width: 80%;
   }
 }
