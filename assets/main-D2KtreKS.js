@@ -1,12 +1,17 @@
-import"./styles-C7_sPWnr.js";import{A as W}from"./config-DF9vnxqS.js";import{T as Fe,g as Se}from"./main-CYA_jV-_.js";function _e(s){const e=document.querySelector(".prices-list");if(!e){console.error("Container .prices-list not found");return}if(!e||!s||s.length===0){console.error("No services available");return}let r=[...["UI/UX Design","Develop","QA","Source code","Custom Project Management"]];const n=s.map(i=>{const a=i.features.map(u=>`<p class="about-features" style="color: ${!r.some(c=>c.trim()===u.trim())?"var(--yellow);)":"inherit"};">${u}</p>`).join("");r=[...new Set([...r,...i.features.map(u=>u.trim())])];const o=i.description&&i.description.length>0?i.description.map(u=>`<p>${u}</p>`).join(""):"";return`
+import"./styles-Bc4ny6Of.js";import{A as W}from"./config-DF9vnxqS.js";import{T as Fe,g as Se}from"./main-CYA_jV-_.js";function _e(s){const e=document.querySelector(".prices-list");if(!e){console.error("Container .prices-list not found");return}if(!e||!s||s.length===0){console.error("No services available");return}let r=[...["UI/UX Design","Develop","QA","Source code","Custom Project Management"]];const n=s.map(i=>{const a=i.description&&i.description.length>0?i.description.map(u=>`<p class="service-description">${u}</p>`).join(""):"",o=i.features.map(u=>`<p class="about-service" style="color: ${!r.some(c=>c.trim()===u.trim())?"var(--yellow)":"inherit"};">${u}</p>`).join("");return r=[...new Set([...r,...i.features.map(u=>u.trim())])],`
       <li class="prices-item">
         <div class="prices-item-container">
           <h4 class="service-name">${i.name}</h4>
-    <hr class="prices-line"/>
-          ${o?`<div class="service-description">${o}</div>`:""}
-          <div class="about-service">
+          <hr class="prices-line"/>
+
+          <div class="description-container">
             ${a}
           </div>
+
+          <div class="features-container">
+            ${o}
+          </div>
+
           <div class="order-container">
             <p class="price">${i.price}</p>
             <button type="button" class="order-btn js-open-modal neon-btn" data-service="${i.name}">Order</button>
