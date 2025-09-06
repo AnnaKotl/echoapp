@@ -1,5 +1,5 @@
 .team-section {
-  padding-top: clamp(60px, 7vw, 112px);
+  padding-top: clamp(90px, 5vw, 112px);
   position: relative;
   z-index: 1;
 }
@@ -35,7 +35,7 @@
 }
 
 .team-text {
-  font-size: clamp(24px, 5vw, 30px);
+  font-size: clamp(18px, 5vw, 30px);
   font-weight: 300;
   line-height: var(--text-standart-line-height);
   text-transform: uppercase;
@@ -44,7 +44,7 @@
 
 .team-subtext {
   text-align: left;
-  font-size: clamp(20px, 5vw, 26px);
+  font-size: clamp(18px, 5vw, 24px);
   font-weight: 300;
   line-height: var(--text-standart-line-height);
 }
@@ -93,7 +93,6 @@
 
 .advantage.active {
   opacity: 1;
-  transform: scale(1.05);
   background: linear-gradient(99.05deg, #bc3cd8 0.07%, #c54b8c 106.32%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -136,7 +135,6 @@
     text-align: center;
     margin: 0 auto;
     max-width: none;
-    margin-bottom: 30px;
   }
   .team-wrap {
     display: flex;

@@ -1,5 +1,5 @@
 .career-section {
-  padding-top: clamp(60px, 5vw, 112px);
+  padding-top: clamp(90px, 5vw, 112px);
 }
 
 .career-container {
@@ -33,8 +33,8 @@
   position: absolute;
   right: 0;
   bottom: 0;
-  width: 70%;
-  height: 70%;
+  width: 75%;
+  height: 75%;
   background-image: url('/images/logo/icononly-transp.png');
   background-position: bottom right;
   background-size: contain;
@@ -54,7 +54,7 @@
 .career-text-accent {
   font-style: normal;
   font-weight: 300;
-  font-size: 30px;
+  font-size: clamp(18px, 5vw, 30px);
   line-height: var(--text-standart-line-height);
   padding-top: 10px;
   text-transform: uppercase;
@@ -77,23 +77,23 @@
   font-weight: 400;
   letter-spacing: 0.06em;
   color: var(--light);
-  font-size: clamp(18px, 5vw, 24px);
+  font-size: clamp(16px, 5vw, 24px);
 }
 
 .bottom-career-wrap {
   margin: auto auto 0 0;
   display: flex;
   align-items: flex-start;
-  gap: 12px;
+  gap: 20px;
   padding-bottom: 10px;
-  max-width: clamp(700px, 5vw, 900px);
+  max-width: clamp(850px, 5vw, 900px);
 }
 
 .text-career {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: clamp(18px, 5vw, 20px);
+  font-size: clamp(16px, 5vw, 24px);
   padding: clamp(12px, 5vw, 20px);
   line-height: var(--text-standart-line-height);
   font-weight: var(--text-standart-font-weight);
@@ -143,6 +143,7 @@
     max-width: none;
   }
   .bottom-career-wrap {
+    flex-direction: column;
     margin: 0 auto;
   }
   .career-bg-img {

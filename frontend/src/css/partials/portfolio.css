@@ -140,6 +140,13 @@ with
 /* ✨ */
 
 /* 🔺 */
+@media (max-width: 767px){
+.bg-icon-blur-left,
+.bg-icon-blur-right,
+.bg-icon-blur-center {
+display: none;
+}
+}
 .bg-blur-wrapp {
   position: relative;
 }

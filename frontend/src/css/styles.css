@@ -359,7 +359,7 @@ button {
   overflow: hidden;
 }
 .section {
-  padding-bottom: clamp(60px, 7vw, 112px);
+  padding-bottom: clamp(90px, 5vw, 112px);
 }
 
 /* === TABLET (768–1023px) === */

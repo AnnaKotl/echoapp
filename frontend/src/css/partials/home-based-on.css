@@ -1,6 +1,6 @@
 .based-on-section {
   z-index: 2;
-  padding-top: clamp(60px, 5vw, 112px);
+  padding-top: clamp(90px, 5vw, 112px);
 }
 
 .based-on-container > h2 {

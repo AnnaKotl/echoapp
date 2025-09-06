@@ -6,7 +6,7 @@
 .hero-content {
   color: var(--light);
   text-align: left;
-  padding-top: clamp(150px, 10vw, 200px);
+  padding-top: clamp(150px, 5vw, 200px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;

@@ -1,7 +1,7 @@
 .running-line-section {
   position: relative;
   overflow: hidden;
-  padding: 40px 0 80px;
+  padding: clamp(30px, 5vw, 60px) 0 clamp(30px, 5vw, 60px);
 }
 
 .running-container {
@@ -28,10 +28,10 @@
 
 .running-list {
   display: flex;
-  gap: 60px;
+  gap: clamp(60px, 5vw, 100px);
   justify-content: flex-start;
   align-items: center;
-  animation: scrollLine 200s linear infinite;
+  animation: scrollLine 300s linear infinite;
   will-change: transform;
   flex-shrink: 0;
 }
@@ -56,16 +56,6 @@
 
 .running-img {
   object-fit: contain;
-  width: 150px;
+  height: clamp(20px, 5vw, 40px);
   opacity: var(--opacity-standart);
-}
-
-/* MOB adaptive css */
-@media (max-width: 767px) {
-  .running-list {
-    gap: 30px;
-  }
-  .running-img {
-    width: 120px;
-  }
 }

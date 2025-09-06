@@ -11,6 +11,7 @@
   gap: clamp(12px, 5vw, 20px);
   padding: 0;
   margin: 10px auto;
+  padding: 10px;
   align-items: stretch;
 }
 
@@ -25,9 +26,14 @@
   background-color: var(--bgc-grey);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
-  padding: 10px;
+  padding: 20px 10px;
   transition: all var(--standart-tr-cubic);
   animation: gradientFlow 5s infinite linear;
+}
+
+.prices-item:is(:hover, :focus) {
+  transform: scale(1.02);
+  background-color: rgba(104, 101, 101, 0.2);
 }
 
 .prices-item-container {
@@ -38,8 +44,8 @@
 }
 
 .service-name {
-  font-weight: 600;
-  font-size: clamp(20px, 5vw, 26px);
+  font-weight: 500;
+  font-size: clamp(18px, 5vw, 26px);
   text-align: center;
   background: linear-gradient(300deg, #ffc107 20%, #fd7e14 50%, #dc3545 80%);
   -webkit-background-clip: text;
@@ -73,7 +79,7 @@
 }
 
 .price {
-  font-weight: 500;
+  font-weight: 400;
   font-size: clamp(16px, 7vw, 20px);
   color: var(--light);
 }
@@ -87,9 +93,10 @@
 
 .about-service {
   text-align: center;
+  padding: 0 20px;
   line-height: var(--text-standart-line-height);
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 .order-container {
@@ -110,16 +117,29 @@
     background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+  .prices-list {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+    max-width: 500px;
+  }
+  .prices-item-container,
+  .prices-item {
+    width: 100%;
+    margin: 0 auto;
+  }
 }
 
 /* TABLET adaptive css */
-@media (max-width: 1220px) {
+@media (min-width: 768px) and (max-width: 1220px) {
   .prices-list {
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
-    gap: 16px;
-    padding: 10px;
     scroll-snap-type: x mandatory;
   }
   .prices-item {
