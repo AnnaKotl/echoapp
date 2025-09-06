@@ -6,7 +6,7 @@
 .hero-content {
   color: var(--light);
   text-align: left;
-  padding-top: clamp(120px, 7vw, 150px);
+  padding-top: clamp(130px, 7vw, 180px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -47,7 +47,7 @@
 
 .hero-text {
   text-transform: uppercase;
-  font-size: clamp(26px, 7vw, 32px);
+  font-size: clamp(24px, 7vw, 32px);
   line-height: 1.5;
   font-weight: 300;
   color: var(--light-opacity);
@@ -58,7 +58,7 @@
 .mob-hero-subtext {
   line-height: 1.5;
   font-weight: 500;
-  font-size: clamp(20px, 7vw, 24px);
+  font-size: clamp(18px, 7vw, 24px);
   letter-spacing: 0.06em;
   color: var(--light);
 }
