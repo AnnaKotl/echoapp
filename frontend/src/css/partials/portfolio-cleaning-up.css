@@ -56,8 +56,9 @@
 }
 .semibold-title {
   text-transform: none;
-  font-size: clamp(40px, 10vw, 56px);
+  font-size: clamp(36px, 5vw, 56px);
   letter-spacing: -0.02em;
+  margin-bottom: clamp(20px, 10vw, 40px);
 }
 .upper-text {
   text-transform: uppercase;
@@ -184,16 +185,6 @@ for PLANNING sections */
     margin: 20px auto;
   }
 }
-
-@media (min-width: 768px) and (max-width: 1023px) {
-}
-
-@media (max-width: 1023px) {
-  /* .planning-title {
-    text-align: center;
-    margin-bottom: clamp(20px, 10vw, 40px);
-  } */
-}
 /*  */
 
 /*  */
@@ -237,6 +228,18 @@ for PLANNING sections */
   border-radius: 12px;
   padding: 12px 12px 12px 36px;
   background-color: var(--bgc-grey);
+}
+
+@media (max-width: 767px) {
+  .features-decorate-items {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, auto);
+  }
+}
+@media (max-width: 1023px) {
+  .semibold-title {
+    text-align: center;
+  }
 }
 /*  */
 
@@ -614,9 +617,6 @@ Project Idea:
 /* 
 Challenges We Solved: 
 */
-@media (max-width: 768px) {
-}
-
 .cleaning-challenges-title {
   margin-bottom: clamp(20px, 10vw, 40px);
 }
@@ -662,7 +662,7 @@ TABLES:
   flex-direction: column;
   gap: clamp(10px, 10vw, 20px);
   margin-top: clamp(20px, 10vw, 50px);
-  padding-left: clamp(20px, 10vw, 100px);
+  padding-left: 100px;
 }
 
 /* ---> */
@@ -673,7 +673,7 @@ TABLES:
     padding-left: 10px;
   }
   .tables-wrapp {
-    gap: 30px;
+    gap: 90px;
   }
   .clients-item::before,
   .cleaners-item::before {
@@ -682,7 +682,14 @@ TABLES:
     left: -20px;
     fill: var(--grey-border);
   }
+  .table-titles {
+    font-weight: 600;
+    font-size: clamp(12px, 10vw, 20px);
+    letter-spacing: 0.01em;
+    padding: clamp(10px, 10vw, 16px) 10px;
+  }
 }
+
 .table-left,
 .table-right {
   position: relative;
@@ -694,6 +701,7 @@ TABLES:
   left: -84px;
   fill: var(--grey-border);
 }
+
 @media (min-width: 1285px) {
   .table-left::before {
     content: '';
@@ -720,7 +728,6 @@ TABLES:
     z-index: -1;
   }
 }
-/*  */
 
 .clients-item,
 .cleaners-item {
@@ -760,6 +767,20 @@ TABLES:
   color: var(--cleaners);
 }
 
+@media (max-width: 767px) {
+  .tables-wrapp {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 60px;
+  }
+  .clients-item,
+  .cleaners-item {
+    max-width: 100%;
+    padding-left: 10px;
+  }
+}
 /* -----> */
 
 /*  */
