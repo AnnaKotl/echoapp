@@ -20,22 +20,22 @@ CONTAINER
 
 .portfolio-section {
   /* 112 */
-  padding-top: clamp(60px, 7vw, 112px);
+  padding-top: clamp(60px, 5vw, 112px);
 }
 
 .portfolio-pages-section {
   /* 80 */
-  padding-bottom: clamp(60px, 7vw, 80px);
+  padding-bottom: clamp(60px, 5vw, 80px);
 }
 
 .padding-bottom-section {
   /* 112 */
-  padding-bottom: clamp(60px, 7vw, 112px);
+  padding-bottom: clamp(60px, 5vw, 112px);
 }
 
 .margine-bottom {
   /* 112 */
-  margin-bottom: clamp(60px, 7vw, 112px);
+  margin-bottom: clamp(60px, 5vw, 112px);
 }
 
 /* === TABLET (768–1023px) === */
@@ -141,11 +141,11 @@ with
 
 /* 🔺 */
 @media (max-width: 767px){
-.bg-icon-blur-left,
+/* .bg-icon-blur-left,
 .bg-icon-blur-right,
 .bg-icon-blur-center {
-display: none;
-}
+  display: none;
+} */
 }
 .bg-blur-wrapp {
   position: relative;
@@ -156,8 +156,9 @@ display: none;
   z-index: -1;
   filter: blur(125px);
   pointer-events: none;
-  width: 814px;
-  height: 814px;
+  
+  width: clamp(400px, 5vw, 814px);
+  height: clamp(400px, 5vw, 814px);
 }
 /* 🔺 
   <div class="bg-icon-blur-left"></div>
@@ -170,7 +171,7 @@ with
   left: -30%;
   background: image-set(url('/images/bg-icon.png') 1x);
   background-position: center;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 /* 🔺
@@ -184,7 +185,7 @@ with
   right: 0;
   background: image-set(url('/images/bg-icon.png') 1x);
   background-position: center;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 /* 🔺
@@ -198,7 +199,7 @@ with
   right: 0;
   background: image-set(url('/images/bg-icon.png') 1x);
   background-position: bottom right;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 /* 🔺 */

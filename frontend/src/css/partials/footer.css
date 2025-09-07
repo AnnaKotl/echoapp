@@ -1,6 +1,7 @@
 /* footer */
 .footer-section {
-  background-color: black;
+  /* background-color: black; */
+  padding-top: clamp(40px, 5vw, 100px);
 }
 .footer-content-wrapp {
   display: flex;
@@ -9,7 +10,7 @@
   max-width: 1640px;
   margin: 0 auto;
   padding: 0 30px;
-  min-height: 300px;
+  min-height: 180px;
 }
 .footer-nav {
   display: flex;
