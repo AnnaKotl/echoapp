@@ -34,6 +34,7 @@
   color: rgba(121, 123, 128, 0.8);
 }
 .footer-link {
+  text-transform: lowercase;
   font-style: normal;
   font-weight: 300;
   font-size: clamp(10px, 5vw, 14px);
@@ -102,7 +103,7 @@
     justify-content: space-between;
     align-items: center;
     max-width: 100%;
-    padding: 0 10px;
+    padding: 0 10px 10px;
     min-height: 100%;
   }
   .footer-nav {
@@ -122,6 +123,10 @@
   .sub-footer-text {
     display: flex;
   }
+  .sub-footer-container {
+  padding: 6px 6px 10px;
+
+}
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
