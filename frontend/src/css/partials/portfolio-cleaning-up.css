@@ -8,7 +8,9 @@
   font-size: clamp(16px, 10vw, 24px);
 }
 
-.flex-section-container {
+.flex-section-container,
+.revert-column,
+.phase-flex-section-container {
   /* img + (h + ul) */
   position: relative;
   display: flex;
@@ -75,11 +77,19 @@
   .flex-section-container {
     flex-direction: column;
   }
-  .flex-section-container {
-    flex-direction: column;
+  .revert-column {
+    display: flex;
+    flex-direction: column-reverse;
   }
   .mob-img {
     max-width: 100%;
+  }
+  
+
+  .no-transform-h2-title {
+margin-left: auto;
+margin-right: auto;
+
   }
 }
 
@@ -91,7 +101,7 @@
     gap: 0;
   }
   .semibold-wrapp .no-transform-h2-title {
-    margin: 0 auto;
+    margin: 0 auto 20px;
   }
   .cleaning-phase-img,
   .cleaning-challenges-img {
