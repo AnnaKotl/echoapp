@@ -138,6 +138,12 @@ with
   .bg-icon-blur-center {
     display: none;
   }
+  .bg-portfolio-img-left,
+  .bg-portfolio-img-right,
+  .bg-portfolio-img-left-rotate,
+  .commerce-left-rotate {
+    display: none;
+  }
 }
 @media (max-width: 1023px) {
   .bg-icon-blur-left,

@@ -9,7 +9,7 @@
   /* img + (h + ul) */
   position: relative;
   display: flex;
-  gap: 56px;
+  gap: clamp(20px, 10vw, 56px);
   align-items: center;
 }
 
@@ -17,7 +17,7 @@
   /* h + ul */
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: clamp(10px, 10vw, 24px);
 }
 
 .decorate-items,
@@ -49,33 +49,33 @@
 .semibold-wrapp {
   display: flex;
   align-items: first baseline;
-  gap: 56px;
+  gap: clamp(20px, 10vw, 56px);
 }
 .semibold-title {
   text-transform: none;
-  font-size: 56px;
+  font-size: clamp(40px, 10vw, 56px);
   letter-spacing: -0.02em;
 }
 .upper-text {
   text-transform: uppercase;
-  font-size: 20px;
+  font-size: clamp(14px, 10vw, 20px);
   letter-spacing: 0.06em;
 }
 .semibold-flex-section {
-  padding-top: 80px;
+  padding-top: clamp(30px, 10vw, 80px);
 }
 /*  */
 
 /* ul witn bgc
 for PLANNING sections */
 .planning-section {
-  padding-bottom: 96px;
+  padding-bottom: clamp(60px, 10vw, 96px);
 }
 .decorate-flex-section-container {
   display: flex;
   align-items: stretch;
   justify-content: space-between;
-  gap: 20px;
+  gap: clamp(10px, 10vw, 20px);
 }
 .bg-decorate-items {
   padding: 12px 12px 12px 40px;
@@ -109,7 +109,7 @@ for PLANNING sections */
   display: flex;
   flex-direction: column;
   flex: 1;
-  gap: 18px;
+  gap: clamp(10px, 10vw, 18px);
   justify-content: space-between;
 }
 .planning-img {
@@ -130,7 +130,7 @@ for PLANNING sections */
 .features-wrapp {
   background: rgba(255, 255, 255, 0.09);
   border-radius: 12px;
-  padding: 24px;
+  padding: clamp(12px, 10vw, 24px);
 }
 .features-subtitle {
   margin-bottom: 10px;
@@ -158,7 +158,7 @@ for PLANNING sections */
 }
 .features-decorate {
   font-weight: 600;
-  font-size: 16px;
+  font-size: clamp(12px, 10vw, 16px);
   line-height: 1.5;
   letter-spacing: 0.04em;
 
@@ -179,7 +179,7 @@ for PLANNING sections */
 .technology-items li {
   background: rgba(255, 255, 255, 0.09);
   border-radius: 12px;
-  padding: 24px;
+  padding: clamp(14px, 10vw, 24px);
   /* height: 100%; */
 
   height: fit-content;
@@ -187,12 +187,12 @@ for PLANNING sections */
 }
 .technology-decorate {
   font-weight: 600;
-  font-size: 16px;
+  font-size: clamp(12px, 10vw, 16px);
   line-height: 1.5;
   letter-spacing: 0.04em;
   text-align: left;
   border-radius: 12px;
-  padding: 12px;
+  padding: clamp(10px, 10vw, 12px);
   background-color: var(--bgc-grey);
 }
 /*  */
@@ -202,7 +202,7 @@ ALL components
 HERO: 
 */
 .pages-hero-title {
-  font-size: 70px;
+  font-size: clamp(40px, 10vw, 70px);
   color: var(--light);
 }
 
@@ -214,8 +214,7 @@ HERO:
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* gap: 106px; */
-  gap: 30px;
+  gap: clamp(10px, 10vw, 30px);
 }
 
 .cleaning-hero-section {
@@ -229,7 +228,7 @@ HERO:
 }
 
 .pages-main-text {
-  font-size: 18px;
+  font-size: clamp(12px, 10vw, 18px);
   color: var(--light);
   margin-top: 12px;
 }
@@ -238,6 +237,31 @@ HERO:
 Cleaning-APP
 HERO
  */
+@media (max-width: 768px) {
+  .pages-flex-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+  }
+  .pos-pictures-wrapp {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+@media (max-width: 1023px) {
+  .hero-flex-container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .hero-no-transform-h2-title {
+    text-align: center;
+  }
+}
+
 .cleaning-hero-wrapp h1 {
   background: linear-gradient(99.05deg, #00ffc8 0.07%, #ffffff 106.32%);
   -webkit-background-clip: text;
@@ -269,7 +293,10 @@ HERO
 .bg-ellipse-1 {
   position: absolute;
   top: 97px;
-  right: 97px;
+  /* right: 97px; */
+
+  left: 50%;
+  transform: translateX(-50%);
 
   background: url('/images/portfolio/cleaners/Ellipse-1-min.svg');
   background-position: center;
@@ -347,7 +374,7 @@ Project Idea:
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 90px;
+  gap: clamp(20px, 10vw, 90px);
   min-height: 540px;
 }
 
@@ -518,7 +545,7 @@ Project Idea:
 Challenges We Solved: 
 */
 .cleaning-challenges-title {
-  margin-bottom: 40px;
+  margin-bottom: clamp(20px, 10vw, 40px);
 }
 /*  */
 
@@ -527,7 +554,7 @@ Features:
 */
 .features-subtitle {
   font-weight: 600;
-  font-size: 20px;
+  font-size: clamp(14px, 10vw, 20px);
 }
 /*  */
 
@@ -546,9 +573,9 @@ TABLES:
 
 .table-titles {
   font-weight: 600;
-  font-size: 24px;
+  font-size: clamp(16px, 10vw, 24px);
   letter-spacing: 0.06em;
-  padding: 22px 15px;
+  padding: clamp(14px, 10vw, 22px) clamp(10px, 10vw, 15px);
   border-radius: 10px;
   margin: 0;
   text-align: left;
@@ -560,9 +587,9 @@ TABLES:
 .cleaners-items {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  margin-top: 50px;
-  padding-left: 100px;
+  gap: clamp(10px, 10vw, 20px);
+  margin-top: clamp(20px, 10vw, 50px);
+  padding-left: clamp(20px, 10vw, 100px);
 }
 
 /* ---> */
@@ -576,12 +603,12 @@ TABLES:
     gap: 30px;
   }
   .clients-item::before,
-.cleaners-item::before {
-  content: url('/images/portfolio/Vector-3.svg');
-  position: absolute;
-  left: -20px;
-  fill: var(--grey-border);
-}
+  .cleaners-item::before {
+    content: url('/images/portfolio/Vector-3.svg');
+    position: absolute;
+    left: -20px;
+    fill: var(--grey-border);
+  }
 }
 .table-left,
 .table-right {
@@ -627,7 +654,7 @@ TABLES:
   position: relative;
   text-transform: uppercase;
   font-weight: 600;
-  font-size: 18px;
+  font-size: clamp(12px, 10vw, 18px);
   line-height: 1.5;
   letter-spacing: 0.06em;
   border-radius: 8px;
