@@ -45,11 +45,48 @@
 }
 /*  */
 
+@media (max-width: 767px) {
+  .semibold-wrapp {
+    flex-direction: column;
+  }
+  .flex-section-container {
+    flex-direction: column;
+  }
+  .flex-section-container {
+    /* img + (h + ul) */
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .semibold-wrapp {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+  }
+  .semibold-wrapp .no-transform-h2-title {
+    margin: 0 auto;
+  }
+  .cleaning-phase-img,
+  .cleaning-challenges-img {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .mob-img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+  }
+}
 /* Interactive Prototype + Implementation section */
 .semibold-wrapp {
   display: flex;
   align-items: first baseline;
-  gap: clamp(20px, 10vw, 56px);
+  gap: clamp(10px, 10vw, 56px);
 }
 .semibold-title {
   text-transform: none;
@@ -202,7 +239,7 @@ ALL components
 HERO: 
 */
 .pages-hero-title {
-  font-size: clamp(40px, 10vw, 70px);
+  font-size: clamp(30px, 10vw, 70px);
   color: var(--light);
 }
 
@@ -240,10 +277,6 @@ HERO
 @media (max-width: 768px) {
   .pages-flex-wrapper {
     position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 auto;
   }
   .pos-pictures-wrapp {
     position: absolute;
@@ -257,7 +290,8 @@ HERO
     display: flex;
     flex-direction: column-reverse;
   }
-  .hero-no-transform-h2-title {
+  .hero-no-transform-h2-title,
+  .pages-hero-title {
     text-align: center;
   }
 }
@@ -279,6 +313,7 @@ HERO
   min-width: 646px;
   min-height: 645px;
 }
+
 .hero-pictures-wrapp-left {
   position: absolute;
   top: 56px;
@@ -290,30 +325,25 @@ HERO
   right: 340px;
 }
 
-.bg-ellipse-1 {
+.bg-ellipse-1,
+.bg-ellipse-2 {
   position: absolute;
-  top: 97px;
-  /* right: 97px; */
-
-  left: 50%;
-  transform: translateX(-50%);
-
-  background: url('/images/portfolio/cleaners/Ellipse-1-min.svg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+.bg-ellipse-1 {
+  top: 97px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: url('/images/portfolio/cleaners/Ellipse-1-min.svg');
   width: 452px;
   height: 452px;
 }
 .bg-ellipse-2 {
-  position: absolute;
   bottom: 0;
   left: 0;
-
   background: url('/images/portfolio/cleaners/Ellipse-2-min.svg');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
   width: 645px;
   height: 645px;
 }
@@ -356,6 +386,12 @@ HERO
 /* 
 Project Idea: 
 */
+@media (max-width: 1023px) {
+  .idea-flex-container {
+    flex-direction: column;
+  }
+}
+
 .idea-section {
   position: relative;
   padding-bottom: 60px;
@@ -544,6 +580,9 @@ Project Idea:
 /* 
 Challenges We Solved: 
 */
+@media (max-width: 768px) {
+}
+
 .cleaning-challenges-title {
   margin-bottom: clamp(20px, 10vw, 40px);
 }

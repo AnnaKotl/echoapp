@@ -224,11 +224,13 @@ TITLE
 
 .no-transform-h2-title {
   text-transform: none;
-  margin-bottom: clamp(20px, 5vw, 40px);
 }
 
 .hero-no-transform-h2-title {
   text-transform: none;
+
+font-weight: 600;
+font-size: clamp(20px, 5vw, 40px);
 }
 
 .uppercase-h4-title {
