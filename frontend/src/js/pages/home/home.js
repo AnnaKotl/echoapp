@@ -13,22 +13,4 @@ document.addEventListener('DOMContentLoaded', () => {
   cloneListItems('running-list', '.running-item', 10);
   // 👩🏻‍💻👨🏼‍💻 
   activateAdvantages();
-
-  // BASED ON video 
-  const video = document.getElementById('video-based');
-  const isHidden = window.getComputedStyle(video).display === 'none';
-
-  if (isHidden && video) {
-    video.pause();
-    video.removeAttribute('autoplay');
-  }
-
-  // TEAM video 
-  const videoTeam = document.getElementById('video-team');
-  const isHiddenTeam = window.getComputedStyle(videoTeam).display === 'none';
-
-  if (isHiddenTeam && videoTeam) {
-    video.pause();
-    video.removeAttribute('autoplay');
-  }
 });

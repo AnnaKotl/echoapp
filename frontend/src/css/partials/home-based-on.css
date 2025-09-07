@@ -94,14 +94,14 @@
 }
 
 .based-on-title {
-  font-size: clamp(12px, 5vw, 30px);
+  font-size: clamp(10px, 5vw, 30px);
   font-weight: var(--text-standart-font-weight);
   transform: rotateX(0deg);
   margin-right: auto;
 }
 
 .based-on-info {
-  font-size: clamp(10px, 5vw, 24px);
+  font-size: clamp(8px, 5vw, 20px);
   font-weight: 300;
   transform: rotateX(180deg);
 }
@@ -164,6 +164,16 @@
   }
   .based-on-info {
     overflow-x: scroll;
+}
+.based-on-item {
+  padding: clamp(10px, 5vw, 12px);
+}
+.based-on-title {
+  font-size: clamp(16px, 5vw, 24px);
+}
+
+.based-on-info {
+  font-size: clamp(12px, 5vw, 16px);
 }
 }
 

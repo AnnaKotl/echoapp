@@ -105,7 +105,7 @@
   align-items: center;
   justify-content: space-between;
   margin-top: auto;
-  gap: 10px;
+  gap: clamp(10px, 5vw, 20px);
 }
 
 /* MOB adaptive css */
