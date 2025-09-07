@@ -343,10 +343,12 @@ button {
 }
 @media (max-width: 767px) {
   #scroll-button {
-    bottom: 6px;
+    bottom: 15px;
     right: 6px;
     padding: 10px;
-  }
+  }.scroll-icon {
+  background: var(--bgc-grey);
+}
 }
 /* / */
 

@@ -78,7 +78,6 @@
 .sub-footer-section {
   background-color: var(--neon);
   color: var(--bgc);
-  z-index: 1;
 }
 
 .sub-footer-container {
