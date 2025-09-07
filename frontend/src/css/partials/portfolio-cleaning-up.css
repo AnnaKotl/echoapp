@@ -3,6 +3,9 @@
   padding: 12px 20px;
   border-radius: 12px;
   border: 1px solid #ffffff;
+
+  font-weight: 600;
+  font-size: clamp(16px, 10vw, 24px);
 }
 
 .flex-section-container {
@@ -45,6 +48,25 @@
 }
 /*  */
 
+/* Interactive Prototype + Implementation section */
+.semibold-wrapp {
+  display: flex;
+  align-items: first baseline;
+  gap: clamp(10px, 10vw, 56px);
+}
+.semibold-title {
+  text-transform: none;
+  font-size: clamp(40px, 10vw, 56px);
+  letter-spacing: -0.02em;
+}
+.upper-text {
+  text-transform: uppercase;
+  font-size: clamp(14px, 10vw, 20px);
+  letter-spacing: 0.06em;
+}
+.semibold-flex-section {
+  padding-top: clamp(30px, 10vw, 80px);
+}
 @media (max-width: 767px) {
   .semibold-wrapp {
     flex-direction: column;
@@ -53,8 +75,10 @@
     flex-direction: column;
   }
   .flex-section-container {
-    /* img + (h + ul) */
     flex-direction: column;
+  }
+  .mob-img {
+    max-width: 100%;
   }
 }
 
@@ -76,31 +100,16 @@
 
 @media (max-width: 1023px) {
   .mob-img {
-    max-width: 100%;
     height: auto;
     object-fit: contain;
     display: block;
   }
+  .planning-title {
+    margin-bottom: clamp(20px, 10vw, 40px);
+    text-align: center;
+  }
 }
-/* Interactive Prototype + Implementation section */
-.semibold-wrapp {
-  display: flex;
-  align-items: first baseline;
-  gap: clamp(10px, 10vw, 56px);
-}
-.semibold-title {
-  text-transform: none;
-  font-size: clamp(40px, 10vw, 56px);
-  letter-spacing: -0.02em;
-}
-.upper-text {
-  text-transform: uppercase;
-  font-size: clamp(14px, 10vw, 20px);
-  letter-spacing: 0.06em;
-}
-.semibold-flex-section {
-  padding-top: clamp(30px, 10vw, 80px);
-}
+
 /*  */
 
 /* ul witn bgc
@@ -113,6 +122,12 @@ for PLANNING sections */
   align-items: stretch;
   justify-content: space-between;
   gap: clamp(10px, 10vw, 20px);
+}
+.planning-title {
+  font-weight: 600;
+  font-size: clamp(26px, 10vw, 40px);
+  letter-spacing: 0;
+  margin-bottom: clamp(20px, 10vw, 40px);
 }
 .bg-decorate-items {
   padding: 12px 12px 12px 40px;
@@ -133,7 +148,6 @@ for PLANNING sections */
   line-height: 1;
   top: 0.4em;
 }
-
 .bg-decorate-wrapp {
   /* h4 + (ul witn bgc) */
   display: flex;
@@ -159,6 +173,26 @@ for PLANNING sections */
   object-fit: cover;
   overflow: hidden;
   border-radius: 12px;
+}
+
+@media (max-width: 767px) {
+  .decorate-flex-section-container {
+    flex-direction: column-reverse;
+  }
+  .planning-img {
+    max-width: 400px;
+    margin: 20px auto;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+}
+
+@media (max-width: 1023px) {
+  /* .planning-title {
+    text-align: center;
+    margin-bottom: clamp(20px, 10vw, 40px);
+  } */
 }
 /*  */
 

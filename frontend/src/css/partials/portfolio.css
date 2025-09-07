@@ -222,23 +222,19 @@ TITLE
   font-size: clamp(40px, 10vw, 56px);
 }
 
-.no-transform-h2-title {
+.no-transform-h2-title,
+.no-transform {
   text-transform: none;
 }
 
 .hero-no-transform-h2-title {
   text-transform: none;
-
-font-weight: 600;
-font-size: clamp(20px, 5vw, 40px);
+  font-weight: 600;
+  font-size: clamp(20px, 5vw, 40px);
 }
 
 .uppercase-h4-title {
   letter-spacing: 0em;
-}
-
-.no-transform {
-  text-transform: none;
 }
 
 .portfolio-subtitle {
