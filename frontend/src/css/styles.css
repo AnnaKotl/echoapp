@@ -39,7 +39,7 @@
   --indigo: #6610f2;
   --pink: #e83e8c;
   --red: #dc3545;
-  --yellow: #ffc107;
+  --yellow: rgb(255, 193, 7);
   --green: #28a745;
   --teal: #20c997;
   --cyan: #17a2b8;
@@ -82,7 +82,7 @@
   }
 }
 
-@keyframes subtlePulse {
+@keyframes pulse {
   0% {
     transform: scale(1);
   }
@@ -94,21 +94,21 @@
   }
 }
 
-@keyframes subtlePulseComb {
+@keyframes subtlePulse {
   0% {
     transform: scale(1);
-    filter: drop-shadow(0 0 2px rgba(197, 75, 140, 0.4))
-      drop-shadow(0 0 4px rgba(188, 60, 216, 0.3));
+    filter: drop-shadow(0 0 2px rgba(253, 126, 20, 0.5))
+      drop-shadow(0 0 4px rgba(255, 193, 7, 0.4));
   }
   50% {
     transform: scale(1.01);
-    filter: drop-shadow(0 0 8px rgba(197, 75, 140, 0.5))
-      drop-shadow(0 0 10px rgba(188, 60, 216, 0.4));
+    filter: drop-shadow(0 0 8px rgba(253, 126, 20, 0.6))
+      drop-shadow(0 0 10px rgba(255, 193, 7, 0.5));
   }
   100% {
     transform: scale(1);
-    filter: drop-shadow(0 0 4px rgba(197, 75, 140, 0.4))
-      drop-shadow(0 0 6px rgba(188, 60, 216, 0.3));
+    filter: drop-shadow(0 0 4px rgba(253, 126, 20, 0.4))
+      drop-shadow(0 0 6px rgba(255, 193, 7, 0.3));
   }
 }
 
