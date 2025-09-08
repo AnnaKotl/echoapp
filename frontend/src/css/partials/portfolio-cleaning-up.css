@@ -192,6 +192,9 @@ for PLANNING sections */
     max-width: 400px;
     margin: 20px auto;
   }
+  .cleaning-challenges-title {
+    text-align: center;
+  }
 }
 /*  */
 
@@ -261,11 +264,9 @@ for PLANNING sections */
 .technology-items li {
   background: rgba(255, 255, 255, 0.09);
   border-radius: 12px;
-  padding: clamp(14px, 10vw, 24px);
-  /* height: 100%; */
-
-  height: fit-content;
-  max-height: 100%;
+  padding: clamp(10px, 10vw, 24px);
+  /* height: fit-content; */
+  height: 100%;
 }
 .technology-decorate {
   font-weight: 600;
@@ -283,6 +284,11 @@ for PLANNING sections */
   }
   .technology-items li {
     height: 100%;
+  }
+}
+@media (max-width: 500px) {
+  .technology-items {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 /*  */
@@ -788,12 +794,16 @@ TABLES:
     justify-content: center;
     align-items: start;
     gap: 60px;
-    margin-left: 50px;
   }
   .clients-item,
   .cleaners-item {
     max-width: 100%;
     padding-left: 10px;
+  }
+}
+@media (max-width: 1023px) {
+  .tables-wrapp {
+    margin-left: clamp(30px, 5vw, 50px);
   }
 }
 /* -----> */
@@ -935,11 +945,11 @@ Prototype:
     min-height: 746px;
   }
   .blur-bg-left {
-    top: 25%;
+    top: 35%;
     left: -10%;
   }
   .blur-bg-right {
-    top: 25%;
+    top: 35%;
     right: -20%;
   }
 }
