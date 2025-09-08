@@ -223,10 +223,14 @@ button {
   letter-spacing: 0.04em;
   text-transform: uppercase;
   font-weight: 400;
-  border: 1px solid var(--border-color);
   border-radius: 100px;
   color: var(--light);
   transition: all var(--standart-tr-cubic);
+  border: 1px solid transparent;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  animation: gradientFlow 5s infinite linear;
+  margin: 2px 0;
   /* large -  
   font-size: 26px;
   padding: 8px 30px; 
@@ -245,8 +249,17 @@ button {
 }
 .standart-button:is(:hover, :focus) {
   outline: none;
-  background: linear-gradient(99.05deg, #bc3cd8 0.07%, #c54b8c 106.32%);
-  border: 1px solidvar(--light);
+  background: linear-gradient(
+    300deg,
+    #ffc107 20%,
+    #e83e8c 50%,
+    #007bff 70%,
+    #20f3dd 90%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: var(--light);
 }
 /* BUTTON  ||*/
 .neon-btn {
@@ -264,8 +277,8 @@ button {
 
   background: linear-gradient(
     300deg,
-    #ffc107 20%,
-    #e83e8c 50%,
+    #ffc107 10%,
+    #e83e8c 40%,
     #007bff 70%,
     #20f3dd 90%
   );
