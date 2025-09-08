@@ -51,7 +51,7 @@ const htmlContent = `
         padding: 20px;
       }
       .container {
-        max-width: 600px;
+        max-width: 800px;
         margin: auto;
         background-color: #ffffff;
         border-radius: 10px;
