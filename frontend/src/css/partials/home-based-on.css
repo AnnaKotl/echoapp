@@ -51,7 +51,7 @@
 .based-on-item {
   aspect-ratio: 4 / 3;
   height: auto;
-  padding: clamp(10px, 5vw, 20px);
+  padding: clamp(10px, 5vw, 30px);
   border-radius: 12px;
   transition: all var(--standart-tr-cubic);
   border: 1px solid transparent;
