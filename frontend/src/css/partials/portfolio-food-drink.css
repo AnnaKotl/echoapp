@@ -36,7 +36,7 @@ Screens
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 1100px;
+  height: clamp(800px, 5vw, 1100px);
   padding-bottom: 60px;
 }
 
@@ -49,4 +49,31 @@ Prototype
   background-size: cover;
   background-repeat: no-repeat;
   height: 649px;
+}
+
+.food-left-bg-img,
+.food-right-bg-img {
+  position: absolute;
+  pointer-events: none;
+  z-index: -1;
+  height: 100%;
+  width: 33%;
+}
+
+.food-left-bg-img {
+  top: 0;
+  left: 0;
+  background: url('/images/portfolio/3-left.svg');
+  background-position: center left;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.food-right-bg-img {
+  top: 0;
+  right: 0;
+  background: url('/images/portfolio/3-right.svg');
+  background-position: center right;
+  background-size: cover;
+  background-repeat: no-repeat;
 }

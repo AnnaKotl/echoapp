@@ -5,7 +5,7 @@
   border: 1px solid #ffffff;
 
   font-weight: 600;
-  font-size: clamp(16px, 10vw, 24px);
+  font-size: clamp(16px, 5vw, 24px);
 }
 
 .flex-section-container,
@@ -134,7 +134,7 @@ for PLANNING sections */
 }
 .planning-title {
   font-weight: 600;
-  font-size: clamp(26px, 10vw, 40px);
+  font-size: clamp(26px, 5vw, 40px);
   letter-spacing: 0;
   margin-bottom: clamp(20px, 10vw, 40px);
 }
@@ -231,7 +231,7 @@ for PLANNING sections */
 }
 .features-decorate {
   font-weight: 600;
-  font-size: clamp(12px, 10vw, 16px);
+  font-size: clamp(12px, 5vw, 16px);
   line-height: 1.5;
   letter-spacing: 0.04em;
 
@@ -270,7 +270,7 @@ for PLANNING sections */
 }
 .technology-decorate {
   font-weight: 600;
-  font-size: clamp(12px, 10vw, 16px);
+  font-size: clamp(12px, 5vw, 16px);
   line-height: 1.5;
   letter-spacing: 0.04em;
   text-align: left;
@@ -298,7 +298,7 @@ ALL components
 HERO: 
 */
 .pages-hero-title {
-  font-size: clamp(30px, 10vw, 70px);
+  font-size: clamp(30px, 5vw, 70px);
   color: var(--light);
 }
 
@@ -324,7 +324,7 @@ HERO:
 }
 
 .pages-main-text {
-  font-size: clamp(12px, 10vw, 18px);
+  font-size: clamp(12px, 5vw, 18px);
   color: var(--light);
   margin-top: 12px;
 }
@@ -833,12 +833,16 @@ Screens:
   pointer-events: none;
 }
 @media (max-width: 767px) {
-  .cleaning-screens {
+  .cleaning-screens,
+  .commerce-screens,
+  .food-screens {
     height: clamp(400px, 5vw, 600px);
   }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
-  .cleaning-screens {
+  .cleaning-screens,
+  .commerce-screens,
+  .food-screens {
     height: clamp(600px, 5vw, 800px);
   }
 }
