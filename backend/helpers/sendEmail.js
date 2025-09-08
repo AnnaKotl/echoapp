@@ -101,37 +101,37 @@ const htmlContent = `
       <h1>📩 New contact request from echocode.app</h1>
 
       <div class="field-card">
-        <span class="label">1️⃣ Name:</span>
+        <span class="label">Name:</span>
         <span class="value">${name}</span>
       </div>
 
       <div class="field-card">
-        <span class="label">2️⃣ Email:</span>
+        <span class="label">Email:</span>
         <span class="value">${email}</span>
       </div>
 
       <div class="field-card">
-        <span class="label">3️⃣ Mobile Number:</span>
+        <span class="label">Mobile Number:</span>
         <span class="value">${mobileNumber}</span>
       </div>
 
       <div class="field-card">
-        <span class="label">4️⃣ Social Network:</span>
+        <span class="label">Social Network:</span>
         <span class="value">${socialNetwork || '➖'}</span>
       </div>
 
       <div class="field-card">
-        <span class="label">5️⃣ Country:</span>
+        <span class="label">Country:</span>
         <span class="value">${country}</span>
       </div>
 
       <div class="field-card">
-        <span class="label">6️⃣ Selected Service:</span>
+        <span class="label">Selected Service:</span>
         <span class="value">${selectedService}</span>
       </div>
 
       <div class="field-card">
-        <span class="label">7️⃣ Message:</span>
+        <span class="label">Message:</span>
         <span class="value">${message || '➖'}</span>
       </div>
 
