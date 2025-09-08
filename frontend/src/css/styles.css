@@ -98,17 +98,17 @@
   0% {
     transform: scale(1);
     filter: drop-shadow(0 0 2px rgba(253, 126, 20, 0.5))
-      drop-shadow(0 0 4px rgba(255, 193, 7, 0.4));
+      drop-shadow(0 0 4px rgba(188, 60, 216, 0.4));
   }
   50% {
     transform: scale(1.01);
     filter: drop-shadow(0 0 8px rgba(253, 126, 20, 0.6))
-      drop-shadow(0 0 10px rgba(255, 193, 7, 0.5));
+      drop-shadow(0 0 10px rgba(188, 60, 216, 0.5));
   }
   100% {
     transform: scale(1);
     filter: drop-shadow(0 0 4px rgba(253, 126, 20, 0.4))
-      drop-shadow(0 0 6px rgba(255, 193, 7, 0.3));
+      drop-shadow(0 0 6px rgba(188, 60, 216, 0.3));
   }
 }
 
@@ -231,21 +231,6 @@ button {
   backdrop-filter: blur(10px);
   animation: gradientFlow 5s infinite linear;
   margin: 2px 0;
-  /* large -  
-  font-size: 26px;
-  padding: 8px 30px; 
-  is(:hover, :focus) - padding: 8px 36px;
-  */
-  /* medium - 
-  font-size: 20px;
-  padding: 8px 16px;
-  is(:hover, :focus) - padding: 8px 26px; 
-  */
-  /* normal - 
-  font-size: 16px;
-  padding: 8px 16px;
-  is(:hover, :focus) - padding: 8px 26px; ~
-  */
 }
 .standart-button:is(:hover, :focus) {
   outline: none;

@@ -395,6 +395,7 @@ HERO:
   max-width: 170px;
   width: 100%;
   overflow: hidden;
+  transition: all var(--standart-tr-cubic);
 }
 
 .portfolio-button:hover,
@@ -407,7 +408,7 @@ HERO:
   fill: currentColor;
   width: 24px;
   height: 24px;
-  transition: all 0.1s ease;
+  transition: all 0.2s ease;
 }
 
 .icon-false {
