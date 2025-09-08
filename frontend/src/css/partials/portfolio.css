@@ -218,6 +218,13 @@ with
 TEXT 
 TITLE
 */
+.left-title-hero {
+  text-transform: none;
+  font-size: clamp(40px, 7vw, 56px);
+  letter-spacing: -0.02em;
+  margin-bottom: clamp(20px, 10vw, 40px);
+}
+
 .portfolio-title {
   font-size: clamp(40px, 10vw, 56px);
 }
@@ -254,6 +261,7 @@ TITLE
 .portfolio-upper-text {
   text-transform: uppercase;
 }
+
 /*  */
 
 /* 
@@ -281,7 +289,7 @@ HERO:
 }
 
 .portfolio-hero-text {
-  font-size: clamp(40px, 10vw, 56px);
+  font-size: clamp(36px, 5vw, 56px);
   margin-top: clamp(30px, 5vw, 60px);
   letter-spacing: 0.06em;
   color: var(--border-color);
