@@ -84,12 +84,10 @@
   .mob-img {
     max-width: 100%;
   }
-  
 
   .no-transform-h2-title {
-margin-left: auto;
-margin-right: auto;
-
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -764,8 +762,7 @@ TABLES:
 .table-clients {
   /* clients */
   background-color: var(--clients);
-  min-width: 210px;
-  max-width: 220px;
+  width: fit-content;
 }
 .clients-item {
   max-width: 420px;
@@ -776,8 +773,7 @@ TABLES:
 .table-cleaners {
   /* cleaners */
   background-color: var(--cleaners);
-  min-width: 245px;
-  max-width: 250px;
+  width: fit-content;
 }
 .cleaners-item {
   max-width: 485px;
@@ -792,6 +788,7 @@ TABLES:
     justify-content: center;
     align-items: start;
     gap: 60px;
+    margin-left: 50px;
   }
   .clients-item,
   .cleaners-item {
@@ -850,12 +847,67 @@ Prototype:
   margin-bottom: 40px;
 }
 
-.cleaning-proto {
-  background: url('/images/portfolio/proto-bg-1.svg');
-  background-position: center;
+.prototype-reletive {
+  position: relative;
+  min-height: 780px;
+}
+
+.left-bg-img,
+.right-bg-img {
+  position: absolute;
+  pointer-events: none;
+  z-index: -1;
+  height: 100%;
+  width: 33%;
+}
+.left-bg-img {
+  top: 0;
+  left: 0;
+  background: url('/images/portfolio/1-left.svg');
+  background-position: center left;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 746px;
+}
+.right-bg-img {
+  top: 0;
+  right: 0;
+  background: url('/images/portfolio/1-right.svg');
+  background-position: center right;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.blur-bg-relative {
+  position: relative;
+  overflow: hidden;
+}
+.blur-bg-right,
+.blur-bg-left {
+  position: absolute;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+
+  filter: blur(125px);
+  width: 500px;
+  height: 500px;
+  opacity: 0.8;
+}
+.blur-bg-left {
+  top: 25%;
+  left: -5%;
+  background: image-set(url('/images/bg-icon.png') 1x);
+  background-position: center left;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.blur-bg-right {
+  top: 25%;
+  right: -5%;
+  background: image-set(url('/images/bg-icon.png') 1x);
+  background-position: center right;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .prototype {
@@ -868,5 +920,26 @@ Prototype:
   border: none;
   margin: 0;
   padding: 0;
+  z-index: 2;
+  min-height: 747px;
 }
-/*  */
+
+@media (max-width: 767px) {
+  .blur-bg-right,
+  .blur-bg-left {
+    display: none;
+  }
+}
+@media (max-width: 1250px) {
+  .prototype-reletive {
+    min-height: 746px;
+  }
+  .blur-bg-left {
+    top: 25%;
+    left: -10%;
+  }
+  .blur-bg-right {
+    top: 25%;
+    right: -20%;
+  }
+}
