@@ -85,6 +85,18 @@
 @keyframes subtlePulse {
   0% {
     transform: scale(1);
+  }
+  50% {
+    transform: scale(1.01);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes subtlePulseComb {
+  0% {
+    transform: scale(1);
     filter: drop-shadow(0 0 2px rgba(197, 75, 140, 0.4))
       drop-shadow(0 0 4px rgba(188, 60, 216, 0.3));
   }
@@ -346,9 +358,10 @@ button {
     bottom: 15px;
     right: 6px;
     padding: 10px;
-  }.scroll-icon {
-  background: var(--bgc-grey);
-}
+  }
+  .scroll-icon {
+    background: var(--bgc-grey);
+  }
 }
 /* / */
 
