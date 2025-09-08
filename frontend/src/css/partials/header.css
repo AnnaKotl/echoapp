@@ -80,10 +80,17 @@
 }
 
 .nav-link:not(.active):is(:hover, :focus) {
-  background: linear-gradient(99.05deg, #bc3cd8 0.07%, #c54b8c 106.32%);
+  background: linear-gradient(
+    300deg,
+    #ffc107 20%,
+    #e83e8c 50%,
+    #007bff 70%,
+    #20f3dd 90%
+  );
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: var(--accent-color);
 }
 
 .nav-link:not(.active):is(:hover, :focus)::after {
@@ -147,7 +154,7 @@
     backdrop-filter: blur(30px);
     border-color: rgba(255, 255, 255, 0.1);
     border-radius: 30px;
-    min-height: 240px; 
+    min-height: 240px;
     /* min-height: 40%;  */
     max-width: 90%;
     margin-top: 10px;

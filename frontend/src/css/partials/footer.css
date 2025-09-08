@@ -9,7 +9,7 @@
   align-items: center;
   max-width: 1640px;
   margin: 0 auto;
-  padding: 0 30px;
+  padding: 0 30px 10px;
   min-height: 180px;
 }
 .footer-nav {
@@ -20,12 +20,12 @@
 .footer-flex-wrapp {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 12px;
 }
 .footer-list {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 10px;
 }
 .footer-title {
   font-weight: 300;

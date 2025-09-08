@@ -261,8 +261,18 @@ button {
 }
 .neon-btn:is(:hover, :focus) {
   outline: none;
-  color: var(--accent-secondary);
-  background-color: var(--bgc-grey);
+
+  background: linear-gradient(
+    300deg,
+    #ffc107 20%,
+    #e83e8c 50%,
+    #007bff 70%,
+    #20f3dd 90%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: var(--accent-color);
 }
 .large-btn {
   font-size: clamp(20px, 7vw, 30px);
