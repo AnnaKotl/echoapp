@@ -943,6 +943,10 @@ Prototype:
   .blur-bg-left {
     display: none;
   }
+.figma-prototype {
+  max-width: 300px;
+  height: auto;
+}
 }
 @media (max-width: 1250px) {
   .prototype-reletive {

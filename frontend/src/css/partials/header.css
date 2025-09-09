@@ -161,7 +161,6 @@
     backdrop-filter: blur(30px);
     border-color: rgba(255, 255, 255, 0.1);
     border-radius: 30px;
-    /* min-height: 240px; */
     min-height: 50%;
     max-width: 90%;
     margin-top: 10px;
