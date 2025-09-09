@@ -910,7 +910,7 @@ Prototype:
 .blur-bg-left {
   top: 25%;
   left: -5%;
-  background: image-set(url('/images/bg-icon.png') 1x);
+  background: var(--bg-img);
   background-position: center left;
   background-size: cover;
   background-repeat: no-repeat;
@@ -918,7 +918,7 @@ Prototype:
 .blur-bg-right {
   top: 25%;
   right: -5%;
-  background: image-set(url('/images/bg-icon.png') 1x);
+  background: var(--bg-img);
   background-position: center right;
   background-size: cover;
   background-repeat: no-repeat;

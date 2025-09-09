@@ -1,20 +1,11 @@
 import { fetchProductIcons, clearCache } from '/js/api/api';
 
-const checkImageExists = async (url) => {
-  try {
-    const res = await fetch(url, { method: 'HEAD' });
-    return res.ok;
-  } catch {
-    return false;
-  }
-};
-
 const renderProductIcons = async () => {
   const productsWrap = document.querySelector('.products-wrap');
+  if (!productsWrap) return;
 
   try {
     const icons = await fetchProductIcons();
-
     if (!icons.length) {
       productsWrap.innerHTML = `<p class="error-message">No product icons found.</p>`;
       return;
@@ -22,19 +13,9 @@ const renderProductIcons = async () => {
 
     productsWrap.innerHTML = '';
 
-    const validIcons = [];
-    for (const icon of icons) {
-      const exists = await checkImageExists(icon.url);
-      if (exists) validIcons.push(icon);
-    }
-
-    if (!validIcons.length) {
-      validIcons.push({ url: '/images/logo/icon-transp.png', name: 'placeholder' });
-    }
-
     const rowsCount = 4;
-    const iconsPerRow = Math.ceil(validIcons.length / rowsCount);
-    const shuffledIcons = validIcons.sort(() => Math.random() - 0.5);
+    const iconsPerRow = Math.ceil(icons.length / rowsCount);
+    const shuffledIcons = icons.sort(() => Math.random() - 0.5);
 
     for (let rowIndex = 0; rowIndex < rowsCount; rowIndex++) {
       const rowContainer = document.createElement('div');
@@ -51,9 +32,7 @@ const renderProductIcons = async () => {
         const item = document.createElement('div');
         item.classList.add('products-item');
 
-        const img = document.createElement('img');
-        img.src = icon.url;
-        img.alt = icon.name || 'Product Icon';
+        const img = createImage(icon);
         item.appendChild(img);
 
         rowContainer.appendChild(item);
@@ -78,9 +57,37 @@ const renderProductIcons = async () => {
   }
 };
 
+// ✅ Lazy-load
+export function initProductIcons() {
+  const productsWrap = document.querySelector('.products-wrap');
+  if (!productsWrap) return;
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        renderProductIcons();
+        observer.unobserve(productsWrap);
+      }
+    });
+  }, { rootMargin: '200px 0px', threshold: 0.1 });
+
+  observer.observe(productsWrap);
+}
+
 renderProductIcons();
 
 export const refreshProductIcons = async () => {
   clearCache('productIcons');
   await renderProductIcons();
 };
+
+function createImage(icon) {
+  const img = document.createElement('img');
+  img.src = icon.url;
+  img.alt = icon.name || 'Product Icon';
+  img.loading = 'lazy';
+  img.onerror = () => {
+    img.src = '/images/logo/icon-transp.png';
+  };
+  return img;
+}

@@ -4,6 +4,9 @@
   --clients: rgba(24, 232, 236, 1);
   --cleaners: rgba(176, 254, 255, 1);
   --black: rgba(24, 24, 24, 1);
+  --bg-icon-1: url('/images/portfolio/cleaners/Untitled-1-top.svg');
+  --bg-icon-2: url('/images/portfolio/cleaners/Untitled-1-bottom.svg');
+  --bg-img: url('/images/bg-icon.png');
 }
 
 /*  
@@ -77,45 +80,34 @@ CONTAINER
   z-index: -1;
   width: 635px;
   height: 635px;
-  /* width: clamp(400px, 5vw, 635px);
-  height: clamp(400px, 5vw, 635px); */
 }
 /* ✨
-  <div class="bg-portfolio-img-left"></div>
-with 
-  class - bg-reletive-wrapp
 */
 .bg-portfolio-img-left {
   bottom: -3%;
   left: 2%;
-  background: url('/images/portfolio/cleaners/Untitled-1-top.svg');
+  background: var(--bg-icon-1);
   background-position: bottom left;
   background-size: cover;
   background-repeat: no-repeat;
 }
-/* ✨ 
-  <div class="bg-portfolio-img-right"></div> 
-with 
-  bg-reletive-wrapp
+/* ✨
 */
 .bg-portfolio-img-right {
   bottom: 0;
   right: 0;
-  background: url('/images/portfolio/cleaners/Untitled-1-bottom.svg');
+  background: var(--bg-icon-2);
   background-position: bottom right;
   background-size: cover;
   background-repeat: no-repeat;
 }
 /* ✨ 
-   <div class="bg-portfolio-img-left-rotate"></div>
-with 
-  bg-reletive-wrapp
 */
 .commerce-left-rotate {
   transform: rotate(180deg);
   bottom: -15%;
   left: 0;
-  background: url('/images/portfolio/cleaners/Untitled-1-bottom.svg');
+  background: var(--bg-icon-2);
   background-position: bottom left;
   background-size: cover;
   background-repeat: no-repeat;
@@ -124,7 +116,7 @@ with
   transform: rotate(180deg);
   bottom: -5%;
   left: 0;
-  background: url('/images/portfolio/cleaners/Untitled-1-bottom.svg');
+  background: var(--bg-icon-2);
   background-position: bottom left;
   background-size: cover;
   background-repeat: no-repeat;
@@ -171,43 +163,34 @@ with
   height: 814px;
 }
 /* 🔺 
-  <div class="bg-icon-blur-left"></div>
-with 
-  class - bg-blur-wrapp 
 */
 .bg-icon-blur-left {
   position: absolute;
   top: 5%;
   left: -30%;
-  background: image-set(url('/images/bg-icon.png') 1x);
+  background: var(--bg-img);
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
 }
-/* 🔺
-  <div class="bg-icon-blur-right"></div> 
-with 
-  class - bg-blur-wrapp 
+/* 🔺 
 */
 .bg-icon-blur-right {
   position: absolute;
   top: -10%;
   right: 0;
-  background: image-set(url('/images/bg-icon.png') 1x);
+  background: var(--bg-img);
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
 }
 /* 🔺
-  <div class="bg-icon-blur-center"></div>
-with 
-  class - bg-blur-wrapp 
 */
 .bg-icon-blur-center {
   position: absolute;
   bottom: 0;
   right: 0;
-  background: image-set(url('/images/bg-icon.png') 1x);
+  background: var(--bg-img);
   background-position: bottom right;
   background-size: contain;
   background-repeat: no-repeat;
