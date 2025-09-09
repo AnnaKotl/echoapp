@@ -43,7 +43,6 @@ export function renderServices(services) {
           </div>
 
           <div class="order-container">
-            <p class="price">${service.price}</p>
             <button type="button" class="order-btn js-open-modal normal-btn neon-btn" data-service="${service.name}">Order</button>
           </div>
         </div>
@@ -52,3 +51,6 @@ export function renderServices(services) {
 
   container.innerHTML = servicesHTML;
 }
+
+
+// <p class="price">${service.price}</p>
