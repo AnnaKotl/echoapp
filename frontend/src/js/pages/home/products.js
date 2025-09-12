@@ -55,6 +55,8 @@ const renderProductIcons = async () => {
     const iconsPerRow = Math.ceil(validIcons.length / rowsCount);
     const shuffledIcons = validIcons.sort(() => Math.random() - 0.5);
 
+    const isMobile = window.matchMedia("(max-width: 768px)").matches;
+
     for (let rowIndex = 0; rowIndex < rowsCount; rowIndex++) {
       const rowContainer = document.createElement('div');
       rowContainer.classList.add('products-row');
@@ -64,7 +66,9 @@ const renderProductIcons = async () => {
         (rowIndex + 1) * iconsPerRow
       );
 
-      const iconsWithClones = [...rowIcons, ...rowIcons, ...rowIcons, ...rowIcons];
+      const iconsWithClones = isMobile 
+        ? [...rowIcons] 
+        : [...rowIcons, ...rowIcons, ...rowIcons, ...rowIcons];
 
       iconsWithClones.forEach(icon => {
         const item = document.createElement('div');
