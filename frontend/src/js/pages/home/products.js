@@ -67,7 +67,7 @@ const renderProductIcons = async () => {
       );
 
       const iconsWithClones = isMobile 
-        ? [...rowIcons] 
+        ? [...rowIcons, ...rowIcons] 
         : [...rowIcons, ...rowIcons, ...rowIcons, ...rowIcons];
 
       iconsWithClones.forEach(icon => {
