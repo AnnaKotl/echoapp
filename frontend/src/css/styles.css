@@ -1,4 +1,4 @@
-@import 'normalize.css';
+@import "modern-normalize/modern-normalize.css";
 
 @import url('./partials/home-based-on.css');
 @import url('./partials/home-career.css');
