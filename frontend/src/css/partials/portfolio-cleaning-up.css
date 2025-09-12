@@ -873,6 +873,7 @@ Prototype:
   z-index: -1;
   height: 100%;
   width: 33%;
+  overflow: hidden;
 }
 .left-bg-img {
   top: 0;
@@ -893,34 +894,33 @@ Prototype:
 
 .blur-bg-relative {
   position: relative;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 .blur-bg-right,
 .blur-bg-left {
   position: absolute;
-  /* overflow: hidden; */
   pointer-events: none;
   z-index: 1;
-
   filter: blur(125px);
   width: 500px;
   height: 500px;
   opacity: 0.8;
+  overflow: hidden;
 }
 .blur-bg-left {
   top: 25%;
-  left: -5%;
+  left: 0;
   background: var(--bg-img);
   background-position: center left;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
 }
 .blur-bg-right {
   top: 25%;
-  right: -5%;
+  right: 0;
   background: var(--bg-img);
   background-position: center right;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
 }
 

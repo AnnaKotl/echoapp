@@ -1,0 +1,127 @@
+/* normalize */
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* root variables */
+:root {
+  --light: rgb(227, 228, 230);
+  --accent-color: rgb(197, 75, 140);
+  --neon: rgba(32, 243, 221, 1);
+  --bgc: #010101;
+  --text-standart-line-height: 1.1;
+  --standart-tr-cubic: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+  font-family: 'Work Sans', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  letter-spacing: 0.02em;
+  color: var(--light);
+  background-color: var(--bgc);
+  overflow-x: hidden;
+}
+
+/* typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.5;
+  margin: 0;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--light);
+}
+h1 {
+  font-size: 56px;
+  letter-spacing: -0.02em;
+}
+h2 {
+  font-size: 40px;
+}
+h3 {
+  font-size: 32px;
+}
+h4 {
+  font-size: 24px;
+  letter-spacing: 0.06em;
+}
+h5 {
+  font-size: 16px;
+  letter-spacing: 0.04em;
+}
+p,
+a {
+  margin: 0;
+  line-height: var(--text-standart-line-height);
+  letter-spacing: 0.04em;
+}
+p {
+  margin: 0;
+  line-height: var(--text-standart-line-height);
+  letter-spacing: 0.04em;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+  line-height: var(--text-standart-line-height);
+  outline: none;
+  letter-spacing: 0.04em;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+img {
+  display: block;
+}
+button {
+  text-transform: uppercase;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
+/* containers and layout */
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding-left: clamp(20px, 5vw, 110px);
+  padding-right: clamp(20px, 5vw, 110px);
+  overflow: hidden;
+}
+.section {
+  padding-bottom: clamp(90px, 5vw, 112px);
+}
+
+/* responsive container */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    max-width: 960px;
+    padding: 0 40px;
+  }
+}
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1440px;
+    padding: 0 110px;
+  }
+}

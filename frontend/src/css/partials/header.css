@@ -61,7 +61,7 @@
   text-transform: uppercase;
   color: var(--light);
   font-size: clamp(14px, 5vw, 18px);
-  font-weight: 500;
+  font-weight: 600;
   padding: 10px clamp(16px, 5vw, 26px);
   text-align: center;
   transition: all var(--standart-tr-cubic);
