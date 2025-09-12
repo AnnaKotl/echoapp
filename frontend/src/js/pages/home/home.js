@@ -6,11 +6,11 @@ import { fetchServices } from '/js/api/api';
 import { cloneListItems } from '/js/pages/home/clone-items';
 import { activateAdvantages } from '/js/pages/home/team-slider';
 
-document.addEventListener('DOMContentLoaded', () => {
-  // 💸 
-  fetchServices();
+document.addEventListener('DOMContentLoaded', () => {  
   // 📲 
   cloneListItems('running-list', '.running-item', 10);
+  // 💸 
+  fetchServices();
   // 👩🏻‍💻👨🏼‍💻 
   activateAdvantages();
 });

@@ -119,7 +119,12 @@ export async function fetchProductIcons() {
     
     const { icons } = await response.json();
 
-    const validIcons = icons.filter(icon => icon.url && icon.url.trim() !== '');
+    const validIcons = icons
+      .filter(icon => icon.url && icon.url.trim() !== '')
+      .map(icon => ({
+        ...icon,
+        url: icon.url.replace(/\.(svg|png|jpg|jpeg)$/, '.webp')
+      }));
 
     setCachedData('productIcons', validIcons);
     return validIcons;
@@ -127,6 +132,14 @@ export async function fetchProductIcons() {
     console.error('Error fetching product icons:', error);
     return [];
   }
+}
+
+export async function fetchCachedProductIcons() {
+  const cached = getCachedData('productIcons');
+  if (cached) return cached;
+
+  const icons = await fetchProductIcons();
+  return icons;
 }
 // 🎆 /
 

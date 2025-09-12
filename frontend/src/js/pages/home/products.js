@@ -1,11 +1,22 @@
-import { fetchProductIcons, clearCache } from '/js/api/api';
+import { fetchCachedProductIcons, clearCache } from '/js/api/api';
+
+const productsWrap = document.querySelector('.products-wrap');
+if (!productsWrap) console.warn('No .products-wrap container found');
+
+const createImage = (icon) => {
+  const img = document.createElement('img');
+  img.src = icon.url;
+  img.alt = icon.name || 'Product Icon';
+  img.loading = 'lazy';
+  img.onerror = () => { img.src = '/images/logo/icon-transp.png'; };
+  return img;
+};
 
 const renderProductIcons = async () => {
-  const productsWrap = document.querySelector('.products-wrap');
   if (!productsWrap) return;
 
   try {
-    const icons = await fetchProductIcons();
+    const icons = await fetchCachedProductIcons();
     if (!icons.length) {
       productsWrap.innerHTML = `<p class="error-message">No product icons found.</p>`;
       return;
@@ -31,10 +42,7 @@ const renderProductIcons = async () => {
       iconsWithClones.forEach(icon => {
         const item = document.createElement('div');
         item.classList.add('products-item');
-
-        const img = createImage(icon);
-        item.appendChild(img);
-
+        item.appendChild(createImage(icon));
         rowContainer.appendChild(item);
       });
 
@@ -57,9 +65,7 @@ const renderProductIcons = async () => {
   }
 };
 
-// ✅ Lazy-load
 export function initProductIcons() {
-  const productsWrap = document.querySelector('.products-wrap');
   if (!productsWrap) return;
 
   const observer = new IntersectionObserver(entries => {
@@ -74,20 +80,9 @@ export function initProductIcons() {
   observer.observe(productsWrap);
 }
 
-renderProductIcons();
-
 export const refreshProductIcons = async () => {
   clearCache('productIcons');
   await renderProductIcons();
 };
 
-function createImage(icon) {
-  const img = document.createElement('img');
-  img.src = icon.url;
-  img.alt = icon.name || 'Product Icon';
-  img.loading = 'lazy';
-  img.onerror = () => {
-    img.src = '/images/logo/icon-transp.png';
-  };
-  return img;
-}
+renderProductIcons();
