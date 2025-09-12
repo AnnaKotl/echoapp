@@ -30,7 +30,7 @@
   margin-bottom: 30px;
 }
 
-#admin-login-form input[type="password"] {
+#admin-login-form input[type='password'] {
   width: 100%;
   padding: 10px 30px;
 
@@ -45,7 +45,7 @@
   animation: gradientFlowBased 3s infinite linear;
 }
 
-#admin-login-form input[type="password"]:focus {
+#admin-login-form input[type='password']:focus {
   outline: none;
 }
 
@@ -82,7 +82,7 @@
   color: var(--red);
   padding: 0 30px 30px;
   opacity: 0.7;
-   display: none;
+  display: none;
 }
 /* / login form */
 
@@ -309,13 +309,31 @@
 
 /* /🩻 Upload Icon  */
 
+.admin-footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 .admin-footer-wrapp {
   display: flex;
   gap: 10px;
   align-items: center;
-  justify-content: space-between;
+  justify-content: start;
 }
-
+.admin-footer-text-wrapp {
+  display: flex;
+  flex-direction: column;
+  align-items: first baseline;
+  gap: 10px;
+}
+.admin-footer-container .footer-text {
+  font-size: 12px;
+  font-weight: 200;
+}
+.admin-footer-text-wrapp .footer-text {
+  font-size: 12px;
+  font-weight: 200;
+}
 .admin-footer-link {
   color: var(--light);
   padding: 10px;
@@ -339,32 +357,32 @@
   #admin-login-container {
     padding: 10px;
     height: 80vh;
-}
-#admin-login-form {
-  font-size: 20px;
-  padding: 10px;
-  border-radius: 30px;
-  max-width: 400px;
-}
-#admin-login-form input[type="password"] {
-  width: 100%;
-  padding: 10px;
-  font-size: 20px;
-}
-#admin-login-form button {
-  padding: 10px 20px;
-  font-size: 16px;
-}
-.a-login-error {
-  font-size: 16px;
-  color: var(--red);
-  padding: 0 20px 20px;
-  opacity: 0.7;
-}
-.a-form-subtitle {
-  font-size: 20px;
-  margin-bottom: 20px;
-}
+  }
+  #admin-login-form {
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 30px;
+    max-width: 400px;
+  }
+  #admin-login-form input[type='password'] {
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+  }
+  #admin-login-form button {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+  .a-login-error {
+    font-size: 16px;
+    color: var(--red);
+    padding: 0 20px 20px;
+    opacity: 0.7;
+  }
+  .a-form-subtitle {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
   .admin-container {
     padding: 0 16px;
   }

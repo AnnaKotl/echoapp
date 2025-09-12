@@ -3,10 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <!-- FAVICON -->
-    <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/png" href="/favicon/favicon-32x32.png" sizes="32x32" />
-    <link rel="icon" type="image/png" href="/favicon/favicon-16x16.png" sizes="16x16" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/favicon/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/favicon/favicon-32x32.png"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/favicon/favicon-16x16.png"
+      sizes="16x16"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/favicon/apple-icon-180x180.png"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>echocode</title>
 
@@ -17,15 +36,11 @@
       href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;0,600;1,400;1,600&display=swap"
       rel="stylesheet"
     />
-
     <!-- CRITICAL CSS -->
-    <link rel="preload" href="/css/critical.css" as="style" />
     <link rel="stylesheet" href="/css/critical.css" />
 
     <!-- MAIN STYLES -->
-    <link rel="preload" href="/css/styles.css" as="style" />
-    <link rel="stylesheet" href="/css/styles.css" media="print" onload="this.media='all'" />
-    <noscript><link rel="stylesheet" href="/css/styles.css" /></noscript>
+    <link rel="stylesheet" href="/css/styles.css" />
   </head>
   <body>
     <main>
@@ -66,8 +81,8 @@
     <!-- FOOTER -->
     <footer class="admin-section">
       <div class="footer-section admin-container">
-        <div class="footer-container">
-          <footer><span id="year" class="footer-text"></span></footer>
+        <div class="admin-footer-container">
+          <span id="year" class="footer-text"></span>
           <a
             href="https://www.google.com/maps?q=50.4501,30.5234"
             target="_blank"
@@ -76,11 +91,15 @@
           >
             Kyiv - Ukraine
           </a>
-          <p class="footer-text">Admin panel page for the Echocode product.</p>
-          <p class="footer-text">
-            If you have any questions or ideas, feel free to contact the website
-            developer:
-          </p>
+          <div class="admin-footer-text-wrapp">
+            <p class="footer-text">
+              Admin panel page for the Echocode product.
+            </p>
+            <p class="footer-text">
+              If you have any questions or ideas, feel free to contact the
+              website developer:
+            </p>
+          </div>
           <div class="admin-footer-wrapp">
             <a
               href="https://github.com/AnnaKotl"

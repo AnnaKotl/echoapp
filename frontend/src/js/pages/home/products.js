@@ -3,6 +3,15 @@ import { fetchCachedProductIcons, clearCache } from '/js/api/api';
 const productsWrap = document.querySelector('.products-wrap');
 if (!productsWrap) console.warn('No .products-wrap container found');
 
+const checkImageExists = async (url) => {
+  try {
+    const res = await fetch(url, { method: 'HEAD' });
+    return res.ok;
+  } catch {
+    return false;
+  }
+};
+
 const createImage = (icon) => {
   const img = document.createElement('img');
   img.src = icon.url;
@@ -18,15 +27,33 @@ const renderProductIcons = async () => {
   try {
     const icons = await fetchCachedProductIcons();
     if (!icons.length) {
-      productsWrap.innerHTML = `<p class="error-message">No product icons found.</p>`;
+      productsWrap.innerHTML = `<p class="error-message">Sorry, we couldn't load the product icons right now 😕<br>Please check back shortly!</p>`;
       return;
+    }
+
+    const uniqueIconsMap = new Map();
+    for (const icon of icons) {
+      if (icon.url && !uniqueIconsMap.has(icon.url)) {
+        uniqueIconsMap.set(icon.url, icon);
+      }
+    }
+    const uniqueIcons = Array.from(uniqueIconsMap.values());
+
+    const validIcons = [];
+    for (const icon of uniqueIcons) {
+      const exists = await checkImageExists(icon.url);
+      if (exists) validIcons.push(icon);
+    }
+
+    if (!validIcons.length) {
+      validIcons.push({ url: '/images/logo/icon-transp.png', name: 'placeholder' });
     }
 
     productsWrap.innerHTML = '';
 
     const rowsCount = 4;
-    const iconsPerRow = Math.ceil(icons.length / rowsCount);
-    const shuffledIcons = icons.sort(() => Math.random() - 0.5);
+    const iconsPerRow = Math.ceil(validIcons.length / rowsCount);
+    const shuffledIcons = validIcons.sort(() => Math.random() - 0.5);
 
     for (let rowIndex = 0; rowIndex < rowsCount; rowIndex++) {
       const rowContainer = document.createElement('div');
