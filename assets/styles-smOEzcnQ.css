@@ -1,0 +1,271 @@
+:root {
+  --light: rgb(227, 228, 230);
+  --border-color: rgba(227, 228, 230, 0.55);
+  --light-opacity: rgb(227, 228, 230, 0.8);
+  --bgc-light: rgba(196, 196, 196, 1);
+  --bgc-grey: rgba(255, 255, 255, 0.09);
+  --grey-border: rgba(203, 212, 220, 1);
+
+  --accent-color: rgb(197, 75, 140);
+  --accent-secondary: rgb(188, 60, 216);
+  --purple: rgb(111, 66, 193);
+  --orange: rgb(253, 126, 20);
+  --neon: rgba(32, 243, 221, 1);
+  --bgc: #010101;
+
+  --blue: rgb(0, 123, 255);
+  --indigo: #6610f2;
+  --pink: #e83e8c;
+  --red: #dc3545;
+  --yellow: rgb(255, 193, 7);
+  --green: #28a745;
+  --teal: #20c997;
+  --cyan: #17a2b8;
+  --white: #fff;
+  --gray: #6c757d;
+  --dark: #343a40;
+
+  --filter: drop-shadow(0 0 8px rgba(32, 243, 221, 0.6))
+    drop-shadow(0 0 14px rgba(32, 243, 221, 0.5));
+
+  --text-standart-font-size: 20px;
+  --text-standart-font-weight: 400;
+  --text-standart-line-height: 1.1;
+  --title-standart-font-weight: 600;
+
+  --opacity-standart: 0.6;
+
+  --standart-tr-cubic: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-bg: background 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-tr: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-cl: color 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-op: opacity 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* BUTTON | */
+.standart-button {
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-weight: 400;
+  border-radius: 100px;
+  color: var(--light);
+  transition: all var(--standart-tr-cubic);
+  border: 1px solid transparent;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  animation: gradientFlow 5s infinite linear;
+  margin: 2px 0;
+}
+.standart-button:is(:hover, :focus) {
+  outline: none;
+  background: linear-gradient(
+    300deg,
+    #ffc107 20%,
+    #e83e8c 50%,
+    #007bff 70%,
+    #20f3dd 90%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: var(--light);
+}
+
+/* BUTTON  ||*/
+.neon-btn {
+  color: var(--neon);
+  background: transparent;
+  border-radius: 100px;
+  transition: all var(--standart-tr-cubic);
+  border: 1px solid transparent;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  animation: gradientFlow 5s infinite linear;
+}
+.neon-btn:is(:hover, :focus) {
+  outline: none;
+
+  background: linear-gradient(
+    300deg,
+    #ffc107 10%,
+    #e83e8c 40%,
+    #007bff 70%,
+    #20f3dd 90%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: var(--accent-color);
+}
+.large-btn {
+  font-size: clamp(20px, 7vw, 30px);
+  padding: clamp(8px, 7vw, 12px) clamp(16px, 7vw, 24px);
+}
+.medium-btn {
+  font-size: clamp(18px, 7vw, 26px);
+  padding: clamp(8px, 7vw, 10px) clamp(16px, 7vw, 20px);
+}
+.normal-btn {
+  font-size: clamp(16px, 7vw, 20px);
+  padding: clamp(6px, 7vw, 8px) clamp(12px, 7vw, 16px);
+}
+/*  */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.error-message {
+  text-align: center;
+  font-weight: 500;
+  font-size: 30px;
+  margin: 30px auto 0;
+  color: var(--yellow);
+  max-width: 600px;
+  opacity: var(--opacity-standart);
+}
+
+/* TITLE standard */
+.title {
+  font-size: clamp(40px, 7vw, 56px);
+  font-weight: var(--title-standart-font-weight);
+  line-height: var(--text-standart-line-height);
+  margin-bottom: clamp(30px, 7vw, 60px);
+}
+/* _________________ */
+
+/* SCROLL */
+#scroll-button {
+  position: fixed;
+  bottom: 30px;
+  right: 10px;
+  padding: 10px;
+  background-color: transparent;
+  color: var(--accent-color);
+  border: none;
+  cursor: pointer;
+  transition: all var(--standart-tr-cubic);
+  opacity: 0;
+  transform: translateY(100px);
+  z-index: 10;
+}
+#scroll-button.visible {
+  opacity: var(--opacity-standart);
+  transform: translateY(0) rotate(-90deg);
+}
+#scroll-button.hidden {
+  opacity: 0;
+  transform: translateY(100px) rotate(180deg);
+  pointer-events: none;
+}
+.scroll-icon {
+  width: clamp(50px, 5vw, 80px);
+  height: clamp(50px, 5vw, 80px);
+  border-radius: 50%;
+  border: 1px solid var(--border-color);
+  fill: var(--border-color);
+  transition: all var(--standart-tr-cubic);
+}
+#scroll-button.visible:hover .scroll-icon {
+  opacity: 1;
+  transform: scale(1.1);
+  fill: var(--light);
+  background: var(--bgc-grey);
+  border: 1px solid var(--light);
+}
+#scroll-button.visible:hover {
+  opacity: 1;
+}
+@media (max-width: 767px) {
+  #scroll-button {
+    bottom: 15px;
+    right: 6px;
+    padding: 10px;
+  }
+  .scroll-icon {
+    background: var(--bgc-grey);
+  }
+}
+/* / */
+
+/* Animation */
+@keyframes gradientFlow {
+  0% {
+    box-shadow: 0 0 0 2px rgba(188, 60, 216, 0.6), 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  30% {
+    box-shadow: 0 0 0 2px rgba(197, 75, 140, 0.6), 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 0 2px rgba(220, 53, 69, 0.6), 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  80% {
+    box-shadow: 0 0 0 2px rgba(32, 243, 221, 0.6), 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  100% {
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.6), 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.01);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes subtlePulse {
+  0% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 2px rgba(253, 126, 20, 0.5))
+      drop-shadow(0 0 4px rgba(188, 60, 216, 0.4));
+  }
+  50% {
+    transform: scale(1.01);
+    filter: drop-shadow(0 0 8px rgba(253, 126, 20, 0.6))
+      drop-shadow(0 0 10px rgba(188, 60, 216, 0.5));
+  }
+  100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 4px rgba(253, 126, 20, 0.4))
+      drop-shadow(0 0 6px rgba(188, 60, 216, 0.3));
+  }
+}
+
+@keyframes combinedEffect {
+  0% {
+    box-shadow: 0 0 0 2px rgba(188, 60, 216, 0.6), 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform: scale(1);
+  }
+  30% {
+    box-shadow: 0 0 0 2px rgba(197, 75, 140, 0.6), 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform: scale(1.02);
+  }
+  50% {
+    box-shadow: 0 0 0 2px rgba(220, 53, 69, 0.6), 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform: scale(1);
+  }
+  80% {
+    box-shadow: 0 0 0 2px rgba(32, 243, 221, 0.6), 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform: scale(1.02);
+  }
+  100% {
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.6), 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform: scale(1);
+  }
+}
