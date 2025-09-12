@@ -162,7 +162,7 @@
     border-color: rgba(255, 255, 255, 0.1);
     border-radius: 30px;
     /* min-height: 60%; */
-    min-height: 40vh;
+    min-height: 30vh;
     overflow-y: auto;
     max-width: 90%;
     margin-top: 10px;
@@ -183,7 +183,7 @@
   }
   .nav-list {
     flex-direction: column;
-    gap: 30px;
+    gap: 20px;
   }
   .nav-link {
     font-size: clamp(20px, 5vw, 30px);
