@@ -10,6 +10,15 @@
 @import url('./partials/home-team.css');
 @import url('./partials/home-career.css');
 @import url('./partials/home-contacts.css');
+@import url('./modal.css');
+@import url('./partials/footer.css');
+
+@import url('./partials/portfolio.css');
+@import url('./partials/portfolio-cleaning-up.css');
+@import url('./partials/portfolio-e-commerce.css');
+@import url('./partials/portfolio-food-drink.css');
+
+@import url('./partials/admin.css');
 
 /* normalize */
 html {
