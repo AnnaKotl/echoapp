@@ -893,12 +893,12 @@ Prototype:
 
 .blur-bg-relative {
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 .blur-bg-right,
 .blur-bg-left {
   position: absolute;
-  overflow: hidden;
+  /* overflow: hidden; */
   pointer-events: none;
   z-index: 1;
 
