@@ -1,3 +1,5 @@
+import '/js/helpers/lazy-load-sections';
+
 // ⚡ Lazy-load 
 window.addEventListener('load', () => {
   const nonCriticalCSS = [

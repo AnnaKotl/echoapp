@@ -148,14 +148,24 @@
   opacity: var(--opacity-standart);
 }
 
-/* TITLE standard */
 .title {
+  /* TITLE standard */
   font-size: clamp(40px, 7vw, 56px);
   font-weight: var(--title-standart-font-weight);
   line-height: var(--text-standart-line-height);
   margin-bottom: clamp(30px, 7vw, 60px);
 }
-/* _________________ */
+
+/* lazy load section */
+.lazy-section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.9s ease, transform 0.8s ease;
+}
+.lazy-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 /* SCROLL */
 #scroll-button {
