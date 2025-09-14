@@ -6,12 +6,22 @@ import { fetchServices } from '/js/api/api';
 import { cloneListItems } from '/js/pages/home/clone-items';
 import { activateAdvantages } from '/js/pages/home/team-slider';
 
-function loadNonCriticalCSS(href) {
+document.addEventListener('DOMContentLoaded', () => {
+  // 📲 
+  cloneListItems('running-list', '.running-item', 10);
+  // 💸  
+  fetchServices();
+  // 👩🏻‍💻👨🏼‍💻 
+  activateAdvantages();
+});
+
+// ⚡ Lazy-load
+const loadNonCriticalCSS = (href) => {
   const link = document.createElement('link');
   link.rel = 'stylesheet';
   link.href = href;
   document.head.appendChild(link);
-}
+};
 
 const nonCriticalStyles = [
   '/css/partials/home-products.css',
@@ -27,13 +37,4 @@ const nonCriticalStyles = [
 
 window.addEventListener('load', () => {
   nonCriticalStyles.forEach(loadNonCriticalCSS);
-});
-
-document.addEventListener('DOMContentLoaded', () => {
-  // 📲 
-  cloneListItems('running-list', '.running-item', 10);
-  // 💸  
-  fetchServices();
-  // 👩🏻‍💻👨🏼‍💻 
-  activateAdvantages();
 });

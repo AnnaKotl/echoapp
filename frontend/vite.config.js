@@ -19,6 +19,7 @@ export default defineConfig({
     },
     outDir: '../dist',
     emptyOutDir: true,
+    cssCodeSplit: true,
   },
   plugins: [
     injectHTML(),
