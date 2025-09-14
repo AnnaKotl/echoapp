@@ -147,6 +147,17 @@ IDEA:
   min-height: 428px;
 }
 
+/* SHADOWS & ELLIPCE anim */
+.bg-ellipse-1,
+.bg-ellipse-2,
+.idea-bg-ellipse-1,
+.idea-bg-ellipse-2,
+.shadow-left-1,
+.shadow-left-2,
+.shadow-right-1 {
+  opacity: 0;
+}
+
 .idea-pictures-wrapp-left {
   position: absolute;
   top: 20px;
@@ -609,10 +620,11 @@ Prototype:
     left: 50%;
     transform: translateX(-50%) scale(0.7);
   }
+  /* IDEA */
   .idea-pos-pictures-wrapp {
     top: 0;
     left: 50%;
-    transform: translateX(-50%) scale(0.8);
+    transform: translateX(-50%) scale(0.7);
     margin: 0 auto;
 }
 
