@@ -12,14 +12,12 @@ const checkImageExists = async (url) => {
   }
 };
 
-const createImage = (icon) => {
-  const img = document.createElement('img');
-  img.src = icon.url;
-  img.alt = icon.name || 'Product Icon';
-  img.loading = 'lazy';
-  img.onerror = () => { img.src = '/images/logo/icon-transp.png'; };
-  return img;
-};
+const createImageHTML = (icon) => `
+  <div class="products-item">
+    <img src="${icon.url}" alt="${icon.name || 'Product Icon'}" loading="lazy" 
+         onerror="this.src='/images/logo/icon-transp.png'"/>
+  </div>
+`;
 
 const renderProductIcons = async () => {
   if (!productsWrap) return;
@@ -32,18 +30,12 @@ const renderProductIcons = async () => {
     }
 
     const uniqueIconsMap = new Map();
-    for (const icon of icons) {
-      if (icon.url && !uniqueIconsMap.has(icon.url)) {
-        uniqueIconsMap.set(icon.url, icon);
-      }
-    }
+    icons.forEach(icon => { if (icon.url && !uniqueIconsMap.has(icon.url)) uniqueIconsMap.set(icon.url, icon); });
     const uniqueIcons = Array.from(uniqueIconsMap.values());
 
-    const validIcons = [];
-    for (const icon of uniqueIcons) {
-      const exists = await checkImageExists(icon.url);
-      if (exists) validIcons.push(icon);
-    }
+    const validIcons = (await Promise.all(
+      uniqueIcons.map(async icon => (await checkImageExists(icon.url)) ? icon : null)
+    )).filter(Boolean);
 
     if (!validIcons.length) {
       validIcons.push({ url: '/images/logo/icon-transp.png', name: 'placeholder' });
@@ -66,20 +58,13 @@ const renderProductIcons = async () => {
         (rowIndex + 1) * iconsPerRow
       );
 
-      const iconsWithClones = isMobile 
-        ? [...rowIcons, ...rowIcons] 
-        : [...rowIcons, ...rowIcons, ...rowIcons, ...rowIcons];
+      const iconsWithClones = [...rowIcons, ...rowIcons, ...rowIcons];
 
-      iconsWithClones.forEach(icon => {
-        const item = document.createElement('div');
-        item.classList.add('products-item');
-        item.appendChild(createImage(icon));
-        rowContainer.appendChild(item);
-      });
+      rowContainer.innerHTML = iconsWithClones.map(createImageHTML).join('');
 
       productsWrap.appendChild(rowContainer);
 
-      const animationSpeed = 80;
+      const animationSpeed = 30;
       rowContainer.style.animation = `scroll-row ${animationSpeed}s linear infinite`;
       if (rowIndex % 2 === 1) rowContainer.style.animationDirection = 'reverse';
 
@@ -106,7 +91,7 @@ export function initProductIcons() {
         observer.unobserve(productsWrap);
       }
     });
-  }, { rootMargin: '200px 0px', threshold: 0.1 });
+  }, { rootMargin: '500px 0px', threshold: 0.1 });
 
   observer.observe(productsWrap);
 }

@@ -47,9 +47,19 @@
     <!-- CRITICAL CSS -->
     <link rel="stylesheet" href="/css/critical.css" />
     <!-- MAIN STYLES -->
-    <link rel="stylesheet" href="/css/styles.css" />
+    <link
+      rel="preload"
+      href="/css/styles.css"
+      as="style"
+      onload="this.rel='stylesheet'"
+    />
     <!-- INDEX CRITICAL STYLES -->
-    <link rel="stylesheet" href="/css/index.css" />
+    <link
+      rel="preload"
+      href="/css/index.css"
+      as="style"
+      onload="this.rel='stylesheet'"
+    />
   </head>
 
   <body>
