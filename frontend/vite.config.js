@@ -8,16 +8,10 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: './src/index.html',
-        career: './src/pages/career.html',
-        contacts: './src/pages/contacts.html',
-        partnership: './src/pages/partnership.html',
-        prices: './src/pages/prices.html',
-        products: './src/pages/products.html',
         portfolio: './src/pages/portfolio.html',
         cleaningApp: './src/pages/cleaning-app.html',
         eCommerce: './src/pages/e-commerce.html',
         foodDrink: './src/pages/food-drink.html',
-        team: './src/pages/team.html',
         admin: './src/pages/admin.html',
       },
     },

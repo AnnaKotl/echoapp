@@ -1,25 +1,3 @@
-@import "normalize.css";
-
-@import url('./partials/header.css');
-@import url('./partials/home-hero.css');
-@import url('./partials/home-based-on.css');
-@import url('./partials/home-products.css');
-@import url('./partials/home-prices.css');
-@import url('./partials/home-partnership.css');
-@import url('./partials/running-line.css');
-@import url('./partials/home-team.css');
-@import url('./partials/home-career.css');
-@import url('./partials/home-contacts.css');
-@import url('./modal.css');
-@import url('./partials/footer.css');
-
-@import url('./partials/portfolio.css');
-@import url('./partials/portfolio-cleaning-up.css');
-@import url('./partials/portfolio-e-commerce.css');
-@import url('./partials/portfolio-food-drink.css');
-
-@import url('./partials/admin.css');
-
 /* normalize */
 html {
   box-sizing: border-box;
