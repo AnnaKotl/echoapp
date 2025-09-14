@@ -1,0 +1,1 @@
+window.addEventListener("load",()=>{["/css/partials/footer.css","/css/partials/portfolio-cleaning-up.css","/css/partials/portfolio-e-commerce.css","/css/partials/portfolio-food-drink.css"].forEach(e=>{const o=new URL(e,import.meta.url).href,s=document.createElement("link");s.rel="stylesheet",s.href=o,document.head.appendChild(s)})});
