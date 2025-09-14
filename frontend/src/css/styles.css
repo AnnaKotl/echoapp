@@ -1,5 +1,7 @@
 @import "normalize.css";
 
+@import url('./partials/header.css');
+
 :root {
   --light: rgb(227, 228, 230);
   --border-color: rgba(227, 228, 230, 0.55);
