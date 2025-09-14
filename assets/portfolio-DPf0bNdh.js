@@ -1,1 +1,0 @@
-import{l as s}from"./lazy-load-css-MQW8UhRS.js";window.addEventListener("load",()=>{s(["/css/partials/footer.css","/css/partials/portfolio-cleaning-up.css","/css/partials/portfolio-e-commerce.css","/css/partials/portfolio-food-drink.css"])});
