@@ -1,0 +1,1 @@
+function e(o){const s=document.createElement("link");s.rel="stylesheet",s.href=o,document.head.appendChild(s)}const t=["/css/partials/footer.css","/css/partials/portfolio-cleaning-up.css","/css/partials/portfolio-e-commerce.css","/css/partials/portfolio-food-drink.css"];window.addEventListener("load",()=>{t.forEach(e)});
