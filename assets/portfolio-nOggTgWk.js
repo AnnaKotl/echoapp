@@ -1,0 +1,1 @@
+import"./lazy-load-sections-BLxcx91W.js";window.addEventListener("load",()=>{["/css/partials/footer.css","/css/partials/portfolio-cleaning-up.css","/css/partials/portfolio-e-commerce.css","/css/partials/portfolio-food-drink.css"].forEach(s=>{const e=new URL(s,import.meta.url).href,o=document.createElement("link");o.rel="stylesheet",o.href=e,document.head.appendChild(o)})});
