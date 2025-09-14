@@ -1,5 +1,7 @@
 import { defineConfig } from 'vite';
 import injectHTML from 'vite-plugin-html-inject';
+import purgecss from 'vite-plugin-purgecss';
+import path from 'path';
 
 export default defineConfig({
   base: './',
@@ -7,12 +9,12 @@ export default defineConfig({
   build: {
     rollupOptions: {
       input: {
-        main: './src/index.html',
-        portfolio: './src/pages/portfolio.html',
-        cleaningApp: './src/pages/cleaning-app.html',
-        eCommerce: './src/pages/e-commerce.html',
-        foodDrink: './src/pages/food-drink.html',
-        admin: './src/pages/admin.html',
+        main: path.resolve(__dirname, 'src/index.html'),
+        portfolio: path.resolve(__dirname, 'src/pages/portfolio.html'),
+        cleaningApp: path.resolve(__dirname, 'src/pages/cleaning-app.html'),
+        eCommerce: path.resolve(__dirname, 'src/pages/e-commerce.html'),
+        foodDrink: path.resolve(__dirname, 'src/pages/food-drink.html'),
+        admin: path.resolve(__dirname, 'src/pages/admin.html'),
       },
     },
     outDir: '../dist',
@@ -20,9 +22,20 @@ export default defineConfig({
   },
   plugins: [
     injectHTML(),
+    purgecss({
+      content: [
+        path.resolve(__dirname, 'src/**/*.html'),
+        path.resolve(__dirname, 'src/**/*.js'),
+      ],
+      safelist: [
+        /^modal/,
+        /^running/,
+        /^active/,
+        /^visible/,
+      ],
+    }),
   ],
 });
-
 
 
 // HELPERS:

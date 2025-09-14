@@ -14,7 +14,8 @@
     "glob": "^8.1.0",
     "vite": "^6.3.5",
     "vite-plugin-full-reload": "^1.2.0",
-    "vite-plugin-html-inject": "^1.1.2"
+    "vite-plugin-html-inject": "^1.1.2",
+    "vite-plugin-purgecss": "^0.2.13"
   },
   "dependencies": {
     "moment": "^2.30.1",
