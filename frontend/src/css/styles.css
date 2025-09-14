@@ -159,8 +159,8 @@
 /* lazy load section */
 .lazy-section {
   opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 0.9s ease, transform 0.8s ease;
+  transform: translateY(100px);
+  transition: opacity 1.2s ease, transform 0.6s ease;
 }
 .lazy-section.visible {
   opacity: 1;
