@@ -159,7 +159,7 @@
 /* lazy load section */
 .lazy-section {
   opacity: 0;
-  transform: translateY(100px);
+  transform: translateY(66px);
   transition: opacity 1.2s ease, transform 0.6s ease;
 }
 .lazy-section.visible {
@@ -218,6 +218,10 @@
   .scroll-icon {
     background: var(--bgc-grey);
   }
+  .lazy-section {
+  transform: translateY(33px);
+  transition: opacity 1s ease, transform 0.6s ease;
+}
 }
 /* / */
 

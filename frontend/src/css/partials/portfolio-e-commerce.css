@@ -9,9 +9,9 @@ HERO
 }
 
 @media (max-width: 1375px) {
-.commerce-hero-wrapp h1 {
-  font-size: clamp(38px, 5vw, 70px);
-}
+  .commerce-hero-wrapp h1 {
+    font-size: clamp(38px, 5vw, 70px);
+  }
 }
 /* 
 Project Idea:
@@ -75,9 +75,21 @@ Features
 }
 
 @media (max-width: 1023px) {
-.features-items {
-  grid-template-columns: repeat(2, 1fr);
+  .features-items {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
+@media (max-width: 767px) {
+  .features-items {
+    grid-template-columns: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .features-items li {
+    width: 100%;
+  }
 }
 
 /* 

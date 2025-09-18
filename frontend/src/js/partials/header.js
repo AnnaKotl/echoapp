@@ -1,25 +1,42 @@
 // HEADER 📌
 const header = document.querySelector('.home-nav-container');
-const maxHeight = 150;
-const minHeight = 100;
+
+const desktopMaxHeight = 150;
+const desktopMinHeight = 100;
+
+const mobileMaxHeight = 100;
+const mobileMinHeight = 80;
+
 const scaleMin = 0.8;
 const scaleRange = 1 - scaleMin;
 const maxScroll = 200;
+
 function updateHeaderStyles() {
   const scrollTop = window.scrollY;
+
+  const isMobile = window.matchMedia('(max-width: 799px)').matches;
+
+  const maxHeight = isMobile ? mobileMaxHeight : desktopMaxHeight;
+  const minHeight = isMobile ? mobileMinHeight : desktopMinHeight;
+
   const scrollFraction = Math.min(scrollTop / maxScroll, 1);
   const newHeight = maxHeight - scrollFraction * (maxHeight - minHeight);
   const newScale = 1 - scrollFraction * scaleRange;
+
   header.style.height = `${newHeight}px`;
   header.style.transform = `translateX(-50%) scale(${newScale})`;
+
   if (scrollTop > 50) {
     header.classList.add('scrolled');
   } else {
     header.classList.remove('scrolled');
   }
 }
+
 updateHeaderStyles();
 window.addEventListener('scroll', updateHeaderStyles);
+window.addEventListener('resize', updateHeaderStyles);
+// 📌
 
 // 🍔 menu
 document.addEventListener("DOMContentLoaded", () => {
