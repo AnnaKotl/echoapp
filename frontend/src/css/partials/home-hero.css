@@ -142,6 +142,7 @@
   .hero-content {
     margin: 0 auto;
     text-align: center;
+    padding-top: 100px;
   }
   .hero-text {
     text-align: center;

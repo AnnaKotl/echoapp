@@ -605,7 +605,7 @@ Prototype:
 
 /* ADAPTIVE */
 @media (max-width: 450px) {
-  .technology-items, 
+  .technology-items,
   .features-items {
     display: flex;
     grid-template-columns: none;
@@ -624,6 +624,9 @@ Prototype:
 
 @media (max-width: 767px) {
   /* HERO */
+  .cleaning-hero-section {
+    padding-top: 10px;
+  }
   .pages-flex-wrapper {
     position: relative;
   }
@@ -695,6 +698,11 @@ Prototype:
   .blur-bg-right,
   .blur-bg-left {
     display: none;
+  }
+  .figma-prototype {
+    max-width: 300px;
+    height: auto;
+    max-height: 80%;
   }
 }
 

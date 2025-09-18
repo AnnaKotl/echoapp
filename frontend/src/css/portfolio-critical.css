@@ -305,6 +305,9 @@ CARDS:
 
 /* === MOBILE (≤767px) === */
 @media (max-width: 767px) {
+  .hero-portfolio-section {
+  padding-top: 100px;
+}
   .portfolio-card.column-reverse-wrapp {
     display: flex;
     flex-direction: column-reverse;
