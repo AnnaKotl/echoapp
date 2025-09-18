@@ -216,3 +216,9 @@ Prototype:
   background-repeat: no-repeat;
 }
 
+@media (max-width: 767px) {
+  .left-bg-img,
+  .right-bg-img {
+    position: static;
+  }
+}

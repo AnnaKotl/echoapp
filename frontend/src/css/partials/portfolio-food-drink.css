@@ -43,14 +43,6 @@ Screens
 /* 
 Prototype
 */
-.food-proto {
-  background: url('/images/portfolio/proto-bg-3.svg');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 649px;
-}
-
 .food-left-bg-img,
 .food-right-bg-img {
   position: absolute;
@@ -76,4 +68,11 @@ Prototype
   background-position: center right;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+@media (max-width: 767px) {
+  .food-left-bg-img,
+  .food-right-bg-img {
+    position: static;
+  }
 }

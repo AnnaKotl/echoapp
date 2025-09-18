@@ -110,13 +110,6 @@ Screens
 /* 
 Prototype
 */
-.commerce-proto {
-  background: url('/images/portfolio/proto-bg-2.svg');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
 .commerce-left-bg-img,
 .commerce-right-bg-img {
   position: absolute;
@@ -142,4 +135,11 @@ Prototype
   background-position: center right;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+@media (max-width: 767px) {
+  .commerce-left-bg-img,
+  .commerce-right-bg-img {
+    position: static;
+  }
 }
