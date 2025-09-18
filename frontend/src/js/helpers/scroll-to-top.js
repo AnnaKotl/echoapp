@@ -34,8 +34,14 @@ document.addEventListener('DOMContentLoaded', () => {
         const targetSection = document.querySelector(targetSelector);
 
         if (targetSection) {
+          const sectionTop = targetSection.offsetTop;
+          const sectionHeight = targetSection.offsetHeight;
+          const windowHeight = window.innerHeight;
+
+          const scrollPosition = sectionTop + sectionHeight / 2 - windowHeight / 2;
+
           window.scrollTo({
-            top: targetSection.offsetTop,
+            top: scrollPosition,
             behavior: 'smooth',
           });
         }
@@ -44,4 +50,5 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
+
 });

@@ -184,6 +184,7 @@
   .nav-list {
     flex-direction: column;
     gap: 30px;
+    margin-bottom: 20px;
   }
   .nav-link {
     font-size: clamp(20px, 5vw, 30px);
