@@ -230,7 +230,8 @@ CARDS:
   min-height: 40px;
   max-width: 170px;
   width: 100%;
-  overflow: hidden;
+  /* overflow: hidden; */
+  z-index: 1;
   transition: all var(--standart-tr-cubic);
 }
 
