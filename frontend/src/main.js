@@ -11,7 +11,7 @@ import 'toastify-js/src/toastify.css';
 // © Footer config
 document.getElementById("year").textContent = new Date().getFullYear();
 
-// VIDEO in home-page
+// VIDEO in home-page 🎥
 document.addEventListener('DOMContentLoaded', () => {
   const videoBased = document.getElementById('video-based');
   const videoTeam = document.getElementById('video-team');
@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
     video.pause();
     video.removeAttribute('autoplay');
     video.removeAttribute('loop');
+    video.removeAttribute('src');
     video.setAttribute('preload', 'none');
     video.currentTime = 0;
     video.style.display = 'none';
@@ -36,6 +37,35 @@ document.addEventListener('DOMContentLoaded', () => {
     disableVideo(videoBased);
   }
 
+  // Lazy load video when section appears
+  const lazyLoadVideo = (videoId, src) => {
+    const video = document.getElementById(videoId);
+    if (!video) return;
+
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          if (!video.querySelector('source')) {
+            const source = document.createElement('source');
+            source.src = src;
+            source.type = 'video/mp4';
+            video.appendChild(source);
+          }
+          video.style.display = 'block';
+          video.load();
+          video.play().catch(() => {});
+          obs.disconnect();
+        }
+      });
+    }, { threshold: 0.25 });
+
+    observer.observe(video);
+  };
+
+  lazyLoadVideo('video-based', '/videos/video-ios-bg.mp4');
+  lazyLoadVideo('video-team', '/videos/video-team-bg.mp4');
+
+  // Pause when tab inactive
   document.addEventListener('visibilitychange', () => {
     if (document.hidden) {
       videoBased?.pause();
@@ -48,3 +78,4 @@ document.addEventListener('DOMContentLoaded', () => {
     videoTeam?.pause();
   });
 });
+
