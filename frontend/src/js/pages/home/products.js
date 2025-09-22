@@ -58,7 +58,7 @@ const renderProductIcons = async () => {
         (rowIndex + 1) * iconsPerRow
       );
 
-      const iconsWithClones = [...rowIcons];
+      const iconsWithClones = [...rowIcons, ...rowIcons];
 
       rowContainer.innerHTML = iconsWithClones.map(createImageHTML).join('');
 
