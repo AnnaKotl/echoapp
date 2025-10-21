@@ -71,5 +71,3 @@ export function renderServices(services) {
 
   observer.observe(container);
 }
-
-// <p class="price">${service.price}</p>
