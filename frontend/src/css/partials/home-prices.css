@@ -1,5 +1,5 @@
 .prices-container > h4 {
-  background: linear-gradient(300deg, #dc3545 75%, #ffc107 95%, #fd7e14 100%);
+  background: linear-gradient(300deg, #ffc107 50%, #fd7e14 80%, #dc3545 95%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
