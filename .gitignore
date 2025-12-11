@@ -42,3 +42,5 @@ public/avatars/*
 
 # Logs directory
 logs/
+
+dist/

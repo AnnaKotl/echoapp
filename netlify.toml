@@ -2,7 +2,33 @@
   command = "cd frontend && npm run build"
   publish = "dist"
 
-# SPA routing
+# Explicit redirects for built HTML pages (clean URLs)
+[[redirects]]
+  from = "/portfolio"
+  to = "/portfolio.html"
+  status = 200
+
+[[redirects]]
+  from = "/portfolio/cleaning-app"
+  to = "/cleaningApp.html"
+  status = 200
+
+[[redirects]]
+  from = "/portfolio/e-commerce"
+  to = "/eCommerce.html"
+  status = 200
+
+[[redirects]]
+  from = "/portfolio/food-drink"
+  to = "/foodDrink.html"
+  status = 200
+
+[[redirects]]
+  from = "/admin-panel"
+  to = "/admin.html"
+  status = 200
+
+# Fallback: treat as SPA for any other route (serves index.html)
 [[redirects]]
   from = "/*"
   to = "/index.html"
