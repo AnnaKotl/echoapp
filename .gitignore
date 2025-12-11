@@ -44,3 +44,4 @@ public/avatars/*
 logs/
 
 dist/
+node_modules/

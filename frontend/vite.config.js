@@ -62,6 +62,10 @@ export default defineConfig({
 // cd /Users/annakotlyar/Desktop/projects/echoapp
 // npm run start
 
+// cd /Users/annakotlyar/Desktop/projects/echoapp
+// npm install
+// npm run start
+
 // push:
 // git status
 // git add .
@@ -76,3 +80,8 @@ export default defineConfig({
 // cd frontend
 // npm install
 // npm run build
+
+// cd frontend
+// npm ci
+// npm run build
+// ls -1 dist/*.html
