@@ -10,17 +10,17 @@
 
 [[redirects]]
   from = "/portfolio/cleaning-app"
-  to = "/cleaningApp.html"
+  to = "/cleaning-app.html"
   status = 200
 
 [[redirects]]
   from = "/portfolio/e-commerce"
-  to = "/eCommerce.html"
+  to = "/e-commerce.html"
   status = 200
 
 [[redirects]]
   from = "/portfolio/food-drink"
-  to = "/foodDrink.html"
+  to = "/food-drink.html"
   status = 200
 
 [[redirects]]

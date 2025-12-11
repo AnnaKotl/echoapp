@@ -8,7 +8,8 @@
     "start:backend": "cd ./backend && npm start",
     "start:frontend": "vite",
     "dev": "vite",
-    "build": "vite build"
+    "build": "vite build && npm run postbuild",
+    "postbuild": "node scripts/postbuild.js"
   },
   "devDependencies": {
     "glob": "^8.1.0",
