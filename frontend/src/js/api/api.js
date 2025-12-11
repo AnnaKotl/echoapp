@@ -3,24 +3,62 @@ import { renderServices } from '/js/pages/home/prices';
 
 // 🖇️ CACHE & Local Storage
 const CACHE_EXPIRY_TIME = 60 * 60 * 1000;
-function getCachedData(key) {
-  const cachedData = localStorage.getItem(key);
-  const cachedTime = localStorage.getItem(`${key}_time`);
-  
-  if (cachedData && cachedTime) {
-    const elapsedTime = Date.now() - Number(cachedTime);
-    if (elapsedTime < CACHE_EXPIRY_TIME) {
-      return JSON.parse(cachedData);
-    } else {
-      localStorage.removeItem(key);
-      localStorage.removeItem(`${key}_time`);
+const MAX_CACHE_SIZE = 50 * 1024 * 1024; // 50MB limit
+
+function getCacheSize() {
+  let size = 0;
+  for (let key in localStorage) {
+    if (localStorage.hasOwnProperty(key)) {
+      size += localStorage[key].length + key.length;
     }
   }
-  return null;
+  return size;
 }
+
+function getCachedData(key) {
+  try {
+    const cachedData = localStorage.getItem(key);
+    const cachedTime = localStorage.getItem(`${key}_time`);
+    
+    if (cachedData && cachedTime) {
+      const elapsedTime = Date.now() - Number(cachedTime);
+      if (elapsedTime < CACHE_EXPIRY_TIME) {
+        return JSON.parse(cachedData);
+      } else {
+        localStorage.removeItem(key);
+        localStorage.removeItem(`${key}_time`);
+      }
+    }
+    return null;
+  } catch (error) {
+    console.error('Cache retrieval error:', error);
+    return null;
+  }
+}
+
 function setCachedData(key, data) {
-  localStorage.setItem(key, JSON.stringify(data));
-  localStorage.setItem(`${key}_time`, Date.now());
+  try {
+    const currentSize = getCacheSize();
+    const dataSize = JSON.stringify(data).length;
+    
+    if (currentSize + dataSize > MAX_CACHE_SIZE) {
+      const keys = Object.keys(localStorage).filter(k => k.endsWith('_time'));
+      keys.sort((a, b) => localStorage[a] - localStorage[b]);
+      for (let i = 0; i < Math.ceil(keys.length / 2); i++) {
+        const keyToDelete = keys[i].replace('_time', '');
+        localStorage.removeItem(keyToDelete);
+        localStorage.removeItem(keys[i]);
+      }
+    }
+    
+    localStorage.setItem(key, JSON.stringify(data));
+    localStorage.setItem(`${key}_time`, Date.now());
+  } catch (error) {
+    if (error.name === 'QuotaExceededError') {
+      console.warn('localStorage limit exceeded, clearing cache');
+      clearAllCaches();
+    }
+  }
 }
 export function clearCache(key) {
   localStorage.removeItem(key);
@@ -48,7 +86,6 @@ export async function fetchIcons() {
 // 🖼️ Modal request to backend
 export const sendRequest = async (data) => {
   try {
-    // console.log('Sending data:', data);
     const response = await fetch(`${API_URL}/submit-request`, {
       method: 'POST',
       credentials: 'include', 
@@ -59,12 +96,14 @@ export const sendRequest = async (data) => {
     });
 
     if (!response.ok) {
-      throw new Error('Failed to submit the form');
+      const errorData = await response.json().catch(() => ({}));
+      throw new Error(errorData.message || `HTTP ${response.status}: Failed to submit the form`);
     }
 
     return await response.json();
   } catch (error) {
-    throw new Error(error.message);
+    const message = error instanceof Error ? error.message : 'Unknown error';
+    throw new Error(message);
   }
 };
 // 🖼️ /
@@ -77,13 +116,17 @@ export async function fetchServices() {
       throw new Error(`Error fetching services: ${response.statusText} (${response.status})`);
     }
     const services = await response.json();
-    setCachedData('services', services); // cache
+    setCachedData('services', services);
     renderServices(services);
   } catch (error) {
-    console.error('Failed to fetch services:', error);
+    const message = error instanceof Error ? error.message : 'Unknown error';
     const container = document.querySelector('.prices-list');
     if (container) {
-      container.innerHTML = `<p class="error-message">Error loading services: ${error.message}</p>`;
+      const errorEl = document.createElement('p');
+      errorEl.className = 'error-message';
+      errorEl.textContent = `Error loading services: ${message}`;
+      container.textContent = '';
+      container.appendChild(errorEl);
     }
   }
 }
@@ -91,22 +134,25 @@ export async function fetchServices() {
 
 // 🩻 Import IMG from backend
 export async function uploadImage(imageFile) {
-  const formData = new FormData();
-  formData.append('image', imageFile);
+  try {
+    const formData = new FormData();
+    formData.append('image', imageFile);
 
-  const response = await fetch(`${API_URL}/upload`, {
-    method: 'POST',
-    credentials: 'include', 
-    body: formData,
-  });
+    const response = await fetch(`${API_URL}/upload`, {
+      method: 'POST',
+      credentials: 'include', 
+      body: formData,
+    });
 
-  if (response.ok) {
+    if (!response.ok) {
+      throw new Error(`Upload failed: HTTP ${response.status}`);
+    }
+
     const data = await response.json();
-    console.log('Image uploaded successfully:', data.imageUrl);
     return data.imageUrl;
-  } else {
-    console.error('Image upload failed');
-    return null;
+  } catch (error) {
+    const message = error instanceof Error ? error.message : 'Image upload failed';
+    throw new Error(message);
   }
 }
 // 🩻 /
@@ -129,8 +175,8 @@ export async function fetchProductIcons() {
     setCachedData('productIcons', validIcons);
     return validIcons;
   } catch (error) {
-    console.error('Error fetching product icons:', error);
-    return [];
+    const message = error instanceof Error ? error.message : 'Unknown error';
+    throw new Error(message);
   }
 }
 
