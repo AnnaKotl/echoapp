@@ -1,5 +1,7 @@
 const Queue = require('bull');
-
+const cloudinary = require('./cloudinary');
+const cache = require('./cache');const cloudinary = require('./cloudinary');
+const { setCachedData } = require('./cache');
 const iconsQueue = new Queue('iconsQueue');
 
 iconsQueue.process(async (job) => {
@@ -14,7 +16,7 @@ iconsQueue.process(async (job) => {
     url: resource.secure_url,
   }));
 
-  await setCachedData('productIcons', icons);
+  await cache.setCachedData('productIcons', icons);
 });
 
 module.exports = { iconsQueue };

@@ -12,7 +12,9 @@ const formValidationSchema = Joi.object({
     .min(2)
     .max(100)
     .required()
-    .custom((value, helpers) => capitalizeName(value)),
+    .custom((value, helpers) => {
+      return capitalizeName(value);
+    }),
     mobileNumber: Joi.string()
     .min(5)
     .pattern(/^[\d\s()+\-]{5,}$/)

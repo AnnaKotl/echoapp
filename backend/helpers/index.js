@@ -6,7 +6,7 @@ const generateId = require('./generateId');
 const parseJsonBody = require('./parseJsonBody');
 const sendEmail = require('./sendEmail');
 const errorHandler = require('./errorHandler');
-const Request = require('./requestSchema');
+const { Request } = require('../models/Request');
 
 module.exports = {
   HttpError,
