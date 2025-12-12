@@ -42,3 +42,6 @@ public/avatars/*
 
 # Logs directory
 logs/
+
+dist/
+node_modules/
