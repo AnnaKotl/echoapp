@@ -41,7 +41,17 @@ app.use(logger(formatsLogger));
 // Parse JSON request bodies
 app.use(express.json());
 
-// Utility endpoints (must be before routes to take precedence)
+// All routes
+app.use('/', routes);
+
+// Serve favicon
+app.use('/favicon.ico', express.static(path.join(__dirname, 'public', 'favicon.ico')));
+
+// Utility endpoints
+app.get('/', (req, res) => {
+  res.status(200).send('Backend is live 🚀');
+});
+
 app.get('/health', (req, res) => {
   res.status(200).send('OK 🐸');
 });
@@ -59,11 +69,8 @@ app.get('/cors-info', (req, res) => {
   });
 });
 
-// All routes
-app.use('/', routes);
-
-// Serve favicon
-app.use('/favicon.ico', express.static(path.join(__dirname, 'public', 'favicon.ico')));
+// Swagger documentation
+setupSwagger(app);
 
 // Error handling
 app.use(errorHandler);

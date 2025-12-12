@@ -4,9 +4,11 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "start": "concurrently \"npm run start:backend\" \"npm run start:frontend\"",
+    "start:backend": "cd ./backend && npm start",
+    "start:frontend": "vite",
     "dev": "vite",
-    "build": "vite build && npm run postbuild",
-    "postbuild": "node scripts/postbuild.js"
+    "build": "vite build"
   },
   "devDependencies": {
     "glob": "^8.1.0",

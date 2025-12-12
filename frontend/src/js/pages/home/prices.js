@@ -16,63 +16,29 @@ export function renderServices(services) {
 
   const createServiceItem = (service) => {
     const descriptionHTML = service.description?.length
-      ? service.description.map(desc => {
-        const p = document.createElement('p');
-        p.className = 'service-description';
-        p.textContent = desc;
-        return p;
-      })
-      : [];
+      ? service.description.map(desc => `<p class="service-description">${desc}</p>`).join('')
+      : '';
 
     const featuresHTML = service.features.map(feature => {
       const isNewFeature = !accumulatedFeatures.includes(feature.trim());
-      const p = document.createElement('p');
-      p.className = 'about-service';
-      p.style.color = isNewFeature ? 'var(--yellow)' : 'inherit';
-      p.textContent = feature;
-      return p;
-    });
+      return `<p class="about-service" style="color: ${isNewFeature ? 'var(--yellow)' : 'inherit'};">${feature}</p>`;
+    }).join('');
 
     accumulatedFeatures = [...new Set([...accumulatedFeatures, ...service.features.map(f => f.trim())])];
 
     const li = document.createElement('li');
     li.classList.add('prices-item');
-    
-    const container = document.createElement('div');
-    container.className = 'prices-item-container';
-    
-    const title = document.createElement('h4');
-    title.className = 'service-name';
-    title.textContent = service.name;
-    
-    const hr = document.createElement('hr');
-    hr.className = 'prices-line';
-    
-    const descDiv = document.createElement('div');
-    descDiv.className = 'description-container';
-    descriptionHTML.forEach(p => descDiv.appendChild(p));
-    
-    const featuresDiv = document.createElement('div');
-    featuresDiv.className = 'features-container';
-    featuresHTML.forEach(p => featuresDiv.appendChild(p));
-    
-    const orderDiv = document.createElement('div');
-    orderDiv.className = 'order-container';
-    
-    const button = document.createElement('button');
-    button.type = 'button';
-    button.className = 'order-btn js-open-modal normal-btn neon-btn';
-    button.dataset.service = service.name;
-    button.textContent = 'Order';
-    
-    orderDiv.appendChild(button);
-    container.appendChild(title);
-    container.appendChild(hr);
-    container.appendChild(descDiv);
-    container.appendChild(featuresDiv);
-    container.appendChild(orderDiv);
-    li.appendChild(container);
-    
+    li.innerHTML = `
+      <div class="prices-item-container">
+        <h4 class="service-name">${service.name}</h4>
+        <hr class="prices-line"/>
+        <div class="description-container">${descriptionHTML}</div>
+        <div class="features-container">${featuresHTML}</div>
+        <div class="order-container">
+          <button type="button" class="order-btn js-open-modal normal-btn neon-btn" data-service="${service.name}">Order</button>
+        </div>
+      </div>
+    `;
     return li;
   };
 

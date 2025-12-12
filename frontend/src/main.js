@@ -8,15 +8,6 @@ import '/js/partials/header';
 // NPM global uses import
 import 'toastify-js/src/toastify.css';
 
-// 🛡️ Global Error Handling
-window.addEventListener('error', (event) => {
-  console.error('Uncaught error:', event.error);
-});
-
-window.addEventListener('unhandledrejection', (event) => {
-  console.error('Unhandled Promise rejection:', event.reason);
-});
-
 // © Footer config
 document.getElementById("year").textContent = new Date().getFullYear();
 

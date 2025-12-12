@@ -2,10 +2,9 @@ import { defineConfig } from 'vite';
 import injectHTML from 'vite-plugin-html-inject';
 import purgecss from 'vite-plugin-purgecss';
 import path from 'path';
-import { execSync } from 'child_process';
 
 export default defineConfig({
-  base: '/',
+  base: './',
   root: 'src',
   build: {
     rollupOptions: {
@@ -16,11 +15,6 @@ export default defineConfig({
         eCommerce: path.resolve(__dirname, 'src/pages/e-commerce.html'),
         foodDrink: path.resolve(__dirname, 'src/pages/food-drink.html'),
         admin: path.resolve(__dirname, 'src/pages/admin.html'),
-      },
-      output: {
-        entryFileNames: 'assets/[name]-[hash].js',
-        chunkFileNames: 'assets/[name]-[hash].js',
-        assetFileNames: 'assets/[name]-[hash][extname]',
       },
     },
     outDir: '../dist',
@@ -41,18 +35,6 @@ export default defineConfig({
         /^visible/,
       ],
     }),
-    {
-      name: 'move-html-files',
-      apply: 'build',
-      enforce: 'post',
-      closeBundle() {
-        try {
-          execSync('mv ../dist/pages/*.html ../dist/ 2>/dev/null || true', { cwd: __dirname });
-          execSync('rm -rf ../dist/pages/ 2>/dev/null || true', { cwd: __dirname });
-        } catch (e) {
-        }
-      },
-    },
   ],
 });
 
@@ -60,10 +42,6 @@ export default defineConfig({
 // HELPERS:
 
 // cd /Users/annakotlyar/Desktop/projects/echoapp
-// npm run start
-
-// cd /Users/annakotlyar/Desktop/projects/echoapp
-// npm install
 // npm run start
 
 // push:
@@ -80,8 +58,3 @@ export default defineConfig({
 // cd frontend
 // npm install
 // npm run build
-
-// cd frontend
-// npm ci
-// npm run build
-// ls -1 dist/*.html
